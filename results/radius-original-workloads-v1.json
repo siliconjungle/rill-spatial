@@ -1,0 +1,2555 @@
+{
+  "schema": 2,
+  "status": "COMPLETE",
+  "created_utc": "2026-10-20T05:07:04.464914+00:00",
+  "host": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "identity": {
+    "git_commit": "720e953078e758ff1a7fe04297b2a4d4bd319deb",
+    "git_status": "M research/20k/research.md\n?? results/twenty-k-radius-holdout-v1.json\n?? results/twenty-k-radius-v1.json",
+    "source_sha256": {
+      ".github/workflows/ci.yml": "92afeec10af9401560aa805f2c417a78106c400dc27327b9ca1be9081d4034b9",
+      ".gitignore": "cc8bdcd033ed79d3b1439ec7aa4e66b501139213dba6dc1f8b4bcdcb49c4f2aa",
+      "Cargo.lock": "949d6294676cbbcaf072ced27703f6588cc6883637b6866a732a88230b67e4f2",
+      "Cargo.toml": "0762d4d76be8d619c3875b74cbbb83449f5e8370a229fbe4c5a2408a57b7abd2",
+      "LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "LICENSE-MIT": "079adec67563038bee5dac86b57a3cf1546cffc112f51f85c68b13c3d0369428",
+      "README.md": "cad1b603a4299213580a718f25265f7c0526f76eb2126ed8f449cce821e0d805",
+      "benchmarks/Cargo.toml": "eadd1e5df53af05548e425bc112b3e2c6322126461a66bf9002442d7bd779eb3",
+      "benchmarks/cohorts-twenty-k/bounded64.json": "665b5f11ec48a71adfde40eb8fb23803c31b1bc30d8f2608e14e68b63284571b",
+      "benchmarks/cohorts-twenty-k/contained.json": "066f087e1226800aa6b250330c1fc5bb6fbfb1f45f6c9a0c69345b75ed8d5f00",
+      "benchmarks/cohorts-twenty-k/crowd.json": "03e8c6dc9cc1d1e942b5ed95d75f0e5f24ce5357e247ddd91debefef19fba493",
+      "benchmarks/cohorts-twenty-k/manifest.json": "360cdd82da8656ca28101fcf651fe53346a5adfe5970f2c2654fa823f1e7fe76",
+      "benchmarks/fixtures/boundaries.json": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "benchmarks/fixtures/clusters.json": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "benchmarks/fixtures/contained.json": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "benchmarks/fixtures/dense.json": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "benchmarks/fixtures/floors.json": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "benchmarks/fixtures/large.json": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "benchmarks/fixtures/manifest.json": "33319e1ff2e497d49b18d70a1607c1c496f299e144428918785467b1c3478086",
+      "benchmarks/fixtures/small.json": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "benchmarks/fixtures/teleports.json": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "benchmarks/fixtures/uniform.json": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "benchmarks/holdout-97123/boundaries.json": "914439d679bc3793b10b45254db0f5fb2994b6cd5b7465dc6b603728ce47ef8a",
+      "benchmarks/holdout-97123/clusters.json": "5bfdad77ded17b68b13cc23a70de687f9438fefe9a7e6563ef6a25803dd63d98",
+      "benchmarks/holdout-97123/contained.json": "cc6b7f8de45ca724df2d93b00b8956a1d1faa508b6b70a1cd420698875eb10a0",
+      "benchmarks/holdout-97123/dense.json": "06b98a8e94294570ac6ecb93a87f3ebc220ee34cf9bb291f7d3b2738ab3a27a1",
+      "benchmarks/holdout-97123/floors.json": "fed8d7cca125bb213d2a71fba55dce280e73a06226eacb6001db10260ed4b70c",
+      "benchmarks/holdout-97123/large.json": "d8b17fd585986e36f4c1f2e350274069c11cb7c4775b5f0b3b8ba1e045fc8cb9",
+      "benchmarks/holdout-97123/manifest.json": "6767c84fba702be8ead8fc8b8bf14f1d97a73f7a29caf045f80a50e4cb88cdba",
+      "benchmarks/holdout-97123/small.json": "24184d41b21cec260cb169e0283485c3182433cdda6b4ff50ca0dfe5667b218e",
+      "benchmarks/holdout-97123/teleports.json": "ac76e6525ea7e25d60befb8097090a1e729938b956f7a8b7c4af1f9bdbf8b21c",
+      "benchmarks/holdout-97123/uniform.json": "623b60122ae133148ca4e36bd2b23836182cb021fe84c103a87a0727c02459f1",
+      "benchmarks/holdout-twenty-k/bounded64.json": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "benchmarks/holdout-twenty-k/crowd.json": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "benchmarks/holdout-twenty-k/manifest.json": "bef84f32f85d6998688046680a77b63ece9106e425bdec7d474d55b6ed3897e1",
+      "benchmarks/holdout-twenty-k/teleports.json": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "benchmarks/holdout-twenty-k/uniform.json": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "benchmarks/javascript.mjs": "49bd32afcd127ab33feb3a45710ffb916fb5a530093b626db76e2c906fa4c9d1",
+      "benchmarks/native.cpp": "a737d4f697a8f57e2d11aa2ab37aae35a8f1cc04f3d0efcb22e328a0a1a0801a",
+      "benchmarks/src/bounded.rs": "18ea6704f0cf406a9714683fc8205ab94ff2fdebf5b4a6a68d34420c58659dee",
+      "benchmarks/src/cohorts.rs": "beec83fdd792f1fad13df045aec02bec815b77ef6a509ee51c0802ad23a909ea",
+      "benchmarks/src/continuous.rs": "d3cbc7048cf2a1405c07a1d7a3ce8ebff207137dfa74eda204637c54265ee3b2",
+      "benchmarks/src/main.rs": "2ef5aae64479c825467cb4c459f85c95c86271ab14b673d328411fbb36fdc205",
+      "benchmarks/src/more_adapters.rs": "222a1a1b8817ab18171256bb10c4c5324d54309ea25f81370c7d9c030e1a7ba2",
+      "benchmarks/src/rust_adapters.rs": "1eb3b7bcb3c860ee0420a5ecf51921f0abc7807018a05a7dfc0014eff9ceb123",
+      "benchmarks/src/studies.rs": "cc0e4e0613ec5fa506808829ed63aee73a9e614bcda67f08ba669924133c9d38",
+      "benchmarks/twenty-k/bounded64.json": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "benchmarks/twenty-k/contained.json": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "benchmarks/twenty-k/crowd.json": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "benchmarks/twenty-k/floors.json": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "benchmarks/twenty-k/manifest.json": "8b7a73fa67d9d10f03e0ce4336d5c4d6ca0a32554fc3f1915f167acbe6a79788",
+      "benchmarks/twenty-k/many-objects.json": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "benchmarks/twenty-k/teleports.json": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "benchmarks/twenty-k/uniform.json": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "examples/probe.rs": "003d633bcdce4a5ea53980db62c3e437d818abf51b4e0d9d53ad17780241c8f6",
+      "research/20k/agent-ownership.json": "ce233544852a0661d16cddb81a14bd3d465686c5131daf7162c674d88b05fdcd",
+      "research/20k/events.jsonl": "6a14d601e87aaff28b29e85942e92f80af81dd0309507a72a91431c863b47f93",
+      "research/20k/holdout-plan.json": "478e87c77eb4ef2178dcf1e3e93188dae2100d39473afad31443eb9eea63ac87",
+      "research/20k/pending-adapters.md": "0cd0f03aaa30601c141af601ed766d91823b4b6e6c754fdf4689082d00204c35",
+      "research/20k/research.md": "b9f9355d08a1e7697a44c4efcdee17430449c776c9a9f20fd78f40053e4f5160",
+      "research/20k/results.md": "925c926bbd5e2a38c601f33289c36d00e0997a2e43747324add1126edf5200cc",
+      "research/20k/sources.json": "beb42a58af5392f0c819809a632f03ce5c3103f30018fd70ad2099553b63c8cf",
+      "research/20k/status.json": "b32dc95dd12babc566e00a505e8f41edaf6285c858c69983ac6d0a72bc579f8f",
+      "research/20k/storage-retention.json": "3536984176bdbacebf5999b40843536480c1f63bc153faa9947622f98294ff00",
+      "research/20k/work-queue.json": "ccde833fed926915422b3289001c1e5859319c9bccdf7d2ef3b6401399c64ba4",
+      "research/baselines.json": "117b9103f931bb6334c5eb186c29129412d7be2b83ca9f181e56133de150a2d2",
+      "research/discovery.json": "7007a4cfa08ccb2477313d7082d9862f3001e87ca57ee3f82911caaf39222633",
+      "research/inventory.json": "de2fdba56900c524aa4c6971c59b9e437669c81c29ff16fe5479c1672282b761",
+      "research/npm/package-lock.json": "cbb268cad3d328a828475020e22a1f4180deff6a83820923157c78ea1e3ecc50",
+      "research/npm/package.json": "f577e233d61564d7685eb4b6c4ad71d16303d3d6988cac88d4e5771b56bca95d",
+      "research/protocol.md": "0b89ac6189c6cfdf5fdcc47970637551f9cdef02fd32a52e039f8a329c87b15e",
+      "research/variants/cell-readview/Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "research/variants/cell-readview/Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "research/variants/cell-readview/README.md": "44bf8fa93d06853c84aec8403ab106cd187782a5aa32513f9dc2602fa5556559",
+      "research/variants/cell-readview/evidence/batch-build-release.txt": "64d0cbd4b7e4c6329fde55978dd3d261407b55f34c21add0feebf7e0575ee531",
+      "research/variants/cell-readview/evidence/batch-holdout-exploratory.json": "0021730530275dd63860352a065516f650278e072619a0706e32816d8913860b",
+      "research/variants/cell-readview/evidence/batch-oracle-release.txt": "b6c425e3225e36ab99997c5f29bcbf943b810dca3c90ddcc559327ed980d3f6f",
+      "research/variants/cell-readview/evidence/batch-summary.json": "353ad113aad8ccaef4c43a2eec08548ab985b8adf30f8f40eeddffc983ebdcb0",
+      "research/variants/cell-readview/evidence/batch-twenty-k-exploratory.json": "64c5d755fe33ab48713523f3cb6a565fbe0bdeeb878f49b6e3bfb84f610ae563",
+      "research/variants/cell-readview/evidence/build-release.txt": "64d0cbd4b7e4c6329fde55978dd3d261407b55f34c21add0feebf7e0575ee531",
+      "research/variants/cell-readview/evidence/holdout-exploratory.json": "d72b6c43a6b286b25a96f86f0d1cbdb5557aaf5740b725ff306ce22ff8d88201",
+      "research/variants/cell-readview/evidence/layout-after-build.txt": "7a7bb64a28cdda9b91e6e27f41be455104d929b5d7ad6dd5beca75fc5a47f1f4",
+      "research/variants/cell-readview/evidence/layout-after-manifest.json": "31421a50ceaed86da97ae1f1f9f3361ef64e7d1e102e85430dc55ca77a104c87",
+      "research/variants/cell-readview/evidence/layout-after-oracle.txt": "38afd31d0821ebd001e732d8d74cbda77f35a5005a55959db624aeaa1f97dc37",
+      "research/variants/cell-readview/evidence/layout-before-build.txt": "7a7bb64a28cdda9b91e6e27f41be455104d929b5d7ad6dd5beca75fc5a47f1f4",
+      "research/variants/cell-readview/evidence/layout-before-manifest.json": "f37fc4edf570e6d56e11f8bd70a05ab737dd0cd29d63fb60943fe0e7bba9e364",
+      "research/variants/cell-readview/evidence/layout-before-oracle.txt": "a67a3ac29983acdbaf80965e77daf5b3bb818041a8d328c05c6a03a2af85b259",
+      "research/variants/cell-readview/evidence/layout-change.patch": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255",
+      "research/variants/cell-readview/evidence/layout-holdout-proof.json": "b96c858f1e694df69253bbec838b1f90d1c1d369042ea9e47b4f2fee7c0af8a3",
+      "research/variants/cell-readview/evidence/layout-summary.json": "df2e9234293e03ec2c805d810d6c52b8cdda1b88eccdb908e2e2694387214f43",
+      "research/variants/cell-readview/evidence/layout-twenty-k-diagnostic.json": "6fe991d2b97fb00c30173131ca3afd72deb26330a1835d831931dc6eef806489",
+      "research/variants/cell-readview/evidence/oracle-release.txt": "ac1e1ba5811b75bc950c7aff97a7371b1fcb88ef5762ec39ded96ff31cee124d",
+      "research/variants/cell-readview/evidence/summary.json": "6a97f1fb51e51cf619dafbd94b759efc5aa9b9c6cde724de427ceab70a80789a",
+      "research/variants/cell-readview/evidence/twenty-k-exploratory.json": "ce86e745bd670f6a6a56c605b7931a4e415c56ab01d7cf8aad4c15d218b6d252",
+      "research/variants/cell-readview/examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+      "research/variants/cell-readview/examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904",
+      "research/variants/cell-readview/run_batch_diagnostics.py": "dcf938e8e205500211c1deeea648c05709e31cda778bec5f47a4ed46916b5f9f",
+      "research/variants/cell-readview/run_diagnostics.py": "6f35a503c4dc4e111c701faf895ab8f27f110a8217e1e08ad4d14f611f255d39",
+      "research/variants/cell-readview/run_layout_diagnostics.py": "39343b5aaae4e0d728142b454981db678d5968f6179363070dc21b35e381afb6",
+      "research/variants/cell-readview/src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+      "research/variants/cell-readview/storage-retention.json": "fa269f9f8db0ac3bf56ea7e60fb9f5866c54b7373468621a8eea3a2c9bc90378",
+      "research/variants/cell-readview/tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+      "research/variants/cell-readview/tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+      "research/variants/dual-tree/Cargo.lock": "5a372ffb49c96d71dd6723ed5d28fa84016e90765a2ac68ca5ff6885bd318f43",
+      "research/variants/dual-tree/Cargo.toml": "f8601c1434fadb4482a2150250b62733a8886cf58a8789cf81570b4072bed56e",
+      "research/variants/dual-tree/README.md": "a249541639c12e3c194b21c60a439dfae36def62becc1f1bd4a25054daaa0134",
+      "research/variants/dual-tree/REFIT.md": "a5b9fce080f9309526dea231715dd70614477eb71baa14087894a169fb5bdb3f",
+      "research/variants/dual-tree/THREADED.md": "76b087ab12a748b5980b8da59a52d25b44a2c97f636a4a989fe2e51cf17b98a4",
+      "research/variants/dual-tree/diagnostics-resources.json": "e5f3476b26a123da92b7f932ee981e0d7777fd9bcfff19423878cc82c3089dcb",
+      "research/variants/dual-tree/diagnostics.jsonl": "be932a1abe0276ff312b1f70da65054d13c1c95f574f5fda72b138fb74555f7e",
+      "research/variants/dual-tree/examples/batch_probe.rs": "d7b3debdf6390222650191cca5b31ab6d6b1b6a2d1008ccde0193df0f853f2d0",
+      "research/variants/dual-tree/examples/refit_diagnostic.rs": "687bc68da11cc858f27c4795b622f8730e2e1e59789ba6171852f4fae86d6207",
+      "research/variants/dual-tree/examples/support/cohort.rs": "b4d4c576e2e4495046f568d65ca9435bb1a3f20ac8a0e1494f1c6a6102fbd5a1",
+      "research/variants/dual-tree/examples/threaded_cohort.rs": "795edf4e0d411284ad1e800c8e8762a2b9fb8042a19958e37b35ef91b89a540e",
+      "research/variants/dual-tree/refit-bounded64.jsonl": "c79edd78faa8e183fcbab64f076a4f9f3449f18d90616fc6bf1309670293fbae",
+      "research/variants/dual-tree/refit-floors.jsonl": "571cd4f210ec1f35414a9ee424633d5a8a861d7e6b385d01493f92410f952d1d",
+      "research/variants/dual-tree/refit-results.json": "4268efb6fef105408c69aebfd1b961e9d8965f90bbd9e42631d21332526b1a06",
+      "research/variants/dual-tree/refit-teleports.jsonl": "e6090cc34537222531f974c7df9b680d5f1665e0df8d9ec2a98ed45d73e1fdff",
+      "research/variants/dual-tree/refit-uniform.jsonl": "a8d9ffe90b58b3f2b7c10829b310f31188bb3e240dc78cd8393eca94d94038a0",
+      "research/variants/dual-tree/repro/original-Cargo.lock": "c675898835fff55d9e161bce62b20b6dd26ccbcebcaf14e2efba493a525bbcd1",
+      "research/variants/dual-tree/repro/original-Cargo.toml": "e37b6a478474e0374893b4c951bf824e37b65caed49b2944d5843e8b082cc9dc",
+      "research/variants/dual-tree/src/lib.rs": "895d16e7425af0a7ed016a45f343769188d4682055e0385d762d01b0f0f59b90",
+      "research/variants/dual-tree/storage-retention.json": "7204730d85ae1c08b93a217f0ebeba21b3b8c4cd1a4c085de3982f46a51121fa",
+      "research/variants/dual-tree/tests/oracle.rs": "3cf3df911aaf20d82fe081078b7b1e85696e32d986fc6b9df91778593c01861c",
+      "research/variants/dual-tree/tests/threaded_cohort.rs": "6c62df29805d77cb529851c756975ad87c7916d6f02b5e435699a5200d643f0f",
+      "research/variants/dual-tree/threaded-bounded64.jsonl": "5c5cd1be48e94b9787f7ed182be067b03d6e8671209f522e479b5998297cd64b",
+      "research/variants/dual-tree/threaded-contained.jsonl": "ccacde9085d1d0d5b0d3f2b0b6133f9054b89b3ee475d3b06b044a02eb212900",
+      "research/variants/dual-tree/threaded-results.json": "e8af67b7715e6276b65e57fdd9e6ae286edd5a9c7bd5df486c9641385ccac89d",
+      "research/variants/dual-tree/threaded-validation.log": "fb6a966d1d81a5314e8c5814c39c5b6d50aaa026b01fc42e11550db8ee6a97b4",
+      "research/variants/dual-tree/validation.json": "ee567e8604397f79b0d8b629da340ab26ad22c72181b6a6b66d985b53f360476",
+      "research/variants/dual-tree/validation.log": "08c5199b5861dc1f20fdf005068ec25e414f3dc68f10a7bb2663beaec3f2e256",
+      "research/variants/kdtree-plusplus/README.md": "119221edb9e6032e9fcb84b7dc49f333f65af4e7923c87bf9d54d820292461b0",
+      "research/variants/kdtree-plusplus/adapter.hpp": "d7f9b12409d3f79891e86e521daee7ef3959c001fc6c6e5b6b43b4c1e999fd9a",
+      "research/variants/kdtree-plusplus/storage-retention.json": "406f61ba39f67690bd09f332bba31c9fc22b7c23cb5bc71688e2755b6b0c4997",
+      "research/variants/radius-aware/Cargo.lock": "909ae5d44e9d34e25e4ecfa8a36820f38ed9afb693b8244bfb4b91c0ea360a7f",
+      "research/variants/radius-aware/Cargo.toml": "26735e1ec7e5441d069d4f4c318811c289e3424901641ff689cc50a2ea862289",
+      "research/variants/radius-aware/README.md": "2519756e5bb52f9187e59e439438acceeca7994e4f1ace6a704b24912c7673b7",
+      "research/variants/radius-aware/source-change.patch": "411a790c13ac375f9b644d7bf959142b9195f35e7bbafa43836f7f2ea39d4663",
+      "research/variants/radius-aware/source-provenance.json": "bd0851eea9a4211a3a42db963d40f7b0074ac71c99839e444643881fb860c23f",
+      "research/variants/radius-aware/src/hierarchy.rs": "3c8268d539e5a1a6228b10042868268c0b05fdceaede51a5dc3690f3b42accc6",
+      "research/variants/radius-aware/src/lib.rs": "40dc788c9d9fdd0cbbf54899b274f0c7039508ff2b25c2f483ad3ab99f1b0fdc",
+      "research/variants/radius-aware/storage-retention.json": "a232da826f5894c67e4c7aee725ac8ff832a6342f44de1ac54d7ef0992b594d5",
+      "research/variants/radius-aware/tests/thin.rs": "9eb93e43f79282825d4e72644ed45b5d0629b7649181307c658f33f7e8879a30",
+      "src/batch.rs": "4f98c0902c4bb2bb731f2372a4feda16fa957e93cf9554d1fdd288821c602f8f",
+      "src/hierarchy.rs": "299cd36c34e398b51832a44d83d92153b13488ddbe61293b3d8a8b5273d618ca",
+      "src/lib.rs": "39563ffe46134e55a356f16a3e0010b4f62d53045cf2a402ebb3a52ce03cc3fc",
+      "storage-retention.json": "c32c54e88f3b77952e456c08578c7d8ee488e87cb7406223a199e12cd7021c84",
+      "tests/batch.rs": "db2bf1a2dfcbfb30d8a11e469047b1de5a6523fffa4ae09790944071d4abf9e8",
+      "tests/correctness.rs": "81bfbe90ad560d7570efdbca9fed39744b11e53e5363350e9186022b34685cb2",
+      "tools/add-cpp.mjs": "e7dc33bb244f0c2eb831af816e67ac1edd99721a9870f742c8d35a6b17192626",
+      "tools/binary-fixtures.py": "bb6c3e8d517be4831ab19a2cfea8a52bc8131a766a8339249e7108c30417cc1d",
+      "tools/build-cpp.py": "825a9b0e4b96c2762d09d9459327413a778d409d2849df8ce9f503016122ecb1",
+      "tools/compare.py": "302372761c83b615e807f4de68cc12c85f15ed14a009d45633d4c7c634f674c4",
+      "tools/coverage.py": "ff8561208deafbdf19f4e3780d969318db1eba59ca8fbcc9094fd4d927ebec76",
+      "tools/discover.mjs": "10bc7da9a7fda07cc06f459336d7f00c8710e685b95fda99025279e654df19e4",
+      "tools/fetch-sources.mjs": "47871b9d40a7a7710f75d9db044598876e694027b20dfd31973bc6eb4008193c",
+      "tools/fixtures-20k.mjs": "ef30ecd1dcbe44b01f1fc79dd9e8678f87c6d9ef8e8bf584615b1b4f142d9528",
+      "tools/fixtures-cohorts.mjs": "9558127e099b63e65682c3f2e650904486721a889d8a71b9181542454b3a6dfb",
+      "tools/fixtures.mjs": "cf286c372fbff0d3b93ee00865979438696adfcb62275a0b149274ddb99f4ba1",
+      "tools/gate.py": "a2b6effe9e2deb85dcbb301971ce172b0e2bbdb26d74f01ad5b8fdc7abac9abf",
+      "tools/summarize-20k.py": "69594e5a38bc6bdd6f1baf6446d020efc40fa02a7d3a531ccf314746643a5878"
+    },
+    "toolchains": {
+      "rust": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+      "node": "v26.1.0",
+      "clang": "Apple clang version 14.0.0 (clang-1400.0.29.202)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+      "cpu": "Apple M2"
+    }
+  },
+  "artifacts": {
+    "rust": {
+      "path": "build/frozen/radius-original-workloads-v1/rust",
+      "sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094"
+    }
+  },
+  "implementations": [
+    "rill-spatial",
+    "rill-radius-1"
+  ],
+  "scenarios": [
+    "small",
+    "uniform",
+    "clusters",
+    "dense",
+    "contained",
+    "floors",
+    "boundaries",
+    "teleports",
+    "large"
+  ],
+  "fixture_directory": "benchmarks/fixtures",
+  "notes": [
+    "Other user workers left running; shared-machine diagnostics",
+    "Process RSS includes reference oracle and retained result vectors; not isolated index bytes"
+  ],
+  "output_window_queries": 64,
+  "output_windows": [
+    64
+  ],
+  "continuous_full_consumption": false,
+  "samples_per_process": 5,
+  "requested_processes": 2,
+  "rows": [
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 53666,
+          "query_ns": 14475792,
+          "results": 3786052,
+          "total_ns": 14760582,
+          "update_ns": 231124
+        },
+        {
+          "build_ns": 8916,
+          "query_ns": 11951501,
+          "results": 3786052,
+          "total_ns": 12110042,
+          "update_ns": 149625
+        },
+        {
+          "build_ns": 9375,
+          "query_ns": 11573125,
+          "results": 3786052,
+          "total_ns": 11736874,
+          "update_ns": 154374
+        },
+        {
+          "build_ns": 9500,
+          "query_ns": 11542584,
+          "results": 3786052,
+          "total_ns": 11698500,
+          "update_ns": 146416
+        },
+        {
+          "build_ns": 8875,
+          "query_ns": 11319208,
+          "results": 3786052,
+          "total_ns": 11467459,
+          "update_ns": 139376
+        }
+      ],
+      "scenario": "dense",
+      "fixture_name": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 87900160,
+      "whole_process_cpu_seconds": {
+        "user": 0.24,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/dense.json",
+        "5"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.4420658750459552
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 33667,
+          "query_ns": 14870251,
+          "results": 3786052,
+          "total_ns": 15074084,
+          "update_ns": 170166
+        },
+        {
+          "build_ns": 8917,
+          "query_ns": 12439290,
+          "results": 3786052,
+          "total_ns": 12592415,
+          "update_ns": 144208
+        },
+        {
+          "build_ns": 8792,
+          "query_ns": 12622708,
+          "results": 3786052,
+          "total_ns": 12782165,
+          "update_ns": 150665
+        },
+        {
+          "build_ns": 9500,
+          "query_ns": 12510208,
+          "results": 3786052,
+          "total_ns": 12665625,
+          "update_ns": 145917
+        },
+        {
+          "build_ns": 9042,
+          "query_ns": 12532834,
+          "results": 3786052,
+          "total_ns": 12695960,
+          "update_ns": 154084
+        }
+      ],
+      "scenario": "dense",
+      "fixture_name": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 87425024,
+      "whole_process_cpu_seconds": {
+        "user": 0.24,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/dense.json",
+        "5"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.27086195803713053
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 4583,
+          "query_ns": 19584,
+          "results": 130,
+          "total_ns": 26456,
+          "update_ns": 2289
+        },
+        {
+          "build_ns": 1166,
+          "query_ns": 16500,
+          "results": 130,
+          "total_ns": 19375,
+          "update_ns": 1709
+        },
+        {
+          "build_ns": 375,
+          "query_ns": 13666,
+          "results": 130,
+          "total_ns": 14751,
+          "update_ns": 710
+        },
+        {
+          "build_ns": 250,
+          "query_ns": 12500,
+          "results": 130,
+          "total_ns": 13460,
+          "update_ns": 710
+        },
+        {
+          "build_ns": 291,
+          "query_ns": 12543,
+          "results": 130,
+          "total_ns": 13457,
+          "update_ns": 623
+        }
+      ],
+      "scenario": "small",
+      "fixture_name": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1998848,
+      "whole_process_cpu_seconds": {
+        "user": 0.0,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/small.json",
+        "5"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.009205874986946583
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 13333,
+          "query_ns": 967959,
+          "results": 14285,
+          "total_ns": 1126667,
+          "update_ns": 145375
+        },
+        {
+          "build_ns": 8791,
+          "query_ns": 837999,
+          "results": 14285,
+          "total_ns": 965167,
+          "update_ns": 118377
+        },
+        {
+          "build_ns": 8250,
+          "query_ns": 865666,
+          "results": 14285,
+          "total_ns": 1040790,
+          "update_ns": 166874
+        },
+        {
+          "build_ns": 8625,
+          "query_ns": 817542,
+          "results": 14285,
+          "total_ns": 955291,
+          "update_ns": 129124
+        },
+        {
+          "build_ns": 8333,
+          "query_ns": 816833,
+          "results": 14285,
+          "total_ns": 947623,
+          "update_ns": 122457
+        }
+      ],
+      "scenario": "boundaries",
+      "fixture_name": "boundaries-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3670016,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/boundaries.json",
+        "5"
+      ],
+      "fixture_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "input_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.022368666948750615
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 13542,
+          "query_ns": 755459,
+          "results": 6828,
+          "total_ns": 1014458,
+          "update_ns": 245457
+        },
+        {
+          "build_ns": 8750,
+          "query_ns": 696376,
+          "results": 6828,
+          "total_ns": 916626,
+          "update_ns": 211500
+        },
+        {
+          "build_ns": 8209,
+          "query_ns": 677999,
+          "results": 6828,
+          "total_ns": 890583,
+          "update_ns": 204375
+        },
+        {
+          "build_ns": 8083,
+          "query_ns": 731916,
+          "results": 6828,
+          "total_ns": 945208,
+          "update_ns": 205209
+        },
+        {
+          "build_ns": 8541,
+          "query_ns": 732499,
+          "results": 6828,
+          "total_ns": 956332,
+          "update_ns": 215292
+        }
+      ],
+      "scenario": "teleports",
+      "fixture_name": "teleports-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3670016,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/teleports.json",
+        "5"
+      ],
+      "fixture_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "input_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.022576750023290515
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 14958,
+          "query_ns": 3728167,
+          "results": 306662,
+          "total_ns": 3899875,
+          "update_ns": 156750
+        },
+        {
+          "build_ns": 8875,
+          "query_ns": 3606293,
+          "results": 306662,
+          "total_ns": 3757708,
+          "update_ns": 142540
+        },
+        {
+          "build_ns": 10500,
+          "query_ns": 3334707,
+          "results": 306662,
+          "total_ns": 3480167,
+          "update_ns": 134960
+        },
+        {
+          "build_ns": 8667,
+          "query_ns": 3383666,
+          "results": 306662,
+          "total_ns": 3520085,
+          "update_ns": 127752
+        },
+        {
+          "build_ns": 8709,
+          "query_ns": 3531541,
+          "results": 306662,
+          "total_ns": 3678793,
+          "update_ns": 138543
+        }
+      ],
+      "scenario": "clusters",
+      "fixture_name": "clusters-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 10698752,
+      "whole_process_cpu_seconds": {
+        "user": 0.04,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/clusters.json",
+        "5"
+      ],
+      "fixture_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "input_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.051267041941173375
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 17875,
+          "query_ns": 6922874,
+          "results": 8000000,
+          "total_ns": 7111084,
+          "update_ns": 170335
+        },
+        {
+          "build_ns": 26458,
+          "query_ns": 2681709,
+          "results": 8000000,
+          "total_ns": 2904750,
+          "update_ns": 196583
+        },
+        {
+          "build_ns": 9084,
+          "query_ns": 2719250,
+          "results": 8000000,
+          "total_ns": 2878418,
+          "update_ns": 150084
+        },
+        {
+          "build_ns": 10084,
+          "query_ns": 2694376,
+          "results": 8000000,
+          "total_ns": 2865586,
+          "update_ns": 161126
+        },
+        {
+          "build_ns": 9667,
+          "query_ns": 2737541,
+          "results": 8000000,
+          "total_ns": 2900877,
+          "update_ns": 153669
+        }
+      ],
+      "scenario": "contained",
+      "fixture_name": "contained-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 134938624,
+      "whole_process_cpu_seconds": {
+        "user": 0.28,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/contained.json",
+        "5"
+      ],
+      "fixture_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "input_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.31351516698487103
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 22000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 199167,
+          "query_ns": 1282416,
+          "results": 11330,
+          "total_ns": 3337998,
+          "update_ns": 1856415
+        },
+        {
+          "build_ns": 108375,
+          "query_ns": 1317457,
+          "results": 11330,
+          "total_ns": 3092667,
+          "update_ns": 1666835
+        },
+        {
+          "build_ns": 94750,
+          "query_ns": 1368124,
+          "results": 11330,
+          "total_ns": 3100749,
+          "update_ns": 1637875
+        },
+        {
+          "build_ns": 94292,
+          "query_ns": 1270626,
+          "results": 11330,
+          "total_ns": 3003335,
+          "update_ns": 1638417
+        },
+        {
+          "build_ns": 89667,
+          "query_ns": 1288499,
+          "results": 11330,
+          "total_ns": 3080500,
+          "update_ns": 1702334
+        }
+      ],
+      "scenario": "large",
+      "fixture_name": "large-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 11599872,
+      "whole_process_cpu_seconds": {
+        "user": 0.08,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/large.json",
+        "5"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.10204462497495115
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 22000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 207625,
+          "query_ns": 1363458,
+          "results": 11330,
+          "total_ns": 3535915,
+          "update_ns": 1964832
+        },
+        {
+          "build_ns": 93667,
+          "query_ns": 1305167,
+          "results": 11330,
+          "total_ns": 3099460,
+          "update_ns": 1700626
+        },
+        {
+          "build_ns": 94000,
+          "query_ns": 1267126,
+          "results": 11330,
+          "total_ns": 3052917,
+          "update_ns": 1691791
+        },
+        {
+          "build_ns": 94750,
+          "query_ns": 1300085,
+          "results": 11330,
+          "total_ns": 3051167,
+          "update_ns": 1656332
+        },
+        {
+          "build_ns": 94250,
+          "query_ns": 1470418,
+          "results": 11330,
+          "total_ns": 3338378,
+          "update_ns": 1773710
+        }
+      ],
+      "scenario": "large",
+      "fixture_name": "large-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 11632640,
+      "whole_process_cpu_seconds": {
+        "user": 0.08,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/large.json",
+        "5"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.10387529199942946
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 24083,
+          "query_ns": 1836459,
+          "results": 24856,
+          "total_ns": 2012249,
+          "update_ns": 151707
+        },
+        {
+          "build_ns": 9125,
+          "query_ns": 1931250,
+          "results": 24856,
+          "total_ns": 2074833,
+          "update_ns": 134458
+        },
+        {
+          "build_ns": 9375,
+          "query_ns": 1733584,
+          "results": 24856,
+          "total_ns": 1884876,
+          "update_ns": 141917
+        },
+        {
+          "build_ns": 9167,
+          "query_ns": 1689250,
+          "results": 24856,
+          "total_ns": 1830709,
+          "update_ns": 132292
+        },
+        {
+          "build_ns": 8625,
+          "query_ns": 1678332,
+          "results": 24856,
+          "total_ns": 1815791,
+          "update_ns": 128834
+        }
+      ],
+      "scenario": "floors",
+      "fixture_name": "floors-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3883008,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/floors.json",
+        "5"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.029770207940600812
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 15791,
+          "query_ns": 854334,
+          "results": 6828,
+          "total_ns": 1319626,
+          "update_ns": 449501
+        },
+        {
+          "build_ns": 9042,
+          "query_ns": 728543,
+          "results": 6828,
+          "total_ns": 960627,
+          "update_ns": 223042
+        },
+        {
+          "build_ns": 8500,
+          "query_ns": 724083,
+          "results": 6828,
+          "total_ns": 940793,
+          "update_ns": 208210
+        },
+        {
+          "build_ns": 8708,
+          "query_ns": 705627,
+          "results": 6828,
+          "total_ns": 925084,
+          "update_ns": 210749
+        },
+        {
+          "build_ns": 8917,
+          "query_ns": 700293,
+          "results": 6828,
+          "total_ns": 915502,
+          "update_ns": 206292
+        }
+      ],
+      "scenario": "teleports",
+      "fixture_name": "teleports-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3850240,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/teleports.json",
+        "5"
+      ],
+      "fixture_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "input_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.023656625067815185
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 14958,
+          "query_ns": 814459,
+          "results": 6828,
+          "total_ns": 1094291,
+          "update_ns": 264874
+        },
+        {
+          "build_ns": 9292,
+          "query_ns": 830667,
+          "results": 6828,
+          "total_ns": 1080708,
+          "update_ns": 240749
+        },
+        {
+          "build_ns": 9209,
+          "query_ns": 769791,
+          "results": 6828,
+          "total_ns": 996418,
+          "update_ns": 217418
+        },
+        {
+          "build_ns": 8958,
+          "query_ns": 747416,
+          "results": 6828,
+          "total_ns": 973958,
+          "update_ns": 217584
+        },
+        {
+          "build_ns": 9375,
+          "query_ns": 733625,
+          "results": 6828,
+          "total_ns": 958956,
+          "update_ns": 215956
+        }
+      ],
+      "scenario": "teleports",
+      "fixture_name": "teleports-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3620864,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/teleports.json",
+        "5"
+      ],
+      "fixture_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "input_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.02390775003004819
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 18542,
+          "query_ns": 5633791,
+          "results": 8000000,
+          "total_ns": 5826126,
+          "update_ns": 173793
+        },
+        {
+          "build_ns": 10041,
+          "query_ns": 2659166,
+          "results": 8000000,
+          "total_ns": 2834165,
+          "update_ns": 164958
+        },
+        {
+          "build_ns": 9416,
+          "query_ns": 2634124,
+          "results": 8000000,
+          "total_ns": 2795666,
+          "update_ns": 152126
+        },
+        {
+          "build_ns": 9750,
+          "query_ns": 2696668,
+          "results": 8000000,
+          "total_ns": 2868002,
+          "update_ns": 161584
+        },
+        {
+          "build_ns": 9584,
+          "query_ns": 2869584,
+          "results": 8000000,
+          "total_ns": 3033085,
+          "update_ns": 153917
+        }
+      ],
+      "scenario": "contained",
+      "fixture_name": "contained-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 135069696,
+      "whole_process_cpu_seconds": {
+        "user": 0.28,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/contained.json",
+        "5"
+      ],
+      "fixture_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "input_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.3101843750337139
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 15583,
+          "query_ns": 996250,
+          "results": 14285,
+          "total_ns": 1165583,
+          "update_ns": 153750
+        },
+        {
+          "build_ns": 9083,
+          "query_ns": 854958,
+          "results": 14285,
+          "total_ns": 997915,
+          "update_ns": 133874
+        },
+        {
+          "build_ns": 8541,
+          "query_ns": 857918,
+          "results": 14285,
+          "total_ns": 992041,
+          "update_ns": 125582
+        },
+        {
+          "build_ns": 9000,
+          "query_ns": 942583,
+          "results": 14285,
+          "total_ns": 1132084,
+          "update_ns": 180501
+        },
+        {
+          "build_ns": 8958,
+          "query_ns": 885167,
+          "results": 14285,
+          "total_ns": 1036916,
+          "update_ns": 142791
+        }
+      ],
+      "scenario": "boundaries",
+      "fixture_name": "boundaries-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3702784,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/boundaries.json",
+        "5"
+      ],
+      "fixture_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "input_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.024162875022739172
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 14458,
+          "query_ns": 819874,
+          "results": 6672,
+          "total_ns": 982042,
+          "update_ns": 147710
+        },
+        {
+          "build_ns": 9500,
+          "query_ns": 751999,
+          "results": 6672,
+          "total_ns": 892709,
+          "update_ns": 131210
+        },
+        {
+          "build_ns": 9208,
+          "query_ns": 735166,
+          "results": 6672,
+          "total_ns": 869207,
+          "update_ns": 124833
+        },
+        {
+          "build_ns": 9375,
+          "query_ns": 712874,
+          "results": 6672,
+          "total_ns": 851042,
+          "update_ns": 128793
+        },
+        {
+          "build_ns": 9583,
+          "query_ns": 868375,
+          "results": 6672,
+          "total_ns": 1002875,
+          "update_ns": 124917
+        }
+      ],
+      "scenario": "uniform",
+      "fixture_name": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3424256,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/uniform.json",
+        "5"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.024285875027999282
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 14333,
+          "query_ns": 809085,
+          "results": 6672,
+          "total_ns": 972126,
+          "update_ns": 148708
+        },
+        {
+          "build_ns": 9666,
+          "query_ns": 752875,
+          "results": 6672,
+          "total_ns": 892665,
+          "update_ns": 130124
+        },
+        {
+          "build_ns": 9416,
+          "query_ns": 722418,
+          "results": 6672,
+          "total_ns": 857667,
+          "update_ns": 125833
+        },
+        {
+          "build_ns": 9125,
+          "query_ns": 709917,
+          "results": 6672,
+          "total_ns": 847877,
+          "update_ns": 128835
+        },
+        {
+          "build_ns": 9250,
+          "query_ns": 708083,
+          "results": 6672,
+          "total_ns": 839666,
+          "update_ns": 122333
+        }
+      ],
+      "scenario": "uniform",
+      "fixture_name": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3424256,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/uniform.json",
+        "5"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.023864875081926584
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 26083,
+          "query_ns": 1818501,
+          "results": 24856,
+          "total_ns": 1990334,
+          "update_ns": 145750
+        },
+        {
+          "build_ns": 9125,
+          "query_ns": 1760416,
+          "results": 24856,
+          "total_ns": 1896417,
+          "update_ns": 126876
+        },
+        {
+          "build_ns": 9000,
+          "query_ns": 1667709,
+          "results": 24856,
+          "total_ns": 1800917,
+          "update_ns": 124208
+        },
+        {
+          "build_ns": 8625,
+          "query_ns": 1692124,
+          "results": 24856,
+          "total_ns": 1827206,
+          "update_ns": 126457
+        },
+        {
+          "build_ns": 8584,
+          "query_ns": 1793207,
+          "results": 24856,
+          "total_ns": 1982791,
+          "update_ns": 181000
+        }
+      ],
+      "scenario": "floors",
+      "fixture_name": "floors-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3817472,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/floors.json",
+        "5"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.029689916060306132
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 22000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 189834,
+          "query_ns": 1330290,
+          "results": 11330,
+          "total_ns": 3408499,
+          "update_ns": 1888375
+        },
+        {
+          "build_ns": 91250,
+          "query_ns": 1243626,
+          "results": 11330,
+          "total_ns": 2951956,
+          "update_ns": 1617080
+        },
+        {
+          "build_ns": 90458,
+          "query_ns": 1221082,
+          "results": 11330,
+          "total_ns": 2885873,
+          "update_ns": 1574333
+        },
+        {
+          "build_ns": 90541,
+          "query_ns": 1262958,
+          "results": 11330,
+          "total_ns": 2915165,
+          "update_ns": 1561666
+        },
+        {
+          "build_ns": 90833,
+          "query_ns": 1225084,
+          "results": 11330,
+          "total_ns": 2877168,
+          "update_ns": 1561251
+        }
+      ],
+      "scenario": "large",
+      "fixture_name": "large-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 11599872,
+      "whole_process_cpu_seconds": {
+        "user": 0.08,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/large.json",
+        "5"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.10302587493788451
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 21917,
+          "query_ns": 1732667,
+          "results": 24856,
+          "total_ns": 1904333,
+          "update_ns": 149749
+        },
+        {
+          "build_ns": 8584,
+          "query_ns": 1581958,
+          "results": 24856,
+          "total_ns": 1715834,
+          "update_ns": 125292
+        },
+        {
+          "build_ns": 8500,
+          "query_ns": 1541167,
+          "results": 24856,
+          "total_ns": 1677915,
+          "update_ns": 128248
+        },
+        {
+          "build_ns": 9333,
+          "query_ns": 1551542,
+          "results": 24856,
+          "total_ns": 1681667,
+          "update_ns": 120792
+        },
+        {
+          "build_ns": 7916,
+          "query_ns": 1536208,
+          "results": 24856,
+          "total_ns": 1663791,
+          "update_ns": 119667
+        }
+      ],
+      "scenario": "floors",
+      "fixture_name": "floors-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3833856,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/floors.json",
+        "5"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.028060041018761694
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 14833,
+          "query_ns": 912873,
+          "results": 14285,
+          "total_ns": 1070040,
+          "update_ns": 142334
+        },
+        {
+          "build_ns": 8625,
+          "query_ns": 837710,
+          "results": 14285,
+          "total_ns": 965084,
+          "update_ns": 118749
+        },
+        {
+          "build_ns": 8250,
+          "query_ns": 812832,
+          "results": 14285,
+          "total_ns": 936749,
+          "update_ns": 115667
+        },
+        {
+          "build_ns": 8167,
+          "query_ns": 797625,
+          "results": 14285,
+          "total_ns": 923958,
+          "update_ns": 118166
+        },
+        {
+          "build_ns": 9459,
+          "query_ns": 846916,
+          "results": 14285,
+          "total_ns": 969754,
+          "update_ns": 113379
+        }
+      ],
+      "scenario": "boundaries",
+      "fixture_name": "boundaries-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3653632,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/boundaries.json",
+        "5"
+      ],
+      "fixture_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "input_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.02254770800936967
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 13125,
+          "query_ns": 940292,
+          "results": 14285,
+          "total_ns": 1091626,
+          "update_ns": 138209
+        },
+        {
+          "build_ns": 8334,
+          "query_ns": 856166,
+          "results": 14285,
+          "total_ns": 983416,
+          "update_ns": 118916
+        },
+        {
+          "build_ns": 8625,
+          "query_ns": 862417,
+          "results": 14285,
+          "total_ns": 997417,
+          "update_ns": 126375
+        },
+        {
+          "build_ns": 8500,
+          "query_ns": 818793,
+          "results": 14285,
+          "total_ns": 942709,
+          "update_ns": 115416
+        },
+        {
+          "build_ns": 8375,
+          "query_ns": 815000,
+          "results": 14285,
+          "total_ns": 935125,
+          "update_ns": 111750
+        }
+      ],
+      "scenario": "boundaries",
+      "fixture_name": "boundaries-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3670016,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/boundaries.json",
+        "5"
+      ],
+      "fixture_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "input_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.02290537499357015
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 23167,
+          "query_ns": 13808499,
+          "results": 3786052,
+          "total_ns": 14020582,
+          "update_ns": 188916
+        },
+        {
+          "build_ns": 9250,
+          "query_ns": 11373166,
+          "results": 3786052,
+          "total_ns": 11527083,
+          "update_ns": 144667
+        },
+        {
+          "build_ns": 9541,
+          "query_ns": 11485291,
+          "results": 3786052,
+          "total_ns": 11641081,
+          "update_ns": 146249
+        },
+        {
+          "build_ns": 9500,
+          "query_ns": 11448291,
+          "results": 3786052,
+          "total_ns": 11606247,
+          "update_ns": 148456
+        },
+        {
+          "build_ns": 9291,
+          "query_ns": 11471291,
+          "results": 3786052,
+          "total_ns": 11623292,
+          "update_ns": 142710
+        }
+      ],
+      "scenario": "dense",
+      "fixture_name": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 87719936,
+      "whole_process_cpu_seconds": {
+        "user": 0.24,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/dense.json",
+        "5"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.26491204102057964
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 3458,
+          "query_ns": 20458,
+          "results": 130,
+          "total_ns": 25085,
+          "update_ns": 1169
+        },
+        {
+          "build_ns": 1208,
+          "query_ns": 16833,
+          "results": 130,
+          "total_ns": 19543,
+          "update_ns": 1502
+        },
+        {
+          "build_ns": 375,
+          "query_ns": 13417,
+          "results": 130,
+          "total_ns": 14376,
+          "update_ns": 584
+        },
+        {
+          "build_ns": 334,
+          "query_ns": 12167,
+          "results": 130,
+          "total_ns": 13127,
+          "update_ns": 626
+        },
+        {
+          "build_ns": 334,
+          "query_ns": 12125,
+          "results": 130,
+          "total_ns": 13085,
+          "update_ns": 626
+        }
+      ],
+      "scenario": "small",
+      "fixture_name": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1982464,
+      "whole_process_cpu_seconds": {
+        "user": 0.0,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/small.json",
+        "5"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.010120542021468282
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 15333,
+          "query_ns": 735249,
+          "results": 6672,
+          "total_ns": 896788,
+          "update_ns": 146206
+        },
+        {
+          "build_ns": 8334,
+          "query_ns": 654750,
+          "results": 6672,
+          "total_ns": 783627,
+          "update_ns": 120543
+        },
+        {
+          "build_ns": 8292,
+          "query_ns": 638499,
+          "results": 6672,
+          "total_ns": 761665,
+          "update_ns": 114874
+        },
+        {
+          "build_ns": 8292,
+          "query_ns": 656959,
+          "results": 6672,
+          "total_ns": 781585,
+          "update_ns": 116334
+        },
+        {
+          "build_ns": 8875,
+          "query_ns": 680125,
+          "results": 6672,
+          "total_ns": 811874,
+          "update_ns": 122874
+        }
+      ],
+      "scenario": "uniform",
+      "fixture_name": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3489792,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/uniform.json",
+        "5"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.61 3.76 4.11 }",
+      "process_wall_seconds": 0.022200958104804158
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 20166,
+          "query_ns": 5447334,
+          "results": 8000000,
+          "total_ns": 5634249,
+          "update_ns": 166749
+        },
+        {
+          "build_ns": 9875,
+          "query_ns": 2708292,
+          "results": 8000000,
+          "total_ns": 2879749,
+          "update_ns": 161582
+        },
+        {
+          "build_ns": 9041,
+          "query_ns": 2564376,
+          "results": 8000000,
+          "total_ns": 2706874,
+          "update_ns": 133457
+        },
+        {
+          "build_ns": 9709,
+          "query_ns": 2553833,
+          "results": 8000000,
+          "total_ns": 2699458,
+          "update_ns": 135916
+        },
+        {
+          "build_ns": 8875,
+          "query_ns": 2642625,
+          "results": 8000000,
+          "total_ns": 2790417,
+          "update_ns": 138917
+        }
+      ],
+      "scenario": "contained",
+      "fixture_name": "contained-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 134889472,
+      "whole_process_cpu_seconds": {
+        "user": 0.27,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/contained.json",
+        "5"
+      ],
+      "fixture_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "input_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.29376875003799796
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 15167,
+          "query_ns": 729500,
+          "results": 6672,
+          "total_ns": 887250,
+          "update_ns": 142583
+        },
+        {
+          "build_ns": 8292,
+          "query_ns": 673502,
+          "results": 6672,
+          "total_ns": 801460,
+          "update_ns": 119666
+        },
+        {
+          "build_ns": 8333,
+          "query_ns": 689208,
+          "results": 6672,
+          "total_ns": 812582,
+          "update_ns": 115041
+        },
+        {
+          "build_ns": 8917,
+          "query_ns": 639583,
+          "results": 6672,
+          "total_ns": 767582,
+          "update_ns": 119082
+        },
+        {
+          "build_ns": 8375,
+          "query_ns": 653500,
+          "results": 6672,
+          "total_ns": 773416,
+          "update_ns": 111541
+        }
+      ],
+      "scenario": "uniform",
+      "fixture_name": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3473408,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/uniform.json",
+        "5"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.021060375031083822
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 22000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 187166,
+          "query_ns": 1327791,
+          "results": 11330,
+          "total_ns": 3281207,
+          "update_ns": 1766250
+        },
+        {
+          "build_ns": 91167,
+          "query_ns": 1273124,
+          "results": 11330,
+          "total_ns": 3009293,
+          "update_ns": 1645002
+        },
+        {
+          "build_ns": 92333,
+          "query_ns": 1241293,
+          "results": 11330,
+          "total_ns": 2951918,
+          "update_ns": 1618292
+        },
+        {
+          "build_ns": 90333,
+          "query_ns": 1258168,
+          "results": 11330,
+          "total_ns": 2925291,
+          "update_ns": 1576790
+        },
+        {
+          "build_ns": 90916,
+          "query_ns": 1229166,
+          "results": 11330,
+          "total_ns": 2889791,
+          "update_ns": 1569709
+        }
+      ],
+      "scenario": "large",
+      "fixture_name": "large-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 11599872,
+      "whole_process_cpu_seconds": {
+        "user": 0.08,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/large.json",
+        "5"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.0983820001129061
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 20500,
+          "query_ns": 1763751,
+          "results": 24856,
+          "total_ns": 1951251,
+          "update_ns": 167000
+        },
+        {
+          "build_ns": 8625,
+          "query_ns": 1651501,
+          "results": 24856,
+          "total_ns": 1781626,
+          "update_ns": 121500
+        },
+        {
+          "build_ns": 9208,
+          "query_ns": 1609292,
+          "results": 24856,
+          "total_ns": 1739417,
+          "update_ns": 120917
+        },
+        {
+          "build_ns": 8250,
+          "query_ns": 1615792,
+          "results": 24856,
+          "total_ns": 1740751,
+          "update_ns": 116709
+        },
+        {
+          "build_ns": 8583,
+          "query_ns": 1609916,
+          "results": 24856,
+          "total_ns": 1736208,
+          "update_ns": 117709
+        }
+      ],
+      "scenario": "floors",
+      "fixture_name": "floors-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3801088,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/floors.json",
+        "5"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.02743166603613645
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 12833,
+          "query_ns": 3683000,
+          "results": 306662,
+          "total_ns": 3845623,
+          "update_ns": 149790
+        },
+        {
+          "build_ns": 8625,
+          "query_ns": 3497042,
+          "results": 306662,
+          "total_ns": 3635666,
+          "update_ns": 129999
+        },
+        {
+          "build_ns": 8833,
+          "query_ns": 3375042,
+          "results": 306662,
+          "total_ns": 3511542,
+          "update_ns": 127667
+        },
+        {
+          "build_ns": 8125,
+          "query_ns": 3279040,
+          "results": 306662,
+          "total_ns": 3409083,
+          "update_ns": 121918
+        },
+        {
+          "build_ns": 9167,
+          "query_ns": 3424043,
+          "results": 306662,
+          "total_ns": 3563920,
+          "update_ns": 130710
+        }
+      ],
+      "scenario": "clusters",
+      "fixture_name": "clusters-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 10715136,
+      "whole_process_cpu_seconds": {
+        "user": 0.03,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/clusters.json",
+        "5"
+      ],
+      "fixture_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "input_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.04944612493272871
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 13791,
+          "query_ns": 14691084,
+          "results": 3786052,
+          "total_ns": 14859916,
+          "update_ns": 155041
+        },
+        {
+          "build_ns": 8625,
+          "query_ns": 12613124,
+          "results": 3786052,
+          "total_ns": 12759666,
+          "update_ns": 137917
+        },
+        {
+          "build_ns": 9041,
+          "query_ns": 12346043,
+          "results": 3786052,
+          "total_ns": 12498251,
+          "update_ns": 143167
+        },
+        {
+          "build_ns": 9209,
+          "query_ns": 12339375,
+          "results": 3786052,
+          "total_ns": 12483916,
+          "update_ns": 135332
+        },
+        {
+          "build_ns": 8958,
+          "query_ns": 12720583,
+          "results": 3786052,
+          "total_ns": 12875164,
+          "update_ns": 145623
+        }
+      ],
+      "scenario": "dense",
+      "fixture_name": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 87523328,
+      "whole_process_cpu_seconds": {
+        "user": 0.24,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/dense.json",
+        "5"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.2612434169277549
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 13625,
+          "query_ns": 3533875,
+          "results": 306662,
+          "total_ns": 3703252,
+          "update_ns": 155752
+        },
+        {
+          "build_ns": 8416,
+          "query_ns": 3307874,
+          "results": 306662,
+          "total_ns": 3443707,
+          "update_ns": 127417
+        },
+        {
+          "build_ns": 8833,
+          "query_ns": 3507250,
+          "results": 306662,
+          "total_ns": 3643415,
+          "update_ns": 127332
+        },
+        {
+          "build_ns": 8625,
+          "query_ns": 3251916,
+          "results": 306662,
+          "total_ns": 3384791,
+          "update_ns": 124250
+        },
+        {
+          "build_ns": 8250,
+          "query_ns": 3238125,
+          "results": 306662,
+          "total_ns": 3369625,
+          "update_ns": 123250
+        }
+      ],
+      "scenario": "clusters",
+      "fixture_name": "clusters-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 10715136,
+      "whole_process_cpu_seconds": {
+        "user": 0.03,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/clusters.json",
+        "5"
+      ],
+      "fixture_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "input_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.04878449998795986
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 3000,
+          "query_ns": 22626,
+          "results": 130,
+          "total_ns": 26666,
+          "update_ns": 1040
+        },
+        {
+          "build_ns": 1125,
+          "query_ns": 14334,
+          "results": 130,
+          "total_ns": 17001,
+          "update_ns": 1542
+        },
+        {
+          "build_ns": 333,
+          "query_ns": 15624,
+          "results": 130,
+          "total_ns": 16667,
+          "update_ns": 710
+        },
+        {
+          "build_ns": 334,
+          "query_ns": 12834,
+          "results": 130,
+          "total_ns": 13834,
+          "update_ns": 666
+        },
+        {
+          "build_ns": 292,
+          "query_ns": 12042,
+          "results": 130,
+          "total_ns": 12874,
+          "update_ns": 540
+        }
+      ],
+      "scenario": "small",
+      "fixture_name": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2015232,
+      "whole_process_cpu_seconds": {
+        "user": 0.0,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/small.json",
+        "5"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.008242124924436212
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 14542,
+          "query_ns": 3553959,
+          "results": 306662,
+          "total_ns": 3728710,
+          "update_ns": 160209
+        },
+        {
+          "build_ns": 8959,
+          "query_ns": 3436208,
+          "results": 306662,
+          "total_ns": 3571792,
+          "update_ns": 126625
+        },
+        {
+          "build_ns": 9417,
+          "query_ns": 3383667,
+          "results": 306662,
+          "total_ns": 3530585,
+          "update_ns": 137501
+        },
+        {
+          "build_ns": 8208,
+          "query_ns": 3247999,
+          "results": 306662,
+          "total_ns": 3379164,
+          "update_ns": 122957
+        },
+        {
+          "build_ns": 8375,
+          "query_ns": 3244250,
+          "results": 306662,
+          "total_ns": 3376043,
+          "update_ns": 123418
+        }
+      ],
+      "scenario": "clusters",
+      "fixture_name": "clusters-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 10764288,
+      "whole_process_cpu_seconds": {
+        "user": 0.03,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/clusters.json",
+        "5"
+      ],
+      "fixture_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "input_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.049204499926418066
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 3833,
+          "query_ns": 22251,
+          "results": 130,
+          "total_ns": 27957,
+          "update_ns": 1873
+        },
+        {
+          "build_ns": 1083,
+          "query_ns": 14625,
+          "results": 130,
+          "total_ns": 17331,
+          "update_ns": 1623
+        },
+        {
+          "build_ns": 375,
+          "query_ns": 15958,
+          "results": 130,
+          "total_ns": 17003,
+          "update_ns": 670
+        },
+        {
+          "build_ns": 333,
+          "query_ns": 12915,
+          "results": 130,
+          "total_ns": 13915,
+          "update_ns": 667
+        },
+        {
+          "build_ns": 291,
+          "query_ns": 12001,
+          "results": 130,
+          "total_ns": 12957,
+          "update_ns": 665
+        }
+      ],
+      "scenario": "small",
+      "fixture_name": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2031616,
+      "whole_process_cpu_seconds": {
+        "user": 0.0,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/small.json",
+        "5"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.008402292034588754
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 14625,
+          "query_ns": 5401542,
+          "results": 8000000,
+          "total_ns": 5559500,
+          "update_ns": 143333
+        },
+        {
+          "build_ns": 8709,
+          "query_ns": 2636126,
+          "results": 8000000,
+          "total_ns": 2782502,
+          "update_ns": 137667
+        },
+        {
+          "build_ns": 9791,
+          "query_ns": 2529375,
+          "results": 8000000,
+          "total_ns": 2680708,
+          "update_ns": 141542
+        },
+        {
+          "build_ns": 8875,
+          "query_ns": 2537500,
+          "results": 8000000,
+          "total_ns": 2678834,
+          "update_ns": 132459
+        },
+        {
+          "build_ns": 9084,
+          "query_ns": 2553708,
+          "results": 8000000,
+          "total_ns": 2692459,
+          "update_ns": 129667
+        }
+      ],
+      "scenario": "contained",
+      "fixture_name": "contained-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 134938624,
+      "whole_process_cpu_seconds": {
+        "user": 0.26,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/contained.json",
+        "5"
+      ],
+      "fixture_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "input_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.2970960409147665
+    },
+    {
+      "correct": true,
+      "implementation": "rill-radius-1",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 11916,
+          "query_ns": 763167,
+          "results": 6828,
+          "total_ns": 1018082,
+          "update_ns": 242999
+        },
+        {
+          "build_ns": 8500,
+          "query_ns": 719791,
+          "results": 6828,
+          "total_ns": 943624,
+          "update_ns": 215333
+        },
+        {
+          "build_ns": 8542,
+          "query_ns": 706500,
+          "results": 6828,
+          "total_ns": 924543,
+          "update_ns": 209501
+        },
+        {
+          "build_ns": 8667,
+          "query_ns": 717625,
+          "results": 6828,
+          "total_ns": 966877,
+          "update_ns": 240585
+        },
+        {
+          "build_ns": 8541,
+          "query_ns": 699667,
+          "results": 6828,
+          "total_ns": 921877,
+          "update_ns": 213669
+        }
+      ],
+      "scenario": "teleports",
+      "fixture_name": "teleports-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3620864,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/radius-original-workloads-v1/rust",
+        "rill-radius-1",
+        "benchmarks/fixtures/teleports.json",
+        "5"
+      ],
+      "fixture_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "input_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "artifact_sha256": "1f54ef8e5ab2cdebceeb51259b0d3b620baa8f197d7c81339a3171f9c1e0a094",
+      "load_average": "{ 3.48 3.73 4.10 }",
+      "process_wall_seconds": 0.021783499978482723
+    }
+  ]
+}

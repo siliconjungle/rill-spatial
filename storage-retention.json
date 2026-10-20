@@ -372,6 +372,66 @@
     {
       "path": "build/frozen/twenty-k-holdout-v3/rust",
       "reason": "Exact selected protocolv3 executable; source preserved at7c9f201"
+    },
+    {
+      "path": "results/radius-original-workloads-v1.json",
+      "reason": "Selected complete exact-proof and performance baseline for topology/cohort experiment; retain exact executable and source in Git"
+    },
+    {
+      "path": "results/twenty-k-cohort-summary-v1.json",
+      "reason": "Selected complete exact-proof and performance baseline for topology/cohort experiment; retain exact executable and source in Git"
+    },
+    {
+      "path": "results/twenty-k-cohorts-v1.json",
+      "reason": "Selected complete exact-proof and performance baseline for topology/cohort experiment; retain exact executable and source in Git"
+    },
+    {
+      "path": "results/twenty-k-radius-holdout-summary-v1.json",
+      "reason": "Selected complete exact-proof and performance baseline for topology/cohort experiment; retain exact executable and source in Git"
+    },
+    {
+      "path": "results/twenty-k-radius-holdout-v1.json",
+      "reason": "Selected complete exact-proof and performance baseline for topology/cohort experiment; retain exact executable and source in Git"
+    },
+    {
+      "path": "results/twenty-k-radius-summary-v1.json",
+      "reason": "Selected complete exact-proof and performance baseline for topology/cohort experiment; retain exact executable and source in Git"
+    },
+    {
+      "path": "results/twenty-k-radius-v1.json",
+      "reason": "Selected complete exact-proof and performance baseline for topology/cohort experiment; retain exact executable and source in Git"
+    },
+    {
+      "path": "build/frozen/radius-original-workloads-v1/rust",
+      "reason": "Selected complete exact-proof and performance baseline for topology/cohort experiment; retain exact executable and source in Git"
+    },
+    {
+      "path": "build/frozen/twenty-k-cohorts-v1/rust",
+      "reason": "Selected complete exact-proof and performance baseline for topology/cohort experiment; retain exact executable and source in Git"
+    },
+    {
+      "path": "build/frozen/twenty-k-radius-holdout-v1/rust",
+      "reason": "Selected complete exact-proof and performance baseline for topology/cohort experiment; retain exact executable and source in Git"
+    },
+    {
+      "path": "build/frozen/twenty-k-radius-v1/rust",
+      "reason": "Selected complete exact-proof and performance baseline for topology/cohort experiment; retain exact executable and source in Git"
+    },
+    {
+      "path": "research/variants/radius-auto",
+      "reason": "Selected adaptive-output candidate source and required correctness/validation proofs"
+    },
+    {
+      "path": "results/validation-auto-release.log",
+      "reason": "Selected adaptive-output candidate source and required correctness/validation proofs"
+    },
+    {
+      "path": "results/validation-auto-scalar.log",
+      "reason": "Selected adaptive-output candidate source and required correctness/validation proofs"
+    },
+    {
+      "path": "results/validation-auto-harness.log",
+      "reason": "Selected adaptive-output candidate source and required correctness/validation proofs"
     }
   ],
   "safe_to_remove": [

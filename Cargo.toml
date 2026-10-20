@@ -12,7 +12,7 @@ exclude = ["build/", "research/", "results/", "benchmarks/", "tools/"]
 
 [workspace]
 members = ["benchmarks"]
-exclude = ["research/variants/cell-readview", "research/variants/dual-tree", "research/variants/radius-aware"]
+exclude = ["research/variants/cell-readview", "research/variants/dual-tree", "research/variants/radius-aware", "research/variants/radius-auto"]
 default-members = ["."]
 resolver = "3"
 

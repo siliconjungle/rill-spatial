@@ -36,6 +36,10 @@
     {
       "path": "holdout-plan.json",
       "reason": "Preselected independent20k seed/profiles registered before tuning resource combinations"
+    },
+    {
+      "path": "results.md",
+      "reason": "Selected measured stage conclusions and limitations"
     }
   ],
   "safe_to_remove": []

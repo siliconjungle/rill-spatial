@@ -32,3 +32,5 @@ rill-cells = { package = "cell-readview-candidate", path = "../research/variants
 rill-dual = { package = "rill-spatial-dual-tree", path = "../research/variants/dual-tree" }
 
 rill-radius = { package = "radius-aware-candidate", path = "../research/variants/radius-aware" }
+
+rill-auto = { package = "radius-auto-candidate", path = "../research/variants/radius-auto" }

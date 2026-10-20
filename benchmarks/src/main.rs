@@ -175,6 +175,8 @@ fn main() {
     use rust_adapters::*;
     match args[1].as_str() {
         "rill-spatial" => run::<Rill>(&args[1], &fixture, samples),
+        "rill-auto-1" => run::<studies::AutoOutput<1>>(&args[1], &fixture, samples),
+        "rill-auto-4" => run::<studies::AutoOutput<4>>(&args[1], &fixture, samples),
         "rill-radius-1" => run::<studies::RadiusAware<1>>(&args[1], &fixture, samples),
         "rill-radius-4" => run::<studies::RadiusAware<4>>(&args[1], &fixture, samples),
         "rill-parallel-1" => run::<studies::PublicParallel<1>>(&args[1], &fixture, samples),

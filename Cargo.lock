@@ -671,6 +671,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "radius-auto-candidate"
+version = "0.1.0"
+dependencies = [
+ "wide",
+]
+
+[[package]]
 name = "radius-aware-candidate"
 version = "0.1.0"
 dependencies = [
@@ -735,6 +742,7 @@ dependencies = [
  "petal-neighbors",
  "quadtree-f32",
  "quadtree_rs",
+ "radius-auto-candidate",
  "radius-aware-candidate",
  "rill-spatial",
  "rill-spatial-dual-tree",

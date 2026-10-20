@@ -1,0 +1,62 @@
+   Compiling radius-auto-candidate v0.1.0 (/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/radius-auto)
+    Finished `release` profile [optimized] target(s) in 10.99s
+     Running unittests src/lib.rs (build/target/release/deps/rill_spatial-70c8a597ba07b496)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/adaptive.rs (build/target/release/deps/adaptive-551993d4e0fa9931)
+
+running 6 tests
+test late_invalid_query_emits_nothing_in_large_adaptive_batch ... ok
+test sparse_samples_keep_configured_window_and_complete_empty_rows ... ok
+test uneven_query_count_samples_floor_three_quarters ... ok
+test fewer_than_1024_queries_keep_configured_window ... ok
+test dense_1024_queries_shrink_to_eight_rows_without_extra_emissions ... ok
+test missed_dense_hotspots_are_exact_and_can_exceed_soft_target ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+     Running ../../../tests/batch.rs (build/target/release/deps/batch-45f9eca5160cdd64)
+
+running 6 tests
+test batch_invalid_input_has_no_callbacks ... ok
+test parallel_callbacks_overlap_and_caller_participates ... ok
+test parallel_callback_requires_sync_without_requiring_send ... ok
+test callback_panic_unwinds_and_index_remains_usable ... ok
+test parallel_callback_panic_unwinds_and_index_remains_usable ... ok
+test batch_full_membership_across_workers_epochs_and_dimensions ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running ../../../tests/correctness.rs (build/target/release/deps/correctness-e275f63a12e8eab0)
+
+running 9 tests
+test closed_boundary_duplicates_and_clear ... ok
+test exceptional_scales_do_not_overflow_or_lose_points ... ok
+test bulk_points_replace_duplicate_ids_and_survive_structural_changes ... ok
+test invalid_inputs_are_atomic ... ok
+test independent_parallel_reads ... ok
+test prepared_queries_match_ordered_f64_at_boundaries_and_scales ... ok
+test prepared_motion_matches_unprepared_with_stable_and_sparse_ids ... ok
+test random_mutations_2d ... ok
+test random_mutations_3d ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running ../radius-aware/tests/thin.rs (build/target/release/deps/thin-831c3e6c1d5bbdd5)
+
+running 3 tests
+test all_axes_below_hint_falls_back_to_full_axis_tree ... ok
+test thin_2d_corridor_disabled_y_and_arbitrary_radii ... ok
+test thin_3d_slab_disabled_z_faces_boundaries_and_axis_transition ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+   Doc-tests rill_spatial
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

@@ -27,7 +27,14 @@
       "concurrencyKey": "main-integration",
       "status": "running",
       "agent": "root",
-      "phase": "bounded drivers, buffer-window sweep, competitor coverage"
+      "phase": "interpret v3 and radius/cohort results; validate adaptive window and measure serially"
+    },
+    {
+      "id": "adaptive_output",
+      "concurrencyKey": "auto-output",
+      "status": "running",
+      "agent": "/root/dual_tree",
+      "phase": "source-only exact adaptive-window candidate; no concurrent benchmark jobs"
     }
   ]
 }

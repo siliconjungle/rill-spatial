@@ -72,3 +72,58 @@ consumer's reduction SIMD-friendly. A direct wrapping-arithmetic equivalence
 test passes, including overflowing u64 inputs. All implementations receive the
 same consumer. A v2→v3 timing difference is not an index-algorithm speedup and
 must not be presented as one. Binary/protocol identities remain separate.
+
+
+## Uninterrupted v3 baseline and independent holdout
+
+The v3 baseline/window/seed97531 holdout studies completed 143 jobs, all passing
+full parallel-path query identity and membership proofs. On this shared Apple M2
+8 GiB host, four-worker public Rill with a 64-query output window gave:
+
+| 20k profile | Mean matches/query | Median query frame (ms) | Worst observed (ms) |
+|---|---:|---:|---:|
+| Uniform | 7.6 | 4.50 | 5.38 |
+| Ordinary density | 69.3 | 6.79 | 7.67 |
+| Crowd | 544.8 | 19.32 | 21.61 |
+| All visible | 20,000 | 50.12 | 55.19 |
+| Floors | 14.7 | 5.64 | 6.49 |
+| Teleports | 69.6 | 7.55 | 8.03 |
+| 100k targets, 20k observers | 85.7 | 12.37 | 16.65 |
+
+Rill led the three selected external indexes (Kiddo, static AABB, packed R-tree)
+at equal four-worker resources on these seven profiles and on the four independent
+holdout profiles. This is a selected screen, not the original all-library gate:
+only two fresh processes per baseline pair, incomplete competitor coverage, and a
+changed output contract. The holdout crowded frame median was 20.71 ms, so a
+20,000-query burst still exceeds a 60 Hz simulation-frame allowance. The all-visible
+window sweep favored eight-query groups (33.91 ms median), while ordinary/crowded
+scenes favored 64. Different binaries and protocols remain separate in raw reports.
+
+## Tree topology and observer cohorts
+
+A global radius-hinted active-axis topology candidate passed the existing 15
+library tests plus three targeted thin-world suites in scalar/release modes.
+The subsequent primary, independent holdout, original nine-workload and cohort
+studies completed another 120 full-proof jobs. It improved several crowded scenes
+but gave mixed results elsewhere; the public tree topology remains unchanged.
+It is retained as an experimental fork rather than promoted as a universal gain.
+
+The cohort fixture assigns each observer a deterministic phase in a three-frame
+cycle. Every observer still receives two complete relevance queries over six
+60 Hz simulation frames (20 Hz per observer), with all frame updates charged.
+This changes client phase and the position epoch observed; it is a separate
+infrastructure choice, not the same-epoch benchmark accelerated by division.
+
+| Cohort profile, public baseline | Median service/frame (ms) | Worst observed (ms) | Observed 16.67 ms misses |
+|---|---:|---:|---:|
+| Ordinary density, mean 69 matches | 2.18 | 5.19 | 0 / 36 |
+| Crowd, mean 545 matches | 6.64 | 8.93 | 0 / 36 |
+| All visible, 20,000 matches | 21.64 | 26.28 | 36 / 36 |
+
+These are six-frame traces, three samples in each of two fresh processes. No
+clock pacing, offered-load queue, sockets, game simulation or encoding is present.
+Motion is tested; structural insert/remove throughput is not yet a performance
+proof. An adaptive output-window candidate is the next isolated experiment:
+retain the public geometry, sample output density, and reduce worker-local rows
+only where complete materialized output would otherwise exceed a soft cache
+budget. Sampling overhead must remain charged.

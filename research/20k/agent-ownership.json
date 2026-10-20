@@ -62,6 +62,14 @@
         "research/variants/radius-aware"
       ],
       "acceptance": "Minimal exact topology fork and targeted thin-world2D/3D oracle sources; root validates and measures serially"
+    },
+    {
+      "task": "dual_tree",
+      "lane": "adaptiveoutputfollowup",
+      "owns": [
+        "research/variants/radius-auto"
+      ],
+      "acceptance": "Original public geometry; adaptive soft output-cache window only; exact full-path tests, serial paired measurements by root"
     }
   ],
   "shared_read_only_inputs": [

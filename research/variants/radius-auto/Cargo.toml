@@ -1,0 +1,54 @@
+[package]
+name = "radius-auto-candidate"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+publish = false
+license = "MIT OR Apache-2.0"
+description = "Source-only original root geometry plus sampled adaptive output windows"
+
+[workspace]
+
+[lib]
+name = "rill_spatial"
+
+[[test]]
+name = "correctness"
+path = "../../../tests/correctness.rs"
+
+[[test]]
+name = "batch"
+path = "../../../tests/batch.rs"
+
+[[test]]
+name = "thin"
+path = "../radius-aware/tests/thin.rs"
+
+[[test]]
+name = "adaptive"
+path = "tests/adaptive.rs"
+
+[[example]]
+name = "probe"
+path = "../../../examples/probe.rs"
+
+[profile.dev]
+debug = 0
+incremental = false
+
+[profile.test]
+debug = 0
+incremental = false
+
+[profile.release]
+debug = 0
+incremental = false
+lto = "thin"
+codegen-units = 1
+
+[dependencies]
+wide = { version = "=0.7.33", optional = true }
+
+[features]
+default = ["simd"]
+simd = ["dep:wide"]

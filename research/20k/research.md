@@ -124,3 +124,41 @@ pruning efficiency. The hint never restricts accepted radii or drops coordinates
 It requires full-dimensional membership proofs, thin 2D/3D edge tests, lifecycle
 cost accounting and comparison against the unchanged topology on registered and
 held-out inputs. It is not claimed as an implementation of AQWA.
+
+## Follow-up: same-rate cohorts
+
+`tools/fixtures-cohorts.mjs` derives a declared workload from the registered 20k
+motion traces. It verifies indexed observer centres and constant per-observer
+radii, assigns IDs to three fixed hash cohorts, and emits current-frame queries
+on every 60 Hz simulation frame. Cohorts contain 6693/6625/6682 observers; each
+observer is queried twice in six frames, preserving 20 Hz. The independent oracle
+checks each resulting frame after that frame's actual updates. The original bulk
+trace queries everyone on frames 2/5; the derived trace changes client phases and
+epochs, so its results are a scheduling experiment, not a same-epoch substitution.
+
+This is a proposed server integration boundary, not a complete implemented server:
+
+```mermaid
+flowchart LR
+    DB[Authored world database] --> C[Validated compiled world tables]
+    C --> S[Authority simulation at 60 Hz]
+    S --> E[Immutable spatial read epoch]
+    E --> Q[One observer cohort per frame]
+    Q --> D[Membership deltas and shared encoding]
+    D --> O[Connection owners and bounded egress]
+```
+
+AOI scheduling does not reduce authoritative simulation to 20 Hz. Combat, input
+processing, movement and collision need their own simulation budgets. A 20 Hz
+eligibility update can lag a boundary crossing by almost 50 ms before compute and
+network delay; spreading phases does not remove that temporal limit. Lower or
+higher replication tiers and reliable critical events need explicit product
+semantics. None of those systems, network delivery, collision or 20,000 sockets is
+implemented or measured by this generic library experiment.
+
+The next complete pipeline proof must include structural entity churn (spells,
+projectiles and despawns), hot authored-data changes, membership enter/leave
+handling, reconstruction under loss/reordering, bootstrap/teleport bursts, shared
+serialization, bounded owner queues, offered-load timing and independently
+receiving clients. The current motion fixtures exercise position updates; unit
+oracles cover insertion/removal correctness but do not establish churn throughput.
