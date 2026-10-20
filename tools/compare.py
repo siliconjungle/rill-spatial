@@ -15,7 +15,7 @@ def identity():
  return {'git_commit':output(['git','rev-parse','HEAD']),'git_status':output(['git','status','--short']),'source_sha256':{f:digest(f)for f in files},'toolchains':{n:output(c)for n,c in {'rust':['rustc','--version'],'node':['node','--version'],'clang':['clang++','--version'],'cpu':['sysctl','-n','machdep.cpu.brand_string']}.items()}}
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--implementations',default=','.join(RUST+JS+CPP));p.add_argument('--scenarios',default='small,uniform,clusters,dense,contained,floors,boundaries,teleports,large');p.add_argument('--samples',type=int,default=5);p.add_argument('--processes',type=int,default=3);p.add_argument('--out',default='results/comparison.json');p.add_argument('--fixtures',default='benchmarks/fixtures');p.add_argument('--seed',type=int,default=17);p.add_argument('--timeout',type=int,default=300);p.add_argument('--window',type=int,default=64);p.add_argument('--continuous',action='store_true');p.add_argument('--windows',help='comma-separated randomized output-window sweep');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--implementations',default=','.join(RUST+JS+CPP));p.add_argument('--scenarios',default='small,uniform,clusters,dense,contained,floors,boundaries,teleports,large');p.add_argument('--samples',type=int,default=5);p.add_argument('--processes',type=int,default=3);p.add_argument('--out',default='results/comparison.json');p.add_argument('--fixtures',default='benchmarks/fixtures');p.add_argument('--seed',type=int,default=17);p.add_argument('--timeout',type=int,default=300);p.add_argument('--window',type=int,default=64);p.add_argument('--continuous',action='store_true');p.add_argument('--windows',help='comma-separated randomized output-window sweep');p.add_argument('--rust-build-metadata',help='JSON build provenance; executable hash must match the frozen Rust artifact');a=p.parse_args()
  names=a.implementations.split(',');scenarios=a.scenarios.split(',');windows=[int(w)for w in a.windows.split(',')]if a.windows else[a.window]
  assert len(windows)==len(set(windows)) and all(1<=w<=64 for w in windows)
  assert a.samples>0 and a.processes>0 and 1<=a.window<=64
@@ -29,6 +29,8 @@ def main():
  artifacts={}
  if set(names)&set(RUST+VARIANTS):
   path=frozen/'rust';shutil.copy2('build/target/release/rill-spatial-benchmarks',path);artifacts['rust']={'path':str(path),'sha256':digest(path)}
+  if a.rust_build_metadata:
+   meta=json.loads(Path(a.rust_build_metadata).read_text());assert meta['executable_sha256']==artifacts['rust']['sha256'],'Build metadata does not identify this executable';artifacts['rust']['build_metadata']=meta
  if set(names)&set(JS):
   path=Path('benchmarks')/('.frozen-'+out.stem+'.mjs');assert not path.exists();shutil.copy2('benchmarks/javascript.mjs',path);artifacts['js']={'path':str(path),'sha256':digest(path)}
  for name in set(names)&set(CPP):

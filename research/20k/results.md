@@ -144,3 +144,28 @@ The probe fraction is small; compiler inlining/layout effects and shared-host
 variation remain hypotheses, not established causes. A second source variant
 moves the identical sampling policy into an out-of-line setup helper, preserving
 all validation, output and statistics semantics. It must be remeasured separately.
+
+
+## Out-of-line setup v2 and public opt-in
+
+The identical sampling policy moved to a private out-of-line helper. All 84
+three-process primary/holdout/cohort jobs passed full proofs; its 24 candidate
+tests passed release/scalar and harness lint checks. Crowd median service was
+17.06 versus fixed-window 17.52 ms in the primary set and 5.80 versus 6.15 ms
+in cohorts. This removes the earlier observed crowd regression in this screen,
+not proof that compiler layout was its cause. Other profiles remain mixed:
+primary floors 5.17 versus 4.64 ms, and 100k-target service 10.93 versus 10.37 ms.
+Shared-host outliers remain included; different executable hashes stay separate.
+
+Dense cohort medians were 10.23 versus 31.48 ms. Crucially, adaptive output still
+had 2/54 observed 16.67 ms misses (worst 27.57 ms), while fixed output missed
+54/54 (worst 35.70 ms). This is not a strict deadline or p99 pass. The earlier
+v1 cohort study's 0/36 misses does not erase the later misses.
+
+The public library therefore exposes the measured policy through opt-in
+`adaptive-batches`, retaining the default fixed-window choice. The maximum row
+configuration remains an upper bound; probes add charged work but neither
+callbacks nor statistics. Exact complete materialization is unchanged. Six
+adaptive oracle suites join the existing 15 public tests when the feature is
+enabled; 21 tests pass SIMD release and scalar validation. Workspace/all-feature
+clippy is clean. Feature flags are recorded alongside final public build hashes.

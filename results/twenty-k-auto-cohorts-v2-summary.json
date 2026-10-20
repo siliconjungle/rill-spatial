@@ -1,0 +1,139 @@
+{
+  "scope": "Observed kernel service only; no full server, queue latency or statistical p99 claim",
+  "budget_ms": 16.666666666666668,
+  "inputs": [
+    {
+      "path": "results/twenty-k-auto-cohorts-v2.json",
+      "status": "COMPLETE"
+    }
+  ],
+  "failures": [],
+  "rows": [
+    {
+      "scenario": "bounded64",
+      "fixture_name": "bounded64-20k-seed20671-cohorts3",
+      "implementation": "rill-auto-4",
+      "window": 64,
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "fixture_sha256": "665b5f11ec48a71adfde40eb8fb23803c31b1bc30d8f2608e14e68b63284571b",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 3,
+      "observed_query_frames": 54,
+      "median_total_ms": 12.461374,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27995,
+        "p99": 158
+      },
+      "median_frame_ms": 1.876375,
+      "max_observed_frame_ms": 3.21725,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "fixture_name": "bounded64-20k-seed20671-cohorts3",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "fixture_sha256": "665b5f11ec48a71adfde40eb8fb23803c31b1bc30d8f2608e14e68b63284571b",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 3,
+      "observed_query_frames": 54,
+      "median_total_ms": 12.795417,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27995,
+        "p99": 158
+      },
+      "median_frame_ms": 1.9750415000000001,
+      "max_observed_frame_ms": 3.404833,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "contained",
+      "fixture_name": "contained-20k-seed20671-cohorts3",
+      "implementation": "rill-auto-4",
+      "window": 64,
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "fixture_sha256": "066f087e1226800aa6b250330c1fc5bb6fbfb1f45f6c9a0c69345b75ed8d5f00",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 3,
+      "observed_query_frames": 54,
+      "median_total_ms": 59.953791,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 10.233457999999999,
+      "max_observed_frame_ms": 27.56875,
+      "observed_deadline_misses": 2
+    },
+    {
+      "scenario": "contained",
+      "fixture_name": "contained-20k-seed20671-cohorts3",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "fixture_sha256": "066f087e1226800aa6b250330c1fc5bb6fbfb1f45f6c9a0c69345b75ed8d5f00",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 3,
+      "observed_query_frames": 54,
+      "median_total_ms": 185.907917,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 31.477708,
+      "max_observed_frame_ms": 35.699709,
+      "observed_deadline_misses": 54
+    },
+    {
+      "scenario": "crowd",
+      "fixture_name": "crowd-20k-seed20671-cohorts3",
+      "implementation": "rill-auto-4",
+      "window": 64,
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "fixture_sha256": "03e8c6dc9cc1d1e942b5ed95d75f0e5f24ce5357e247ddd91debefef19fba493",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 3,
+      "observed_query_frames": 54,
+      "median_total_ms": 35.967417,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.790425,
+        "p99": 1259
+      },
+      "median_frame_ms": 5.800208,
+      "max_observed_frame_ms": 7.136667,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "crowd",
+      "fixture_name": "crowd-20k-seed20671-cohorts3",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "fixture_sha256": "03e8c6dc9cc1d1e942b5ed95d75f0e5f24ce5357e247ddd91debefef19fba493",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 3,
+      "observed_query_frames": 54,
+      "median_total_ms": 36.298542,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.790425,
+        "p99": 1259
+      },
+      "median_frame_ms": 6.146395500000001,
+      "max_observed_frame_ms": 7.627709,
+      "observed_deadline_misses": 0
+    }
+  ],
+  "notes": [
+    "Different binary hashes, fixture hashes and protocols stay separate",
+    "Reported frame includes updates/preparation and complete output consumption where specified",
+    "Maximum is the worst observed frame, not a guaranteed bound",
+    "Fresh processes and samples are retained; this does not satisfy the original simultaneous superiority gate"
+  ]
+}

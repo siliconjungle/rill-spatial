@@ -468,6 +468,70 @@
     {
       "path": "build/frozen/twenty-k-auto-cohorts-v1/rust",
       "reason": "Selected adaptive-output v1 complete proof/performance baseline; retain regression evidence with improvements"
+    },
+    {
+      "path": "results/twenty-k-auto-v2.json",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/twenty-k-auto-v2-summary.json",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "build/frozen/twenty-k-auto-v2/rust",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/twenty-k-auto-holdout-v2.json",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/twenty-k-auto-holdout-v2-summary.json",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "build/frozen/twenty-k-auto-holdout-v2/rust",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/twenty-k-auto-cohorts-v2.json",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/twenty-k-auto-cohorts-v2-summary.json",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "build/frozen/twenty-k-auto-cohorts-v2/rust",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/validation-auto-v2-release.log",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/validation-auto-v2-scalar.log",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/validation-auto-v2-harness.log",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/validation-public-default.log",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/validation-public-adaptive-release.log",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/validation-public-adaptive-scalar.log",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/validation-public-all-clippy.log",
+      "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
     }
   ],
   "safe_to_remove": [

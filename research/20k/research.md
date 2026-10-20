@@ -1,6 +1,6 @@
 # Spatial relevance at 20,000 connected observers
 
-Research date: 2026-10-20. Starting revision: `ef1fbbc44cfcd62c54ec7d6ab3e1892d734f15a1`. This is research and a proposed measurement plan, not a demonstrated server capacity result. The current comparison screens 52 competitor entries from 38 projects; its strict acceptance gate remains OPEN. The machine available for exploration is an Apple M2 with 8 GB RAM and approximately 23 GiB free disk, below the user's 100 GB reserve. No builds, dependency copies, GPU experiments, or server load tests were run for this document. Only useful research artifacts are retained.
+Research date: 2026-10-20. Starting revision: `ef1fbbc44cfcd62c54ec7d6ab3e1892d734f15a1`. This is research and a proposed measurement plan, not a demonstrated server capacity result. The current comparison screens 53 competitor entries from 39 projects; its strict acceptance gate remains OPEN. The machine available for exploration is an Apple M2 with 8 GB RAM and approximately 23 GiB free disk, below the user's 100 GB reserve. No builds, dependency copies, GPU experiments, or server load tests were run for this document. Only useful research artifacts are retained.
 
 ## What has to scale
 

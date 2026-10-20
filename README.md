@@ -143,6 +143,20 @@ and a dense exact row may contain every indexed ID. The method creates threads
 per call; it does not provide a persistent executor. One worker uses the caller's
 thread. Existing `within_into` remains useful for caller-managed scheduling.
 
+For large dense batches, opt in to `adaptive-batches`:
+
+```toml
+rill-spatial = { git = "https://github.com/siliconjungle/rill-spatial", features = ["adaptive-batches"] }
+```
+
+This uses four exact density probes to choose a smaller group when sampled output
+would exceed a soft 1 MiB target per worker. All input validation still happens
+first. Probes are extra work; only original queries reach callbacks/statistics.
+Every returned row remains complete. Samples can miss dense regions, capacities
+can exceed lengths, and one row can exceed the target: it is not a hard memory
+limit. `queries_per_group` remains the maximum. The feature is opt-in because
+cache sizes and workload tradeoffs vary; default builds retain fixed windows.
+
 ## 20,000-observer research
 
 The target is 20,000 observers at 60 Hz movement / 20 Hz relevance, including sparse
@@ -159,7 +173,8 @@ times uninterrupted query frames, including full ID materialization and every-ID
 consumption. Worker counts, output windows and timing contracts are distinct
 experimental dimensions; their results must not be pooled.
 
-Independent packed-cell and dual-tree candidates live under `research/variants`.
+Independent packed-cell, dual-tree, radius-hinted and adaptive-output candidates
+live under `research/variants`.
 Their tests and exploratory measurements are separate from acceptance. See
 [the primary-source research](research/20k/research.md),
 [remaining adapter audit](research/20k/pending-adapters.md),

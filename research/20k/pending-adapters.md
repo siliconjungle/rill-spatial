@@ -46,3 +46,11 @@ For all-population kNN, request the entire indexed population, not an estimated 
 4. Resolve unibn's pruning precision and quadtree-ts's recursion/logging through concrete adapter proofs/tests; keep unresolved cases pending and the gate open.
 
 For every adapter test exact-boundary/nextafter, radius zero, coincident distinct IDs, out-of-root motion, negative coordinates, arbitrary unindexed centers, unequal radii, extreme finite inputs, and empty collections. Record native-domain coverage and fallback counts/bytes. A successful build is not correctness evidence; a missing radius method is not incompatibility; adapter-implemented is not a passed performance gate.
+
+## Integration follow-up
+
+Kdtree-plusplus was subsequently implemented and passed all nine original fixture
+proofs; selected native evidence is in `results/kdtree-plusplus-proof-v1.json` at
+repository root. The original read-only audit above is retained as written.
+Coverage is now 53 competitor entries from 39 source projects, with 11 projects
+still pending. Adapter correctness is not a performance acceptance pass.

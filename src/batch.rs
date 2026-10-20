@@ -1,4 +1,7 @@
 //! Bounded exact batches over an immutable index.
+//! With `adaptive-batches`, four exact probes may reduce the configured maximum
+//! group size toward a soft 1 MiB output target per worker. Samples can miss dense
+//! queries, so this does not impose a hard byte bound or change any result.
 use crate::{Error, SpatialIndex};
 use std::sync::{
     Mutex,
@@ -13,6 +16,9 @@ pub struct BatchOptions {
     pub workers: usize,
     /// Maximum complete result rows retained by each worker. Must be positive.
     /// Default: 64. Smaller groups reduce dense-output memory and may lose locality.
+    /// The opt-in `adaptive-batches` feature can choose fewer rows using four
+    /// exact density probes and a soft 1 MiB output target per worker. Samples
+    /// can miss hotspots; this is not a hard byte bound.
     pub queries_per_group: usize,
 }
 impl Default for BatchOptions {
@@ -33,6 +39,8 @@ pub struct BatchStats {
     pub matches: u128,
 }
 type Query<const D: usize> = ([f64; D], f64);
+#[cfg(feature = "adaptive-batches")]
+const SOFT_OUTPUT_TARGET_BYTES: usize = 1024 * 1024;
 fn partition<const D: usize>(
     queries: &[Query<D>],
     order: &mut [usize],
@@ -86,6 +94,10 @@ impl<const D: usize> SpatialIndex<D> {
     /// capacity may exceed length; each exact row may contain the entire index.
     /// The caller chooses a suitable worker count and memory budget. A callback
     /// panic propagates after scoped workers join.
+    ///
+    /// With `adaptive-batches`, large batches may use four exact density probes
+    /// to reduce group size. Probes add call cost but emit no callbacks or stats;
+    /// every original query is still reported once. The output target is soft.
     pub fn within_batch<F>(
         &self,
         queries: &[Query<D>],
@@ -120,6 +132,10 @@ impl<const D: usize> SpatialIndex<D> {
     /// O(query count) ordering/scheduling storage. Each row may contain the
     /// entire index, and vector capacity may exceed length.
     ///
+    /// With `adaptive-batches`, four exact density probes may reduce group size
+    /// toward a soft cache target. Their work is charged to the call; only the
+    /// original queries contribute callbacks and statistics.
+    ///
     /// A callback panic propagates after scoped workers join. Other callbacks
     /// may already be running and can continue before the call unwinds. The
     /// index remains unchanged and can be queried again after catching a panic.
@@ -133,6 +149,41 @@ impl<const D: usize> SpatialIndex<D> {
         F: Fn(&[usize], &[Vec<u64>]) + Sync,
     {
         self.run_batch(queries, options, visit)
+    }
+
+    // Keep exact density probes out of the callback-specific scheduler code.
+    // This is intentionally not cold: dense query phases use it routinely.
+    #[cfg(feature = "adaptive-batches")]
+    #[inline(never)]
+    fn adaptive_group_limit(&self, queries: &[Query<D>], configured_limit: usize) -> usize {
+        let mut effective_limit = configured_limit.min(queries.len());
+        let worst_case_bytes = self
+            .len()
+            .saturating_mul(effective_limit)
+            .saturating_mul(std::mem::size_of::<u64>());
+        if queries.len() >= 1024 && worst_case_bytes > SOFT_OUTPUT_TARGET_BYTES {
+            let mut scratch = Vec::new();
+            let mut max_matches = 0usize;
+            for q in [
+                0,
+                queries.len() / 4,
+                queries.len() / 2,
+                3 * queries.len() / 4,
+            ] {
+                self.within_into(queries[q].0, queries[q].1, &mut scratch)
+                    .expect("prevalidated probe query");
+                max_matches = max_matches.max(scratch.len());
+            }
+            if max_matches > 0 {
+                let sampled_row_bytes = max_matches.saturating_mul(std::mem::size_of::<u64>());
+                effective_limit =
+                    effective_limit.min((SOFT_OUTPUT_TARGET_BYTES / sampled_row_bytes).max(1));
+            }
+            // Probe results never reach consumers/stats and do not overlap the
+            // worker result allocations. Probe CPU/allocation remains call cost.
+            drop(scratch);
+        }
+        effective_limit
     }
 
     fn run_batch<F>(
@@ -158,22 +209,18 @@ impl<const D: usize> SpatialIndex<D> {
         if queries.is_empty() {
             return Ok(BatchStats::default());
         }
+        #[cfg(feature = "adaptive-batches")]
+        let effective_limit = self.adaptive_group_limit(queries, options.queries_per_group);
+        #[cfg(not(feature = "adaptive-batches"))]
+        let effective_limit = options.queries_per_group.min(queries.len());
         let mut order: Vec<_> = (0..queries.len()).collect();
         let mut groups = Vec::new();
-        partition(
-            queries,
-            &mut order,
-            0,
-            options.queries_per_group,
-            &mut groups,
-        );
+        partition(queries, &mut order, 0, effective_limit, &mut groups);
         let workers = options.workers.min(groups.len());
         let next = AtomicUsize::new(0);
         let work = || {
             let mut matches = 0u128;
-            let mut outputs: Vec<Vec<u64>> = (0..options.queries_per_group.min(queries.len()))
-                .map(|_| Vec::new())
-                .collect();
+            let mut outputs: Vec<Vec<u64>> = (0..effective_limit).map(|_| Vec::new()).collect();
             loop {
                 let at = next.fetch_add(1, Ordering::Relaxed);
                 let Some(range) = groups.get(at) else {

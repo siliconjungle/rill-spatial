@@ -14,3 +14,5 @@ jobs:
       - run: cargo test --locked -p rill-spatial
       - run: cargo test --locked --release -p rill-spatial
       - run: cargo test --locked -p rill-spatial --no-default-features
+      - run: cargo test --locked --release -p rill-spatial --all-features
+      - run: cargo test --locked -p rill-spatial --no-default-features --features adaptive-batches

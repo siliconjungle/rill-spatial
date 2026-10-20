@@ -1,0 +1,5237 @@
+{
+  "schema": 2,
+  "status": "COMPLETE",
+  "created_utc": "2026-10-20T05:18:49.612351+00:00",
+  "host": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "identity": {
+    "git_commit": "6f8027c171bcfc7b43fe6e95225b9cb99dd76f1c",
+    "git_status": "?? results/twenty-k-auto-v2-summary.json\n?? results/twenty-k-auto-v2.json\n?? results/validation-auto-v2-harness.log\n?? results/validation-auto-v2-release.log\n?? results/validation-auto-v2-scalar.log",
+    "source_sha256": {
+      ".github/workflows/ci.yml": "92afeec10af9401560aa805f2c417a78106c400dc27327b9ca1be9081d4034b9",
+      ".gitignore": "cc8bdcd033ed79d3b1439ec7aa4e66b501139213dba6dc1f8b4bcdcb49c4f2aa",
+      "Cargo.lock": "b1ef26e36ceb1113a6e330ca250a62e2104d5891dbaf327fe10b2ca84c5095d0",
+      "Cargo.toml": "98a0ffddefdef345a0ef315fab5542f6a0e450fc656a3398c16ac17b55af10d2",
+      "LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "LICENSE-MIT": "079adec67563038bee5dac86b57a3cf1546cffc112f51f85c68b13c3d0369428",
+      "README.md": "cad1b603a4299213580a718f25265f7c0526f76eb2126ed8f449cce821e0d805",
+      "benchmarks/Cargo.toml": "4dd2ffe996f0ded3af118c905b77f6e0f7ae07c892de518c9f4b78f1af4a8f56",
+      "benchmarks/cohorts-twenty-k/bounded64.json": "665b5f11ec48a71adfde40eb8fb23803c31b1bc30d8f2608e14e68b63284571b",
+      "benchmarks/cohorts-twenty-k/contained.json": "066f087e1226800aa6b250330c1fc5bb6fbfb1f45f6c9a0c69345b75ed8d5f00",
+      "benchmarks/cohorts-twenty-k/crowd.json": "03e8c6dc9cc1d1e942b5ed95d75f0e5f24ce5357e247ddd91debefef19fba493",
+      "benchmarks/cohorts-twenty-k/manifest.json": "360cdd82da8656ca28101fcf651fe53346a5adfe5970f2c2654fa823f1e7fe76",
+      "benchmarks/fixtures/boundaries.json": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "benchmarks/fixtures/clusters.json": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "benchmarks/fixtures/contained.json": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "benchmarks/fixtures/dense.json": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "benchmarks/fixtures/floors.json": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "benchmarks/fixtures/large.json": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "benchmarks/fixtures/manifest.json": "33319e1ff2e497d49b18d70a1607c1c496f299e144428918785467b1c3478086",
+      "benchmarks/fixtures/small.json": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "benchmarks/fixtures/teleports.json": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "benchmarks/fixtures/uniform.json": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "benchmarks/holdout-97123/boundaries.json": "914439d679bc3793b10b45254db0f5fb2994b6cd5b7465dc6b603728ce47ef8a",
+      "benchmarks/holdout-97123/clusters.json": "5bfdad77ded17b68b13cc23a70de687f9438fefe9a7e6563ef6a25803dd63d98",
+      "benchmarks/holdout-97123/contained.json": "cc6b7f8de45ca724df2d93b00b8956a1d1faa508b6b70a1cd420698875eb10a0",
+      "benchmarks/holdout-97123/dense.json": "06b98a8e94294570ac6ecb93a87f3ebc220ee34cf9bb291f7d3b2738ab3a27a1",
+      "benchmarks/holdout-97123/floors.json": "fed8d7cca125bb213d2a71fba55dce280e73a06226eacb6001db10260ed4b70c",
+      "benchmarks/holdout-97123/large.json": "d8b17fd585986e36f4c1f2e350274069c11cb7c4775b5f0b3b8ba1e045fc8cb9",
+      "benchmarks/holdout-97123/manifest.json": "6767c84fba702be8ead8fc8b8bf14f1d97a73f7a29caf045f80a50e4cb88cdba",
+      "benchmarks/holdout-97123/small.json": "24184d41b21cec260cb169e0283485c3182433cdda6b4ff50ca0dfe5667b218e",
+      "benchmarks/holdout-97123/teleports.json": "ac76e6525ea7e25d60befb8097090a1e729938b956f7a8b7c4af1f9bdbf8b21c",
+      "benchmarks/holdout-97123/uniform.json": "623b60122ae133148ca4e36bd2b23836182cb021fe84c103a87a0727c02459f1",
+      "benchmarks/holdout-twenty-k/bounded64.json": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "benchmarks/holdout-twenty-k/crowd.json": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "benchmarks/holdout-twenty-k/manifest.json": "bef84f32f85d6998688046680a77b63ece9106e425bdec7d474d55b6ed3897e1",
+      "benchmarks/holdout-twenty-k/teleports.json": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "benchmarks/holdout-twenty-k/uniform.json": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "benchmarks/javascript.mjs": "49bd32afcd127ab33feb3a45710ffb916fb5a530093b626db76e2c906fa4c9d1",
+      "benchmarks/native.cpp": "a737d4f697a8f57e2d11aa2ab37aae35a8f1cc04f3d0efcb22e328a0a1a0801a",
+      "benchmarks/src/bounded.rs": "18ea6704f0cf406a9714683fc8205ab94ff2fdebf5b4a6a68d34420c58659dee",
+      "benchmarks/src/cohorts.rs": "beec83fdd792f1fad13df045aec02bec815b77ef6a509ee51c0802ad23a909ea",
+      "benchmarks/src/continuous.rs": "d3cbc7048cf2a1405c07a1d7a3ce8ebff207137dfa74eda204637c54265ee3b2",
+      "benchmarks/src/main.rs": "139201814b5b11048b16712c94d5b018794ba9d8e6b97241b98845bfa66b5906",
+      "benchmarks/src/more_adapters.rs": "222a1a1b8817ab18171256bb10c4c5324d54309ea25f81370c7d9c030e1a7ba2",
+      "benchmarks/src/rust_adapters.rs": "1eb3b7bcb3c860ee0420a5ecf51921f0abc7807018a05a7dfc0014eff9ceb123",
+      "benchmarks/src/studies.rs": "6f452b62bc227687b9e373b0c92e34c28d4c7df12ee5abcd86f54bc8c47e33d3",
+      "benchmarks/twenty-k/bounded64.json": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "benchmarks/twenty-k/contained.json": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "benchmarks/twenty-k/crowd.json": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "benchmarks/twenty-k/floors.json": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "benchmarks/twenty-k/manifest.json": "8b7a73fa67d9d10f03e0ce4336d5c4d6ca0a32554fc3f1915f167acbe6a79788",
+      "benchmarks/twenty-k/many-objects.json": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "benchmarks/twenty-k/teleports.json": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "benchmarks/twenty-k/uniform.json": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "examples/probe.rs": "003d633bcdce4a5ea53980db62c3e437d818abf51b4e0d9d53ad17780241c8f6",
+      "research/20k/agent-ownership.json": "dbd94562d79708e735155a4f5c599758d26d860461f1beae705c79858adb685a",
+      "research/20k/events.jsonl": "f48e19e038535a5df623051bb3b285158d0a1112e0e2cfa60647233d68cdfc70",
+      "research/20k/holdout-plan.json": "805245e110ce9c6d894422b68fd85e4872e558bc9d1fbf04bbf208c26b135bda",
+      "research/20k/pending-adapters.md": "0cd0f03aaa30601c141af601ed766d91823b4b6e6c754fdf4689082d00204c35",
+      "research/20k/research.md": "b9f9355d08a1e7697a44c4efcdee17430449c776c9a9f20fd78f40053e4f5160",
+      "research/20k/results.md": "9508cdf265c18870b9bc0ca5c6d3e883b8ac061cbdc573eb4701e2a7c6091f49",
+      "research/20k/sources.json": "beb42a58af5392f0c819809a632f03ce5c3103f30018fd70ad2099553b63c8cf",
+      "research/20k/status.json": "adb5fe1edd6df106f27a3703338470e253b88e38076ef49f5c30a8841956cb37",
+      "research/20k/storage-retention.json": "781089153ef7d1715e123b73a9f54480000e5c1f7a6352914f98f639b4a68e87",
+      "research/20k/work-queue.json": "66343b8435dde31223b4ecde6b8d8980c2c7995137bd017ff6ba924b947db3d5",
+      "research/baselines.json": "117b9103f931bb6334c5eb186c29129412d7be2b83ca9f181e56133de150a2d2",
+      "research/discovery.json": "7007a4cfa08ccb2477313d7082d9862f3001e87ca57ee3f82911caaf39222633",
+      "research/inventory.json": "de2fdba56900c524aa4c6971c59b9e437669c81c29ff16fe5479c1672282b761",
+      "research/npm/package-lock.json": "cbb268cad3d328a828475020e22a1f4180deff6a83820923157c78ea1e3ecc50",
+      "research/npm/package.json": "f577e233d61564d7685eb4b6c4ad71d16303d3d6988cac88d4e5771b56bca95d",
+      "research/protocol.md": "0b89ac6189c6cfdf5fdcc47970637551f9cdef02fd32a52e039f8a329c87b15e",
+      "research/variants/cell-readview/Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "research/variants/cell-readview/Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "research/variants/cell-readview/README.md": "44bf8fa93d06853c84aec8403ab106cd187782a5aa32513f9dc2602fa5556559",
+      "research/variants/cell-readview/evidence/batch-build-release.txt": "64d0cbd4b7e4c6329fde55978dd3d261407b55f34c21add0feebf7e0575ee531",
+      "research/variants/cell-readview/evidence/batch-holdout-exploratory.json": "0021730530275dd63860352a065516f650278e072619a0706e32816d8913860b",
+      "research/variants/cell-readview/evidence/batch-oracle-release.txt": "b6c425e3225e36ab99997c5f29bcbf943b810dca3c90ddcc559327ed980d3f6f",
+      "research/variants/cell-readview/evidence/batch-summary.json": "353ad113aad8ccaef4c43a2eec08548ab985b8adf30f8f40eeddffc983ebdcb0",
+      "research/variants/cell-readview/evidence/batch-twenty-k-exploratory.json": "64c5d755fe33ab48713523f3cb6a565fbe0bdeeb878f49b6e3bfb84f610ae563",
+      "research/variants/cell-readview/evidence/build-release.txt": "64d0cbd4b7e4c6329fde55978dd3d261407b55f34c21add0feebf7e0575ee531",
+      "research/variants/cell-readview/evidence/holdout-exploratory.json": "d72b6c43a6b286b25a96f86f0d1cbdb5557aaf5740b725ff306ce22ff8d88201",
+      "research/variants/cell-readview/evidence/layout-after-build.txt": "7a7bb64a28cdda9b91e6e27f41be455104d929b5d7ad6dd5beca75fc5a47f1f4",
+      "research/variants/cell-readview/evidence/layout-after-manifest.json": "31421a50ceaed86da97ae1f1f9f3361ef64e7d1e102e85430dc55ca77a104c87",
+      "research/variants/cell-readview/evidence/layout-after-oracle.txt": "38afd31d0821ebd001e732d8d74cbda77f35a5005a55959db624aeaa1f97dc37",
+      "research/variants/cell-readview/evidence/layout-before-build.txt": "7a7bb64a28cdda9b91e6e27f41be455104d929b5d7ad6dd5beca75fc5a47f1f4",
+      "research/variants/cell-readview/evidence/layout-before-manifest.json": "f37fc4edf570e6d56e11f8bd70a05ab737dd0cd29d63fb60943fe0e7bba9e364",
+      "research/variants/cell-readview/evidence/layout-before-oracle.txt": "a67a3ac29983acdbaf80965e77daf5b3bb818041a8d328c05c6a03a2af85b259",
+      "research/variants/cell-readview/evidence/layout-change.patch": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255",
+      "research/variants/cell-readview/evidence/layout-holdout-proof.json": "b96c858f1e694df69253bbec838b1f90d1c1d369042ea9e47b4f2fee7c0af8a3",
+      "research/variants/cell-readview/evidence/layout-summary.json": "df2e9234293e03ec2c805d810d6c52b8cdda1b88eccdb908e2e2694387214f43",
+      "research/variants/cell-readview/evidence/layout-twenty-k-diagnostic.json": "6fe991d2b97fb00c30173131ca3afd72deb26330a1835d831931dc6eef806489",
+      "research/variants/cell-readview/evidence/oracle-release.txt": "ac1e1ba5811b75bc950c7aff97a7371b1fcb88ef5762ec39ded96ff31cee124d",
+      "research/variants/cell-readview/evidence/summary.json": "6a97f1fb51e51cf619dafbd94b759efc5aa9b9c6cde724de427ceab70a80789a",
+      "research/variants/cell-readview/evidence/twenty-k-exploratory.json": "ce86e745bd670f6a6a56c605b7931a4e415c56ab01d7cf8aad4c15d218b6d252",
+      "research/variants/cell-readview/examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+      "research/variants/cell-readview/examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904",
+      "research/variants/cell-readview/run_batch_diagnostics.py": "dcf938e8e205500211c1deeea648c05709e31cda778bec5f47a4ed46916b5f9f",
+      "research/variants/cell-readview/run_diagnostics.py": "6f35a503c4dc4e111c701faf895ab8f27f110a8217e1e08ad4d14f611f255d39",
+      "research/variants/cell-readview/run_layout_diagnostics.py": "39343b5aaae4e0d728142b454981db678d5968f6179363070dc21b35e381afb6",
+      "research/variants/cell-readview/src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+      "research/variants/cell-readview/storage-retention.json": "fa269f9f8db0ac3bf56ea7e60fb9f5866c54b7373468621a8eea3a2c9bc90378",
+      "research/variants/cell-readview/tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+      "research/variants/cell-readview/tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+      "research/variants/dual-tree/Cargo.lock": "5a372ffb49c96d71dd6723ed5d28fa84016e90765a2ac68ca5ff6885bd318f43",
+      "research/variants/dual-tree/Cargo.toml": "f8601c1434fadb4482a2150250b62733a8886cf58a8789cf81570b4072bed56e",
+      "research/variants/dual-tree/README.md": "a249541639c12e3c194b21c60a439dfae36def62becc1f1bd4a25054daaa0134",
+      "research/variants/dual-tree/REFIT.md": "a5b9fce080f9309526dea231715dd70614477eb71baa14087894a169fb5bdb3f",
+      "research/variants/dual-tree/THREADED.md": "76b087ab12a748b5980b8da59a52d25b44a2c97f636a4a989fe2e51cf17b98a4",
+      "research/variants/dual-tree/diagnostics-resources.json": "e5f3476b26a123da92b7f932ee981e0d7777fd9bcfff19423878cc82c3089dcb",
+      "research/variants/dual-tree/diagnostics.jsonl": "be932a1abe0276ff312b1f70da65054d13c1c95f574f5fda72b138fb74555f7e",
+      "research/variants/dual-tree/examples/batch_probe.rs": "d7b3debdf6390222650191cca5b31ab6d6b1b6a2d1008ccde0193df0f853f2d0",
+      "research/variants/dual-tree/examples/refit_diagnostic.rs": "687bc68da11cc858f27c4795b622f8730e2e1e59789ba6171852f4fae86d6207",
+      "research/variants/dual-tree/examples/support/cohort.rs": "b4d4c576e2e4495046f568d65ca9435bb1a3f20ac8a0e1494f1c6a6102fbd5a1",
+      "research/variants/dual-tree/examples/threaded_cohort.rs": "795edf4e0d411284ad1e800c8e8762a2b9fb8042a19958e37b35ef91b89a540e",
+      "research/variants/dual-tree/refit-bounded64.jsonl": "c79edd78faa8e183fcbab64f076a4f9f3449f18d90616fc6bf1309670293fbae",
+      "research/variants/dual-tree/refit-floors.jsonl": "571cd4f210ec1f35414a9ee424633d5a8a861d7e6b385d01493f92410f952d1d",
+      "research/variants/dual-tree/refit-results.json": "4268efb6fef105408c69aebfd1b961e9d8965f90bbd9e42631d21332526b1a06",
+      "research/variants/dual-tree/refit-teleports.jsonl": "e6090cc34537222531f974c7df9b680d5f1665e0df8d9ec2a98ed45d73e1fdff",
+      "research/variants/dual-tree/refit-uniform.jsonl": "a8d9ffe90b58b3f2b7c10829b310f31188bb3e240dc78cd8393eca94d94038a0",
+      "research/variants/dual-tree/repro/original-Cargo.lock": "c675898835fff55d9e161bce62b20b6dd26ccbcebcaf14e2efba493a525bbcd1",
+      "research/variants/dual-tree/repro/original-Cargo.toml": "e37b6a478474e0374893b4c951bf824e37b65caed49b2944d5843e8b082cc9dc",
+      "research/variants/dual-tree/src/lib.rs": "895d16e7425af0a7ed016a45f343769188d4682055e0385d762d01b0f0f59b90",
+      "research/variants/dual-tree/storage-retention.json": "7204730d85ae1c08b93a217f0ebeba21b3b8c4cd1a4c085de3982f46a51121fa",
+      "research/variants/dual-tree/tests/oracle.rs": "3cf3df911aaf20d82fe081078b7b1e85696e32d986fc6b9df91778593c01861c",
+      "research/variants/dual-tree/tests/threaded_cohort.rs": "6c62df29805d77cb529851c756975ad87c7916d6f02b5e435699a5200d643f0f",
+      "research/variants/dual-tree/threaded-bounded64.jsonl": "5c5cd1be48e94b9787f7ed182be067b03d6e8671209f522e479b5998297cd64b",
+      "research/variants/dual-tree/threaded-contained.jsonl": "ccacde9085d1d0d5b0d3f2b0b6133f9054b89b3ee475d3b06b044a02eb212900",
+      "research/variants/dual-tree/threaded-results.json": "e8af67b7715e6276b65e57fdd9e6ae286edd5a9c7bd5df486c9641385ccac89d",
+      "research/variants/dual-tree/threaded-validation.log": "fb6a966d1d81a5314e8c5814c39c5b6d50aaa026b01fc42e11550db8ee6a97b4",
+      "research/variants/dual-tree/validation.json": "ee567e8604397f79b0d8b629da340ab26ad22c72181b6a6b66d985b53f360476",
+      "research/variants/dual-tree/validation.log": "08c5199b5861dc1f20fdf005068ec25e414f3dc68f10a7bb2663beaec3f2e256",
+      "research/variants/kdtree-plusplus/README.md": "119221edb9e6032e9fcb84b7dc49f333f65af4e7923c87bf9d54d820292461b0",
+      "research/variants/kdtree-plusplus/adapter.hpp": "d7f9b12409d3f79891e86e521daee7ef3959c001fc6c6e5b6b43b4c1e999fd9a",
+      "research/variants/kdtree-plusplus/storage-retention.json": "406f61ba39f67690bd09f332bba31c9fc22b7c23cb5bc71688e2755b6b0c4997",
+      "research/variants/radius-auto/Cargo.lock": "fd85c9436095e31126e2019f5a7c39e8eb8f47b107c885c8c1aa6cd2a76ded21",
+      "research/variants/radius-auto/Cargo.toml": "d5225e0975b5c68eb654d0a93e006de445e1cc944888df16ecded45130c644d9",
+      "research/variants/radius-auto/README.md": "9f26cf5f241dda80117fef2fe699c22c99ee1f88b54e5e036719267824a23fe3",
+      "research/variants/radius-auto/source-change-v1.patch": "d7019cda0933ece314be37a4c895e0fa06eae9575a540846e54df61fc13cabbe",
+      "research/variants/radius-auto/source-change.patch": "0cce4eb54b245a029b62d5b9263fcf5f3cba3d884cdb655c616e23abe6579aa1",
+      "research/variants/radius-auto/source-provenance-v1.json": "fceb92cc205d4dea9f8991cc3fee40ae1722cfaf5f25bdec8ceb25782341c56b",
+      "research/variants/radius-auto/source-provenance.json": "293e9dca147e1b451ec1931718d87e05efdd2799647c5b0a4e0f60a78527840a",
+      "research/variants/radius-auto/src/batch.rs": "46a9a10207ae1732b88e1178fed1fc1691c0d67d0b72255082db56b16a660212",
+      "research/variants/radius-auto/src/lib.rs": "577ca92778b928ae2c9ccbea74bd529631c315962c12e616c7ed58ad41968be9",
+      "research/variants/radius-auto/storage-retention.json": "61927293cb85c04dc599a1832ba3a7e9fd31c5d295b96873a0cd7334cae42927",
+      "research/variants/radius-auto/tests/adaptive.rs": "9189f1a35223d0373770ed89be6ccae96a6b5d194c5f57e5e89dc60e1efa6e21",
+      "research/variants/radius-aware/Cargo.lock": "909ae5d44e9d34e25e4ecfa8a36820f38ed9afb693b8244bfb4b91c0ea360a7f",
+      "research/variants/radius-aware/Cargo.toml": "26735e1ec7e5441d069d4f4c318811c289e3424901641ff689cc50a2ea862289",
+      "research/variants/radius-aware/README.md": "2519756e5bb52f9187e59e439438acceeca7994e4f1ace6a704b24912c7673b7",
+      "research/variants/radius-aware/source-change.patch": "411a790c13ac375f9b644d7bf959142b9195f35e7bbafa43836f7f2ea39d4663",
+      "research/variants/radius-aware/source-provenance.json": "bd0851eea9a4211a3a42db963d40f7b0074ac71c99839e444643881fb860c23f",
+      "research/variants/radius-aware/src/hierarchy.rs": "3c8268d539e5a1a6228b10042868268c0b05fdceaede51a5dc3690f3b42accc6",
+      "research/variants/radius-aware/src/lib.rs": "40dc788c9d9fdd0cbbf54899b274f0c7039508ff2b25c2f483ad3ab99f1b0fdc",
+      "research/variants/radius-aware/storage-retention.json": "a232da826f5894c67e4c7aee725ac8ff832a6342f44de1ac54d7ef0992b594d5",
+      "research/variants/radius-aware/tests/thin.rs": "9eb93e43f79282825d4e72644ed45b5d0629b7649181307c658f33f7e8879a30",
+      "src/batch.rs": "4f98c0902c4bb2bb731f2372a4feda16fa957e93cf9554d1fdd288821c602f8f",
+      "src/hierarchy.rs": "299cd36c34e398b51832a44d83d92153b13488ddbe61293b3d8a8b5273d618ca",
+      "src/lib.rs": "39563ffe46134e55a356f16a3e0010b4f62d53045cf2a402ebb3a52ce03cc3fc",
+      "storage-retention.json": "a1475d54551b5b38ddf462bd3626e8d9f3aa3a74353db593ae090248e82e13ae",
+      "tests/batch.rs": "db2bf1a2dfcbfb30d8a11e469047b1de5a6523fffa4ae09790944071d4abf9e8",
+      "tests/correctness.rs": "81bfbe90ad560d7570efdbca9fed39744b11e53e5363350e9186022b34685cb2",
+      "tools/add-cpp.mjs": "e7dc33bb244f0c2eb831af816e67ac1edd99721a9870f742c8d35a6b17192626",
+      "tools/binary-fixtures.py": "bb6c3e8d517be4831ab19a2cfea8a52bc8131a766a8339249e7108c30417cc1d",
+      "tools/build-cpp.py": "825a9b0e4b96c2762d09d9459327413a778d409d2849df8ce9f503016122ecb1",
+      "tools/compare.py": "194586a04d838458bd029bbda25287a99c49205d70f505fc476488339a62a8fe",
+      "tools/coverage.py": "ff8561208deafbdf19f4e3780d969318db1eba59ca8fbcc9094fd4d927ebec76",
+      "tools/discover.mjs": "10bc7da9a7fda07cc06f459336d7f00c8710e685b95fda99025279e654df19e4",
+      "tools/fetch-sources.mjs": "47871b9d40a7a7710f75d9db044598876e694027b20dfd31973bc6eb4008193c",
+      "tools/fixtures-20k.mjs": "ef30ecd1dcbe44b01f1fc79dd9e8678f87c6d9ef8e8bf584615b1b4f142d9528",
+      "tools/fixtures-cohorts.mjs": "9558127e099b63e65682c3f2e650904486721a889d8a71b9181542454b3a6dfb",
+      "tools/fixtures.mjs": "cf286c372fbff0d3b93ee00865979438696adfcb62275a0b149274ddb99f4ba1",
+      "tools/gate.py": "a2b6effe9e2deb85dcbb301971ce172b0e2bbdb26d74f01ad5b8fdc7abac9abf",
+      "tools/summarize-20k.py": "69594e5a38bc6bdd6f1baf6446d020efc40fa02a7d3a531ccf314746643a5878"
+    },
+    "toolchains": {
+      "rust": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+      "node": "v26.1.0",
+      "clang": "Apple clang version 14.0.0 (clang-1400.0.29.202)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+      "cpu": "Apple M2"
+    }
+  },
+  "artifacts": {
+    "rust": {
+      "path": "build/frozen/twenty-k-auto-holdout-v2/rust",
+      "sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517"
+    }
+  },
+  "implementations": [
+    "rill-parallel-4",
+    "rill-auto-4"
+  ],
+  "scenarios": [
+    "uniform",
+    "bounded64",
+    "crowd",
+    "teleports"
+  ],
+  "fixture_directory": "benchmarks/holdout-twenty-k",
+  "notes": [
+    "Other user workers left running; shared-machine diagnostics",
+    "Process RSS includes reference oracle and retained result vectors; not isolated index bytes"
+  ],
+  "output_window_queries": 64,
+  "output_windows": [
+    64
+  ],
+  "continuous_full_consumption": true,
+  "samples_per_process": 3,
+  "requested_processes": 3,
+  "rows": [
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 33709,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 32209
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 30042,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 29584
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6755958,
+          "queries": 20000,
+          "query_wall_ns": 5494916,
+          "sample": 0,
+          "update_prepare_ns": 1260833
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 217791,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 217125
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 45833,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 45583
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 6358750,
+          "queries": 20000,
+          "query_wall_ns": 4996375,
+          "sample": 0,
+          "update_prepare_ns": 1362167
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 24250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 23750
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 20083,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19750
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6464417,
+          "queries": 20000,
+          "query_wall_ns": 5286708,
+          "sample": 1,
+          "update_prepare_ns": 1177625
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 73959,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 73542
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 34209,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 33834
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 6276291,
+          "queries": 20000,
+          "query_wall_ns": 5031125,
+          "sample": 1,
+          "update_prepare_ns": 1245042
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 21667,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19625
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19459,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19209
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6188875,
+          "queries": 20000,
+          "query_wall_ns": 5019500,
+          "sample": 2,
+          "update_prepare_ns": 1169292
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 43666,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 43292
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 27750,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 27333
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 6274708,
+          "queries": 20000,
+          "query_wall_ns": 5005666,
+          "sample": 2,
+          "update_prepare_ns": 1268958
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 87104,
+      "matches_per_query": {
+        "max": 183,
+        "mean": 69.450325,
+        "p99": 160
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "581595375",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 109167,
+          "query_ns": 10491291,
+          "results": 2778013,
+          "total_ns": 13547959,
+          "update_ns": 2947501
+        },
+        {
+          "build_ns": 82042,
+          "query_ns": 10317833,
+          "results": 2778013,
+          "total_ns": 12973418,
+          "update_ns": 2573543
+        },
+        {
+          "build_ns": 79458,
+          "query_ns": 10025166,
+          "results": 2778013,
+          "total_ns": 12652333,
+          "update_ns": 2547709
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "teleports-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 18481152,
+      "whole_process_cpu_seconds": {
+        "user": 0.73,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 2,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/teleports.json",
+        "3"
+      ],
+      "fixture_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "input_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.73 4.75 4.36 }",
+      "process_wall_seconds": 0.8864087910624221
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 37833,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 36750
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 31083,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 30625
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 17752459,
+          "queries": 20000,
+          "query_wall_ns": 16526834,
+          "sample": 0,
+          "update_prepare_ns": 1225417
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 117542,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 117042
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 45250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 44875
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 16446375,
+          "queries": 20000,
+          "query_wall_ns": 16334625,
+          "sample": 0,
+          "update_prepare_ns": 111667
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 31875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 30833
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 23666,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 23250
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 17456375,
+          "queries": 20000,
+          "query_wall_ns": 16266792,
+          "sample": 1,
+          "update_prepare_ns": 1189500
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 75916,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 75583
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 34208,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 33625
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 16489500,
+          "queries": 20000,
+          "query_wall_ns": 16379083,
+          "sample": 1,
+          "update_prepare_ns": 110375
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 21500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19250
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19416,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19084
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 17426875,
+          "queries": 20000,
+          "query_wall_ns": 16237625,
+          "sample": 2,
+          "update_prepare_ns": 1189125
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 75959,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 75458
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 34250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 33917
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 16412333,
+          "queries": 20000,
+          "query_wall_ns": 16315167,
+          "sample": 2,
+          "update_prepare_ns": 97083
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 760832,
+      "matches_per_query": {
+        "max": 1308,
+        "mean": 545.478075,
+        "p99": 1253
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "858837875",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 104583,
+          "query_ns": 32861459,
+          "results": 21819123,
+          "total_ns": 34532418,
+          "update_ns": 1566376
+        },
+        {
+          "build_ns": 129583,
+          "query_ns": 32645875,
+          "results": 21819123,
+          "total_ns": 34238624,
+          "update_ns": 1463166
+        },
+        {
+          "build_ns": 80208,
+          "query_ns": 32552792,
+          "results": 21819123,
+          "total_ns": 34066917,
+          "update_ns": 1433917
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "crowd-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 20496384,
+      "whole_process_cpu_seconds": {
+        "user": 1.34,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/crowd.json",
+        "3"
+      ],
+      "fixture_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "input_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.73 4.75 4.36 }",
+      "process_wall_seconds": 0.9867822090163827
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 106709,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 104542
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 79042,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 78375
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 23265625,
+          "queries": 20000,
+          "query_wall_ns": 21523833,
+          "sample": 0,
+          "update_prepare_ns": 1741625
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 124250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 123500
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 57209,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 56875
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 21451208,
+          "queries": 20000,
+          "query_wall_ns": 21306333,
+          "sample": 0,
+          "update_prepare_ns": 144750
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 29208,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 28333
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 23166,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 22833
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 24198500,
+          "queries": 20000,
+          "query_wall_ns": 22941166,
+          "sample": 1,
+          "update_prepare_ns": 1257125
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 417000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 414750
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 241667,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 240375
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 25972917,
+          "queries": 20000,
+          "query_wall_ns": 25666083,
+          "sample": 1,
+          "update_prepare_ns": 306750
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 68000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 63625
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 30583,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 30167
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 20282792,
+          "queries": 20000,
+          "query_wall_ns": 18799792,
+          "sample": 2,
+          "update_prepare_ns": 1482541
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 173458,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 172541
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 93750,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 93500
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 21273709,
+          "queries": 20000,
+          "query_wall_ns": 21133125,
+          "sample": 2,
+          "update_prepare_ns": 140500
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 780800,
+      "matches_per_query": {
+        "max": 1308,
+        "mean": 545.478075,
+        "p99": 1253
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "990468667",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 143875,
+          "query_ns": 42830166,
+          "results": 21819123,
+          "total_ns": 45223708,
+          "update_ns": 2249667
+        },
+        {
+          "build_ns": 84000,
+          "query_ns": 48607249,
+          "results": 21819123,
+          "total_ns": 50961415,
+          "update_ns": 2270166
+        },
+        {
+          "build_ns": 89625,
+          "query_ns": 39932917,
+          "results": 21819123,
+          "total_ns": 42005416,
+          "update_ns": 1982874
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "crowd-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 19775488,
+      "whole_process_cpu_seconds": {
+        "user": 1.52,
+        "system": 0.05,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/crowd.json",
+        "3"
+      ],
+      "fixture_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "input_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.73 4.75 4.36 }",
+      "process_wall_seconds": 1.1546215419657528
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 77333,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 75875
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 58166,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 57709
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 9502542,
+          "queries": 20000,
+          "query_wall_ns": 7259292,
+          "sample": 0,
+          "update_prepare_ns": 2242958
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 154709,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 153625
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 128125,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 127417
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 7409583,
+          "queries": 20000,
+          "query_wall_ns": 5979834,
+          "sample": 0,
+          "update_prepare_ns": 1429667
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 41167,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 40333
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 24125,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 23667
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 8679458,
+          "queries": 20000,
+          "query_wall_ns": 7077875,
+          "sample": 1,
+          "update_prepare_ns": 1600875
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 123541,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 122958
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 340833,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 338250
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 26708417,
+          "queries": 20000,
+          "query_wall_ns": 22054416,
+          "sample": 1,
+          "update_prepare_ns": 4653709
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 173084,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 171584
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 222167,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 219458
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 13800042,
+          "queries": 20000,
+          "query_wall_ns": 10657875,
+          "sample": 2,
+          "update_prepare_ns": 3141834
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 381584,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 379042
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 188500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 187209
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 10308417,
+          "queries": 20000,
+          "query_wall_ns": 6701708,
+          "sample": 2,
+          "update_prepare_ns": 3606583
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 85856,
+      "matches_per_query": {
+        "max": 183,
+        "mean": 69.450325,
+        "p99": 160
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "910959583",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 178958,
+          "query_ns": 13239126,
+          "results": 2778013,
+          "total_ns": 17505335,
+          "update_ns": 4087251
+        },
+        {
+          "build_ns": 107791,
+          "query_ns": 29132291,
+          "results": 2778013,
+          "total_ns": 36019874,
+          "update_ns": 6779792
+        },
+        {
+          "build_ns": 704125,
+          "query_ns": 17359583,
+          "results": 2778013,
+          "total_ns": 25769418,
+          "update_ns": 7705710
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "teleports-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 18006016,
+      "whole_process_cpu_seconds": {
+        "user": 0.87,
+        "system": 0.05,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/teleports.json",
+        "3"
+      ],
+      "fixture_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "input_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.75 4.75 4.37 }",
+      "process_wall_seconds": 1.0192096249666065
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 50708,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 49291
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 43375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 42917
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 8254584,
+          "queries": 20000,
+          "query_wall_ns": 6818083,
+          "sample": 0,
+          "update_prepare_ns": 1436292
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 180792,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 180083
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 58375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 57917
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 8610791,
+          "queries": 20000,
+          "query_wall_ns": 6759667,
+          "sample": 0,
+          "update_prepare_ns": 1850834
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 225125,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 224208
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 115584,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 115042
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 11667375,
+          "queries": 20000,
+          "query_wall_ns": 9094917,
+          "sample": 1,
+          "update_prepare_ns": 2572375
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 138458,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 137875
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 61834,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 61208
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 8649042,
+          "queries": 20000,
+          "query_wall_ns": 7126583,
+          "sample": 1,
+          "update_prepare_ns": 1522292
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 48916,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 45333
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 34834,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 34417
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 8125209,
+          "queries": 20000,
+          "query_wall_ns": 6583958,
+          "sample": 2,
+          "update_prepare_ns": 1541042
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 129917,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 129292
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 58917,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 58459
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 9765000,
+          "queries": 20000,
+          "query_wall_ns": 8313208,
+          "sample": 2,
+          "update_prepare_ns": 1451708
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 87232,
+      "matches_per_query": {
+        "max": 183,
+        "mean": 69.450325,
+        "p99": 160
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "652601125",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 212000,
+          "query_ns": 13577750,
+          "results": 2778013,
+          "total_ns": 17407084,
+          "update_ns": 3617334
+        },
+        {
+          "build_ns": 157958,
+          "query_ns": 16221500,
+          "results": 2778013,
+          "total_ns": 21012458,
+          "update_ns": 4633000
+        },
+        {
+          "build_ns": 112292,
+          "query_ns": 14897166,
+          "results": 2778013,
+          "total_ns": 18269709,
+          "update_ns": 3260251
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "teleports-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 19857408,
+      "whole_process_cpu_seconds": {
+        "user": 0.79,
+        "system": 0.03,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/teleports.json",
+        "3"
+      ],
+      "fixture_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "input_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.75 4.75 4.37 }",
+      "process_wall_seconds": 0.7405708340229467
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 37750,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 36875
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 29125,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 28584
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 7204083,
+          "queries": 20000,
+          "query_wall_ns": 5786834,
+          "sample": 0,
+          "update_prepare_ns": 1417000
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 171166,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 170583
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 47166,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 46791
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 7205041,
+          "queries": 20000,
+          "query_wall_ns": 5797000,
+          "sample": 0,
+          "update_prepare_ns": 1407916
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 23917,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 23250
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 21709,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 21250
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 7064834,
+          "queries": 20000,
+          "query_wall_ns": 5738833,
+          "sample": 1,
+          "update_prepare_ns": 1325959
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 81208,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 80666
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 39458,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 39000
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 7788333,
+          "queries": 20000,
+          "query_wall_ns": 6463666,
+          "sample": 1,
+          "update_prepare_ns": 1324625
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 27541,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 24541
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 22250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 21750
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 8338875,
+          "queries": 20000,
+          "query_wall_ns": 7069208,
+          "sample": 2,
+          "update_prepare_ns": 1269500
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 112375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 111750
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 48833,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 48500
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 7679209,
+          "queries": 20000,
+          "query_wall_ns": 6338875,
+          "sample": 2,
+          "update_prepare_ns": 1340125
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 86240,
+      "matches_per_query": {
+        "max": 183,
+        "mean": 69.450325,
+        "p99": 160
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "602528500",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 107541,
+          "query_ns": 11583834,
+          "results": 2778013,
+          "total_ns": 14799124,
+          "update_ns": 3107749
+        },
+        {
+          "build_ns": 83166,
+          "query_ns": 12202499,
+          "results": 2778013,
+          "total_ns": 15100415,
+          "update_ns": 2814750
+        },
+        {
+          "build_ns": 83708,
+          "query_ns": 13408083,
+          "results": 2778013,
+          "total_ns": 16307957,
+          "update_ns": 2816166
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "teleports-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 19742720,
+      "whole_process_cpu_seconds": {
+        "user": 0.75,
+        "system": 0.02,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 2,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/teleports.json",
+        "3"
+      ],
+      "fixture_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "input_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.75 4.75 4.37 }",
+      "process_wall_seconds": 0.6789119580062106
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 37792,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 36625
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 46000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 45250
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4436250,
+          "queries": 20000,
+          "query_wall_ns": 3189541,
+          "sample": 0,
+          "update_prepare_ns": 1246584
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 66292,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 65625
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 38625,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 38250
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 3277500,
+          "queries": 20000,
+          "query_wall_ns": 3162208,
+          "sample": 0,
+          "update_prepare_ns": 115208
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 26208,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 25459
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 26750,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 26250
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4500292,
+          "queries": 20000,
+          "query_wall_ns": 3194709,
+          "sample": 1,
+          "update_prepare_ns": 1305459
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 74041,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 73375
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 38250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 37791
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 3499208,
+          "queries": 20000,
+          "query_wall_ns": 3393250,
+          "sample": 1,
+          "update_prepare_ns": 105916
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 54834,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 47125
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 25584,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 25167
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4742292,
+          "queries": 20000,
+          "query_wall_ns": 3275250,
+          "sample": 2,
+          "update_prepare_ns": 1466917
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 44250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 43750
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 31167,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 30917
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 3343292,
+          "queries": 20000,
+          "query_wall_ns": 3237542,
+          "sample": 2,
+          "update_prepare_ns": 105667
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 10496,
+      "matches_per_query": {
+        "max": 34,
+        "mean": 7.557775,
+        "p99": 25
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "557155416",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 98625,
+          "query_ns": 6351749,
+          "results": 302311,
+          "total_ns": 7997916,
+          "update_ns": 1547542
+        },
+        {
+          "build_ns": 83542,
+          "query_ns": 6587959,
+          "results": 302311,
+          "total_ns": 8245751,
+          "update_ns": 1574250
+        },
+        {
+          "build_ns": 142458,
+          "query_ns": 6512792,
+          "results": 302311,
+          "total_ns": 8374793,
+          "update_ns": 1719543
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "uniform-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 15515648,
+      "whole_process_cpu_seconds": {
+        "user": 0.62,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/uniform.json",
+        "3"
+      ],
+      "fixture_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "input_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.75 4.75 4.37 }",
+      "process_wall_seconds": 0.6098107079742476
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 31084,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 29833
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 25417,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 25042
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6386541,
+          "queries": 20000,
+          "query_wall_ns": 5131417,
+          "sample": 0,
+          "update_prepare_ns": 1255000
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 93458,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 93000
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 42958,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 42625
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5379250,
+          "queries": 20000,
+          "query_wall_ns": 5269500,
+          "sample": 0,
+          "update_prepare_ns": 109625
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 20625,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 20000
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19459,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19084
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6233833,
+          "queries": 20000,
+          "query_wall_ns": 4964000,
+          "sample": 1,
+          "update_prepare_ns": 1269792
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 68416,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 67958
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 44500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 44042
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5288541,
+          "queries": 20000,
+          "query_wall_ns": 5145458,
+          "sample": 1,
+          "update_prepare_ns": 142917
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 22041,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19500
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 24416,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 24041
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6604500,
+          "queries": 20000,
+          "query_wall_ns": 5341333,
+          "sample": 2,
+          "update_prepare_ns": 1263000
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 70083,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 69500
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 41209,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 40875
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5137500,
+          "queries": 20000,
+          "query_wall_ns": 5033208,
+          "sample": 2,
+          "update_prepare_ns": 104166
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 86752,
+      "matches_per_query": {
+        "max": 176,
+        "mean": 69.523175,
+        "p99": 159
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "612329250",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 117958,
+          "query_ns": 10400917,
+          "results": 2780927,
+          "total_ns": 12074000,
+          "update_ns": 1555125
+        },
+        {
+          "build_ns": 115833,
+          "query_ns": 10109458,
+          "results": 2780927,
+          "total_ns": 11789084,
+          "update_ns": 1563793
+        },
+        {
+          "build_ns": 81292,
+          "query_ns": 10374541,
+          "results": 2780927,
+          "total_ns": 11976915,
+          "update_ns": 1521082
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "bounded64-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 16384000,
+      "whole_process_cpu_seconds": {
+        "user": 0.74,
+        "system": 0.02,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/bounded64.json",
+        "3"
+      ],
+      "fixture_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "input_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.75 4.75 4.37 }",
+      "process_wall_seconds": 0.6749544159974903
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 33666,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 32584
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 31375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 30875
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 20574875,
+          "queries": 20000,
+          "query_wall_ns": 19310291,
+          "sample": 0,
+          "update_prepare_ns": 1264500
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 141583,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 141042
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 53792,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 53458
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 18348833,
+          "queries": 20000,
+          "query_wall_ns": 18226084,
+          "sample": 0,
+          "update_prepare_ns": 122667
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 27916,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 27250
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 22167,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 21625
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 20954666,
+          "queries": 20000,
+          "query_wall_ns": 19668875,
+          "sample": 1,
+          "update_prepare_ns": 1285667
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 107000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 106500
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 43000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 42625
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 18244750,
+          "queries": 20000,
+          "query_wall_ns": 18134667,
+          "sample": 1,
+          "update_prepare_ns": 110000
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 24500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 21584
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 20667,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 20250
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 20559583,
+          "queries": 20000,
+          "query_wall_ns": 19323209,
+          "sample": 2,
+          "update_prepare_ns": 1236250
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 91459,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 91000
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 39125,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 38750
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 18524375,
+          "queries": 20000,
+          "query_wall_ns": 18408291,
+          "sample": 2,
+          "update_prepare_ns": 115958
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 750336,
+      "matches_per_query": {
+        "max": 1308,
+        "mean": 545.478075,
+        "p99": 1253
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "889546834",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 115625,
+          "query_ns": 37536375,
+          "results": 21819123,
+          "total_ns": 39297126,
+          "update_ns": 1645126
+        },
+        {
+          "build_ns": 102584,
+          "query_ns": 37803542,
+          "results": 21819123,
+          "total_ns": 39499793,
+          "update_ns": 1593667
+        },
+        {
+          "build_ns": 83292,
+          "query_ns": 37731500,
+          "results": 21819123,
+          "total_ns": 39338584,
+          "update_ns": 1523792
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "crowd-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 20103168,
+      "whole_process_cpu_seconds": {
+        "user": 1.41,
+        "system": 0.02,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/crowd.json",
+        "3"
+      ],
+      "fixture_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "input_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.75 4.75 4.37 }",
+      "process_wall_seconds": 1.0352941669989377
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 37084,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 36167
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 32750,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 32250
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6696208,
+          "queries": 20000,
+          "query_wall_ns": 5451041,
+          "sample": 0,
+          "update_prepare_ns": 1244958
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 97542,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 97042
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 45500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 45042
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 6043708,
+          "queries": 20000,
+          "query_wall_ns": 5930500,
+          "sample": 0,
+          "update_prepare_ns": 113167
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 23000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 22500
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 21417,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 21000
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6237208,
+          "queries": 20000,
+          "query_wall_ns": 5027916,
+          "sample": 1,
+          "update_prepare_ns": 1209125
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 61875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 61375
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 32166,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 31834
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5837458,
+          "queries": 20000,
+          "query_wall_ns": 5739875,
+          "sample": 1,
+          "update_prepare_ns": 97458
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 32875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 25209
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 22917,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 22542
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 7887333,
+          "queries": 20000,
+          "query_wall_ns": 6539875,
+          "sample": 2,
+          "update_prepare_ns": 1347291
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 105708,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 105125
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 42791,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 42541
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5368292,
+          "queries": 20000,
+          "query_wall_ns": 5255208,
+          "sample": 2,
+          "update_prepare_ns": 112958
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 87360,
+      "matches_per_query": {
+        "max": 176,
+        "mean": 69.523175,
+        "p99": 159
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "582277834",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 112667,
+          "query_ns": 11381541,
+          "results": 2780927,
+          "total_ns": 13062834,
+          "update_ns": 1568626
+        },
+        {
+          "build_ns": 83167,
+          "query_ns": 10767791,
+          "results": 2780927,
+          "total_ns": 12294250,
+          "update_ns": 1443292
+        },
+        {
+          "build_ns": 87917,
+          "query_ns": 11795083,
+          "results": 2780927,
+          "total_ns": 13538666,
+          "update_ns": 1655666
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "bounded64-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 16367616,
+      "whole_process_cpu_seconds": {
+        "user": 0.73,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/bounded64.json",
+        "3"
+      ],
+      "fixture_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "input_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.75 4.75 4.37 }",
+      "process_wall_seconds": 0.6462412920081988
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 48208,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 46959
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 26084,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 25375
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4702250,
+          "queries": 20000,
+          "query_wall_ns": 3335167,
+          "sample": 0,
+          "update_prepare_ns": 1366958
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 121459,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 120917
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 48000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 47583
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 3206500,
+          "queries": 20000,
+          "query_wall_ns": 3089750,
+          "sample": 0,
+          "update_prepare_ns": 116666
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 22750,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 21958
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 29041,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 28500
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4528167,
+          "queries": 20000,
+          "query_wall_ns": 3220208,
+          "sample": 1,
+          "update_prepare_ns": 1307833
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 126417,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 125583
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 49500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 48917
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 3375750,
+          "queries": 20000,
+          "query_wall_ns": 3237084,
+          "sample": 1,
+          "update_prepare_ns": 138584
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 21625,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 20958
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 20834,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 20375
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4452209,
+          "queries": 20000,
+          "query_wall_ns": 3135083,
+          "sample": 2,
+          "update_prepare_ns": 1317042
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 123041,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 122166
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 52792,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 52250
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 3695917,
+          "queries": 20000,
+          "query_wall_ns": 3537042,
+          "sample": 2,
+          "update_prepare_ns": 158833
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 10496,
+      "matches_per_query": {
+        "max": 34,
+        "mean": 7.557775,
+        "p99": 25
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "550503625",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 179917,
+          "query_ns": 6424917,
+          "results": 302311,
+          "total_ns": 8329292,
+          "update_ns": 1724458
+        },
+        {
+          "build_ns": 84417,
+          "query_ns": 6457292,
+          "results": 302311,
+          "total_ns": 8213084,
+          "update_ns": 1671375
+        },
+        {
+          "build_ns": 83333,
+          "query_ns": 6672125,
+          "results": 302311,
+          "total_ns": 8447082,
+          "update_ns": 1691624
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "uniform-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 15466496,
+      "whole_process_cpu_seconds": {
+        "user": 0.63,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/uniform.json",
+        "3"
+      ],
+      "fixture_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "input_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.93 4.79 4.38 }",
+      "process_wall_seconds": 0.6016737499739975
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 31500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 30500
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 29083,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 28583
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6475333,
+          "queries": 20000,
+          "query_wall_ns": 5048042,
+          "sample": 0,
+          "update_prepare_ns": 1426916
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 110208,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 109708
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 49875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 49542
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 6613625,
+          "queries": 20000,
+          "query_wall_ns": 5237792,
+          "sample": 0,
+          "update_prepare_ns": 1375708
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 20875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 20250
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19167
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6190167,
+          "queries": 20000,
+          "query_wall_ns": 5006833,
+          "sample": 1,
+          "update_prepare_ns": 1183250
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 52958,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 52500
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 30958,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 30584
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 6240500,
+          "queries": 20000,
+          "query_wall_ns": 5021667,
+          "sample": 1,
+          "update_prepare_ns": 1218750
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 24542,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19000
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19292,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19042
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6292750,
+          "queries": 20000,
+          "query_wall_ns": 5059333,
+          "sample": 2,
+          "update_prepare_ns": 1233333
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 64458,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 64042
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 32958,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 32708
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 6268750,
+          "queries": 20000,
+          "query_wall_ns": 5038708,
+          "sample": 2,
+          "update_prepare_ns": 1230000
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 87264,
+      "matches_per_query": {
+        "max": 183,
+        "mean": 69.450325,
+        "p99": 160
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "573027417",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 106375,
+          "query_ns": 10285834,
+          "results": 2778013,
+          "total_ns": 13413166,
+          "update_ns": 3020957
+        },
+        {
+          "build_ns": 80417,
+          "query_ns": 10028500,
+          "results": 2778013,
+          "total_ns": 12633418,
+          "update_ns": 2524501
+        },
+        {
+          "build_ns": 82916,
+          "query_ns": 10098041,
+          "results": 2778013,
+          "total_ns": 12779082,
+          "update_ns": 2598125
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "teleports-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 18268160,
+      "whole_process_cpu_seconds": {
+        "user": 0.71,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/teleports.json",
+        "3"
+      ],
+      "fixture_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "input_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.93 4.79 4.38 }",
+      "process_wall_seconds": 0.6369746249401942
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 23791,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 22500
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 30375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 29875
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 17438250,
+          "queries": 20000,
+          "query_wall_ns": 16227417,
+          "sample": 0,
+          "update_prepare_ns": 1210708
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 93625,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 93083
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 40542,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 40250
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 16700916,
+          "queries": 20000,
+          "query_wall_ns": 16590667,
+          "sample": 0,
+          "update_prepare_ns": 110167
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 20167,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19667
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19583,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19209
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 17268041,
+          "queries": 20000,
+          "query_wall_ns": 16099042,
+          "sample": 1,
+          "update_prepare_ns": 1168875
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 71917,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 71416
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 35250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 34875
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 16447667,
+          "queries": 20000,
+          "query_wall_ns": 16344042,
+          "sample": 1,
+          "update_prepare_ns": 103541
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 19625,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19125
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19000
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 17314625,
+          "queries": 20000,
+          "query_wall_ns": 16141958,
+          "sample": 2,
+          "update_prepare_ns": 1172583
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 61958,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 61500
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 30958,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 30583
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 16467708,
+          "queries": 20000,
+          "query_wall_ns": 16363916,
+          "sample": 2,
+          "update_prepare_ns": 103792
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 770816,
+      "matches_per_query": {
+        "max": 1308,
+        "mean": 545.478075,
+        "p99": 1253
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "853370667",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 77834,
+          "query_ns": 32818084,
+          "results": 21819123,
+          "total_ns": 34402501,
+          "update_ns": 1506583
+        },
+        {
+          "build_ns": 82625,
+          "query_ns": 32443084,
+          "results": 21819123,
+          "total_ns": 33943292,
+          "update_ns": 1417583
+        },
+        {
+          "build_ns": 82000,
+          "query_ns": 32505874,
+          "results": 21819123,
+          "total_ns": 33994457,
+          "update_ns": 1406583
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "crowd-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 20054016,
+      "whole_process_cpu_seconds": {
+        "user": 1.34,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 2,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/crowd.json",
+        "3"
+      ],
+      "fixture_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "input_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.93 4.79 4.38 }",
+      "process_wall_seconds": 0.9802670419448987
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 44375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 43500
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 35083,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 34667
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 17528667,
+          "queries": 20000,
+          "query_wall_ns": 16303916,
+          "sample": 0,
+          "update_prepare_ns": 1224625
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 102000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 101667
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 43500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 43209
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 16454042,
+          "queries": 20000,
+          "query_wall_ns": 16349666,
+          "sample": 0,
+          "update_prepare_ns": 104292
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 19667,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19208
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19292,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19000
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 17313334,
+          "queries": 20000,
+          "query_wall_ns": 16117917,
+          "sample": 1,
+          "update_prepare_ns": 1195292
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 72958,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 72292
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 34667,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 34250
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 16459583,
+          "queries": 20000,
+          "query_wall_ns": 16348125,
+          "sample": 1,
+          "update_prepare_ns": 111416
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 19459,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19000
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19417,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19125
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 17297875,
+          "queries": 20000,
+          "query_wall_ns": 16090375,
+          "sample": 2,
+          "update_prepare_ns": 1207416
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 63666,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 63250
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 30666,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 30416
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 16297500,
+          "queries": 20000,
+          "query_wall_ns": 16205500,
+          "sample": 2,
+          "update_prepare_ns": 91959
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 731520,
+      "matches_per_query": {
+        "max": 1308,
+        "mean": 545.478075,
+        "p99": 1253
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "862623333",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 120291,
+          "query_ns": 32653582,
+          "results": 21819123,
+          "total_ns": 34325833,
+          "update_ns": 1551960
+        },
+        {
+          "build_ns": 83208,
+          "query_ns": 32466042,
+          "results": 21819123,
+          "total_ns": 34000708,
+          "update_ns": 1451458
+        },
+        {
+          "build_ns": 81750,
+          "query_ns": 32295875,
+          "results": 21819123,
+          "total_ns": 33808791,
+          "update_ns": 1431166
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "crowd-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 20054016,
+      "whole_process_cpu_seconds": {
+        "user": 1.34,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 2,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/crowd.json",
+        "3"
+      ],
+      "fixture_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "input_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.93 4.79 4.38 }",
+      "process_wall_seconds": 0.9906101250089705
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 38541,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 37584
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 28958,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 28542
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4049875,
+          "queries": 20000,
+          "query_wall_ns": 2839833,
+          "sample": 0,
+          "update_prepare_ns": 1209834
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 154000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 153625
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 61208,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 60875
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 3053584,
+          "queries": 20000,
+          "query_wall_ns": 2903542,
+          "sample": 0,
+          "update_prepare_ns": 149958
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 20458,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19916
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19042
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 3997459,
+          "queries": 20000,
+          "query_wall_ns": 2805792,
+          "sample": 1,
+          "update_prepare_ns": 1191542
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 87458,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 86958
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 34542,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 34125
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 3024791,
+          "queries": 20000,
+          "query_wall_ns": 2925000,
+          "sample": 1,
+          "update_prepare_ns": 99708
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 20083,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19500
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19000
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 3944750,
+          "queries": 20000,
+          "query_wall_ns": 2784333,
+          "sample": 2,
+          "update_prepare_ns": 1160333
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 30042,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 29750
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 26167,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 25917
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 2899292,
+          "queries": 20000,
+          "query_wall_ns": 2810709,
+          "sample": 2,
+          "update_prepare_ns": 88417
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 10496,
+      "matches_per_query": {
+        "max": 34,
+        "mean": 7.557775,
+        "p99": 25
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "523710584",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 100917,
+          "query_ns": 5743375,
+          "results": 302311,
+          "total_ns": 7484710,
+          "update_ns": 1640418
+        },
+        {
+          "build_ns": 80417,
+          "query_ns": 5730792,
+          "results": 302311,
+          "total_ns": 7262500,
+          "update_ns": 1451291
+        },
+        {
+          "build_ns": 81625,
+          "query_ns": 5595042,
+          "results": 302311,
+          "total_ns": 7019584,
+          "update_ns": 1342917
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "uniform-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 15499264,
+      "whole_process_cpu_seconds": {
+        "user": 0.59,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/uniform.json",
+        "3"
+      ],
+      "fixture_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "input_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.93 4.79 4.38 }",
+      "process_wall_seconds": 0.5713532499503344
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 23042,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 22042
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 40084,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 39584
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6386292,
+          "queries": 20000,
+          "query_wall_ns": 5165958,
+          "sample": 0,
+          "update_prepare_ns": 1220292
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 86042,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 85500
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 40334,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 40000
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5077875,
+          "queries": 20000,
+          "query_wall_ns": 4950958,
+          "sample": 0,
+          "update_prepare_ns": 126917
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 20625,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 20083
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19666,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19417
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6307708,
+          "queries": 20000,
+          "query_wall_ns": 5035750,
+          "sample": 1,
+          "update_prepare_ns": 1271500
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 87250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 86708
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 43125,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 42750
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5359875,
+          "queries": 20000,
+          "query_wall_ns": 5233375,
+          "sample": 1,
+          "update_prepare_ns": 126375
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 22875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 20833
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 20000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19750
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6185083,
+          "queries": 20000,
+          "query_wall_ns": 4940209,
+          "sample": 2,
+          "update_prepare_ns": 1244583
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 80333,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 79958
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 43875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 43667
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5207000,
+          "queries": 20000,
+          "query_wall_ns": 5077708,
+          "sample": 2,
+          "update_prepare_ns": 129208
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 86752,
+      "matches_per_query": {
+        "max": 176,
+        "mean": 69.523175,
+        "p99": 159
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "565547250",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 82833,
+          "query_ns": 10116916,
+          "results": 2780927,
+          "total_ns": 11734084,
+          "update_ns": 1534335
+        },
+        {
+          "build_ns": 79833,
+          "query_ns": 10269125,
+          "results": 2780927,
+          "total_ns": 11915791,
+          "update_ns": 1566833
+        },
+        {
+          "build_ns": 81708,
+          "query_ns": 10017917,
+          "results": 2780927,
+          "total_ns": 11637624,
+          "update_ns": 1537999
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "bounded64-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 16171008,
+      "whole_process_cpu_seconds": {
+        "user": 0.7,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/bounded64.json",
+        "3"
+      ],
+      "fixture_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "input_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.93 4.79 4.38 }",
+      "process_wall_seconds": 0.6268642919603735
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 30542,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 29333
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 28709,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 28125
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4030292,
+          "queries": 20000,
+          "query_wall_ns": 2811541,
+          "sample": 0,
+          "update_prepare_ns": 1218667
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 88875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 88417
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 71541,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 71208
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 2969125,
+          "queries": 20000,
+          "query_wall_ns": 2860375,
+          "sample": 0,
+          "update_prepare_ns": 108625
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 20000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19542
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19625,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19209
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4116750,
+          "queries": 20000,
+          "query_wall_ns": 2922584,
+          "sample": 1,
+          "update_prepare_ns": 1194083
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 55833,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 55375
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 30166,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 29833
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 3003083,
+          "queries": 20000,
+          "query_wall_ns": 2908625,
+          "sample": 1,
+          "update_prepare_ns": 94292
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 26041,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 20250
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19458,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19125
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4019667,
+          "queries": 20000,
+          "query_wall_ns": 2843125,
+          "sample": 2,
+          "update_prepare_ns": 1176458
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 30750,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 30416
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 26500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 26125
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 2921584,
+          "queries": 20000,
+          "query_wall_ns": 2832583,
+          "sample": 2,
+          "update_prepare_ns": 88917
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 10496,
+      "matches_per_query": {
+        "max": 34,
+        "mean": 7.557775,
+        "p99": 25
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "519857208",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 119584,
+          "query_ns": 5671916,
+          "results": 302311,
+          "total_ns": 7335875,
+          "update_ns": 1544375
+        },
+        {
+          "build_ns": 90834,
+          "query_ns": 5831209,
+          "results": 302311,
+          "total_ns": 7334377,
+          "update_ns": 1412334
+        },
+        {
+          "build_ns": 99000,
+          "query_ns": 5675708,
+          "results": 302311,
+          "total_ns": 7135999,
+          "update_ns": 1361291
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "uniform-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 15515648,
+      "whole_process_cpu_seconds": {
+        "user": 0.59,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 2,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/uniform.json",
+        "3"
+      ],
+      "fixture_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "input_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.86 4.77 4.38 }",
+      "process_wall_seconds": 0.5674725829157978
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 33625,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 32458
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 36250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 35792
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 21419875,
+          "queries": 20000,
+          "query_wall_ns": 20089958,
+          "sample": 0,
+          "update_prepare_ns": 1329708
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 127708,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 127167
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 53125,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 52750
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 20752542,
+          "queries": 20000,
+          "query_wall_ns": 20627291,
+          "sample": 0,
+          "update_prepare_ns": 125209
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 23667,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 22875
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 21292,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 20917
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 21191708,
+          "queries": 20000,
+          "query_wall_ns": 19882875,
+          "sample": 1,
+          "update_prepare_ns": 1308750
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 126000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 125375
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 51292,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 50916
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 18464625,
+          "queries": 20000,
+          "query_wall_ns": 18346875,
+          "sample": 1,
+          "update_prepare_ns": 117709
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 25416,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 22541
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 22583,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 22291
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 18554958,
+          "queries": 20000,
+          "query_wall_ns": 17279625,
+          "sample": 2,
+          "update_prepare_ns": 1275125
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 173875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 173125
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 57917,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 57583
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 18283500,
+          "queries": 20000,
+          "query_wall_ns": 18158291,
+          "sample": 2,
+          "update_prepare_ns": 125083
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 735744,
+      "matches_per_query": {
+        "max": 1308,
+        "mean": 545.478075,
+        "p99": 1253
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "875478250",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 114875,
+          "query_ns": 40717249,
+          "results": 21819123,
+          "total_ns": 42535208,
+          "update_ns": 1703084
+        },
+        {
+          "build_ns": 86208,
+          "query_ns": 38229750,
+          "results": 21819123,
+          "total_ns": 39962500,
+          "update_ns": 1646542
+        },
+        {
+          "build_ns": 86875,
+          "query_ns": 35437916,
+          "results": 21819123,
+          "total_ns": 37200539,
+          "update_ns": 1675748
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "crowd-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 20086784,
+      "whole_process_cpu_seconds": {
+        "user": 1.42,
+        "system": 0.02,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/crowd.json",
+        "3"
+      ],
+      "fixture_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "input_sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.86 4.77 4.38 }",
+      "process_wall_seconds": 1.020856042043306
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 82167,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 79958
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 56792,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 56292
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6492375,
+          "queries": 20000,
+          "query_wall_ns": 5145625,
+          "sample": 0,
+          "update_prepare_ns": 1346541
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 84792,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 84208
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 42375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 41958
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5164250,
+          "queries": 20000,
+          "query_wall_ns": 5058667,
+          "sample": 0,
+          "update_prepare_ns": 105458
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 20583,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 20083
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19458,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19166
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6178291,
+          "queries": 20000,
+          "query_wall_ns": 4987709,
+          "sample": 1,
+          "update_prepare_ns": 1190459
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 53958,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 53458
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 33333,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 32958
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5736208,
+          "queries": 20000,
+          "query_wall_ns": 5639542,
+          "sample": 1,
+          "update_prepare_ns": 96541
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 29209,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 26917
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 20000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19667
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6304917,
+          "queries": 20000,
+          "query_wall_ns": 5077125,
+          "sample": 2,
+          "update_prepare_ns": 1227750
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 49666,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 49208
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 31125,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 30792
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5075209,
+          "queries": 20000,
+          "query_wall_ns": 4982500,
+          "sample": 2,
+          "update_prepare_ns": 92625
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 86336,
+      "matches_per_query": {
+        "max": 176,
+        "mean": 69.523175,
+        "p99": 159
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "589228375",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 290500,
+          "query_ns": 10204292,
+          "results": 2780927,
+          "total_ns": 12209207,
+          "update_ns": 1714415
+        },
+        {
+          "build_ns": 79625,
+          "query_ns": 10627251,
+          "results": 2780927,
+          "total_ns": 12119541,
+          "update_ns": 1412665
+        },
+        {
+          "build_ns": 82375,
+          "query_ns": 10059625,
+          "results": 2780927,
+          "total_ns": 11588959,
+          "update_ns": 1446959
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "bounded64-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 16384000,
+      "whole_process_cpu_seconds": {
+        "user": 0.73,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 2,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/bounded64.json",
+        "3"
+      ],
+      "fixture_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "input_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.86 4.77 4.38 }",
+      "process_wall_seconds": 0.6506710830144584
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 29167,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 28125
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 20584,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 20042
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6206875,
+          "queries": 20000,
+          "query_wall_ns": 5013708,
+          "sample": 0,
+          "update_prepare_ns": 1193000
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 70667,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 70208
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 36709,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 36333
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 6682000,
+          "queries": 20000,
+          "query_wall_ns": 5340541,
+          "sample": 0,
+          "update_prepare_ns": 1341334
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 24500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 20500
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19792,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19500
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6199416,
+          "queries": 20000,
+          "query_wall_ns": 5016167,
+          "sample": 1,
+          "update_prepare_ns": 1183166
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 48334,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 47875
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 29667,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 29333
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 6259500,
+          "queries": 20000,
+          "query_wall_ns": 5038083,
+          "sample": 1,
+          "update_prepare_ns": 1221292
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 27708,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 25458
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 27583,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 27291
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6331458,
+          "queries": 20000,
+          "query_wall_ns": 5024375,
+          "sample": 2,
+          "update_prepare_ns": 1306958
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 49000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 48542
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 28959,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 28625
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 6325459,
+          "queries": 20000,
+          "query_wall_ns": 4992916,
+          "sample": 2,
+          "update_prepare_ns": 1332459
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 87264,
+      "matches_per_query": {
+        "max": 183,
+        "mean": 69.450325,
+        "p99": 160
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "567014042",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 105833,
+          "query_ns": 10354249,
+          "results": 2778013,
+          "total_ns": 13149124,
+          "update_ns": 2689042
+        },
+        {
+          "build_ns": 80916,
+          "query_ns": 10054250,
+          "results": 2778013,
+          "total_ns": 12656832,
+          "update_ns": 2521666
+        },
+        {
+          "build_ns": 125917,
+          "query_ns": 10017291,
+          "results": 2778013,
+          "total_ns": 12912541,
+          "update_ns": 2769333
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "teleports-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 18464768,
+      "whole_process_cpu_seconds": {
+        "user": 0.71,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/teleports.json",
+        "3"
+      ],
+      "fixture_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "input_sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.86 4.77 4.38 }",
+      "process_wall_seconds": 0.6316205409821123
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 21042,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 20000
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19958,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 19375
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4156667,
+          "queries": 20000,
+          "query_wall_ns": 2881833,
+          "sample": 0,
+          "update_prepare_ns": 1274708
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 53959,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 53500
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 35334,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 34958
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 2907667,
+          "queries": 20000,
+          "query_wall_ns": 2813750,
+          "sample": 0,
+          "update_prepare_ns": 93833
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 19667,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19167
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19458,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19125
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 3947583,
+          "queries": 20000,
+          "query_wall_ns": 2790709,
+          "sample": 1,
+          "update_prepare_ns": 1156791
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 43333,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 42791
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 29708,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 29375
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 2959208,
+          "queries": 20000,
+          "query_wall_ns": 2865083,
+          "sample": 1,
+          "update_prepare_ns": 94041
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 33667,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 31500
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19334,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19084
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4033417,
+          "queries": 20000,
+          "query_wall_ns": 2850375,
+          "sample": 2,
+          "update_prepare_ns": 1183000
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 44000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 43667
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 28875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 28542
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 2930834,
+          "queries": 20000,
+          "query_wall_ns": 2838792,
+          "sample": 2,
+          "update_prepare_ns": 91958
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 10496,
+      "matches_per_query": {
+        "max": 34,
+        "mean": 7.557775,
+        "p99": 25
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "515412666",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 88375,
+          "query_ns": 5695583,
+          "results": 302311,
+          "total_ns": 7280332,
+          "update_ns": 1496374
+        },
+        {
+          "build_ns": 79959,
+          "query_ns": 5655792,
+          "results": 302311,
+          "total_ns": 7097041,
+          "update_ns": 1361290
+        },
+        {
+          "build_ns": 82125,
+          "query_ns": 5689167,
+          "results": 302311,
+          "total_ns": 7169043,
+          "update_ns": 1397751
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "uniform-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 15532032,
+      "whole_process_cpu_seconds": {
+        "user": 0.58,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/uniform.json",
+        "3"
+      ],
+      "fixture_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "input_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.86 4.77 4.38 }",
+      "process_wall_seconds": 0.5625122500350699
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 33375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 32375
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 29541,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 29125
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6443958,
+          "queries": 20000,
+          "query_wall_ns": 5140292,
+          "sample": 0,
+          "update_prepare_ns": 1303458
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 104958,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 104458
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 66083,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 65791
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5135416,
+          "queries": 20000,
+          "query_wall_ns": 5012084,
+          "sample": 0,
+          "update_prepare_ns": 123291
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 20041,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19541
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19542,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19208
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6268292,
+          "queries": 20000,
+          "query_wall_ns": 5054166,
+          "sample": 1,
+          "update_prepare_ns": 1214042
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 66500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 66041
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 35042,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 34667
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5270208,
+          "queries": 20000,
+          "query_wall_ns": 5169042,
+          "sample": 1,
+          "update_prepare_ns": 101083
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 22709,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19875
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19333,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19042
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6152458,
+          "queries": 20000,
+          "query_wall_ns": 4983750,
+          "sample": 2,
+          "update_prepare_ns": 1168625
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 33166,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 32750
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 26667,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 26416
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5092666,
+          "queries": 20000,
+          "query_wall_ns": 4999250,
+          "sample": 2,
+          "update_prepare_ns": 93166
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 87552,
+      "matches_per_query": {
+        "max": 176,
+        "mean": 69.523175,
+        "p99": 159
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "566004750",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 102666,
+          "query_ns": 10152376,
+          "results": 2780927,
+          "total_ns": 11913540,
+          "update_ns": 1658498
+        },
+        {
+          "build_ns": 83000,
+          "query_ns": 10223208,
+          "results": 2780927,
+          "total_ns": 11760790,
+          "update_ns": 1454582
+        },
+        {
+          "build_ns": 83834,
+          "query_ns": 9983000,
+          "results": 2780927,
+          "total_ns": 11426708,
+          "update_ns": 1359874
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "bounded64-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 16138240,
+      "whole_process_cpu_seconds": {
+        "user": 0.7,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 2,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/bounded64.json",
+        "3"
+      ],
+      "fixture_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "input_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.86 4.77 4.38 }",
+      "process_wall_seconds": 0.6275730420602486
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 21750,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 20833
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 20416,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 19916
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4107917,
+          "queries": 20000,
+          "query_wall_ns": 2887542,
+          "sample": 0,
+          "update_prepare_ns": 1220292
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 63375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 62834
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 34167,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 33792
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 2899334,
+          "queries": 20000,
+          "query_wall_ns": 2803417,
+          "sample": 0,
+          "update_prepare_ns": 95750
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 21791,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 21250
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19833,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19541
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4055541,
+          "queries": 20000,
+          "query_wall_ns": 2886125,
+          "sample": 1,
+          "update_prepare_ns": 1169333
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 44125,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 43583
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 30625,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 30292
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 3144542,
+          "queries": 20000,
+          "query_wall_ns": 3049083,
+          "sample": 1,
+          "update_prepare_ns": 95375
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 22709,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19625
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19500,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 19250
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 4175625,
+          "queries": 20000,
+          "query_wall_ns": 2951375,
+          "sample": 2,
+          "update_prepare_ns": 1224208
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 39875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 39458
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 28125,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 27834
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 2911750,
+          "queries": 20000,
+          "query_wall_ns": 2821000,
+          "sample": 2,
+          "update_prepare_ns": 90625
+        }
+      ],
+      "implementation": "rill-parallel-4",
+      "largest_emitted_group_capacity_bytes": 10496,
+      "matches_per_query": {
+        "max": 34,
+        "mean": 7.557775,
+        "p99": 25
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "518066500",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 97250,
+          "query_ns": 5690959,
+          "results": 302311,
+          "total_ns": 7241626,
+          "update_ns": 1453417
+        },
+        {
+          "build_ns": 82875,
+          "query_ns": 5935208,
+          "results": 302311,
+          "total_ns": 7397457,
+          "update_ns": 1379374
+        },
+        {
+          "build_ns": 82833,
+          "query_ns": 5772375,
+          "results": 302311,
+          "total_ns": 7276208,
+          "update_ns": 1421000
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "uniform-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 15548416,
+      "whole_process_cpu_seconds": {
+        "user": 0.59,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 2,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-parallel-4",
+        "benchmarks/holdout-twenty-k/uniform.json",
+        "3"
+      ],
+      "fixture_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "input_sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.86 4.77 4.38 }",
+      "process_wall_seconds": 0.5656559589551762
+    },
+    {
+      "capacity_scope": "one group only; not sum of live worker buffers",
+      "continuous_full_consumption": true,
+      "continuous_protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "correct": true,
+      "frame_samples": [
+        {
+          "frame": 0,
+          "frame_service_ns": 56417,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 55083
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 40625,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 40000
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6373792,
+          "queries": 20000,
+          "query_wall_ns": 5127875,
+          "sample": 0,
+          "update_prepare_ns": 1245750
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 95375,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 94792
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 51083,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 0,
+          "update_prepare_ns": 50791
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5137916,
+          "queries": 20000,
+          "query_wall_ns": 5023708,
+          "sample": 0,
+          "update_prepare_ns": 114125
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 20250,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19667
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 19625,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 19167
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6152208,
+          "queries": 20000,
+          "query_wall_ns": 4960625,
+          "sample": 1,
+          "update_prepare_ns": 1191541
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 76750,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 76333
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 39584,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 1,
+          "update_prepare_ns": 39334
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5538959,
+          "queries": 20000,
+          "query_wall_ns": 5422917,
+          "sample": 1,
+          "update_prepare_ns": 115959
+        },
+        {
+          "frame": 0,
+          "frame_service_ns": 23000,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 20792
+        },
+        {
+          "frame": 1,
+          "frame_service_ns": 20708,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 20250
+        },
+        {
+          "frame": 2,
+          "frame_service_ns": 6313708,
+          "queries": 20000,
+          "query_wall_ns": 5058416,
+          "sample": 2,
+          "update_prepare_ns": 1255208
+        },
+        {
+          "frame": 3,
+          "frame_service_ns": 67875,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 67333
+        },
+        {
+          "frame": 4,
+          "frame_service_ns": 35583,
+          "queries": 0,
+          "query_wall_ns": 0,
+          "sample": 2,
+          "update_prepare_ns": 35291
+        },
+        {
+          "frame": 5,
+          "frame_service_ns": 5082666,
+          "queries": 20000,
+          "query_wall_ns": 4982584,
+          "sample": 2,
+          "update_prepare_ns": 100041
+        }
+      ],
+      "implementation": "rill-auto-4",
+      "largest_emitted_group_capacity_bytes": 86752,
+      "matches_per_query": {
+        "max": 176,
+        "mean": 69.523175,
+        "p99": 159
+      },
+      "materialization": "bounded complete u64 result vectors; every ID consumed by same synthetic checksum; timed count/checksum agree with independent full-membership and exact query-visitation proof",
+      "output_window_queries": 64,
+      "points": 20000,
+      "proof_wall_ns": "575883791",
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 134625,
+          "query_ns": 10151583,
+          "results": 2780927,
+          "total_ns": 11886749,
+          "update_ns": 1600541
+        },
+        {
+          "build_ns": 83959,
+          "query_ns": 10383542,
+          "results": 2780927,
+          "total_ns": 11929502,
+          "update_ns": 1462001
+        },
+        {
+          "build_ns": 84459,
+          "query_ns": 10041000,
+          "results": 2780927,
+          "total_ns": 11624374,
+          "update_ns": 1498915
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "uninterrupted query-frame service including update/prepare, ordering, allocations, dispatch, scoped threads, full materialization and synthetic every-ID consumption; no scheduled-load queue, network or game simulation",
+      "fixture_name": "bounded64-20k-seed97531",
+      "status": "measured",
+      "process_peak_rss_bytes": 16056320,
+      "whole_process_cpu_seconds": {
+        "user": 0.71,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 1,
+      "command": [
+        "build/frozen/twenty-k-auto-holdout-v2/rust",
+        "rill-auto-4",
+        "benchmarks/holdout-twenty-k/bounded64.json",
+        "3"
+      ],
+      "fixture_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "input_sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "artifact_sha256": "f8695ea4cf110a19317ae8958f10feb0fe0a1413b8d67d9bb8b574b78d313517",
+      "load_average": "{ 4.87 4.78 4.38 }",
+      "process_wall_seconds": 0.6384966670302674
+    }
+  ]
+}
