@@ -1,0 +1,9 @@
+{
+  "source_commit": "e5e2a824f36a77732995ec0d31a4e0de24e8402e",
+  "package_path": "build/packages/rill-spatial-0.1.0.crate",
+  "sha256": "5fc75ca71327dcf8b3d7acf273f25e4b7dcf22857726532d3c68e6b4f1033b2b",
+  "bytes": 31074,
+  "validation": "cargo package --offline --locked --all-features; standalone unpacked package built successfully",
+  "log": "results/validation-public-package.log",
+  "published_to_crates_io": false
+}

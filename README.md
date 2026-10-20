@@ -173,6 +173,24 @@ times uninterrupted query frames, including full ID materialization and every-ID
 consumption. Worker counts, output windows and timing contracts are distinct
 experimental dimensions; their results must not be pooled.
 
+A final public-feature run on a shared Apple M2 (8 GiB), four workers, modeled
+20 Hz relevance spread across 60 Hz cohorts gave the following **kernel service**:
+
+| 20k observers | Mean exact matches/query | Median/frame | Worst observed |
+|---|---:|---:|---:|
+| Ordinary density | 69.3 | 2.05 ms | 3.56 ms |
+| Crowded | 544.8 | 6.27 ms | 7.74 ms |
+| All-visible output stress | 20000.0 | 10.64 ms | 12.65 ms |
+
+Each profile has 54 observed frames, with full membership proofs before separate
+uninterrupted timing. This final run had no 16.67 ms misses; a preceding adaptive
+candidate run had 2/54 dense misses, so it is not a tail-latency guarantee.
+Motion, preparation, complete u64 output and synthetic every-ID consumption are
+charged. Sockets, offered-load queues, physics, encoding and client reconstruction
+are absent. All-visible output stress is not a viable full-state egress claim.
+[Raw public results](results/twenty-k-public-cohorts-v1.json) record build features,
+compiler identity, source and executable hashes.
+
 Independent packed-cell, dual-tree, radius-hinted and adaptive-output candidates
 live under `research/variants`.
 Their tests and exploratory measurements are separate from acceptance. See

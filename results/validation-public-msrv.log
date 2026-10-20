@@ -1,0 +1,56 @@
+   Compiling bytemuck v1.25.2
+   Compiling safe_arch v0.7.4
+   Compiling wide v0.7.33
+   Compiling rill-spatial v0.1.0 (/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial)
+    Finished `test` profile [unoptimized] target(s) in 2.61s
+     Running unittests src/lib.rs (build/msrv-target/debug/deps/rill_spatial-67c65c0bab289686)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/adaptive.rs (build/msrv-target/debug/deps/adaptive-93c8cd16719208c2)
+
+running 6 tests
+test late_invalid_query_emits_nothing_in_large_adaptive_batch ... ok
+test uneven_query_count_samples_floor_three_quarters ... ok
+test sparse_samples_keep_configured_window_and_complete_empty_rows ... ok
+test fewer_than_1024_queries_keep_configured_window ... ok
+test dense_1024_queries_shrink_to_eight_rows_without_extra_emissions ... ok
+test missed_dense_hotspots_are_exact_and_can_exceed_soft_target ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.05s
+
+     Running tests/batch.rs (build/msrv-target/debug/deps/batch-dff257cb33bccb54)
+
+running 6 tests
+test batch_invalid_input_has_no_callbacks ... ok
+test parallel_callback_requires_sync_without_requiring_send ... ok
+test parallel_callbacks_overlap_and_caller_participates ... ok
+test callback_panic_unwinds_and_index_remains_usable ... ok
+test parallel_callback_panic_unwinds_and_index_remains_usable ... ok
+test batch_full_membership_across_workers_epochs_and_dimensions ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.61s
+
+     Running tests/correctness.rs (build/msrv-target/debug/deps/correctness-06f05681b8aa890f)
+
+running 9 tests
+test invalid_inputs_are_atomic ... ok
+test closed_boundary_duplicates_and_clear ... ok
+test bulk_points_replace_duplicate_ids_and_survive_structural_changes ... ok
+test exceptional_scales_do_not_overflow_or_lose_points ... ok
+test independent_parallel_reads ... ok
+test prepared_queries_match_ordered_f64_at_boundaries_and_scales ... ok
+test prepared_motion_matches_unprepared_with_stable_and_sparse_ids ... ok
+test random_mutations_2d ... ok
+test random_mutations_3d ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+   Doc-tests rill_spatial
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

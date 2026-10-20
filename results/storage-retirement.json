@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-20T05:24:52.369054+00:00",
+  "removed_paths": [
+    "build/target",
+    "build/msrv-target",
+    "build/auto-output-build.log",
+    "build/auto-output-v2-build.log",
+    "build/public-adaptive-build.log",
+    "build/adaptive-study.log",
+    "build/adaptive-study-v2.log",
+    "build/public-cohorts.log"
+  ],
+  "basis": "All owned build, validation and measurement jobs completed; exact selected inputs/artifacts retained under storage-retention.json",
+  "free_bytes_before": 23694385152,
+  "free_bytes_after": 24229584896,
+  "requested_reserve_bytes": 100000000000,
+  "reserve_met": false,
+  "protected_inputs_deleted": false,
+  "note": "Free-space delta is a shared-filesystem observation, not isolated attribution"
+}

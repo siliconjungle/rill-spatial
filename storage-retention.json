@@ -532,6 +532,42 @@
     {
       "path": "results/validation-public-all-clippy.log",
       "reason": "Selected complete adaptive v2 evidence and required public feature validation, including regressions and deadline misses"
+    },
+    {
+      "path": "results/public-adaptive-build.json",
+      "reason": "Final actual public-feature build, standalone package and complete cohort proof/performance evidence"
+    },
+    {
+      "path": "results/validation-public-package.log",
+      "reason": "Final actual public-feature build, standalone package and complete cohort proof/performance evidence"
+    },
+    {
+      "path": "results/public-package.json",
+      "reason": "Final actual public-feature build, standalone package and complete cohort proof/performance evidence"
+    },
+    {
+      "path": "build/packages/rill-spatial-0.1.0.crate",
+      "reason": "Final actual public-feature build, standalone package and complete cohort proof/performance evidence"
+    },
+    {
+      "path": "results/twenty-k-public-cohorts-v1.json",
+      "reason": "Final actual public-feature build, standalone package and complete cohort proof/performance evidence"
+    },
+    {
+      "path": "results/twenty-k-public-cohorts-v1-summary.json",
+      "reason": "Final actual public-feature build, standalone package and complete cohort proof/performance evidence"
+    },
+    {
+      "path": "build/frozen/twenty-k-public-cohorts-v1/rust",
+      "reason": "Final actual public-feature build, standalone package and complete cohort proof/performance evidence"
+    },
+    {
+      "path": "results/validation-public-msrv.log",
+      "reason": "Required Rust1.85 public all-feature correctness proof"
+    },
+    {
+      "path": "results/storage-retirement.json",
+      "reason": "Required record of completed generated-output retirement and remaining disk reserve deficit"
     }
   ],
   "safe_to_remove": [
@@ -586,6 +622,38 @@
     {
       "path": "build/continuous-smoke-v2.log",
       "reason": "Completed insight-only scheduler smoke superseded by selected complete84-job screen and96-job window sweep"
+    },
+    {
+      "path": "build/target",
+      "reason": "Completed generated build cache or progress log; exact selected executables, package, raw measurements, validation logs and Git source retained"
+    },
+    {
+      "path": "build/auto-output-build.log",
+      "reason": "Completed generated build cache or progress log; exact selected executables, package, raw measurements, validation logs and Git source retained"
+    },
+    {
+      "path": "build/auto-output-v2-build.log",
+      "reason": "Completed generated build cache or progress log; exact selected executables, package, raw measurements, validation logs and Git source retained"
+    },
+    {
+      "path": "build/public-adaptive-build.log",
+      "reason": "Completed generated build cache or progress log; exact selected executables, package, raw measurements, validation logs and Git source retained"
+    },
+    {
+      "path": "build/adaptive-study.log",
+      "reason": "Completed generated build cache or progress log; exact selected executables, package, raw measurements, validation logs and Git source retained"
+    },
+    {
+      "path": "build/adaptive-study-v2.log",
+      "reason": "Completed generated build cache or progress log; exact selected executables, package, raw measurements, validation logs and Git source retained"
+    },
+    {
+      "path": "build/public-cohorts.log",
+      "reason": "Completed generated build cache or progress log; exact selected executables, package, raw measurements, validation logs and Git source retained"
+    },
+    {
+      "path": "build/msrv-target",
+      "reason": "Completed Rust1.85 validation cache; test proof and exact source retained"
     }
   ]
 }

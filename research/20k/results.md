@@ -169,3 +169,25 @@ callbacks nor statistics. Exact complete materialization is unchanged. Six
 adaptive oracle suites join the existing 15 public tests when the feature is
 enabled; 21 tests pass SIMD release and scalar validation. Workspace/all-feature
 clippy is clean. Feature flags are recorded alongside final public build hashes.
+
+
+## Final public artifact verification
+
+The promoted opt-in policy was built through the actual public crate at
+`e5e2a824f36a77732995ec0d31a4e0de24e8402e`, with the build command and feature
+set in `results/public-adaptive-build.json`. The runner verifies that manifest's
+executable SHA before freezing it and embeds the manifest in raw observations.
+Nine fresh-process jobs (three per cohort profile) passed the full independent
+parallel-path proof. The final public frame medians/worst observed were ordinary
+2.05/3.56 ms, crowd 6.27/7.74 ms, and all-visible 10.64/12.65 ms. Each profile
+has 54 timed query frames. This run had no 16.67 ms misses; it does not erase
+the candidate's earlier dense outliers or establish sustained offered-load tails.
+No prior/candidate result is silently relabeled as this public executable.
+
+`cargo package --offline --locked --all-features` successfully packaged and built
+the unpacked standalone library (17 files; 30.3 KiB compressed). Package SHA and
+validation are recorded in `results/public-package.json`. GitHub is public;
+there has been no crates.io publication. The original superiority gate remains
+OPEN, with 11 unimplemented projects and insufficient simultaneous evidence.
+The next infrastructure proof is membership deltas/shared encoding/owner queues
+and actual receiving clients, including churn and bootstrap/teleport waves.

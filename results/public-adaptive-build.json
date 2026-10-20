@@ -1,0 +1,29 @@
+{
+  "command": [
+    "cargo",
+    "build",
+    "-p",
+    "rill-spatial-benchmarks",
+    "--release",
+    "--features",
+    "rill-spatial/adaptive-batches",
+    "--offline"
+  ],
+  "features": [
+    "rill-spatial/adaptive-batches"
+  ],
+  "environment": {
+    "RUSTUP_TOOLCHAIN": "stable",
+    "CARGO_TARGET_DIR": "build/target",
+    "CARGO_INCREMENTAL": "0"
+  },
+  "source_commit": "e5e2a824f36a77732995ec0d31a4e0de24e8402e",
+  "executable_sha256": "5565a055c7283b560df586223188a5209cdd29ee3952ae04ea436f7603cc66f5",
+  "source_sha256": {
+    "src/lib.rs": "39563ffe46134e55a356f16a3e0010b4f62d53045cf2a402ebb3a52ce03cc3fc",
+    "src/batch.rs": "4da8c15252c6ad7160227814bf29a8e7bcf829f701c2a3540d11d564aec518fb",
+    "src/hierarchy.rs": "299cd36c34e398b51832a44d83d92153b13488ddbe61293b3d8a8b5273d618ca",
+    "Cargo.toml": "eb573468dac66d4085050c2604b1944b042a8fbb031a6dfee80b8fc962e09e44",
+    "Cargo.lock": "b1ef26e36ceb1113a6e330ca250a62e2104d5891dbaf327fe10b2ca84c5095d0"
+  }
+}

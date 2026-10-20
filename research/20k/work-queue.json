@@ -25,16 +25,16 @@
     {
       "id": "root",
       "concurrencyKey": "main-integration",
-      "status": "running",
+      "status": "stage_complete",
       "agent": "root",
-      "phase": "interpret v3 and radius/cohort results; validate adaptive window and measure serially"
+      "phase": "20k library/research stage published; universal superiority and full-server gates remain OPEN"
     },
     {
       "id": "adaptive_output",
       "concurrencyKey": "auto-output",
-      "status": "running",
+      "status": "complete",
       "agent": "/root/dual_tree",
-      "phase": "source-only exact adaptive-window candidate; no concurrent benchmark jobs"
+      "phase": "v1/v2 proofs and paired timings retained; v2 policy public opt-in; final public artifact verified"
     }
   ]
 }

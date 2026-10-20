@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "updated_utc": "2026-10-20T05:13:20.627405+00:00",
+  "updated_utc": "2026-10-20T05:24:52.369054+00:00",
   "acceptance": "OPEN",
   "server_capacity": "UNPROVEN",
   "host": {
     "cpu": "Apple M2",
     "ram_bytes": 8589934592,
-    "free_bytes": 23716409344,
+    "free_bytes": 24229584896,
     "requested_free_reserve_bytes": 100000000000,
     "reserve_status": "preexisting deficit; protected inputs preserved"
   },
@@ -29,16 +29,25 @@
     "38 annotated primary sources with capacity bounds and experiment designs",
     "143 protocol-v3 baseline/window/independent-holdout full proof jobs",
     "120 topology/original-workload/cohort full proof jobs; mixed topology kept experimental",
-    "Adaptive-output candidate: 24 tests pass release and scalar; harness clippy clean"
+    "Adaptive-output candidate: 24 tests pass release and scalar; harness clippy clean",
+    "56 adaptive-output v1 proof/performance jobs; regressions retained",
+    "84 adaptive-output v2 proof/performance jobs; tail misses retained",
+    "Public adaptive-batches opt-in feature; 21 tests pass SIMD release and scalar, default15 pass; workspace lint clean",
+    "Standalone unpacked package verifies successfully; not published to crates.io",
+    "9 final public-feature jobs; all full proofs pass; explicit build/executable identity recorded",
+    "Rust1.85 public all-feature21 tests pass locally",
+    "Completed stable/MSRV build caches retired; exact frozen executable and standalone package rehashed successfully"
   ],
-  "in_progress": [
-    "Serial equal-resource adaptive-output comparison on primary, independent holdout and cohort fixtures",
-    "Selected source/result publication"
-  ],
+  "in_progress": [],
   "limits": [
     "No live clients, networking, physics or complete server tested",
     "Comparison has unresolved projects and losses; no universal superiority claim",
     "Concurrent results and oracle-paused measurements are exploratory",
     "Single/four-worker studies must be compared at equal resources"
+  ],
+  "remaining_gates": [
+    "11 competitor source projects still need adapters; original simultaneous superiority gate OPEN",
+    "Kernel traces do not prove actual 20,000-connection service or sustained scheduled-to-ready tails",
+    "Replication/delta/shared encoding/queue and network tests; structural-churn throughput"
   ]
 }
