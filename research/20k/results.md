@@ -56,3 +56,19 @@ all IDs under a proof-only mutex, then recreates the trace for uninterrupted
 concurrent consumption using per-group atomic summaries. Every timed query is
 visited once; count and order-independent checksum agree with the independent
 proof. Callback order never substitutes for original query identity.
+
+Protocol v2 completed 35/35 additional full-path proof jobs. Parallel consumers
+improved the dense case, but one crowded-scene run had large outliers (up to
+146 ms) on the shared host. They remain retained rather than discarded. The
+benchmark also wrote a shared AtomicBool per query and did a scalar multiply per
+returned ID. Those are synthetic measurement costs, not required index work.
+
+Protocol v3 keeps the same exact library and checksum value, factors the checksum
+using modular distributivity, and removes per-query shared timed counters. Every
+query/ID/duplicate/omission is still checked in the separate full proof; timed
+runs check aggregate count and the identical order-independent checksum. Group
+counters remain atomic. This reduces instrumentation contention and makes the
+consumer's reduction SIMD-friendly. A direct wrapping-arithmetic equivalence
+test passes, including overflowing u64 inputs. All implementations receive the
+same consumer. A v2→v3 timing difference is not an index-algorithm speedup and
+must not be presented as one. Binary/protocol identities remain separate.

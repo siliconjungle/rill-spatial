@@ -1,0 +1,684 @@
+{
+  "scope": "Observed kernel service only; no full server, queue latency or statistical p99 claim",
+  "budget_ms": 16.666666666666668,
+  "inputs": [
+    {
+      "path": "results/twenty-k-concurrent-screen-v2.json",
+      "status": "COMPLETE"
+    }
+  ],
+  "failures": [],
+  "rows": [
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 18.332834,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 8.8306465,
+      "max_observed_frame_ms": 9.911917,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 16.402666,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 8.0190005,
+      "max_observed_frame_ms": 8.891333,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 31.325667,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 15.1909165,
+      "max_observed_frame_ms": 15.452042,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 32.103792,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 15.472583,
+      "max_observed_frame_ms": 15.843166,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 26.691042,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 12.0401045,
+      "max_observed_frame_ms": 12.974791,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 347.354749,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 173.48668750000002,
+      "max_observed_frame_ms": 175.679,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 163.090833,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 80.8035835,
+      "max_observed_frame_ms": 88.380083,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 1591.007334,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 797.0264999999999,
+      "max_observed_frame_ms": 813.891042,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 1017.98979,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 504.73002099999997,
+      "max_observed_frame_ms": 538.588916,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 1114.625583,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 556.398563,
+      "max_observed_frame_ms": 567.202417,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 51.092583,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 25.403354,
+      "max_observed_frame_ms": 26.149834,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 148.323168,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 64.578542,
+      "max_observed_frame_ms": 145.917417,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 114.881873,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 56.9497915,
+      "max_observed_frame_ms": 58.782791,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 100.925832,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 49.826063000000005,
+      "max_observed_frame_ms": 50.803333,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 85.536167,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 41.757416500000005,
+      "max_observed_frame_ms": 42.615166,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "floors",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 12.898417,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 6.2895835,
+      "max_observed_frame_ms": 7.223458,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "floors",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 11.292126,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 5.7961670000000005,
+      "max_observed_frame_ms": 6.97775,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "floors",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 33.979917,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 16.3970835,
+      "max_observed_frame_ms": 16.633625,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "floors",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 25.274209,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 11.66675,
+      "max_observed_frame_ms": 12.347333,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "floors",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 22.001753,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 10.299707999999999,
+      "max_observed_frame_ms": 10.337375,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 30.075168,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 14.588417,
+      "max_observed_frame_ms": 19.145792,
+      "observed_deadline_misses": 3
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 26.655749,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 12.717063,
+      "max_observed_frame_ms": 17.09875,
+      "observed_deadline_misses": 2
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 63.320001,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 27.691354,
+      "max_observed_frame_ms": 38.574417,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 66.050835,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 29.854875,
+      "max_observed_frame_ms": 30.256333,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 44.237748,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 18.3275,
+      "max_observed_frame_ms": 18.468834,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 17.834917,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 8.7666875,
+      "max_observed_frame_ms": 8.866875,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 17.872667,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 8.815021,
+      "max_observed_frame_ms": 8.873417,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 33.453708,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 16.518354000000002,
+      "max_observed_frame_ms": 17.404,
+      "observed_deadline_misses": 2
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 29.937334,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 14.435604000000001,
+      "max_observed_frame_ms": 20.678083,
+      "observed_deadline_misses": 2
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 23.728167,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 11.1540005,
+      "max_observed_frame_ms": 12.560125,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 11.086792,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 5.3954375,
+      "max_observed_frame_ms": 6.246708,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 9.356583,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 4.547354,
+      "max_observed_frame_ms": 5.253,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 20.941085,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 9.926479,
+      "max_observed_frame_ms": 10.187208,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 13.066125,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 5.9381045,
+      "max_observed_frame_ms": 6.051542,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "b069715c37294020060128af33309204f8cf1c3134c950f33eaf544928ac3be6",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v2 shared concurrent consumer; complete parallel-path proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 13.77396,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 6.2210415,
+      "max_observed_frame_ms": 6.281292,
+      "observed_deadline_misses": 0
+    }
+  ],
+  "notes": [
+    "Different binary hashes, fixture hashes and protocols stay separate",
+    "Reported frame includes updates/preparation and complete output consumption where specified",
+    "Maximum is the worst observed frame, not a guaranteed bound",
+    "Fresh processes and samples are retained; this does not satisfy the original simultaneous superiority gate"
+  ]
+}

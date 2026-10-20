@@ -292,6 +292,22 @@
     {
       "path": "benchmarks/holdout-twenty-k/manifest.json",
       "reason": "Independent seed97531 fixture hashes; generator and registered plan are exact reproduction inputs"
+    },
+    {
+      "path": "results/twenty-k-concurrent-screen-v2.json",
+      "reason": "Selected35-job concurrent consumer study, including crowded-scene regressions and complete proofs"
+    },
+    {
+      "path": "build/frozen/twenty-k-concurrent-screen-v2/rust",
+      "reason": "Exact selected protocolv2 executable; source preserved atd3b54cc"
+    },
+    {
+      "path": "results/twenty-k-summary-v2.json",
+      "reason": "Dimension-preserving derived summary of v2 study"
+    },
+    {
+      "path": "results/validation-consumer-v3.log",
+      "reason": "Exact checksum-equivalence and harness query identity proof before protocolv3"
     }
   ],
   "safe_to_remove": [

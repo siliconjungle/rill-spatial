@@ -1,0 +1,10 @@
+   Compiling rill-spatial-benchmarks v0.1.0 (/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks)
+    Finished `release` profile [optimized] target(s) in 5.09s
+     Running unittests src/main.rs (build/target/release/deps/rill_spatial_benchmarks-03aa4fa09e439044)
+
+running 2 tests
+test continuous::tests::factored_checksum_preserves_wrapping_observable ... ok
+test cohorts::tests::coherent_rows_restore_query_identity ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

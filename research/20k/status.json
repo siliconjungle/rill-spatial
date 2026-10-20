@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_utc": "2026-10-20T04:37:54.920466+00:00",
+  "updated_utc": "2026-10-20T04:51:11.432615+00:00",
   "acceptance": "OPEN",
   "server_capacity": "UNPROVEN",
   "host": {
@@ -20,12 +20,17 @@
     "public bounded coherent batch API and exact2D/3D tests",
     "JS and native bounded driver full-membership smoke proofs",
     "Kiddo wider-leaf fallback full-membership proof",
-    "12 publiclibrary tests pass in default/scalar/release modes; clippy clean"
+    "12 publiclibrary tests pass in default/scalar/release modes; clippy clean",
+    "84-job continuous v1 equal-worker comparison (all proofs pass)",
+    "96-job randomized1/8/64 window sweep (all proofs pass)",
+    "35-job concurrent-consumer v2 comparison (all proofs pass; crowded regression retained)",
+    "15 library tests pass default/scalar/release; publicparallel API Rust1.85/stable remoteCI pass",
+    "53 competitor entries now adapted from39sourceprojects; additional nativeproject nine-fixture proof passes"
   ],
   "in_progress": [
-    "serial84-job continuous proof-then-timing screen across12 configurations and7 scenes",
-    "randomized1/8/64 output-window sweep",
-    "source/evidence publication"
+    "protocolv3 metrology: factor equivalent checksum and remove per-query shared timed counters",
+    "independent seed97531 holdout verification",
+    "selected result interpretation and publication"
   ],
   "limits": [
     "No live clients, networking, physics or complete server tested",
