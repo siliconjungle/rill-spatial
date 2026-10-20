@@ -1,0 +1,932 @@
+{
+  "schema": 1,
+  "status": "COMPLETE",
+  "host": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "notes": [
+    "Other user workers left running; shared-machine diagnostics",
+    "Process RSS includes reference oracle and retained result vectors; not isolated index bytes"
+  ],
+  "samples_per_process": 2,
+  "requested_processes": 1,
+  "rows": [
+    {
+      "implementation": "nanoflann",
+      "scenario": "dense-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 207542,
+          "update_ns": 391124,
+          "query_ns": 43806792,
+          "total_ns": 44405458,
+          "results": 3786052
+        },
+        {
+          "build_ns": 189416,
+          "update_ns": 381168,
+          "query_ns": 40452001,
+          "total_ns": 41022585,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 84606976,
+      "process": 0,
+      "command": [
+        "build/cpp-nanoflann",
+        "benchmarks/fixtures/dense.bin",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.6923624170012772
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "dense-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 10992292,
+          "update_ns": 3077291,
+          "query_ns": 1600598833,
+          "total_ns": 1614668416,
+          "results": 3786052
+        },
+        {
+          "build_ns": 3226500,
+          "update_ns": 2644418,
+          "query_ns": 1630853502,
+          "total_ns": 1636724420,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 253476864,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/javascript.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 4.5469106659293175
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "dense-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 681791,
+          "update_ns": 1489708,
+          "query_ns": 571720708,
+          "total_ns": 573892207,
+          "results": 3786052
+        },
+        {
+          "build_ns": 668791,
+          "update_ns": 1445959,
+          "query_ns": 565715915,
+          "total_ns": 567830665,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 86163456,
+      "process": 0,
+      "command": [
+        "build/cpp-crvs-kdtree",
+        "benchmarks/fixtures/dense.bin",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 1.7059780000708997
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "uniform-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 139375,
+          "update_ns": 250333,
+          "query_ns": 925042,
+          "total_ns": 1314750,
+          "results": 6672
+        },
+        {
+          "build_ns": 126000,
+          "update_ns": 205542,
+          "query_ns": 891958,
+          "total_ns": 1223500,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 2572288,
+      "process": 0,
+      "command": [
+        "build/cpp-pico-tree",
+        "benchmarks/fixtures/uniform.bin",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.37943091697525233
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "small-seed2051",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 4250,
+          "update_ns": 4500,
+          "query_ns": 17332,
+          "total_ns": 26082,
+          "results": 130
+        },
+        {
+          "build_ns": 1000,
+          "update_ns": 2041,
+          "query_ns": 12750,
+          "total_ns": 15791,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 1474560,
+      "process": 0,
+      "command": [
+        "build/cpp-pico-tree",
+        "benchmarks/fixtures/small.bin",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005867292056791484
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "dense-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 300500,
+          "update_ns": 701875,
+          "query_ns": 230572709,
+          "total_ns": 231575084,
+          "results": 3786052
+        },
+        {
+          "build_ns": 292000,
+          "update_ns": 724209,
+          "query_ns": 238835500,
+          "total_ns": 239851709,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 84754432,
+      "process": 0,
+      "command": [
+        "build/cpp-libkdtree",
+        "benchmarks/fixtures/dense.bin",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 1.0170077909715474
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "uniform-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 365625,
+          "update_ns": 752293,
+          "query_ns": 2289373,
+          "total_ns": 3407291,
+          "results": 6672
+        },
+        {
+          "build_ns": 339291,
+          "update_ns": 732125,
+          "query_ns": 2160292,
+          "total_ns": 3231708,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 2768896,
+      "process": 0,
+      "command": [
+        "build/cpp-gishi-kdtree",
+        "benchmarks/fixtures/uniform.bin",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.3761685410281643
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "small-seed2051",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 11125,
+          "update_ns": 20251,
+          "query_ns": 51792,
+          "total_ns": 83168,
+          "results": 130
+        },
+        {
+          "build_ns": 6375,
+          "update_ns": 16417,
+          "query_ns": 39416,
+          "total_ns": 62208,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 1507328,
+      "process": 0,
+      "command": [
+        "build/cpp-libkdtree",
+        "benchmarks/fixtures/small.bin",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.006371457944624126
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "uniform-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 2234166,
+          "update_ns": 6076040,
+          "query_ns": 5368292,
+          "total_ns": 13678498,
+          "results": 6672
+        },
+        {
+          "build_ns": 1309250,
+          "update_ns": 2814168,
+          "query_ns": 4542500,
+          "total_ns": 8665918,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 84983808,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/javascript.mjs",
+        "rbush",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.14348233304917812
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "dense-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 676792,
+          "update_ns": 1636042,
+          "query_ns": 265652708,
+          "total_ns": 267965542,
+          "results": 3786052
+        },
+        {
+          "build_ns": 619625,
+          "update_ns": 1581958,
+          "query_ns": 266245501,
+          "total_ns": 268447084,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 86278144,
+      "process": 0,
+      "command": [
+        "build/cpp-kdtree-cpp",
+        "benchmarks/fixtures/dense.bin",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 1.0838015000335872
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "dense-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 149792,
+          "update_ns": 283167,
+          "query_ns": 37726750,
+          "total_ns": 38159709,
+          "results": 3786052
+        },
+        {
+          "build_ns": 185209,
+          "update_ns": 302039,
+          "query_ns": 34795501,
+          "total_ns": 35282749,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 84639744,
+      "process": 0,
+      "command": [
+        "build/cpp-pico-tree",
+        "benchmarks/fixtures/dense.bin",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.27626212500035763
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "small-seed2051",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 25375,
+          "update_ns": 40084,
+          "query_ns": 134209,
+          "total_ns": 199668,
+          "results": 130
+        },
+        {
+          "build_ns": 15125,
+          "update_ns": 33625,
+          "query_ns": 122833,
+          "total_ns": 171583,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 1589248,
+      "process": 0,
+      "command": [
+        "build/cpp-crvs-kdtree",
+        "benchmarks/fixtures/small.bin",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.006331207929179072
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "small-seed2051",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 456917,
+          "update_ns": 1614291,
+          "query_ns": 760375,
+          "total_ns": 2831583,
+          "results": 130
+        },
+        {
+          "build_ns": 111125,
+          "update_ns": 261416,
+          "query_ns": 222792,
+          "total_ns": 595333,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 60456960,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/javascript.mjs",
+        "rbush",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.05856729194056243
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "dense-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 371875,
+          "update_ns": 772083,
+          "query_ns": 81417250,
+          "total_ns": 82561208,
+          "results": 3786052
+        },
+        {
+          "build_ns": 336708,
+          "update_ns": 723791,
+          "query_ns": 77209709,
+          "total_ns": 78270208,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 84803584,
+      "process": 0,
+      "command": [
+        "build/cpp-gishi-kdtree",
+        "benchmarks/fixtures/dense.bin",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.3563972089905292
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "dense-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 2186292,
+          "update_ns": 9433626,
+          "query_ns": 139000500,
+          "total_ns": 150620418,
+          "results": 3786052
+        },
+        {
+          "build_ns": 805042,
+          "update_ns": 3525500,
+          "query_ns": 145377834,
+          "total_ns": 149708376,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 257687552,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/javascript.mjs",
+        "rbush-3d",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 1.4330226660240442
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "uniform-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 659125,
+          "update_ns": 1579249,
+          "query_ns": 4134000,
+          "total_ns": 6372374,
+          "results": 6672
+        },
+        {
+          "build_ns": 603459,
+          "update_ns": 1535750,
+          "query_ns": 3970001,
+          "total_ns": 6109210,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 4014080,
+      "process": 0,
+      "command": [
+        "build/cpp-kdtree-cpp",
+        "benchmarks/fixtures/uniform.bin",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.02809325000271201
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "small-seed2051",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 480959,
+          "update_ns": 1164375,
+          "query_ns": 368041,
+          "total_ns": 2013375,
+          "results": 130
+        },
+        {
+          "build_ns": 142250,
+          "update_ns": 197833,
+          "query_ns": 104834,
+          "total_ns": 444917,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 60342272,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/javascript.mjs",
+        "rbush-3d",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.05574629199691117
+    },
+    {
+      "implementation": "nanoflann",
+      "scenario": "small-seed2051",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 5833,
+          "update_ns": 5918,
+          "query_ns": 17500,
+          "total_ns": 29251,
+          "results": 130
+        },
+        {
+          "build_ns": 1375,
+          "update_ns": 2958,
+          "query_ns": 13333,
+          "total_ns": 17666,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 1490944,
+      "process": 0,
+      "command": [
+        "build/cpp-nanoflann",
+        "benchmarks/fixtures/small.bin",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.006165125058032572
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "small-seed2051",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 27708,
+          "update_ns": 44584,
+          "query_ns": 61583,
+          "total_ns": 133875,
+          "results": 130
+        },
+        {
+          "build_ns": 15083,
+          "update_ns": 38459,
+          "query_ns": 45083,
+          "total_ns": 98625,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 1589248,
+      "process": 0,
+      "command": [
+        "build/cpp-kdtree-cpp",
+        "benchmarks/fixtures/small.bin",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005519541096873581
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "small-seed2051",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 249125,
+          "update_ns": 456749,
+          "query_ns": 1813502,
+          "total_ns": 2519376,
+          "results": 130
+        },
+        {
+          "build_ns": 45375,
+          "update_ns": 90793,
+          "query_ns": 850791,
+          "total_ns": 986959,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 60522496,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/javascript.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.0523901249980554
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "uniform-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 3961584,
+          "update_ns": 2818376,
+          "query_ns": 198697875,
+          "total_ns": 205477835,
+          "results": 6672
+        },
+        {
+          "build_ns": 3498209,
+          "update_ns": 2276289,
+          "query_ns": 190462625,
+          "total_ns": 196237123,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 106708992,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/javascript.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.5130250420188531
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "small-seed2051",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 11375,
+          "update_ns": 15915,
+          "query_ns": 26625,
+          "total_ns": 53915,
+          "results": 130
+        },
+        {
+          "build_ns": 5500,
+          "update_ns": 10375,
+          "query_ns": 19791,
+          "total_ns": 35666,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 1507328,
+      "process": 0,
+      "command": [
+        "build/cpp-gishi-kdtree",
+        "benchmarks/fixtures/small.bin",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.0062796249985694885
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "dense-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 2215167,
+          "update_ns": 5421292,
+          "query_ns": 110031167,
+          "total_ns": 117667626,
+          "results": 3786052
+        },
+        {
+          "build_ns": 837500,
+          "update_ns": 2751708,
+          "query_ns": 116784875,
+          "total_ns": 120374083,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 256081920,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/javascript.mjs",
+        "rbush",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 1.3874112089397386
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "uniform-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 315458,
+          "update_ns": 722166,
+          "query_ns": 4444793,
+          "total_ns": 5482417,
+          "results": 6672
+        },
+        {
+          "build_ns": 293875,
+          "update_ns": 721292,
+          "query_ns": 4490000,
+          "total_ns": 5505167,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 2654208,
+      "process": 0,
+      "command": [
+        "build/cpp-libkdtree",
+        "benchmarks/fixtures/uniform.bin",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.028094833018258214
+    },
+    {
+      "implementation": "nanoflann",
+      "scenario": "uniform-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 198500,
+          "update_ns": 365584,
+          "query_ns": 922583,
+          "total_ns": 1486667,
+          "results": 6672
+        },
+        {
+          "build_ns": 185125,
+          "update_ns": 320749,
+          "query_ns": 898374,
+          "total_ns": 1404248,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 2588672,
+      "process": 0,
+      "command": [
+        "build/cpp-nanoflann",
+        "benchmarks/fixtures/uniform.bin",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.01749708305578679
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "uniform-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 728167,
+          "update_ns": 1522210,
+          "query_ns": 11771291,
+          "total_ns": 14021668,
+          "results": 6672
+        },
+        {
+          "build_ns": 638083,
+          "update_ns": 1534960,
+          "query_ns": 11130041,
+          "total_ns": 13303084,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 3653632,
+      "process": 0,
+      "command": [
+        "build/cpp-crvs-kdtree",
+        "benchmarks/fixtures/uniform.bin",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.04160662495996803
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "uniform-seed2051",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 2254708,
+          "update_ns": 9053832,
+          "query_ns": 6768500,
+          "total_ns": 18077040,
+          "results": 6672
+        },
+        {
+          "build_ns": 827750,
+          "update_ns": 4016708,
+          "query_ns": 5909457,
+          "total_ns": 10753915,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 84459520,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/javascript.mjs",
+        "rbush-3d",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.12947395804803818
+    }
+  ]
+}

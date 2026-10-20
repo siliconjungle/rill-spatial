@@ -1,0 +1,199 @@
+[
+  {
+    "implementation": "rbush",
+    "scenario": "small-seed2051",
+    "points": 64,
+    "queries": 128,
+    "correct": true,
+    "runtime": "v26.1.0",
+    "samples": [
+      {
+        "build_ns": 375500,
+        "update_ns": 1135167,
+        "query_ns": 400124,
+        "total_ns": 1910791,
+        "results": 130
+      }
+    ]
+  },
+  {
+    "implementation": "rbush-3d",
+    "status": "adapter-failed",
+    "error": "file:///Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/javascript.mjs:11\n make=points=>{let current=points.slice(),items=current.map(toBox),tree=new Tree().load(items);return{\n                                                                        ^\n\nTypeError: Tree is not a constructor\n    at make (file:///Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/javascript.mjs:11:73)\n    at file:///Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/javascript.mjs:72:36\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:636:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.1.0\n"
+  },
+  {
+    "implementation": "flatbush",
+    "scenario": "small-seed2051",
+    "points": 64,
+    "queries": 128,
+    "correct": true,
+    "runtime": "v26.1.0",
+    "samples": [
+      {
+        "build_ns": 807833,
+        "update_ns": 196750,
+        "query_ns": 608875,
+        "total_ns": 1613458,
+        "results": 130
+      }
+    ]
+  },
+  {
+    "implementation": "kdbush",
+    "scenario": "small-seed2051",
+    "points": 64,
+    "queries": 128,
+    "correct": true,
+    "runtime": "v26.1.0",
+    "samples": [
+      {
+        "build_ns": 173250,
+        "update_ns": 86542,
+        "query_ns": 1102834,
+        "total_ns": 1362626,
+        "results": 130
+      }
+    ]
+  },
+  {
+    "implementation": "static-kdtree",
+    "scenario": "small-seed2051",
+    "points": 64,
+    "queries": 128,
+    "correct": true,
+    "runtime": "v26.1.0",
+    "samples": [
+      {
+        "build_ns": 2699125,
+        "update_ns": 392874,
+        "query_ns": 1414417,
+        "total_ns": 4506416,
+        "results": 130
+      }
+    ]
+  },
+  {
+    "implementation": "d3-quadtree",
+    "scenario": "small-seed2051",
+    "points": 64,
+    "queries": 128,
+    "correct": true,
+    "runtime": "v26.1.0",
+    "samples": [
+      {
+        "build_ns": 298333,
+        "update_ns": 221250,
+        "query_ns": 676710,
+        "total_ns": 1196293,
+        "results": 130
+      }
+    ]
+  },
+  {
+    "implementation": "kd-tree-javascript",
+    "status": "adapter-failed",
+    "error": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: kd-tree-javascript small-seed2051 query 5\n+ actual - expected\n\n  [\n    63,\n+   63\n  ]\n\n    at file:///Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/javascript.mjs:74:85\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:636:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [ 63, 63 ],\n  expected: [ 63 ],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v26.1.0\n"
+  },
+  {
+    "implementation": "js-quadtree",
+    "scenario": "small-seed2051",
+    "points": 64,
+    "queries": 128,
+    "correct": true,
+    "runtime": "v26.1.0",
+    "samples": [
+      {
+        "build_ns": 531417,
+        "update_ns": 381958,
+        "query_ns": 687207,
+        "total_ns": 1600582,
+        "results": 130
+      }
+    ]
+  },
+  {
+    "implementation": "@timohausmann/quadtree-js",
+    "scenario": "small-seed2051",
+    "points": 64,
+    "queries": 128,
+    "correct": true,
+    "runtime": "v26.1.0",
+    "samples": [
+      {
+        "build_ns": 669209,
+        "update_ns": 324417,
+        "query_ns": 701084,
+        "total_ns": 1694710,
+        "results": 130
+      }
+    ]
+  },
+  {
+    "implementation": "quadtree-lib",
+    "scenario": "small-seed2051",
+    "points": 64,
+    "queries": 128,
+    "correct": true,
+    "runtime": "v26.1.0",
+    "samples": [
+      {
+        "build_ns": 1632000,
+        "update_ns": 678165,
+        "query_ns": 1376792,
+        "total_ns": 3686957,
+        "results": 130
+      }
+    ]
+  },
+  {
+    "implementation": "rtree",
+    "scenario": "small-seed2051",
+    "points": 64,
+    "queries": 128,
+    "correct": true,
+    "runtime": "v26.1.0",
+    "samples": [
+      {
+        "build_ns": 1166166,
+        "update_ns": 1143042,
+        "query_ns": 795501,
+        "total_ns": 3104709,
+        "results": 130
+      }
+    ]
+  },
+  {
+    "implementation": "mnemonist-vp",
+    "scenario": "small-seed2051",
+    "points": 64,
+    "queries": 128,
+    "correct": true,
+    "runtime": "v26.1.0",
+    "samples": [
+      {
+        "build_ns": 404959,
+        "update_ns": 238001,
+        "query_ns": 545416,
+        "total_ns": 1188376,
+        "results": 130
+      }
+    ]
+  },
+  {
+    "implementation": "spatial-hash",
+    "scenario": "small-seed2051",
+    "points": 64,
+    "queries": 128,
+    "correct": true,
+    "runtime": "v26.1.0",
+    "samples": [
+      {
+        "build_ns": 178298041,
+        "update_ns": 214085,
+        "query_ns": 424166,
+        "total_ns": 178936292,
+        "results": 130
+      }
+    ]
+  }
+]

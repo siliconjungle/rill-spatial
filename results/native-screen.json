@@ -1,0 +1,1544 @@
+{
+  "schema": 1,
+  "status": "COMPLETE",
+  "host": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "notes": [
+    "Other user workers left running; shared-machine diagnostics",
+    "Process RSS includes reference oracle and retained result vectors; not isolated index bytes"
+  ],
+  "samples_per_process": 2,
+  "requested_processes": 1,
+  "rows": [
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 10583,
+          "query_ns": 40417,
+          "results": 130,
+          "total_ns": 54167,
+          "update_ns": 3167
+        },
+        {
+          "build_ns": 6334,
+          "query_ns": 27458,
+          "results": 130,
+          "total_ns": 36625,
+          "update_ns": 2833
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1933312,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "rill-spatial",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.8879897500155494
+    },
+    {
+      "correct": true,
+      "implementation": "kiddo-mutable",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 61625,
+          "query_ns": 20709,
+          "results": 130,
+          "total_ns": 90124,
+          "update_ns": 7790
+        },
+        {
+          "build_ns": 2666,
+          "query_ns": 15000,
+          "results": 130,
+          "total_ns": 23706,
+          "update_ns": 6040
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2015232,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kiddo-mutable",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.008214500034227967
+    },
+    {
+      "correct": true,
+      "implementation": "rstar",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 38500,
+          "query_ns": 30209,
+          "results": 130,
+          "total_ns": 123959,
+          "update_ns": 55250
+        },
+        {
+          "build_ns": 17333,
+          "query_ns": 23499,
+          "results": 130,
+          "total_ns": 86416,
+          "update_ns": 45584
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2080768,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "rstar",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.006994750001467764
+    },
+    {
+      "correct": true,
+      "implementation": "kiddo-immutable",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 156250,
+          "query_ns": 27388541,
+          "results": 3786052,
+          "total_ns": 27757666,
+          "update_ns": 212875
+        },
+        {
+          "build_ns": 76416,
+          "query_ns": 25886501,
+          "results": 3786052,
+          "total_ns": 26106542,
+          "update_ns": 143625
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 78987264,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kiddo-immutable",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.19065054191742092
+    },
+    {
+      "correct": true,
+      "implementation": "spart-quadtree",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 18291,
+          "query_ns": 53208,
+          "results": 130,
+          "total_ns": 117708,
+          "update_ns": 46209
+        },
+        {
+          "build_ns": 11542,
+          "query_ns": 46125,
+          "results": 130,
+          "total_ns": 97833,
+          "update_ns": 40166
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1966080,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-quadtree",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.007373875007033348
+    },
+    {
+      "correct": true,
+      "implementation": "kdtree",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 16833,
+          "query_ns": 23500,
+          "results": 130,
+          "total_ns": 54458,
+          "update_ns": 14125
+        },
+        {
+          "build_ns": 9250,
+          "query_ns": 18875,
+          "results": 130,
+          "total_ns": 39666,
+          "update_ns": 11541
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1949696,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kdtree",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005478041945025325
+    },
+    {
+      "correct": true,
+      "implementation": "geo-index-rtree",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 6167,
+          "query_ns": 30543,
+          "results": 130,
+          "total_ns": 45959,
+          "update_ns": 9249
+        },
+        {
+          "build_ns": 2167,
+          "query_ns": 24250,
+          "results": 130,
+          "total_ns": 31292,
+          "update_ns": 4875
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1966080,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "geo-index-rtree",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005511000053957105
+    },
+    {
+      "correct": true,
+      "implementation": "spart-quadtree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 377250,
+          "query_ns": 35760958,
+          "results": 3786052,
+          "total_ns": 37461332,
+          "update_ns": 1323124
+        },
+        {
+          "build_ns": 362791,
+          "query_ns": 33200083,
+          "results": 3786052,
+          "total_ns": 34857959,
+          "update_ns": 1295085
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 85311488,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-quadtree",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.19630858302116394
+    },
+    {
+      "correct": true,
+      "implementation": "spart-quadtree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 319750,
+          "query_ns": 1848959,
+          "results": 6672,
+          "total_ns": 3096209,
+          "update_ns": 927500
+        },
+        {
+          "build_ns": 278875,
+          "query_ns": 1782916,
+          "results": 6672,
+          "total_ns": 2909083,
+          "update_ns": 847292
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3309568,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-quadtree",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.02113591693341732
+    },
+    {
+      "correct": true,
+      "implementation": "spart-octree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 309959,
+          "query_ns": 2960083,
+          "results": 6672,
+          "total_ns": 4144085,
+          "update_ns": 874043
+        },
+        {
+          "build_ns": 266333,
+          "query_ns": 2908751,
+          "results": 6672,
+          "total_ns": 4056835,
+          "update_ns": 881751
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3473408,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-octree",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.022932082996703684
+    },
+    {
+      "correct": true,
+      "implementation": "spart-octree",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 24708,
+          "query_ns": 83250,
+          "results": 130,
+          "total_ns": 136789,
+          "update_ns": 28831
+        },
+        {
+          "build_ns": 12000,
+          "query_ns": 74417,
+          "results": 130,
+          "total_ns": 113250,
+          "update_ns": 26833
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1982464,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-octree",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.007028375053778291
+    },
+    {
+      "correct": true,
+      "implementation": "geo-index-kd",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 133166,
+          "query_ns": 34608792,
+          "results": 3786052,
+          "total_ns": 34979791,
+          "update_ns": 237833
+        },
+        {
+          "build_ns": 123000,
+          "query_ns": 27217750,
+          "results": 3786052,
+          "total_ns": 27589248,
+          "update_ns": 248498
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 85213184,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "geo-index-kd",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.18727770796976984
+    },
+    {
+      "correct": true,
+      "implementation": "geo-index-rtree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 87833,
+          "query_ns": 31625751,
+          "results": 3786052,
+          "total_ns": 31876502,
+          "update_ns": 162918
+        },
+        {
+          "build_ns": 82708,
+          "query_ns": 31416958,
+          "results": 3786052,
+          "total_ns": 31654294,
+          "update_ns": 154628
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 85278720,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "geo-index-rtree",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.1853228750405833
+    },
+    {
+      "correct": true,
+      "implementation": "rstar",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 341333,
+          "query_ns": 67102334,
+          "results": 3786052,
+          "total_ns": 69870625,
+          "update_ns": 2426958
+        },
+        {
+          "build_ns": 332875,
+          "query_ns": 64305000,
+          "results": 3786052,
+          "total_ns": 67338793,
+          "update_ns": 2700918
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 86179840,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "rstar",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.2604468340286985
+    },
+    {
+      "correct": true,
+      "implementation": "geo-index-kd",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 792,
+          "query_ns": 27831,
+          "results": 130,
+          "total_ns": 30416,
+          "update_ns": 1793
+        },
+        {
+          "build_ns": 375,
+          "query_ns": 22249,
+          "results": 130,
+          "total_ns": 23334,
+          "update_ns": 710
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1916928,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "geo-index-kd",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.006024166941642761
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 83042,
+          "query_ns": 37417209,
+          "results": 3786052,
+          "total_ns": 37592000,
+          "update_ns": 91749
+        },
+        {
+          "build_ns": 63542,
+          "query_ns": 34282584,
+          "results": 3786052,
+          "total_ns": 34426750,
+          "update_ns": 80624
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 85360640,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "rill-spatial",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.16212295892182738
+    },
+    {
+      "correct": true,
+      "implementation": "spart-kd",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 570084,
+          "query_ns": 50838334,
+          "results": 3786052,
+          "total_ns": 52855335,
+          "update_ns": 1446917
+        },
+        {
+          "build_ns": 544000,
+          "query_ns": 48494749,
+          "results": 3786052,
+          "total_ns": 50491998,
+          "update_ns": 1453249
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 78741504,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-kd",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.22623770800419152
+    },
+    {
+      "correct": true,
+      "implementation": "spart-rstar",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 5134208,
+          "query_ns": 40614000,
+          "results": 3786052,
+          "total_ns": 51852626,
+          "update_ns": 6104418
+        },
+        {
+          "build_ns": 4138834,
+          "query_ns": 38127708,
+          "results": 3786052,
+          "total_ns": 48481541,
+          "update_ns": 6214999
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 79347712,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-rstar",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.22262199991382658
+    },
+    {
+      "correct": true,
+      "implementation": "kiddo-immutable",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 10708,
+          "query_ns": 20832,
+          "results": 130,
+          "total_ns": 34499,
+          "update_ns": 2959
+        },
+        {
+          "build_ns": 1417,
+          "query_ns": 13000,
+          "results": 130,
+          "total_ns": 17541,
+          "update_ns": 3124
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2031616,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kiddo-immutable",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.007872375077567995
+    },
+    {
+      "correct": true,
+      "implementation": "static-aabb2d",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 95375,
+          "query_ns": 1055874,
+          "results": 6672,
+          "total_ns": 1328831,
+          "update_ns": 177582
+        },
+        {
+          "build_ns": 93917,
+          "query_ns": 1025791,
+          "results": 6672,
+          "total_ns": 1285376,
+          "update_ns": 165668
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3178496,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "static-aabb2d",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.016544625046662986
+    },
+    {
+      "correct": true,
+      "implementation": "kiddo-mutable",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 74291,
+          "query_ns": 28893123,
+          "results": 3786052,
+          "total_ns": 29285121,
+          "update_ns": 317707
+        },
+        {
+          "build_ns": 62542,
+          "query_ns": 26173250,
+          "results": 3786052,
+          "total_ns": 26550583,
+          "update_ns": 314791
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 78741504,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kiddo-mutable",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.1856489999918267
+    },
+    {
+      "correct": true,
+      "implementation": "static-aabb2d",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 104750,
+          "query_ns": 26740957,
+          "results": 3786052,
+          "total_ns": 27072041,
+          "update_ns": 226334
+        },
+        {
+          "build_ns": 100750,
+          "query_ns": 22760624,
+          "results": 3786052,
+          "total_ns": 23064832,
+          "update_ns": 203458
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 85196800,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "static-aabb2d",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.17461754207033664
+    },
+    {
+      "correct": true,
+      "implementation": "kd-tree",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 5875,
+          "query_ns": 23708,
+          "results": 130,
+          "total_ns": 34374,
+          "update_ns": 4791
+        },
+        {
+          "build_ns": 1458,
+          "query_ns": 14332,
+          "results": 130,
+          "total_ns": 19249,
+          "update_ns": 3459
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1900544,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kd-tree",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.006614207988604903
+    },
+    {
+      "correct": true,
+      "implementation": "spart-rstar",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 59083,
+          "query_ns": 29625,
+          "results": 130,
+          "total_ns": 218207,
+          "update_ns": 129499
+        },
+        {
+          "build_ns": 49875,
+          "query_ns": 20835,
+          "results": 130,
+          "total_ns": 188792,
+          "update_ns": 118082
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2146304,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-rstar",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005598125047981739
+    },
+    {
+      "correct": true,
+      "implementation": "spart-rtree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 2092584,
+          "query_ns": 57024626,
+          "results": 3786052,
+          "total_ns": 64257751,
+          "update_ns": 5140541
+        },
+        {
+          "build_ns": 2359375,
+          "query_ns": 53755207,
+          "results": 3786052,
+          "total_ns": 61009165,
+          "update_ns": 4894583
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 79167488,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-rtree",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.24663520802278072
+    },
+    {
+      "correct": true,
+      "implementation": "kiddo-immutable",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 79959,
+          "query_ns": 950333,
+          "results": 6672,
+          "total_ns": 1157668,
+          "update_ns": 127376
+        },
+        {
+          "build_ns": 66958,
+          "query_ns": 925793,
+          "results": 6672,
+          "total_ns": 1121667,
+          "update_ns": 128916
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3244032,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kiddo-immutable",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.016773416893556714
+    },
+    {
+      "correct": true,
+      "implementation": "kiddo-mutable",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 65459,
+          "query_ns": 1043875,
+          "results": 6672,
+          "total_ns": 1412667,
+          "update_ns": 303333
+        },
+        {
+          "build_ns": 56542,
+          "query_ns": 1001208,
+          "results": 6672,
+          "total_ns": 1352667,
+          "update_ns": 294917
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3260416,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kiddo-mutable",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.01719112496357411
+    },
+    {
+      "correct": true,
+      "implementation": "spart-kd",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 19000,
+          "query_ns": 26373,
+          "results": 130,
+          "total_ns": 82083,
+          "update_ns": 36710
+        },
+        {
+          "build_ns": 13458,
+          "query_ns": 21210,
+          "results": 130,
+          "total_ns": 63334,
+          "update_ns": 28666
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1998848,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-kd",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005551832960918546
+    },
+    {
+      "correct": true,
+      "implementation": "spart-kd",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 626875,
+          "query_ns": 1860207,
+          "results": 6672,
+          "total_ns": 3852501,
+          "update_ns": 1365419
+        },
+        {
+          "build_ns": 631125,
+          "query_ns": 1745500,
+          "results": 6672,
+          "total_ns": 3771541,
+          "update_ns": 1394916
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3457024,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-kd",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.021436207927763462
+    },
+    {
+      "correct": true,
+      "implementation": "brute-force",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 10459,
+          "query_ns": 41156419,
+          "results": 3786052,
+          "total_ns": 41173004,
+          "update_ns": 6126
+        },
+        {
+          "build_ns": 1875,
+          "query_ns": 38024250,
+          "results": 3786052,
+          "total_ns": 38033374,
+          "update_ns": 7249
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 85049344,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "brute-force",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.14035841706208885
+    },
+    {
+      "correct": true,
+      "implementation": "spart-rstar",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 4446667,
+          "query_ns": 1743543,
+          "results": 6672,
+          "total_ns": 11334876,
+          "update_ns": 5144666
+        },
+        {
+          "build_ns": 4373583,
+          "query_ns": 1873958,
+          "results": 6672,
+          "total_ns": 11187832,
+          "update_ns": 4940291
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3751936,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-rstar",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.03692458302248269
+    },
+    {
+      "correct": true,
+      "implementation": "brute-force",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 1666,
+          "query_ns": 5363793,
+          "results": 6672,
+          "total_ns": 5369834,
+          "update_ns": 4375
+        },
+        {
+          "build_ns": 1541,
+          "query_ns": 5304626,
+          "results": 6672,
+          "total_ns": 5309124,
+          "update_ns": 2957
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3129344,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "brute-force",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.025626542046666145
+    },
+    {
+      "correct": true,
+      "implementation": "spart-octree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 376500,
+          "query_ns": 48383751,
+          "results": 3786052,
+          "total_ns": 49942751,
+          "update_ns": 1182500
+        },
+        {
+          "build_ns": 331459,
+          "query_ns": 47043084,
+          "results": 3786052,
+          "total_ns": 48551294,
+          "update_ns": 1176751
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 79282176,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-octree",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.22210737504065037
+    },
+    {
+      "correct": true,
+      "implementation": "geo-index-rtree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 79583,
+          "query_ns": 1196168,
+          "results": 6672,
+          "total_ns": 1418084,
+          "update_ns": 142333
+        },
+        {
+          "build_ns": 69334,
+          "query_ns": 1232125,
+          "results": 6672,
+          "total_ns": 1443668,
+          "update_ns": 142209
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3162112,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "geo-index-rtree",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.017438874929212034
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 113375,
+          "query_ns": 1779499,
+          "results": 6672,
+          "total_ns": 2055084,
+          "update_ns": 162210
+        },
+        {
+          "build_ns": 104292,
+          "query_ns": 1106208,
+          "results": 6672,
+          "total_ns": 1270377,
+          "update_ns": 59877
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3407872,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "rill-spatial",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.017154208035208285
+    },
+    {
+      "correct": true,
+      "implementation": "brute-force",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 209,
+          "query_ns": 12501,
+          "results": 130,
+          "total_ns": 12917,
+          "update_ns": 207
+        },
+        {
+          "build_ns": 84,
+          "query_ns": 10167,
+          "results": 130,
+          "total_ns": 10375,
+          "update_ns": 124
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1900544,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "brute-force",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005606750026345253
+    },
+    {
+      "correct": true,
+      "implementation": "static-aabb2d",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 3708,
+          "query_ns": 24084,
+          "results": 130,
+          "total_ns": 33083,
+          "update_ns": 5291
+        },
+        {
+          "build_ns": 1125,
+          "query_ns": 15916,
+          "results": 130,
+          "total_ns": 19209,
+          "update_ns": 2168
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1966080,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "static-aabb2d",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005284750019200146
+    },
+    {
+      "correct": true,
+      "implementation": "rstar",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 348250,
+          "query_ns": 3239585,
+          "results": 6672,
+          "total_ns": 5877959,
+          "update_ns": 2290124
+        },
+        {
+          "build_ns": 298958,
+          "query_ns": 2778210,
+          "results": 6672,
+          "total_ns": 5238958,
+          "update_ns": 2161790
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 4145152,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "rstar",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.02623200009111315
+    },
+    {
+      "correct": true,
+      "implementation": "kd-tree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 124125,
+          "query_ns": 41352749,
+          "results": 3786052,
+          "total_ns": 41724874,
+          "update_ns": 248000
+        },
+        {
+          "build_ns": 120834,
+          "query_ns": 39345207,
+          "results": 3786052,
+          "total_ns": 39712710,
+          "update_ns": 246669
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 78692352,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kd-tree",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.20098316704388708
+    },
+    {
+      "correct": true,
+      "implementation": "spart-rtree",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 46542,
+          "query_ns": 30334,
+          "results": 130,
+          "total_ns": 141293,
+          "update_ns": 64417
+        },
+        {
+          "build_ns": 35542,
+          "query_ns": 22459,
+          "results": 130,
+          "total_ns": 118044,
+          "update_ns": 60043
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2015232,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-rtree",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.006587624899111688
+    },
+    {
+      "correct": true,
+      "implementation": "kdtree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 409250,
+          "query_ns": 1073167,
+          "results": 6672,
+          "total_ns": 8956959,
+          "update_ns": 7474542
+        },
+        {
+          "build_ns": 391833,
+          "query_ns": 1069374,
+          "results": 6672,
+          "total_ns": 9245998,
+          "update_ns": 7784791
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3407872,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kdtree",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.031834624940529466
+    },
+    {
+      "correct": true,
+      "implementation": "geo-index-kd",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 122250,
+          "query_ns": 1193584,
+          "results": 6672,
+          "total_ns": 1529333,
+          "update_ns": 213499
+        },
+        {
+          "build_ns": 107042,
+          "query_ns": 1150502,
+          "results": 6672,
+          "total_ns": 1461125,
+          "update_ns": 203581
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3112960,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "geo-index-kd",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.01796750002540648
+    },
+    {
+      "correct": true,
+      "implementation": "kd-tree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 123375,
+          "query_ns": 1603001,
+          "results": 6672,
+          "total_ns": 1960585,
+          "update_ns": 234209
+        },
+        {
+          "build_ns": 114083,
+          "query_ns": 1524707,
+          "results": 6672,
+          "total_ns": 1861624,
+          "update_ns": 222834
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3129344,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kd-tree",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.01783383300062269
+    },
+    {
+      "correct": true,
+      "implementation": "spart-rtree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 2007083,
+          "query_ns": 4133792,
+          "results": 6672,
+          "total_ns": 10990832,
+          "update_ns": 4849957
+        },
+        {
+          "build_ns": 2143750,
+          "query_ns": 4597251,
+          "results": 6672,
+          "total_ns": 11779167,
+          "update_ns": 5038166
+        }
+      ],
+      "scenario": "uniform-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 3653632,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spart-rtree",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "process_wall_seconds": 0.03679849999025464
+    },
+    {
+      "correct": true,
+      "implementation": "kdtree",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 405375,
+          "query_ns": 118009709,
+          "results": 3786052,
+          "total_ns": 126104998,
+          "update_ns": 7689914
+        },
+        {
+          "build_ns": 392625,
+          "query_ns": 115380042,
+          "results": 3786052,
+          "total_ns": 123474042,
+          "update_ns": 7701375
+        }
+      ],
+      "scenario": "dense-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 78905344,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "kdtree",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "process_wall_seconds": 0.37140674993861467
+    }
+  ]
+}

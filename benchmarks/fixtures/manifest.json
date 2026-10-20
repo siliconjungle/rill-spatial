@@ -1,0 +1,68 @@
+{
+  "seed": 2051,
+  "fixtures": [
+    {
+      "name": "small",
+      "path": "benchmarks/fixtures/small.json",
+      "sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "points": 64,
+      "queries": 128
+    },
+    {
+      "name": "uniform",
+      "path": "benchmarks/fixtures/uniform.json",
+      "sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "points": 2000,
+      "queries": 4000
+    },
+    {
+      "name": "clusters",
+      "path": "benchmarks/fixtures/clusters.json",
+      "sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "points": 2000,
+      "queries": 4000
+    },
+    {
+      "name": "dense",
+      "path": "benchmarks/fixtures/dense.json",
+      "sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "points": 2000,
+      "queries": 4000
+    },
+    {
+      "name": "contained",
+      "path": "benchmarks/fixtures/contained.json",
+      "sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "points": 2000,
+      "queries": 4000
+    },
+    {
+      "name": "floors",
+      "path": "benchmarks/fixtures/floors.json",
+      "sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "points": 2000,
+      "queries": 4000
+    },
+    {
+      "name": "boundaries",
+      "path": "benchmarks/fixtures/boundaries.json",
+      "sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "points": 2000,
+      "queries": 4000
+    },
+    {
+      "name": "teleports",
+      "path": "benchmarks/fixtures/teleports.json",
+      "sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "points": 2000,
+      "queries": 4000
+    },
+    {
+      "name": "large",
+      "path": "benchmarks/fixtures/large.json",
+      "sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "points": 22000,
+      "queries": 4000
+    }
+  ]
+}

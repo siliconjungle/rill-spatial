@@ -1,0 +1,9 @@
+/build/
+/target/
+/research/vendor/
+/research/npm/node_modules/
+/research/python-env/
+*.profraw
+__pycache__/
+/benchmarks/fixtures/*.bin
+

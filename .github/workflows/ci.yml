@@ -1,0 +1,15 @@
+name: correctness
+on: [push, pull_request]
+jobs:
+  library:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        toolchain: [stable, "1.85.0"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ matrix.toolchain }}
+      - run: cargo test --locked -p rill-spatial
+      - run: cargo test --locked --release -p rill-spatial

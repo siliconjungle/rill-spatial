@@ -1,0 +1,108 @@
+[
+  {
+    "implementation": "nanoflann",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O3",
+      "-ffp-contract=off",
+      "-DNDEBUG",
+      "-DIMPLEMENTATION=1",
+      "-DIMPLEMENTATION_NAME=\"nanoflann\"",
+      "benchmarks/native.cpp",
+      "-o",
+      "build/cpp-nanoflann"
+    ],
+    "status": "built",
+    "error": "benchmarks/native.cpp:26:135: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]\n void query(const Point&p,double r,std::vector<uint64_t>&out)const{out.clear();nanoflann::SearchParameters params;params.sorted=false;tree->radiusSearch(p.data(),r*r+1e-9,scratch,params);for(auto&x:scratch)if(squared(points[x.first],p)<=r*r)out.push_back(x.first);}\n                                                                                                                                      ^~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n1 warning generated.\n"
+  },
+  {
+    "implementation": "pico-tree",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O3",
+      "-ffp-contract=off",
+      "-DNDEBUG",
+      "-DIMPLEMENTATION=2",
+      "-DIMPLEMENTATION_NAME=\"pico-tree\"",
+      "benchmarks/native.cpp",
+      "-Iresearch/vendor/pico_tree/src/pico_tree",
+      "-o",
+      "build/cpp-pico-tree"
+    ],
+    "status": "built",
+    "error": ""
+  },
+  {
+    "implementation": "libkdtree",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O3",
+      "-ffp-contract=off",
+      "-DNDEBUG",
+      "-DIMPLEMENTATION=3",
+      "-DIMPLEMENTATION_NAME=\"libkdtree\"",
+      "benchmarks/native.cpp",
+      "build/libkdtree.o",
+      "-o",
+      "build/cpp-libkdtree"
+    ],
+    "status": "built",
+    "error": ""
+  },
+  {
+    "implementation": "kdtree-cpp",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O3",
+      "-ffp-contract=off",
+      "-DNDEBUG",
+      "-DIMPLEMENTATION=4",
+      "-DIMPLEMENTATION_NAME=\"kdtree-cpp\"",
+      "benchmarks/native.cpp",
+      "research/vendor/kdtree-cpp/kdtree.cpp",
+      "-o",
+      "build/cpp-kdtree-cpp"
+    ],
+    "status": "built",
+    "error": ""
+  },
+  {
+    "implementation": "crvs-kdtree",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O3",
+      "-ffp-contract=off",
+      "-DNDEBUG",
+      "-DIMPLEMENTATION=5",
+      "-DIMPLEMENTATION_NAME=\"crvs-kdtree\"",
+      "benchmarks/native.cpp",
+      "research/vendor/KDTree/KDTree.cpp",
+      "-o",
+      "build/cpp-crvs-kdtree"
+    ],
+    "status": "built",
+    "error": "benchmarks/native.cpp:52:10: warning: non-portable path to file '\"../research/vendor/kdtree/KDTree.hpp\"'; specified path differs in case from file name on disk [-Wnonportable-include-path]\n#include \"../research/vendor/KDTree/KDTree.hpp\"\n         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n         \"../research/vendor/kdtree/KDTree.hpp\"\n1 warning generated.\n"
+  },
+  {
+    "implementation": "gishi-kdtree",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O3",
+      "-ffp-contract=off",
+      "-DNDEBUG",
+      "-DIMPLEMENTATION=6",
+      "-DIMPLEMENTATION_NAME=\"gishi-kdtree\"",
+      "benchmarks/native.cpp",
+      "-o",
+      "build/cpp-gishi-kdtree"
+    ],
+    "status": "built",
+    "error": ""
+  }
+]

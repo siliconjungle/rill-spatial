@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "keep": [
+    {
+      "path": "Cargo.toml",
+      "reason": "Standalone library and reproducible workspace manifest"
+    },
+    {
+      "path": "Cargo.lock",
+      "reason": "Exact dependency resolution for comparative measurements"
+    },
+    {
+      "path": "src",
+      "reason": "Public library source"
+    },
+    {
+      "path": "tests",
+      "reason": "Required correctness and mutation regression proofs"
+    },
+    {
+      "path": "benchmarks",
+      "reason": "Comparative benchmark adapters and workload generators"
+    },
+    {
+      "path": "research/protocol.md",
+      "reason": "Registered comparison and acceptance protocol"
+    },
+    {
+      "path": "research/inventory.json",
+      "reason": "Pinned comparison source inventory and explicit coverage status"
+    },
+    {
+      "path": "results",
+      "reason": "Required raw benchmark evidence and correctness records"
+    },
+    {
+      "path": "tools",
+      "reason": "Reproduction, source fetching and acceptance evaluation inputs"
+    },
+    {
+      "path": "storage-retention.json",
+      "reason": "Retention contract"
+    },
+    {
+      "path": "README.md",
+      "reason": "Public API and explicit acceptance status"
+    },
+    {
+      "path": "LICENSE-MIT",
+      "reason": "Public library license"
+    },
+    {
+      "path": "LICENSE-APACHE",
+      "reason": "Public library license"
+    },
+    {
+      "path": ".git",
+      "reason": "Git history for exact source revisions"
+    },
+    {
+      "path": ".gitignore",
+      "reason": "Exclude generated outputs and fetched sources"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "reason": "Portable correctness validation"
+    },
+    {
+      "path": "research/discovery.json",
+      "reason": "Source discovery evidence"
+    },
+    {
+      "path": "research/npm/package.json",
+      "reason": "Pinned JavaScript comparison dependency manifest"
+    },
+    {
+      "path": "research/npm/package-lock.json",
+      "reason": "Exact JavaScript transitive dependency checksums"
+    }
+  ],
+  "safe_to_remove": []
+}
