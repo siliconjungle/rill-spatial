@@ -16,3 +16,14 @@ jobs:
       - run: cargo test --locked -p rill-spatial --no-default-features
       - run: cargo test --locked --release -p rill-spatial --all-features
       - run: cargo test --locked -p rill-spatial --no-default-features --features adaptive-batches
+  javascript:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ["22", "26"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: node --test javascript/test/*.test.mjs

@@ -200,3 +200,12 @@ Their tests and exploratory measurements are separate from acceptance. See
 [selected experiment results](research/20k/results.md).
 The superiority gate is OPEN. A faster spatial kernel alone does not establish
 simulation, replication, congestion-control or network capacity.
+
+## Portable JavaScript snapshots
+
+The [JavaScript implementation](javascript/README.md) ports packed leaves and
+median partitioning to dependency-free Node/browser ESM. It provides immutable
+position snapshots, stable identity/order, nearest queries and strict spherical
+queries. Its JavaScript predicates and API are documented separately from the
+mutable Rust API; it does not require native bindings or a GPU. Independent
+oracles pass on Node22 and26. Source is available here; no npm publication yet.

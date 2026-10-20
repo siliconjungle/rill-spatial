@@ -8,7 +8,7 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/siliconjungle/rill-spatial"
 keywords = ["spatial", "radius", "proximity", "geometry", "index"]
 categories = ["data-structures", "algorithms"]
-exclude = ["build/", "research/", "results/", "benchmarks/", "tools/"]
+exclude = ["build/", "research/", "results/", "benchmarks/", "tools/", "javascript/"]
 
 [workspace]
 members = ["benchmarks"]

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "@siliconjungle/rill-spatial@0.1.0",
+    "name": "@siliconjungle/rill-spatial",
+    "version": "0.1.0",
+    "size": 4311,
+    "unpackedSize": 10662,
+    "shasum": "2e29540c99e13ae6963a37e7c44adbcef105fac5",
+    "integrity": "sha512-InBHxkYDtYAqYrcqOZlZmDduaDqLnKvN0kPi6ShlvFNpiiHjDnFtkp9KFk2N9VTwvi9BleqpYBvutE0ZB2x9vA==",
+    "filename": "siliconjungle-rill-spatial-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE-MIT",
+        "size": 1082,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 2169,
+        "mode": 420
+      },
+      {
+        "path": "index.mjs",
+        "size": 7084,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 327,
+        "mode": 420
+      }
+    ],
+    "entryCount": 4,
+    "bundled": []
+  }
+]

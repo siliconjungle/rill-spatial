@@ -32,6 +32,10 @@
     {
       "path": "test-node26.log",
       "reason": "Required current-engine standalone oracle proof"
+    },
+    {
+      "path": "package-proof.json",
+      "reason": "Required standalone package file-list and size proof; dry run, no npm publication"
     }
   ],
   "safe_to_remove": []
