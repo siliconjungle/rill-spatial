@@ -1,0 +1,50 @@
+[package]
+name = "radius-aware-candidate"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+publish = false
+license = "MIT OR Apache-2.0"
+description = "Source-only global active-axis prepared hierarchy experiment"
+
+[workspace]
+
+[lib]
+name = "rill_spatial"
+
+[[test]]
+name = "correctness"
+path = "../../../tests/correctness.rs"
+
+[[test]]
+name = "batch"
+path = "../../../tests/batch.rs"
+
+[[test]]
+name = "thin"
+path = "tests/thin.rs"
+
+[[example]]
+name = "probe"
+path = "../../../examples/probe.rs"
+
+[profile.dev]
+debug = 0
+incremental = false
+
+[profile.test]
+debug = 0
+incremental = false
+
+[profile.release]
+debug = 0
+incremental = false
+lto = "thin"
+codegen-units = 1
+
+[dependencies]
+wide = { version = "=0.7.33", optional = true }
+
+[features]
+default = ["simd"]
+simd = ["dep:wide"]

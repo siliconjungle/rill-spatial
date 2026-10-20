@@ -30,3 +30,5 @@ nabo = { version = "=0.6.0", default-features = false }
 
 rill-cells = { package = "cell-readview-candidate", path = "../research/variants/cell-readview" }
 rill-dual = { package = "rill-spatial-dual-tree", path = "../research/variants/dual-tree" }
+
+rill-radius = { package = "radius-aware-candidate", path = "../research/variants/radius-aware" }

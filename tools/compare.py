@@ -5,7 +5,7 @@ from pathlib import Path
 RUST=['rill-spatial','brute-force','rstar','kdtree','kd-tree','kiddo-mutable','kiddo-immutable','static-aabb2d','geo-index-kd','geo-index-rtree','spart-kd','spart-rtree','spart-rstar','spart-octree','spart-quadtree']
 RUST+=['acap-kd','acap-flat-kd','acap-vp','acap-flat-vp','acap-exhaustive','vpsearch','petal-ball','neighbourhood-owned','neighbourhood-index','quadtree-f64','quadtree-rs','rust-octree','spatial-linear','spatial-quadratic','spatial-rstar','nabo']
 JS=['rbush','rbush-3d','flatbush','kdbush','static-kdtree','d3-quadtree','kd-tree-javascript','js-quadtree','@timohausmann/quadtree-js','quadtree-lib','rtree','mnemonist-vp','spatial-hash','flatten-planar','box-intersect','quadtree2','mnemonist-kd']
-VARIANTS=['rill-parallel-1','rill-parallel-2','rill-parallel-4','study-kiddo-1','study-kiddo-4','study-static-aabb-1','study-static-aabb-4','study-geo-rtree-1','study-geo-rtree-4','rill-batch-1','rill-batch-2','rill-batch-4','rill-coherent-1','rill-coherent-2','rill-coherent-4','rill-cell-sorted','rill-cell-hybrid','rill-cell-hash','rill-cell-occupied','rill-dual','rill-cell-batch-sorted','rill-cell-batch-hybrid','rill-cell-batch-hash','rill-cell-batch-occupied']
+VARIANTS=['rill-radius-1','rill-radius-4','rill-parallel-1','rill-parallel-2','rill-parallel-4','study-kiddo-1','study-kiddo-4','study-static-aabb-1','study-static-aabb-4','study-geo-rtree-1','study-geo-rtree-4','rill-batch-1','rill-batch-2','rill-batch-4','rill-coherent-1','rill-coherent-2','rill-coherent-4','rill-cell-sorted','rill-cell-hybrid','rill-cell-hash','rill-cell-occupied','rill-dual','rill-cell-batch-sorted','rill-cell-batch-hybrid','rill-cell-batch-hash','rill-cell-batch-occupied']
 CPP=['kdtree-plusplus','nanoflann','pico-tree','libkdtree','kdtree-cpp','crvs-kdtree','gishi-kdtree']
 def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def output(cmd):return subprocess.check_output(cmd,text=True).strip()
@@ -33,7 +33,7 @@ def main():
   path=Path('benchmarks')/('.frozen-'+out.stem+'.mjs');assert not path.exists();shutil.copy2('benchmarks/javascript.mjs',path);artifacts['js']={'path':str(path),'sha256':digest(path)}
  for name in set(names)&set(CPP):
   path=frozen/name;shutil.copy2('build/cpp-'+name,path);artifacts[name]={'path':str(path),'sha256':digest(path)}
- doc={'schema':2,'status':'INCOMPLETE','created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'host':platform.platform(),'machine':platform.machine(),'identity':identity(),'artifacts':artifacts,'implementations':names,'scenarios':scenarios,'notes':['Other user workers left running; shared-machine diagnostics','Process RSS includes reference oracle and retained result vectors; not isolated index bytes'],'output_window_queries':windows[0] if len(windows)==1 else None,'output_windows':windows,'continuous_full_consumption':a.continuous,'samples_per_process':a.samples,'requested_processes':a.processes,'rows':[]}
+ doc={'schema':2,'status':'INCOMPLETE','created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'host':platform.platform(),'machine':platform.machine(),'identity':identity(),'artifacts':artifacts,'implementations':names,'scenarios':scenarios,'fixture_directory':a.fixtures,'notes':['Other user workers left running; shared-machine diagnostics','Process RSS includes reference oracle and retained result vectors; not isolated index bytes'],'output_window_queries':windows[0] if len(windows)==1 else None,'output_windows':windows,'continuous_full_consumption':a.continuous,'samples_per_process':a.samples,'requested_processes':a.processes,'rows':[]}
  jobs=[(i,s,n,w)for i in range(a.processes)for s in scenarios for n in names for w in windows];random.Random(a.seed).shuffle(jobs)
  for ordinal,(process,scenario,name,window)in enumerate(jobs):
   fixture=Path(a.fixtures)/(scenario+'.json');input_path=fixture
@@ -47,7 +47,7 @@ def main():
   try:
    r=subprocess.run(['/usr/bin/time','-l']+cmd,text=True,capture_output=True,timeout=a.timeout,env={**os.environ,"RILL_OUTPUT_WINDOW":str(window),"RILL_CONTINUOUS":"1" if a.continuous else "0"})
    if r.returncode:row={'implementation':name,'scenario':scenario,'status':'failed','exit_code':r.returncode,'error':r.stderr if len(r.stderr)<7000 else r.stderr[:3500]+'\n[stderr middle omitted]\n'+r.stderr[-3500:]}
-   else:row=json.loads(r.stdout);row['scenario']=scenario;row['status']='measured';row['process_peak_rss_bytes']=int(re.search(r'(\d+)\s+maximum resident set size',r.stderr)[1])
+   else:row=json.loads(r.stdout);row['fixture_name']=row.get('scenario');row['scenario']=scenario;row['status']='measured';row['process_peak_rss_bytes']=int(re.search(r'(\d+)\s+maximum resident set size',r.stderr)[1])
    if r.returncode==0:
     cpu=re.search(r'([\d.]+)\s+real\s+([\d.]+)\s+user\s+([\d.]+)\s+sys',r.stderr)
     if cpu:row['whole_process_cpu_seconds']={'user':float(cpu[2]),'system':float(cpu[3]),'scope':'entire process including proof, parsing, allocation and timing; not timed kernel CPU alone'}

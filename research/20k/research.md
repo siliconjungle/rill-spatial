@@ -104,3 +104,23 @@ A complete server test needs independent clients/load generators, 20,000 establi
 First pursue coherent cell/packed and dual-tree CPU variants with true u64 reporting, then combine the winner with refit and replication sharing. A bounded-K 20k service is a plausible engineering target under an explicit machine, simulation and egress budget; the current evidence does not establish it. Full-fidelity all-to-all at 20 Hz has terabit-scale payload requirements in the illustrative 32-byte scenario and needs a different declared service policy. Existing 2,000-query screening times identify kernels worth investigating, but are neither a scaling law nor connected-server evidence.
 
 The annotated primary bibliography and source-to-experiment mapping are in [sources.json](sources.json). Retention is already declared by this directory's storage-retention.json; no generated experiment output was created by this research lane.
+
+## Follow-up: geometry and workload hints
+
+[AQWA](https://www.cs.purdue.edu/homes/aref/papers/aqwa2015twoQueues.pdf)
+provides primary evidence that point distribution alone need not determine the
+best spatial partition. Its adaptive Hadoop partitioner uses query-workload
+statistics; its results do not establish a CPU-tree optimization here.
+[SciPy's construction options](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.cKDTree.html)
+also make leaf size, compact data bounds and median splitting explicit cost
+choices rather than universal constants.
+
+Our new radius-aware candidate is a separate hypothesis: when a global dimension
+is narrower than the configured cell-size hint, retain its exact bounds/filtering
+but prefer median splits along wider dimensions. All-axis fallback handles worlds
+smaller than the hint in every dimension. This may reduce duplicated horizontal
+traversal in thin 3D worlds; small-radius or off-slab queries may instead lose
+pruning efficiency. The hint never restricts accepted radii or drops coordinates.
+It requires full-dimensional membership proofs, thin 2D/3D edge tests, lifecycle
+cost accounting and comparison against the unchanged topology on registered and
+held-out inputs. It is not claimed as an implementation of AQWA.

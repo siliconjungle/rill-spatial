@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "status": "source_ready_no_builds_tests_or_measurements_run",
+  "keep": [
+    {"path": "Cargo.toml", "reason": "Minimal independent manifest with unchanged wide pin and shared test references"},
+    {"path": "Cargo.lock", "reason": "Only required dependency closure, extracted from pinned root lock without dependency source copies"},
+    {"path": "src/lib.rs", "reason": "Declared core source materialization, passing the validated cell-size hint into preparation"},
+    {"path": "src/hierarchy.rs", "reason": "Declared core source materialization implementing only global active-axis split selection"},
+    {"path": "tests/thin.rs", "reason": "Candidate-specific independent full-membership oracle inputs forcing disabled axes, fallback, mutation transitions and four-worker batch composition"},
+    {"path": "README.md", "reason": "Exact hypothesis, 1x threshold, preconditions, limitations and deferred validation instructions"},
+    {"path": "source-provenance.json", "reason": "Exact upstream revision and copied/shared source hashes"},
+    {"path": "source-change.patch", "reason": "Reviewable difference from the pinned source without additional full source snapshots"},
+    {"path": "storage-retention.json", "reason": "Exact source-only retention policy"}
+  ],
+  "safe_to_remove": []
+}

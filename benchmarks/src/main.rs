@@ -28,6 +28,8 @@ pub struct Fixture {
     pub bounded: bool,
     pub frames: Vec<Frame>,
 }
+// Keep callback object lifetimes tied to their borrows across prototype adapters.
+#[allow(clippy::type_complexity)]
 pub trait Adapter {
     fn build(points: &[Point], cell_size: f64) -> Self;
     fn update(&mut self, updates: &[(usize, Point)]);
@@ -173,6 +175,8 @@ fn main() {
     use rust_adapters::*;
     match args[1].as_str() {
         "rill-spatial" => run::<Rill>(&args[1], &fixture, samples),
+        "rill-radius-1" => run::<studies::RadiusAware<1>>(&args[1], &fixture, samples),
+        "rill-radius-4" => run::<studies::RadiusAware<4>>(&args[1], &fixture, samples),
         "rill-parallel-1" => run::<studies::PublicParallel<1>>(&args[1], &fixture, samples),
         "rill-parallel-2" => run::<studies::PublicParallel<2>>(&args[1], &fixture, samples),
         "rill-parallel-4" => run::<studies::PublicParallel<4>>(&args[1], &fixture, samples),

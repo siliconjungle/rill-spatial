@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "research_date": "2026-10-20",
-  "source_count": 36,
+  "source_count": 38,
   "selection": "Primary papers, author publications/repositories and official engine/library/standard documentation. Mechanisms are hypotheses until measured against the current contract.",
   "source_revision": "ef1fbbc44cfcd62c54ec7d6ab3e1892d734f15a1",
   "experiments": {
@@ -311,7 +311,7 @@
     },
     {
       "id": "S18",
-      "title": "Scene Queries — PhysX 5.4.1",
+      "title": "Scene Queries \u2014 PhysX 5.4.1",
       "url": "https://nvidia-omniverse.github.io/PhysX/physx/5.4.1/docs/SceneQueries.html",
       "type": "official_engine_documentation",
       "author_or_owner": "NVIDIA",
@@ -635,6 +635,40 @@
         "E6"
       ],
       "limitations": "Quantization/overflow range and merge semantics need configuration; old recording nanosecond figures are not current-machine evidence."
+    },
+    {
+      "id": "S37",
+      "title": "AQWA: Adaptive Query-Workload-Aware Partitioning of Big Spatial Data",
+      "url": "https://www.cs.purdue.edu/homes/aref/papers/aqwa2015twoQueues.pdf",
+      "type": "author_paper",
+      "author_or_owner": "Ahmed M. Aly et al., author-hosted manuscript",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Spatial partition cost can depend on query distribution as well as point distribution.",
+        "Incremental workload statistics can guide repartitioning instead of repeated whole-data reconstruction."
+      ],
+      "applicable_experiments": [
+        "E4",
+        "E7"
+      ],
+      "limitations": "Distributed Hadoop partitions and skewed query traffic; does not implement or establish our global-axis radius-hint heuristic or Rust CPU performance."
+    },
+    {
+      "id": "S38",
+      "title": "SciPy cKDTree construction options",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.cKDTree.html",
+      "type": "official_documentation",
+      "author_or_owner": "SciPy",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Leaf cutoff, compact data bounds and median splitting expose construction/query tradeoffs.",
+        "Mutable borrowed input must be protected or copied for consistent queries."
+      ],
+      "applicable_experiments": [
+        "E1",
+        "E4"
+      ],
+      "limitations": "Official design context only; SciPy is not an adapted competitor in the current registered Rust/JS/C++ comparison, and does not establish this exact splitting heuristic."
     }
   ]
 }

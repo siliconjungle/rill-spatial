@@ -15,7 +15,7 @@ for path in a.results:
 rows=[]
 for (scenario,name,window,artifact,fixture,protocol),observations in sorted(groups.items()):
  frames=[f['frame_service_ns']/1e6 for r in observations for f in r.get('frame_samples',[])if f['queries']]
- row={'scenario':scenario,'implementation':name,'window':window,'artifact_sha256':artifact,'fixture_sha256':fixture,'protocol':protocol,'fresh_processes':len(observations),'observed_query_frames':len(frames),'median_total_ms':statistics.median(statistics.median(s['total_ns']for s in r['samples'])for r in observations)/1e6,'matches_per_query':observations[0].get('matches_per_query')}
+ row={'scenario':scenario,'fixture_name':observations[0].get('fixture_name'),'implementation':name,'window':window,'artifact_sha256':artifact,'fixture_sha256':fixture,'protocol':protocol,'fresh_processes':len(observations),'observed_query_frames':len(frames),'median_total_ms':statistics.median(statistics.median(s['total_ns']for s in r['samples'])for r in observations)/1e6,'matches_per_query':observations[0].get('matches_per_query')}
  if frames:row.update({'median_frame_ms':statistics.median(frames),'max_observed_frame_ms':max(frames),'observed_deadline_misses':sum(f>a.budget_ms for f in frames)})
  rows.append(row)
 report={'scope':'Observed kernel service only; no full server, queue latency or statistical p99 claim','budget_ms':a.budget_ms,'inputs':inputs,'failures':failures,'rows':rows,'notes':['Different binary hashes, fixture hashes and protocols stay separate','Reported frame includes updates/preparation and complete output consumption where specified','Maximum is the worst observed frame, not a guaranteed bound','Fresh processes and samples are retained; this does not satisfy the original simultaneous superiority gate']}

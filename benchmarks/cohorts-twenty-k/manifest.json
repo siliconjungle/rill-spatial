@@ -1,0 +1,54 @@
+{
+  "profile": "hashed-cohorts3-v1",
+  "source": "benchmarks/twenty-k",
+  "fixtures": [
+    {
+      "name": "bounded64",
+      "path": "benchmarks/cohorts-twenty-k/bounded64.json",
+      "source_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "sha256": "665b5f11ec48a71adfde40eb8fb23803c31b1bc30d8f2608e14e68b63284571b",
+      "bytes": 5393342,
+      "queries": 40000,
+      "queries_per_frame": [
+        6693,
+        6625,
+        6682,
+        6693,
+        6625,
+        6682
+      ]
+    },
+    {
+      "name": "crowd",
+      "path": "benchmarks/cohorts-twenty-k/crowd.json",
+      "source_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "sha256": "03e8c6dc9cc1d1e942b5ed95d75f0e5f24ce5357e247ddd91debefef19fba493",
+      "bytes": 5145269,
+      "queries": 40000,
+      "queries_per_frame": [
+        6693,
+        6625,
+        6682,
+        6693,
+        6625,
+        6682
+      ]
+    },
+    {
+      "name": "contained",
+      "path": "benchmarks/cohorts-twenty-k/contained.json",
+      "source_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "sha256": "066f087e1226800aa6b250330c1fc5bb6fbfb1f45f6c9a0c69345b75ed8d5f00",
+      "bytes": 4908142,
+      "queries": 40000,
+      "queries_per_frame": [
+        6693,
+        6625,
+        6682,
+        6693,
+        6625,
+        6682
+      ]
+    }
+  ]
+}

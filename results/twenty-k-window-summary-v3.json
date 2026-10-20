@@ -1,0 +1,532 @@
+{
+  "scope": "Observed kernel service only; no full server, queue latency or statistical p99 claim",
+  "budget_ms": 16.666666666666668,
+  "inputs": [
+    {
+      "path": "results/twenty-k-parallel-windows-v3.json",
+      "status": "COMPLETE"
+    }
+  ],
+  "failures": [],
+  "rows": [
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-parallel-1",
+      "window": 1,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 41.942708,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 20.4495205,
+      "max_observed_frame_ms": 21.494167,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-parallel-1",
+      "window": 8,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 39.348875,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 19.8789165,
+      "max_observed_frame_ms": 21.652208,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-parallel-1",
+      "window": 64,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 39.013959,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 19.4006665,
+      "max_observed_frame_ms": 20.204875,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-parallel-2",
+      "window": 1,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 26.547,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 13.209979,
+      "max_observed_frame_ms": 14.762875,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-parallel-2",
+      "window": 8,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 24.784791,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 12.3032085,
+      "max_observed_frame_ms": 13.269,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-parallel-2",
+      "window": 64,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 22.724,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 11.8301665,
+      "max_observed_frame_ms": 14.559667,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-parallel-4",
+      "window": 1,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 20.566124,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 10.096125,
+      "max_observed_frame_ms": 11.137875,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-parallel-4",
+      "window": 8,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 16.475376,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 8.126771,
+      "max_observed_frame_ms": 8.977459,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 14.523625,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 6.9791039999999995,
+      "max_observed_frame_ms": 7.87975,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-parallel-1",
+      "window": 1,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 235.901831,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 117.491229,
+      "max_observed_frame_ms": 118.180375,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-parallel-1",
+      "window": 8,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 197.344126,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 98.5223125,
+      "max_observed_frame_ms": 103.495709,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-parallel-1",
+      "window": 64,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 191.526208,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 95.643771,
+      "max_observed_frame_ms": 99.243791,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-parallel-2",
+      "window": 1,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 132.341083,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 66.0122915,
+      "max_observed_frame_ms": 70.919167,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-parallel-2",
+      "window": 8,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 112.818499,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 56.246271,
+      "max_observed_frame_ms": 57.76025,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-parallel-2",
+      "window": 64,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 110.127665,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 55.059375,
+      "max_observed_frame_ms": 57.953041,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-parallel-4",
+      "window": 1,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 78.691125,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 39.187937500000004,
+      "max_observed_frame_ms": 43.064417,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-parallel-4",
+      "window": 8,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 67.226958,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 33.913812,
+      "max_observed_frame_ms": 35.651833,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 100.676291,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 50.2933545,
+      "max_observed_frame_ms": 54.933166,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-parallel-1",
+      "window": 1,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 134.812332,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 67.09831249999999,
+      "max_observed_frame_ms": 70.227292,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-parallel-1",
+      "window": 8,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 129.819709,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 64.648562,
+      "max_observed_frame_ms": 65.212459,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-parallel-1",
+      "window": 64,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 133.522459,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 66.6142505,
+      "max_observed_frame_ms": 73.801667,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-parallel-2",
+      "window": 1,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 80.006126,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 39.585271,
+      "max_observed_frame_ms": 40.27525,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-parallel-2",
+      "window": 8,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 73.4495,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 36.820375,
+      "max_observed_frame_ms": 37.998792,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-parallel-2",
+      "window": 64,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 74.844666,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 37.236854,
+      "max_observed_frame_ms": 38.062334,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-parallel-4",
+      "window": 1,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 45.622334,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 22.426625,
+      "max_observed_frame_ms": 23.926542,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-parallel-4",
+      "window": 8,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 45.262251,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 22.494020499999998,
+      "max_observed_frame_ms": 23.30425,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-parallel-4",
+      "window": 64,
+      "artifact_sha256": "fc822f43c52471b1e338ff5aaf7985db98ff2a52e0cf326b13b966b97c5031d2",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v3 shared consumer; equivalent factored checksum, no per-query shared timed counters; complete parallel-path membership/visit proof before timing",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 42.572082,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 21.4610415,
+      "max_observed_frame_ms": 21.848458,
+      "observed_deadline_misses": 6
+    }
+  ],
+  "notes": [
+    "Different binary hashes, fixture hashes and protocols stay separate",
+    "Reported frame includes updates/preparation and complete output consumption where specified",
+    "Maximum is the worst observed frame, not a guaranteed bound",
+    "Fresh processes and samples are retained; this does not satisfy the original simultaneous superiority gate"
+  ]
+}

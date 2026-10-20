@@ -1,0 +1,95 @@
+--- pinned-core/src/lib.rs
++++ radius-aware/src/lib.rs
+@@ -10,6 +10,7 @@
+ 
+ use std::collections::HashMap;
+ use std::hash::{BuildHasherDefault, Hasher};
++#[path = "../../../../src/batch.rs"]
+ mod batch;
+ mod hierarchy;
+ pub use batch::{BatchOptions, BatchStats};
+@@ -385,6 +386,7 @@
+             self.grid_stale = true;
+             self.prepared = Some(hierarchy::Hierarchy::new(
+                 self.entries.iter().map(|e| (e.id, e.point)),
++                self.cell_size,
+             ));
+         }
+     }
+--- pinned-core/src/hierarchy.rs
++++ radius-aware/src/hierarchy.rs
+@@ -42,7 +42,10 @@
+ }
+ 
+ impl<const D: usize> Hierarchy<D> {
+-    pub(crate) fn new(mut rows: impl ExactSizeIterator<Item = (u64, [f64; D])>) -> Self {
++    pub(crate) fn new(
++        mut rows: impl ExactSizeIterator<Item = (u64, [f64; D])>,
++        cell_size: f64,
++    ) -> Self {
+         if rows.len() <= 128 {
+             let mut blocks = Vec::with_capacity(rows.len().div_ceil(4));
+             while rows.len() > 0 {
+@@ -74,7 +77,23 @@
+             .collect();
+         let mut nodes = Vec::new();
+         if rows.len() > 128 {
+-            Self::build(&mut rows, 0, &mut nodes);
++            // One global topology hint: avoid splitting dimensions narrower
++            // than the configured cell width, which may approximate a common
++            // query radius. Bounds and exact filtering retain every dimension.
++            let mut global_lo = [f64::INFINITY; D];
++            let mut global_hi = [f64::NEG_INFINITY; D];
++            for (_, point, _) in &rows {
++                for d in 0..D {
++                    global_lo[d] = global_lo[d].min(point[d]);
++                    global_hi[d] = global_hi[d].max(point[d]);
++                }
++            }
++            let mut active_axes =
++                std::array::from_fn(|d| global_hi[d] - global_lo[d] >= cell_size);
++            if !active_axes.iter().any(|&active| active) {
++                active_axes.fill(true);
++            }
++            Self::build(&mut rows, 0, &mut nodes, &active_axes);
+         }
+         let points = rows.iter().map(|x| x.1).collect();
+         let ids = rows.iter().map(|x| x.0).collect();
+@@ -127,7 +146,12 @@
+             }
+         }
+     }
+-    fn build(rows: &mut [(u64, [f64; D], usize)], start: usize, nodes: &mut Vec<Node<D>>) -> usize {
++    fn build(
++        rows: &mut [(u64, [f64; D], usize)],
++        start: usize,
++        nodes: &mut Vec<Node<D>>,
++        active_axes: &[bool; D],
++    ) -> usize {
+         let mut lo = [f64::INFINITY; D];
+         let mut hi = [f64::NEG_INFINITY; D];
+         for (_, p, _) in rows.iter() {
+@@ -136,9 +160,9 @@
+                 hi[d] = hi[d].max(p[d]);
+             }
+         }
+-        let mut axis = 0;
+-        for d in 1..D {
+-            if hi[d] - lo[d] > hi[axis] - lo[axis] {
++        let mut axis = active_axes.iter().position(|&active| active).unwrap_or(0);
++        for d in 0..D {
++            if active_axes[d] && hi[d] - lo[d] > hi[axis] - lo[axis] {
+                 axis = d;
+             }
+         }
+@@ -162,8 +186,8 @@
+             let middle = rows.len() / 2;
+             rows.select_nth_unstable_by(middle, |a, b| a.1[axis].total_cmp(&b.1[axis]));
+             let (a, b) = rows.split_at_mut(middle);
+-            let left = Self::build(a, start, nodes);
+-            let right = Self::build(b, start + middle, nodes);
++            let left = Self::build(a, start, nodes, active_axes);
++            let right = Self::build(b, start + middle, nodes, active_axes);
+             nodes[at].left = left;
+             nodes[at].right = right;
+         }

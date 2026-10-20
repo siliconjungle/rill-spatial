@@ -308,6 +308,70 @@
     {
       "path": "results/validation-consumer-v3.log",
       "reason": "Exact checksum-equivalence and harness query identity proof before protocolv3"
+    },
+    {
+      "path": "research/variants/radius-aware",
+      "reason": "Minimal selected topology candidate source, shared inputs, provenance patch and thin-world proofs; nested contract"
+    },
+    {
+      "path": "benchmarks/holdout-twenty-k",
+      "reason": "Selected independent-seed correctness/performance reproduction baseline; generated from pre-registered seed97531"
+    },
+    {
+      "path": "benchmarks/cohorts-twenty-k",
+      "reason": "Selected same-rate hashed-cohort infrastructure experiment inputs; generator/source hashes retained"
+    },
+    {
+      "path": "results/twenty-k-concurrent-screen-v3.json",
+      "reason": "Selected84-job clean shared-consumer baseline with full proofs and equal worker comparisons"
+    },
+    {
+      "path": "results/twenty-k-parallel-windows-v3.json",
+      "reason": "Selected27-job worker/window exploration, full proofs"
+    },
+    {
+      "path": "results/twenty-k-holdout-v3.json",
+      "reason": "Selected32-job independent-seed validation, full proofs"
+    },
+    {
+      "path": "results/twenty-k-summary-v3.json",
+      "reason": "Dimension-preserving baseline summary, no statistical p99 or server claim"
+    },
+    {
+      "path": "results/twenty-k-window-summary-v3.json",
+      "reason": "Dimension-preserving output-window summary"
+    },
+    {
+      "path": "results/twenty-k-holdout-summary-v3.json",
+      "reason": "Dimension-preserving independent-seed summary"
+    },
+    {
+      "path": "results/validation-radius-release.log",
+      "reason": "Shared15-test proof for topology candidate"
+    },
+    {
+      "path": "results/validation-radius-thin-release.log",
+      "reason": "Three targeted thin-axis exact membership/lifecycle/parallel proofs"
+    },
+    {
+      "path": "results/validation-radius-scalar.log",
+      "reason": "All18 tests pass without SIMD for topology candidate"
+    },
+    {
+      "path": "results/validation-radius-harness-clippy.log",
+      "reason": "Benchmark adapter static validation before topology measurements"
+    },
+    {
+      "path": "build/frozen/twenty-k-concurrent-screen-v3/rust",
+      "reason": "Exact selected protocolv3 executable; source preserved at7c9f201"
+    },
+    {
+      "path": "build/frozen/twenty-k-parallel-windows-v3/rust",
+      "reason": "Exact selected protocolv3 executable; source preserved at7c9f201"
+    },
+    {
+      "path": "build/frozen/twenty-k-holdout-v3/rust",
+      "reason": "Exact selected protocolv3 executable; source preserved at7c9f201"
     }
   ],
   "safe_to_remove": [

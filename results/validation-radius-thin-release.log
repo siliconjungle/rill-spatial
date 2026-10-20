@@ -1,0 +1,11 @@
+   Compiling radius-aware-candidate v0.1.0 (/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/radius-aware)
+    Finished `release` profile [optimized] target(s) in 5.09s
+     Running tests/thin.rs (build/target/release/deps/thin-ad12151d950accf9)
+
+running 3 tests
+test all_axes_below_hint_falls_back_to_full_axis_tree ... ok
+test thin_2d_corridor_disabled_y_and_arbitrary_radii ... ok
+test thin_3d_slab_disabled_z_faces_boundaries_and_axis_transition ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+

@@ -54,6 +54,14 @@
         "research/variants/kdtree-plusplus"
       ],
       "acceptance": "Pinned closed-box native-f64 adapter source; root integrates and validates after serialtiming"
+    },
+    {
+      "task": "cell_readview",
+      "lane": "radiusawarefollowup",
+      "owns": [
+        "research/variants/radius-aware"
+      ],
+      "acceptance": "Minimal exact topology fork and targeted thin-world2D/3D oracle sources; root validates and measures serially"
     }
   ],
   "shared_read_only_inputs": [

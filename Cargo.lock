@@ -671,6 +671,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "radius-aware-candidate"
+version = "0.1.0"
+dependencies = [
+ "wide",
+]
+
+[[package]]
 name = "rand"
 version = "0.8.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -728,6 +735,7 @@ dependencies = [
  "petal-neighbors",
  "quadtree-f32",
  "quadtree_rs",
+ "radius-aware-candidate",
  "rill-spatial",
  "rill-spatial-dual-tree",
  "rstar",
