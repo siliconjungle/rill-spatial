@@ -100,6 +100,31 @@ export class PackedPointIndex {
     return best<0?null:{value:this.values[best],distance};
   }
 
+  // Earliest input matches, with bounded result storage. `exclude` is a pure
+  // predicate; traversal may prune rows that cannot enter the selected prefix.
+  firstWithin3D(origin,radius,limit,{exclude=()=>false}={}){
+    if(!this.size||!Number.isInteger(limit)||limit<1||!(radius>0))return [];
+    const x=origin[0],y=origin[1],z=origin[2],heap=[],stack=[0];
+    const keep=rank=>{
+      if(heap.length<limit){let i=heap.length;heap.push(rank);while(i){const p=(i-1)>>1;if(rank<=heap[p])break;heap[i]=heap[p];i=p;}heap[i]=rank;}
+      else if(rank<heap[0]){let i=0;while(i*2+1<heap.length){let c=i*2+1;if(c+1<heap.length&&heap[c+1]>heap[c])c++;if(heap[c]<=rank)break;heap[i]=heap[c];i=c;}heap[i]=rank;}
+    };
+    while(stack.length){
+      const n=stack.pop();if(heap.length===limit&&this.first[n]>=heap[0])continue;
+      const dx=Math.max(this.x0[n]-x,0,x-this.x1[n]),dy=Math.max(this.y0[n]-y,0,y-this.y1[n]),dz=Math.max(this.z0[n]-z,0,z-this.z1[n]);
+      if(Math.hypot(dx,dy,dz)>=radius)continue;
+      if(this.left[n]<0){
+        for(let j=this.begin[n];j<this.end[n];j++){
+          const rank=this.order[j];if(heap.length===limit&&rank>=heap[0])continue;
+          if(Math.hypot(this.x[j]-x,this.y[j]-y,this.z[j]-z)<radius&&!exclude(this.values[rank]))keep(rank);
+        }
+      }else{
+        const a=this.left[n],b=this.right[n];if(this.first[a]<this.first[b])stack.push(b,a);else stack.push(a,b);
+      }
+    }
+    heap.sort((a,b)=>a-b);return heap.map(rank=>this.values[rank]);
+  }
+
   within3D(origin,radius){return this._within(origin,radius,3);}
   withinXZ(origin,radius){return this._within(origin,radius,2);}
   withinBox(origin,radius){return this._within(origin,radius,0);}

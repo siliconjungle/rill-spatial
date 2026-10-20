@@ -35,3 +35,5 @@ The initial Node22/26 game-component experiment showed lower build-plus-query an
 fauna-update cost; this is not whole-game FPS or hosted capacity evidence. The
 original all-competitor acceptance gate remains open. This package is source-only
 in this repository; it has not been published to npm.
+
+`firstWithin3D(origin, radius, limit, {exclude})` returns at most the first `limit` strict-sphere matches in input order, using bounded result storage. The optional `exclude(value)` callback must be a pure predicate; pruned rows need not invoke it.

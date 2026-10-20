@@ -3,10 +3,10 @@
     "id": "@siliconjungle/rill-spatial@0.1.0",
     "name": "@siliconjungle/rill-spatial",
     "version": "0.1.0",
-    "size": 4311,
-    "unpackedSize": 10662,
-    "shasum": "2e29540c99e13ae6963a37e7c44adbcef105fac5",
-    "integrity": "sha512-InBHxkYDtYAqYrcqOZlZmDduaDqLnKvN0kPi6ShlvFNpiiHjDnFtkp9KFk2N9VTwvi9BleqpYBvutE0ZB2x9vA==",
+    "size": 4793,
+    "unpackedSize": 12410,
+    "shasum": "e23f8435b75b13374169009320b87db995d9fbca",
+    "integrity": "sha512-2Ldb8Dj9wYZG2AxHKmk7tVp7yWSHKoASWXndoO+rX413adqaPr2ieBjddQFQWVNin73gzaiX93neovgC56InzA==",
     "filename": "siliconjungle-rill-spatial-0.1.0.tgz",
     "files": [
       {
@@ -16,12 +16,12 @@
       },
       {
         "path": "README.md",
-        "size": 2169,
+        "size": 2419,
         "mode": 420
       },
       {
         "path": "index.mjs",
-        "size": 7084,
+        "size": 8582,
         "mode": 420
       },
       {

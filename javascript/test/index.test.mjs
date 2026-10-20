@@ -61,3 +61,20 @@ test('height pruning retains coincident heights when the tolerance is below an o
  const points=Array.from({length:70},(_,i)=>[i,1e16+(i%3)*4,0]);
  for(const leafSize of[1,16,24])check(points,[[[0,1e16,0],5,.1],[[3,1e16,0],5,.1]],{leafSize});
 });
+
+test('bounded ordered spheres equal independent filtered prefixes with exclusions',()=>{
+ let seed=337;const R=()=>(seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296;
+ for(const n of[0,1,32,1000])for(const leafSize of[1,16,24]){
+  const values=Array.from({length:n},(_,id)=>({id,pos:[Math.round(R()*30)-15,Math.round(R()*12)-6,Math.round(R()*30)-15]}));
+  const index=new PackedPointIndex(values,{leafSize}),exclude=v=>v.id%3===0;
+  for(let query=0;query<20;query++){
+   const o=[R()*30-15,R()*12-6,R()*30-15],radius=query%5===0?Infinity:query,rows=values.filter(v=>!exclude(v)&&Math.hypot(...v.pos.map((x,i)=>x-o[i]))<radius);
+   for(const limit of[0,1,4,17,2000])assert.deepEqual(index.firstWithin3D(o,radius,limit,{exclude}),rows.slice(0,limit));
+  }
+ }
+ const values=[{id:0,pos:[3,0,4]},{id:1,pos:[0,0,0]},{id:2,pos:[0,0,0]}],index=new PackedPointIndex(values,{leafSize:1});
+ assert.deepEqual(index.firstWithin3D([0,0,0],5,1),[values[1]]);
+ assert.deepEqual(index.firstWithin3D([0,0,0],5,10),values.slice(1));
+ for(const limit of[-1,NaN,1.5])assert.deepEqual(index.firstWithin3D([0,0,0],5,limit),[]);
+ for(const radius of[0,-1,NaN])assert.deepEqual(index.firstWithin3D([0,0,0],radius,2),[]);
+});
