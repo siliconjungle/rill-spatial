@@ -1,6 +1,6 @@
 # rill-spatial
 
-A standalone, dependency-free Rust library for exact dynamic 2D/3D radius
+A standalone Rust library for exact dynamic 2D/3D radius
 reporting. Stable `u64` IDs, immediate insert/update/removal, caller-owned result
 buffers and an optional packed read view. No game engine, database, renderer,
 network service or application-specific behaviour is required.
@@ -24,7 +24,7 @@ let mut ids = Vec::new();
 index.within_into([0.0, 0.0, 0.0], 8.0, &mut ids)?;
 assert_eq!(ids, vec![101]);
 
-// Mutation invalidates prepared data; the next query remains immediately correct.
+// Movement requires refitting before using the packed view; queries stay current.
 index.upsert(102, [0.0, 0.0, 0.0])?;
 index.remove(101);
 # Ok::<(), rill_spatial::Error>(())
@@ -44,7 +44,17 @@ index.remove(101);
 - Read-only queries may run concurrently on shared references. Mutations use
   ordinary exclusive Rust access; there is no hidden thread pool or global state.
 - Queries always observe current mutations. `prepare()` builds a packed hierarchy
-  for a query-heavy phase; the dynamic grid remains the immediately correct fallback.
+  and releases the grid. Movement refits that hierarchy on the next preparation;
+  queries during a dirty phase scan current points. Structural changes rebuild
+  the hierarchy on preparation. `clear()` returns to the initial grid mode.
+
+`from_points(cell_size, rows)` bulk-loads `(u64, [f64; D])` rows directly into
+packed mode, avoiding temporary grid construction. Duplicate IDs keep the last
+position. Call `prepare()` before a query-heavy phase.
+
+The default `simd` feature uses the portable `wide` crate for small packed scans.
+`--no-default-features` selects a scalar, dependency-free library. SIMD preserves
+ordered squared-distance arithmetic; it does not enable fast-math.
 
 Cell width is a workload tuning parameter, not a restriction on query radius.
 Extreme coordinate/cell ratios fall back to a scan. Conservative bounds can be
@@ -59,12 +69,13 @@ cargo test --locked -p rill-spatial
 cargo build --locked --release -p rill-spatial-benchmarks
 node tools/fixtures.mjs
 python3 tools/binary-fixtures.py
-node tools/discover.mjs
 node tools/fetch-sources.mjs
 node tools/add-cpp.mjs
 npm ci --prefix research/npm --ignore-scripts --no-audit --no-fund
 python3 tools/build-cpp.py
-python3 tools/compare.py --out results/comparison.json
+python3 tools/coverage.py
+python3 tools/compare.py --samples 3 --processes 14 --out results/comparison.json
+python3 tools/gate.py results/comparison.json
 ```
 
 In the development workspace, use the local Cargo source-preparation entry point
@@ -72,10 +83,24 @@ and pin `RUSTUP_TOOLCHAIN=stable` when compiling dependencies that carry their o
 toolchain file. Compilation is outside runtime measurement. C++ adapters use
 `clang++ -O3 -ffp-contract=off`; Rust uses the checked-in release profile.
 
-Discovery refreshes are not benchmark source-pin updates: review changes before
+Run `node tools/discover.mjs` only to refresh discovery, not as part of reproducing
+a pinned measurement. Discovery refreshes are not benchmark source-pin updates: review changes before
 accepting a new dependency inventory or lockfile. Third-party code stays outside
 the public library and retains its own licenses. Registry versions/checksums and
 Git commit pins are in the source inventory; benchmark adapters are original code.
+
+## Comparison status
+
+The harness currently has 52 competitor entries from 38 source projects, plus a
+brute-force control. Several projects expose genuinely different data structures;
+these are separate implementations, not 52 independent algorithms. Additional
+source projects remain pending. The source inventory records adapter limitations.
+A single screening sample checks correctness and finds optimization targets; it
+cannot pass the gate. The evaluator requires at least 14 fresh process pairs per
+comparison for its simultaneous 95% median-runtime bound, and rejects missing
+cases, failed correctness, losses/ties, mixed binaries or unresolved sources.
+The initial machine is shared with other workers; this is not isolated-host
+capacity evidence. No 2,000-connection server claim follows from this kernel.
 
 ## Scope
 

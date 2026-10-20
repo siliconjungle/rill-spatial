@@ -27,7 +27,7 @@
       "-DIMPLEMENTATION=2",
       "-DIMPLEMENTATION_NAME=\"pico-tree\"",
       "benchmarks/native.cpp",
-      "-Iresearch/vendor/pico_tree/src/pico_tree",
+      "-Iresearch/vendor/cpp-pico_tree/src/pico_tree",
       "-o",
       "build/cpp-pico-tree"
     ],
@@ -63,7 +63,7 @@
       "-DIMPLEMENTATION=4",
       "-DIMPLEMENTATION_NAME=\"kdtree-cpp\"",
       "benchmarks/native.cpp",
-      "research/vendor/kdtree-cpp/kdtree.cpp",
+      "research/vendor/cpp-kdtree-cpp/kdtree.cpp",
       "-o",
       "build/cpp-kdtree-cpp"
     ],
@@ -81,12 +81,12 @@
       "-DIMPLEMENTATION=5",
       "-DIMPLEMENTATION_NAME=\"crvs-kdtree\"",
       "benchmarks/native.cpp",
-      "research/vendor/KDTree/KDTree.cpp",
+      "research/vendor/cpp-KDTree/KDTree.cpp",
       "-o",
       "build/cpp-crvs-kdtree"
     ],
     "status": "built",
-    "error": "benchmarks/native.cpp:52:10: warning: non-portable path to file '\"../research/vendor/kdtree/KDTree.hpp\"'; specified path differs in case from file name on disk [-Wnonportable-include-path]\n#include \"../research/vendor/KDTree/KDTree.hpp\"\n         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n         \"../research/vendor/kdtree/KDTree.hpp\"\n1 warning generated.\n"
+    "error": ""
   },
   {
     "implementation": "gishi-kdtree",

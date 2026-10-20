@@ -18,7 +18,7 @@ template<class T>T read(std::ifstream&f){T v;f.read(reinterpret_cast<char*>(&v),
 Fixture load(const char*path){std::ifstream in(path,std::ios::binary);char magic[8];in.read(magic,8);if(std::string(magic,8)!="RILLv001")throw std::runtime_error("fixture ABI");Fixture f;auto len=read<uint32_t>(in);f.name.resize(len);in.read(&f.name[0],len);f.cell_size=read<double>(in);auto n=read<uint32_t>(in),nf=read<uint32_t>(in);for(uint32_t i=0;i<n;i++){Point p;for(auto&x:p)x=read<double>(in);f.points.push_back(p);}for(uint32_t i=0;i<nf;i++){Frame frame;auto nu=read<uint32_t>(in);for(uint32_t j=0;j<nu;j++){auto id=read<uint32_t>(in);Point p;for(auto&x:p)x=read<double>(in);frame.updates.push_back({id,p});}auto nq=read<uint32_t>(in);for(uint32_t j=0;j<nq;j++){Query q;for(auto&x:q.point)x=read<double>(in);q.radius=read<double>(in);frame.queries.push_back(q);}f.frames.push_back(std::move(frame));}return f;}
 
 #if IMPLEMENTATION == 1
-#include "../research/vendor/nanoflann/include/nanoflann.hpp"
+#include "../research/vendor/cpp-nanoflann/include/nanoflann.hpp"
 struct Cloud{const std::vector<Point>&points;size_t kdtree_get_point_count()const{return points.size();}double kdtree_get_pt(size_t i,size_t d)const{return points[i][d];}template<class B>bool kdtree_get_bbox(B&)const{return false;}};
 class Native{std::vector<Point> points;Cloud cloud;using Tree=nanoflann::KDTreeSingleIndexAdaptor<nanoflann::L2_Simple_Adaptor<double,Cloud>,Cloud,3,size_t>;std::unique_ptr<Tree> tree;bool dirty=false;mutable std::vector<nanoflann::ResultItem<size_t,double>> scratch;
  void rebuild(){tree=std::make_unique<Tree>(3,cloud,nanoflann::KDTreeSingleIndexAdaptorParams(16));}
@@ -35,28 +35,28 @@ class Native{std::vector<Point>points;using Tree=pico_tree::kd_tree<std::referen
  void query(const Point&p,double r,std::vector<uint64_t>&out)const{out.clear();tree->search_radius(p,r*r+1e-9,scratch,false);for(auto&x:scratch)if(squared(points[x.index],p)<=r*r)out.push_back(x.index);}
 };
 #elif IMPLEMENTATION == 3
-#include "../research/vendor/libkdtree/kdtree.h"
+#include "../research/vendor/cpp-libkdtree/kdtree.h"
 class Native{std::vector<Point>points;kdtree*tree=nullptr;bool dirty=false;
  void rebuild(){if(tree)kd_free(tree);tree=kd_create(3);for(size_t i=0;i<points.size();i++)kd_insert(tree,points[i].data(),reinterpret_cast<void*>(i+1));}
  public:Native(const std::vector<Point>&p,double):points(p){rebuild();}~Native(){kd_free(tree);}void update(const std::vector<std::pair<uint32_t,Point>>&u){for(auto&x:u)points[x.first]=x.second;dirty|=!u.empty();}void prepare(){if(dirty){rebuild();dirty=false;}}
  void query(const Point&p,double r,std::vector<uint64_t>&out)const{out.clear();auto result=kd_nearest_range(tree,p.data(),r+1e-9);for(;!kd_res_end(result);kd_res_next(result)){auto i=reinterpret_cast<uintptr_t>(kd_res_item_data(result))-1;if(squared(points[i],p)<=r*r)out.push_back(i);}kd_res_free(result);}
 };
 #elif IMPLEMENTATION == 4
-#include "../research/vendor/kdtree-cpp/kdtree.hpp"
+#include "../research/vendor/cpp-kdtree-cpp/kdtree.hpp"
 class Native{std::vector<Point>points;Kdtree::KdNodeVector nodes;std::unique_ptr<Kdtree::KdTree>tree;bool dirty=false;
  void rebuild(){nodes.clear();for(size_t i=0;i<points.size();i++)nodes.emplace_back(Kdtree::CoordPoint(points[i].begin(),points[i].end()),nullptr,int(i));tree=std::make_unique<Kdtree::KdTree>(&nodes);}
  public:Native(const std::vector<Point>&p,double):points(p){rebuild();}void update(const std::vector<std::pair<uint32_t,Point>>&u){for(auto&x:u)points[x.first]=x.second;dirty|=!u.empty();}void prepare(){if(dirty){rebuild();dirty=false;}}
  void query(const Point&p,double r,std::vector<uint64_t>&out)const{out.clear();Kdtree::KdNodeVector found;tree->range_nearest_neighbors(Kdtree::CoordPoint(p.begin(),p.end()),r+1e-9,&found);for(auto&x:found)if(squared(points[x.index],p)<=r*r)out.push_back(x.index);}
 };
 #elif IMPLEMENTATION == 5
-#include "../research/vendor/KDTree/KDTree.hpp"
+#include "../research/vendor/cpp-KDTree/KDTree.hpp"
 class Native{std::vector<Point>points;std::unique_ptr<KDTree>tree;bool dirty=false;
  void rebuild(){pointVec p;for(auto&x:points)p.emplace_back(x.begin(),x.end());tree=std::make_unique<KDTree>(p);}
  public:Native(const std::vector<Point>&p,double):points(p){rebuild();}void update(const std::vector<std::pair<uint32_t,Point>>&u){for(auto&x:u)points[x.first]=x.second;dirty|=!u.empty();}void prepare(){if(dirty){rebuild();dirty=false;}}
  void query(const Point&p,double r,std::vector<uint64_t>&out)const{out.clear();for(auto i:tree->neighborhood_indices(point_t(p.begin(),p.end()),r+1e-9))if(squared(points[i],p)<=r*r)out.push_back(i);}
 };
 #elif IMPLEMENTATION == 6
-#include "../research/vendor/gishi-kdtree/kdtree.h"
+#include "../research/vendor/cpp-gishi-kdtree/kdtree.h"
 struct GPoint:std::array<double,3>{static const int DIM=3;};
 class Native{std::vector<Point>points;std::vector<GPoint>gp;std::unique_ptr<kdt::KDTree<GPoint>>tree;bool dirty=false;
  void rebuild(){gp.resize(points.size());for(size_t i=0;i<points.size();i++)std::copy(points[i].begin(),points[i].end(),gp[i].begin());tree=std::make_unique<kdt::KDTree<GPoint>>(gp);}

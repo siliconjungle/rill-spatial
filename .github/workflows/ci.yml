@@ -13,3 +13,4 @@ jobs:
           toolchain: ${{ matrix.toolchain }}
       - run: cargo test --locked -p rill-spatial
       - run: cargo test --locked --release -p rill-spatial
+      - run: cargo test --locked -p rill-spatial --no-default-features

@@ -30,8 +30,32 @@
       "reason": "Pinned comparison source inventory and explicit coverage status"
     },
     {
-      "path": "results",
-      "reason": "Required raw benchmark evidence and correctness records"
+      "path": "results/all-implementations-screen.json",
+      "reason": "Selected raw comparison, gate evaluation or required validation evidence"
+    },
+    {
+      "path": "results/cpp-builds.json",
+      "reason": "Selected raw comparison, gate evaluation or required validation evidence"
+    },
+    {
+      "path": "results/foreign-screen.json",
+      "reason": "Selected raw comparison, gate evaluation or required validation evidence"
+    },
+    {
+      "path": "results/hierarchy-screen.json",
+      "reason": "Selected raw comparison, gate evaluation or required validation evidence"
+    },
+    {
+      "path": "results/javascript-smoke.json",
+      "reason": "Selected raw comparison, gate evaluation or required validation evidence"
+    },
+    {
+      "path": "results/native-screen.json",
+      "reason": "Selected raw comparison, gate evaluation or required validation evidence"
+    },
+    {
+      "path": "results/screen-gate.json",
+      "reason": "Selected raw comparison, gate evaluation or required validation evidence"
     },
     {
       "path": "tools",
@@ -76,7 +100,116 @@
     {
       "path": "research/npm/package-lock.json",
       "reason": "Exact JavaScript transitive dependency checksums"
+    },
+    {
+      "path": "examples",
+      "reason": "Dependency-free fixture parser and profiling harness; original reproduction input"
+    },
+    {
+      "path": "research/baselines.json",
+      "reason": "Maps measured executable hashes to preserved Git source revisions"
+    },
+    {
+      "path": "tools/coverage.py",
+      "reason": "Pinned source-to-adapter capability inventory generation"
+    },
+    {
+      "path": "tools/gate.py",
+      "reason": "Strict independent acceptance evaluation"
+    },
+    {
+      "path": "build/frozen/all-implementations-screen/kdtree-cpp",
+      "reason": "Selected complete screening baseline: exact measured executable; source retained in evidence/screen-v2 Git history"
+    },
+    {
+      "path": "build/frozen/all-implementations-screen/rust",
+      "reason": "Selected complete screening baseline: exact measured executable; source retained in evidence/screen-v2 Git history"
+    },
+    {
+      "path": "build/frozen/all-implementations-screen/gishi-kdtree",
+      "reason": "Selected complete screening baseline: exact measured executable; source retained in evidence/screen-v2 Git history"
+    },
+    {
+      "path": "build/frozen/all-implementations-screen/libkdtree",
+      "reason": "Selected complete screening baseline: exact measured executable; source retained in evidence/screen-v2 Git history"
+    },
+    {
+      "path": "build/frozen/all-implementations-screen/pico-tree",
+      "reason": "Selected complete screening baseline: exact measured executable; source retained in evidence/screen-v2 Git history"
+    },
+    {
+      "path": "build/frozen/all-implementations-screen/nanoflann",
+      "reason": "Selected complete screening baseline: exact measured executable; source retained in evidence/screen-v2 Git history"
+    },
+    {
+      "path": "build/frozen/all-implementations-screen/crvs-kdtree",
+      "reason": "Selected complete screening baseline: exact measured executable; source retained in evidence/screen-v2 Git history"
+    },
+    {
+      "path": "benchmarks/.frozen-all-implementations-screen.mjs",
+      "reason": "Exact measured JavaScript adapter source for selected complete screening baseline"
+    },
+    {
+      "path": "research/vendor/cpp-nanoflann",
+      "reason": "Minimal pinned native source inputs for reproduction or ongoing capability evaluation; preserve upstream licenses"
+    },
+    {
+      "path": "research/vendor/cpp-pico_tree",
+      "reason": "Minimal pinned native source inputs for reproduction or ongoing capability evaluation; preserve upstream licenses"
+    },
+    {
+      "path": "research/vendor/cpp-libkdtree",
+      "reason": "Minimal pinned native source inputs for reproduction or ongoing capability evaluation; preserve upstream licenses"
+    },
+    {
+      "path": "research/vendor/cpp-kdtree-cpp",
+      "reason": "Minimal pinned native source inputs for reproduction or ongoing capability evaluation; preserve upstream licenses"
+    },
+    {
+      "path": "research/vendor/cpp-KDTree",
+      "reason": "Minimal pinned native source inputs for reproduction or ongoing capability evaluation; preserve upstream licenses"
+    },
+    {
+      "path": "research/vendor/cpp-gishi-kdtree",
+      "reason": "Minimal pinned native source inputs for reproduction or ongoing capability evaluation; preserve upstream licenses"
+    },
+    {
+      "path": "research/vendor/cpp-unibn-octree",
+      "reason": "Minimal pinned native source inputs for reproduction or ongoing capability evaluation; preserve upstream licenses"
+    },
+    {
+      "path": "research/vendor/cpp-kdtree-plusplus",
+      "reason": "Minimal pinned native source inputs for reproduction or ongoing capability evaluation; preserve upstream licenses"
     }
   ],
-  "safe_to_remove": []
+  "safe_to_remove": [
+    {
+      "path": "results/refit-screen.json",
+      "reason": "Completed diagnostic superseded by selected complete screening baseline; not acceptance evidence"
+    },
+    {
+      "path": "results/repair-screen.json",
+      "reason": "Completed diagnostic superseded by selected complete screening baseline; not acceptance evidence"
+    },
+    {
+      "path": "results/native-additional-smoke.json",
+      "reason": "Completed diagnostic superseded by selected complete screening baseline; not acceptance evidence"
+    },
+    {
+      "path": "build/frozen/refit-screen",
+      "reason": "Completed diagnostic superseded by selected complete screening baseline; not acceptance evidence"
+    },
+    {
+      "path": "build/refit-screen.log",
+      "reason": "Completed diagnostic superseded by selected complete screening baseline; not acceptance evidence"
+    },
+    {
+      "path": "build/repair-screen.log",
+      "reason": "Completed diagnostic superseded by selected complete screening baseline; not acceptance evidence"
+    },
+    {
+      "path": "build/screen-source-index",
+      "reason": "Completed temporary Git index; exact source blobs retained by evidence/screen-v2 commit"
+    }
+  ]
 }

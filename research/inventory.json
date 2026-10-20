@@ -13,7 +13,9 @@
       "description": "A quadtree that maps bounding-boxes to elements",
       "license": "MIT/Apache-2.0",
       "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/aabb-quadtree/0.2.0/download"
+      "source_url": "https://crates.io/api/v1/crates/aabb-quadtree/0.2.0/download",
+      "adapters": [],
+      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
     },
     {
       "name": "abd-clam",
@@ -25,7 +27,9 @@
       "description": "Clustering, Learning and Approximation with Manifolds",
       "license": "MIT",
       "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/abd-clam/0.30.0/download"
+      "source_url": "https://crates.io/api/v1/crates/abd-clam/0.30.0/download",
+      "adapters": [],
+      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
     },
     {
       "name": "acap",
@@ -34,10 +38,19 @@
       "version": "0.4.0",
       "checksum": "6264eddbcc18e299cc5eb2f3f50d0ff0034ce165897bed71195a2be5fe559f84",
       "repository": "https://github.com/tavianator/acap",
-      "description": "As Close As Possible — nearest neighbor search in Rust.",
+      "description": "As Close As Possible \u2014 nearest neighbor search in Rust.",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/acap/0.4.0/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/acap/0.4.0/download",
+      "adapters": [
+        "acap-kd",
+        "acap-flat-kd",
+        "acap-vp",
+        "acap-flat-vp",
+        "acap-exhaustive"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "bosque",
@@ -49,7 +62,9 @@
       "description": "A very fast in-place kdtree library",
       "license": "Apache-2.0 OR MIT",
       "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/bosque/0.2.0/download"
+      "source_url": "https://crates.io/api/v1/crates/bosque/0.2.0/download",
+      "adapters": [],
+      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
     },
     {
       "name": "collision",
@@ -61,7 +76,9 @@
       "description": "A collision extension to cgmath",
       "license": "Apache-2.0",
       "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/collision/0.20.1/download"
+      "source_url": "https://crates.io/api/v1/crates/collision/0.20.1/download",
+      "adapters": [],
+      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
     },
     {
       "name": "fnntw",
@@ -73,7 +90,9 @@
       "description": "FNNTW: Fastest Nearest Neighbor (in the) West. A fast kdtree/kNN library.",
       "license": "MIT OR Apache-2.0",
       "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/fnntw/0.4.1/download"
+      "source_url": "https://crates.io/api/v1/crates/fnntw/0.4.1/download",
+      "adapters": [],
+      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
     },
     {
       "name": "geo-index",
@@ -84,8 +103,14 @@
       "repository": "https://github.com/kylebarron/geo-index",
       "description": "Fast, immutable, ABI-stable spatial indexes.",
       "license": "MIT OR Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/geo-index/0.4.0/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/geo-index/0.4.0/download",
+      "adapters": [
+        "geo-index-kd",
+        "geo-index-rtree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "kd-tree",
@@ -96,8 +121,13 @@
       "repository": "https://github.com/u1roh/kd-tree",
       "description": "k-dimensional tree",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/kd-tree/0.6.2/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/kd-tree/0.6.2/download",
+      "adapters": [
+        "kd-tree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "kdt",
@@ -109,7 +139,9 @@
       "description": "k-dimensional tree implemented with const generics",
       "license": "MIT",
       "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/kdt/0.0.2/download"
+      "source_url": "https://crates.io/api/v1/crates/kdt/0.0.2/download",
+      "adapters": [],
+      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
     },
     {
       "name": "kdtree",
@@ -120,8 +152,13 @@
       "repository": "https://github.com/mrhooray/kdtree-rs",
       "description": "K-dimensional tree in Rust for fast geospatial indexing and nearest neighbors lookup",
       "license": "MIT OR Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/kdtree/0.8.1/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/kdtree/0.8.1/download",
+      "adapters": [
+        "kdtree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "kiddo",
@@ -132,8 +169,14 @@
       "repository": "https://github.com/sdd/kiddo",
       "description": "A high-performance, flexible, ergonomic k-d tree library. Ideal for geo- and astro- nearest-neighbour and k-nearest-neighbor queries",
       "license": "MIT OR Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/kiddo/6.3.0/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/kiddo/6.3.0/download",
+      "adapters": [
+        "kiddo-mutable",
+        "kiddo-immutable"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "nabo",
@@ -144,8 +187,15 @@
       "repository": "https://github.com/enlightware/nabo-rs",
       "description": "A fast K Nearest Neighbor (KNN) library for low-dimensional spaces",
       "license": "MIT OR Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/nabo/0.6.0/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/nabo/0.6.0/download",
+      "adapters": [
+        "nabo"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {
+        "nabo": "Bounded KNN with k=population, allow-self and unsorted results; no truncation."
+      }
     },
     {
       "name": "neighbourhood",
@@ -156,8 +206,14 @@
       "repository": "https://github.com/HOminus/neighbourhood",
       "description": "Super fast fixed size K-d Trees for extremely large datasets.",
       "license": "MIT OR Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/neighbourhood/0.2.0/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/neighbourhood/0.2.0/download",
+      "adapters": [
+        "neighbourhood-owned",
+        "neighbourhood-index"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "octree",
@@ -168,8 +224,13 @@
       "repository": "https://github.com/ybyygu/rust-octree",
       "description": "Octree algorithm for nearest neighbor search in 3D space",
       "license": "MIT OR Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/octree/0.1.0/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/octree/0.1.0/download",
+      "adapters": [
+        "rust-octree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "petal-neighbors",
@@ -180,8 +241,13 @@
       "repository": "https://github.com/petabi/petal-neighbors",
       "description": "Nearest neighbor search algorithms including a ball tree and a vantage point tree.",
       "license": "Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/petal-neighbors/0.19.0/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/petal-neighbors/0.19.0/download",
+      "adapters": [
+        "petal-ball"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "quadtree",
@@ -193,7 +259,9 @@
       "description": "A generic quadtree implementation",
       "license": "MIT",
       "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/quadtree/0.5.0/download"
+      "source_url": "https://crates.io/api/v1/crates/quadtree/0.5.0/download",
+      "adapters": [],
+      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
     },
     {
       "name": "quadtree_rs",
@@ -204,8 +272,15 @@
       "repository": "https://github.com/ambuc/quadtree",
       "description": "Point/region Quadtree with support for overlapping regions.",
       "license": "Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/quadtree_rs/0.1.3/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/quadtree_rs/0.1.3/download",
+      "adapters": [
+        "quadtree-rs"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {
+        "quadtree-rs": "Conservative integer XY projection plus exact f64 XYZ filter; adapter bounded to registered coordinate range."
+      }
     },
     {
       "name": "quadtree-f32",
@@ -216,8 +291,15 @@
       "repository": "https://github.com/fschutt/quadtree-f32",
       "description": "Simple, dependency-free ID-based quadtree",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/quadtree-f32/0.5.0/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/quadtree-f32/0.5.0/download",
+      "adapters": [
+        "quadtree-f64"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {
+        "quadtree-f64": "f64 feature. Fixed bounding rectangle avoids source contains_rect typo (r.max_x <= self.max_y). Coalesced rebuild avoids duplicate retention/removal failures. Deduplication and exact 3D filtering charged; source remains unmodified."
+      }
     },
     {
       "name": "rstar",
@@ -228,8 +310,13 @@
       "repository": "https://github.com/georust/rstar",
       "description": "An R*-tree spatial index",
       "license": "MIT OR Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/rstar/0.13.0/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/rstar/0.13.0/download",
+      "adapters": [
+        "rstar"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "sif",
@@ -240,8 +327,10 @@
       "repository": "https://github.com/foresterre/sif",
       "description": "Small but convenient parameterized testing attribute macro for Rust",
       "license": "MIT OR Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/sif/0.1.0/download"
+      "status": "incompatible",
+      "source_url": "https://crates.io/api/v1/crates/sif/0.1.0/download",
+      "adapters": [],
+      "status_reason": "Parameter-testing macro, not a spatial index (source description)."
     },
     {
       "name": "spart",
@@ -252,8 +341,17 @@
       "repository": "https://github.com/habedi/spart",
       "description": "A collection of space partitioning tree data structures for Rust",
       "license": "MIT OR Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/spart/0.6.2/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/spart/0.6.2/download",
+      "adapters": [
+        "spart-kd",
+        "spart-rtree",
+        "spart-rstar",
+        "spart-octree",
+        "spart-quadtree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "spatial",
@@ -264,8 +362,19 @@
       "repository": "https://github.com/ambaxter/spatial-rs.git",
       "description": "An N-Dimensional R-tree family spatial tree implementations",
       "license": "MIT/Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/spatial/1.0.1/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/spatial/1.0.1/download",
+      "adapters": [
+        "spatial-linear",
+        "spatial-quadratic",
+        "spatial-rstar"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {
+        "spatial-linear": "Original linear R-tree split algorithm.",
+        "spatial-quadratic": "Original quadratic R-tree split algorithm.",
+        "spatial-rstar": "Original R-star split algorithm."
+      }
     },
     {
       "name": "spatial_hash",
@@ -277,7 +386,9 @@
       "description": "A 2D Spatial Hash which uses cubes, triangles and hexes.",
       "license": "MIT",
       "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/spatial_hash/0.2.0/download"
+      "source_url": "https://crates.io/api/v1/crates/spatial_hash/0.2.0/download",
+      "adapters": [],
+      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
     },
     {
       "name": "spatialtree",
@@ -289,7 +400,9 @@
       "description": "A fast and flexible generic spatial tree collection (Octree, Quadtree, etc)",
       "license": "GPL-3.0",
       "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/spatialtree/0.1.3/download"
+      "source_url": "https://crates.io/api/v1/crates/spatialtree/0.1.3/download",
+      "adapters": [],
+      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
     },
     {
       "name": "static_aabb2d_index",
@@ -300,8 +413,13 @@
       "repository": "https://github.com/jbuckmccready/static_aabb2d_index",
       "description": "Fast static spatial index data structure for 2D axis aligned bounding boxes",
       "license": "MIT OR Apache-2.0",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/static_aabb2d_index/2.1.0/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/static_aabb2d_index/2.1.0/download",
+      "adapters": [
+        "static-aabb2d"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "vpsearch",
@@ -312,8 +430,13 @@
       "repository": "https://github.com/kornelski/vpsearch.git",
       "description": "Vantage Point Tree search algorithm for fast nearest neighbour search in multi-dimensional metric spaces.",
       "license": "BSD-2-Clause",
-      "status": "pending",
-      "source_url": "https://crates.io/api/v1/crates/vpsearch/2.1.0/download"
+      "status": "adapter-implemented",
+      "source_url": "https://crates.io/api/v1/crates/vpsearch/2.1.0/download",
+      "adapters": [
+        "vpsearch"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "@flatten-js/core",
@@ -324,8 +447,13 @@
       "repository": "git+https://github.com/alexbol99/flatten-js.git",
       "description": "Javascript library for 2d geometry",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/@flatten-js/core/-/core-1.6.14.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/@flatten-js/core/-/core-1.6.14.tgz",
+      "adapters": [
+        "flatten-planar"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "@timohausmann/quadtree-js",
@@ -336,8 +464,13 @@
       "repository": "git+https://github.com/timohausmann/quadtree-js.git",
       "description": "Another quadtree implementation for javascript",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/@timohausmann/quadtree-js/-/quadtree-js-1.2.6.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/@timohausmann/quadtree-js/-/quadtree-js-1.2.6.tgz",
+      "adapters": [
+        "@timohausmann/quadtree-js"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "box-intersect",
@@ -348,8 +481,15 @@
       "repository": "git+https://github.com/mikolalysenko/box-intersect.git",
       "description": "Any dimensional box intersection",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/box-intersect/-/box-intersect-1.0.2.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/box-intersect/-/box-intersect-1.0.2.tgz",
+      "adapters": [
+        "box-intersect"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {
+        "box-intersect": "Original batch intersection API handles full observer batch at once; construction, callback filtering and materialization charged."
+      }
     },
     {
       "name": "bush",
@@ -359,8 +499,10 @@
       "integrity": "sha512-HmrPDVcbRdFKSFaJNG9jQ8tAElFvXIX0AJcF6oJflurKGGXwA+RRFSjnzjFgqrfMCISRR8rzlPfypXtzRkKHAQ==",
       "description": "",
       "license": "ISC",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/bush/-/bush-0.0.1.tgz"
+      "status": "incompatible",
+      "source_url": "https://registry.npmjs.org/bush/-/bush-0.0.1.tgz",
+      "adapters": [],
+      "status_reason": "Unrelated package; not a spatial index."
     },
     {
       "name": "d3-quadtree",
@@ -371,8 +513,13 @@
       "repository": "git+https://github.com/d3/d3-quadtree.git",
       "description": "Two-dimensional recursive spatial subdivision.",
       "license": "ISC",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/d3-quadtree/-/d3-quadtree-3.0.1.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/d3-quadtree/-/d3-quadtree-3.0.1.tgz",
+      "adapters": [
+        "d3-quadtree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "flatbush",
@@ -383,8 +530,13 @@
       "repository": "git+https://github.com/mourner/flatbush.git",
       "description": "Fast static spatial index for rectangles",
       "license": "ISC",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/flatbush/-/flatbush-4.6.2.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/flatbush/-/flatbush-4.6.2.tgz",
+      "adapters": [
+        "flatbush"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "js-quadtree",
@@ -395,8 +547,13 @@
       "repository": "git+https://github.com/CorentinTh/quadtree-js.git",
       "description": "A simple quadtree implementation for javascript (nodejs or browser with module bundler).",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/js-quadtree/-/js-quadtree-3.3.6.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/js-quadtree/-/js-quadtree-3.3.6.tgz",
+      "adapters": [
+        "js-quadtree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "kd-tree-javascript",
@@ -407,8 +564,13 @@
       "repository": "git+https://github.com/ubilabs/kd-tree-javascript.git",
       "description": "A basic but super fast JavaScript implementation of the k-dimensional tree data structure.",
       "license": "UNLICENSED",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/kd-tree-javascript/-/kd-tree-javascript-1.0.3.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/kd-tree-javascript/-/kd-tree-javascript-1.0.3.tgz",
+      "adapters": [
+        "kd-tree-javascript"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "kdbush",
@@ -419,8 +581,13 @@
       "repository": "git://github.com/mourner/kdbush.git",
       "description": "A very fast static 2D index for points based on kd-tree.",
       "license": "ISC",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/kdbush/-/kdbush-4.1.0.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/kdbush/-/kdbush-4.1.0.tgz",
+      "adapters": [
+        "kdbush"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "mnemonist",
@@ -431,8 +598,16 @@
       "repository": "git+https://github.com/yomguithereal/mnemonist.git",
       "description": "Curated collection of data structures for the JavaScript/TypeScript.",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/mnemonist/-/mnemonist-0.40.6.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/mnemonist/-/mnemonist-0.40.6.tgz",
+      "adapters": [
+        "mnemonist-vp",
+        "mnemonist-kd"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {
+        "mnemonist-kd": "Radius via all-N nearest-neighbour reporting; complete, untruncated, includes ranking cost because exposed API requires it."
+      }
     },
     {
       "name": "quadtree",
@@ -442,8 +617,10 @@
       "integrity": "sha512-G5tMJYH9sIQiJp0Okr9vctIXtbIsf+xO76ixx2yv8rBNksQlOeQEyT7dIgBeDUUVf4uhbYH8f/gL8iYm5CS+ZA==",
       "repository": "http://github.com/B2MSolutions/node-quadtree.git",
       "description": "geospatial quadtree encoding and decoding.",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/quadtree/-/quadtree-1.1.3.tgz"
+      "status": "incompatible",
+      "source_url": "https://registry.npmjs.org/quadtree/-/quadtree-1.1.3.tgz",
+      "adapters": [],
+      "status_reason": "Quadkey encoding package, not a radius-reporting index."
     },
     {
       "name": "quadtree-lib",
@@ -454,8 +631,13 @@
       "repository": "git+https://github.com/elbywan/quadtree-lib.git",
       "description": "Efficient quadtrees library written in CoffeeScript.",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/quadtree-lib/-/quadtree-lib-1.0.9.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/quadtree-lib/-/quadtree-lib-1.0.9.tgz",
+      "adapters": [
+        "quadtree-lib"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "quadtree-ts",
@@ -466,7 +648,9 @@
       "description": "A simple quad tree implementation in TypeScript",
       "license": "ISC",
       "status": "pending",
-      "source_url": "https://registry.npmjs.org/quadtree-ts/-/quadtree-ts-0.0.1.tgz"
+      "source_url": "https://registry.npmjs.org/quadtree-ts/-/quadtree-ts-0.0.1.tgz",
+      "adapters": [],
+      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
     },
     {
       "name": "quadtree2",
@@ -477,8 +661,13 @@
       "repository": "git+https://github.com/p1100i/quadtree2.js.git",
       "description": "JavaScript implementation of quadtree datastructure for collision detection.",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/quadtree2/-/quadtree2-0.6.0.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/quadtree2/-/quadtree2-0.6.0.tgz",
+      "adapters": [
+        "quadtree2"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "rbush",
@@ -489,8 +678,13 @@
       "repository": "git://github.com/mourner/rbush.git",
       "description": "High-performance 2D spatial index for rectangles (based on R*-tree with bulk loading and bulk insertion algorithms)",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/rbush/-/rbush-4.0.1.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/rbush/-/rbush-4.0.1.tgz",
+      "adapters": [
+        "rbush"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "rbush-3d",
@@ -501,8 +695,13 @@
       "repository": "git+https://github.com/Eronana/rbush-3d.git",
       "description": "High-performance 3D spatial index for cuboids (based on R*-tree with bulk loading and bulk insertion algorithms)",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/rbush-3d/-/rbush-3d-0.1.2.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/rbush-3d/-/rbush-3d-0.1.2.tgz",
+      "adapters": [
+        "rbush-3d"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "rtree",
@@ -513,8 +712,13 @@
       "repository": "git://github.com/leaflet-extras/RTree.git",
       "description": "rtree library for javascript",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/rtree/-/rtree-1.4.2.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/rtree/-/rtree-1.4.2.tgz",
+      "adapters": [
+        "rtree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "spatial-hash",
@@ -525,8 +729,13 @@
       "repository": "git+https://github.com/ColinVDH/spatial-hash.git",
       "description": "Spatial hash package for node.js",
       "license": "Apache-2.0",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/spatial-hash/-/spatial-hash-0.0.4.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/spatial-hash/-/spatial-hash-0.0.4.tgz",
+      "adapters": [
+        "spatial-hash"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "name": "static-kdtree",
@@ -537,8 +746,13 @@
       "repository": "git://github.com/mikolalysenko/static-kdtree.git",
       "description": "A kdtree data structure",
       "license": "MIT",
-      "status": "pending",
-      "source_url": "https://registry.npmjs.org/static-kdtree/-/static-kdtree-1.0.2.tgz"
+      "status": "adapter-implemented",
+      "source_url": "https://registry.npmjs.org/static-kdtree/-/static-kdtree-1.0.2.tgz",
+      "adapters": [
+        "static-kdtree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "id": "cpp:nanoflann",
@@ -547,9 +761,16 @@
       "repository": "https://github.com/jlblancoc/nanoflann",
       "commit": "9c930ba410f545b0b76330acb502850cd1816920",
       "license": "NOASSERTION",
-      "status": "pending",
+      "status": "adapter-implemented",
       "description": "nanoflann: a C++11 header-only library for Nearest Neighbor (NN) search with KD-trees",
-      "source_url": "https://api.github.com/repos/jlblancoc/nanoflann/tarball/9c930ba410f545b0b76330acb502850cd1816920"
+      "source_url": "https://api.github.com/repos/jlblancoc/nanoflann/tarball/9c930ba410f545b0b76330acb502850cd1816920",
+      "source_directory": "research/vendor/cpp-nanoflann",
+      "archive_sha256": "b40ca53acf42c41bf33f903cb601fb78d71e97fe81e41ef9163a06deff288787",
+      "adapters": [
+        "nanoflann"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "id": "cpp:pico_tree",
@@ -558,9 +779,16 @@
       "repository": "https://github.com/Jaybro/pico_tree",
       "commit": "3796726a862bc23887746b93a925eac55c36638f",
       "license": "MIT",
-      "status": "pending",
+      "status": "adapter-implemented",
       "description": "A C++ header only library for fast nearest neighbor and range searches using a KdTree. It supports interfacing with Eigen, OpenCV, and custom data types and provides optional Python bindings.",
-      "source_url": "https://api.github.com/repos/Jaybro/pico_tree/tarball/3796726a862bc23887746b93a925eac55c36638f"
+      "source_url": "https://api.github.com/repos/Jaybro/pico_tree/tarball/3796726a862bc23887746b93a925eac55c36638f",
+      "source_directory": "research/vendor/cpp-pico_tree",
+      "archive_sha256": "281777b487832943d8ff45ce576aeb57d66e5450259eb2826e1c2fdc13a7ebcf",
+      "adapters": [
+        "pico-tree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "id": "cpp:unibn-octree",
@@ -571,7 +799,11 @@
       "license": "MIT",
       "status": "pending",
       "description": "Fast radius neighbor search with an Octree (ICRA 2015)",
-      "source_url": "https://api.github.com/repos/jbehley/octree/tarball/8e3927d48d5ce61f94aab6090d77b4434f87dc89"
+      "source_url": "https://api.github.com/repos/jbehley/octree/tarball/8e3927d48d5ce61f94aab6090d77b4434f87dc89",
+      "source_directory": "research/vendor/cpp-unibn-octree",
+      "archive_sha256": "0565417e04607dff7529edeca143bc80392b5acb34c130b2e3d524d0d1750701",
+      "adapters": [],
+      "status_reason": "Source uses float internal bounds; requires a validated conservative binary64 adapter before comparison."
     },
     {
       "id": "cpp:libkdtree",
@@ -580,9 +812,16 @@
       "repository": "https://github.com/jtsiomb/kdtree",
       "commit": "384f9eba646018f99fe37c1f5d0c9e21a63d5057",
       "license": "NOASSERTION",
-      "status": "pending",
+      "status": "adapter-implemented",
       "description": "A simple C library for working with KD-Trees",
-      "source_url": "https://api.github.com/repos/jtsiomb/kdtree/tarball/384f9eba646018f99fe37c1f5d0c9e21a63d5057"
+      "source_url": "https://api.github.com/repos/jtsiomb/kdtree/tarball/384f9eba646018f99fe37c1f5d0c9e21a63d5057",
+      "source_directory": "research/vendor/cpp-libkdtree",
+      "archive_sha256": "dd7de0a0e7c175ec13a136d6430aa4b0166817e79a8024dfd2ac6e824a56af44",
+      "adapters": [
+        "libkdtree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "id": "cpp:kdtree-cpp",
@@ -591,9 +830,16 @@
       "repository": "https://github.com/cdalitz/kdtree-cpp",
       "commit": "ee5b2f2514df1698f1f7d10232cd1c693823bdca",
       "license": "NOASSERTION",
-      "status": "pending",
+      "status": "adapter-implemented",
       "description": "Kd-Tree library for kNN and range queries in plain C++98",
-      "source_url": "https://api.github.com/repos/cdalitz/kdtree-cpp/tarball/ee5b2f2514df1698f1f7d10232cd1c693823bdca"
+      "source_url": "https://api.github.com/repos/cdalitz/kdtree-cpp/tarball/ee5b2f2514df1698f1f7d10232cd1c693823bdca",
+      "source_directory": "research/vendor/cpp-kdtree-cpp",
+      "archive_sha256": "80dfd73f2098ff0819f306d3a9e77a4a35f0d082ca207e10dda6669869292128",
+      "adapters": [
+        "kdtree-cpp"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "id": "cpp:KDTree",
@@ -602,9 +848,16 @@
       "repository": "https://github.com/crvs/KDTree",
       "commit": "625093e323266881ff7080eaf9268fb2c396afc4",
       "license": "BSD-3-Clause",
-      "status": "pending",
+      "status": "adapter-implemented",
       "description": "Simple C++ KD-Tree implementation",
-      "source_url": "https://api.github.com/repos/crvs/KDTree/tarball/625093e323266881ff7080eaf9268fb2c396afc4"
+      "source_url": "https://api.github.com/repos/crvs/KDTree/tarball/625093e323266881ff7080eaf9268fb2c396afc4",
+      "source_directory": "research/vendor/cpp-KDTree",
+      "archive_sha256": "1c08732df8ee3f671601d3c4d338f4525140fc56602f50454872526d7947b458",
+      "adapters": [
+        "crvs-kdtree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "id": "cpp:gishi-kdtree",
@@ -613,9 +866,16 @@
       "repository": "https://github.com/gishi523/kd-tree",
       "commit": "91e58f754fa556e9503fc1e4baca9cbdba48b41f",
       "license": "MIT",
-      "status": "pending",
+      "status": "adapter-implemented",
       "description": "An implementation of k-d tree",
-      "source_url": "https://api.github.com/repos/gishi523/kd-tree/tarball/91e58f754fa556e9503fc1e4baca9cbdba48b41f"
+      "source_url": "https://api.github.com/repos/gishi523/kd-tree/tarball/91e58f754fa556e9503fc1e4baca9cbdba48b41f",
+      "source_directory": "research/vendor/cpp-gishi-kdtree",
+      "archive_sha256": "c5223ca214d0367616657946624e6d5b350ca17b27e17e4c05188aa54904f2de",
+      "adapters": [
+        "gishi-kdtree"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {}
     },
     {
       "id": "cpp:kdtree-plusplus",
@@ -626,7 +886,11 @@
       "license": "NOASSERTION",
       "status": "pending",
       "description": "libkdtree++ is an STL-like C++ template container implementation of k-dimensional space sorting, using a kd-tree. It sports a theoretically unlimited number of dimensions, and can store any data structure",
-      "source_url": "https://api.github.com/repos/nvmd/libkdtree/tarball/ab5118c86342d6bb195b4187f61f05911ebc0587"
+      "source_url": "https://api.github.com/repos/nvmd/libkdtree/tarball/ab5118c86342d6bb195b4187f61f05911ebc0587",
+      "source_directory": "research/vendor/cpp-kdtree-plusplus",
+      "archive_sha256": "825c3a9082a7518e4134e29d7536116202c1e251a452cab71a59d446117a2a80",
+      "adapters": [],
+      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
     }
   ]
 }

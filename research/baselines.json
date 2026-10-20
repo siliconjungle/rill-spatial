@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "baselines": [
+    {
+      "name": "all-implementations-screen",
+      "source_commit": "a002e3aeefa9c7143ae60985d1903f61ddd9c2cb",
+      "artifact_sha256": "3ac69ed19caca2aff8e51e8a230413de03b9bb84ff1937da31f0dc822d174445",
+      "branch": "evidence/screen-v2",
+      "note": "Screening evidence only; gate remains open. Core sources match source hashes captured by the runner."
+    }
+  ]
+}

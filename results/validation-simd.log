@@ -1,0 +1,29 @@
+   Compiling rill-spatial v0.1.0 (/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial)
+    Finished `test` profile [unoptimized] target(s) in 0.57s
+     Running unittests src/lib.rs (build/target/debug/deps/rill_spatial-ff1939a27cecdb59)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/correctness.rs (build/target/debug/deps/correctness-a94ed8ef73bd7d2a)
+
+running 9 tests
+test exceptional_scales_do_not_overflow_or_lose_points ... ok
+test invalid_inputs_are_atomic ... ok
+test closed_boundary_duplicates_and_clear ... ok
+test bulk_points_replace_duplicate_ids_and_survive_structural_changes ... ok
+test independent_parallel_reads ... ok
+test prepared_queries_match_ordered_f64_at_boundaries_and_scales ... ok
+test prepared_motion_matches_unprepared_with_stable_and_sparse_ids ... ok
+test random_mutations_2d ... ok
+test random_mutations_3d ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+
+   Doc-tests rill_spatial
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

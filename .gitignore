@@ -7,3 +7,4 @@
 __pycache__/
 /benchmarks/fixtures/*.bin
 
+/benchmarks/.frozen-*.mjs

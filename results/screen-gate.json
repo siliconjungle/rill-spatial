@@ -1,0 +1,3848 @@
+{
+  "status": "OPEN",
+  "scope": "Complete exact-radius dynamic workload runtime; resource/capability superiority and 2,000-connection server capacity are not established",
+  "family_confidence": 0.95,
+  "required_fresh_process_pairs": 14,
+  "method": "Distribution-free one-sided median bound, Bonferroni family correction; assumes independent process pairs",
+  "runs": [
+    {
+      "path": "results/all-implementations-screen.json",
+      "schema": 2,
+      "status": "COMPLETE_WITH_FAILURES"
+    }
+  ],
+  "issues": [
+    "Unresolved source projects: cargo:aabb-quadtree, cargo:abd-clam, cargo:bosque, cargo:collision, cargo:fnntw, cargo:kdt, cargo:quadtree, cargo:spatial_hash, cargo:spatialtree, npm:quadtree-ts, cpp:unibn-octree, cpp:kdtree-plusplus",
+    "results/all-implementations-screen.json: failed mandatory case kd-tree-javascript/boundaries",
+    "results/all-implementations-screen.json: failed mandatory case kd-tree-javascript/contained",
+    "results/all-implementations-screen.json: failed mandatory case kd-tree-javascript/floors",
+    "results/all-implementations-screen.json: failed mandatory case kiddo-mutable/boundaries",
+    "results/all-implementations-screen.json: failed mandatory case kiddo-mutable/floors",
+    "results/all-implementations-screen.json: failed mandatory case spatial-hash/clusters",
+    "results/all-implementations-screen.json: failed mandatory case spatial-hash/dense"
+  ],
+  "counts": {
+    "pass": 0,
+    "missing": 7,
+    "loss-or-tie": 13,
+    "insufficient-processes": 457
+  },
+  "comparisons": [
+    {
+      "implementation": "brute-force",
+      "scenario": "small",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 3.029021151008362,
+      "upper_median_ratio_bound": 3.029021151008362
+    },
+    {
+      "implementation": "rstar",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.20769251524472507,
+      "upper_median_ratio_bound": 0.20769251524472507
+    },
+    {
+      "implementation": "kdtree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.40579366334545836,
+      "upper_median_ratio_bound": 0.40579366334545836
+    },
+    {
+      "implementation": "kd-tree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.9236538173091345,
+      "upper_median_ratio_bound": 0.9236538173091345
+    },
+    {
+      "implementation": "kiddo-mutable",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6657297297297298,
+      "upper_median_ratio_bound": 0.6657297297297298
+    },
+    {
+      "implementation": "kiddo-immutable",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7745911949685534,
+      "upper_median_ratio_bound": 0.7745911949685534
+    },
+    {
+      "implementation": "static-aabb2d",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.9723055546783718,
+      "upper_median_ratio_bound": 0.9723055546783718
+    },
+    {
+      "implementation": "geo-index-kd",
+      "scenario": "small",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 1.072411270941451,
+      "upper_median_ratio_bound": 1.072411270941451
+    },
+    {
+      "implementation": "geo-index-rtree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5795873804683382,
+      "upper_median_ratio_bound": 0.5795873804683382
+    },
+    {
+      "implementation": "spart-kd",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.32142223335734343,
+      "upper_median_ratio_bound": 0.32142223335734343
+    },
+    {
+      "implementation": "spart-rtree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1809399002156705,
+      "upper_median_ratio_bound": 0.1809399002156705
+    },
+    {
+      "implementation": "spart-rstar",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1341372565249781,
+      "upper_median_ratio_bound": 0.1341372565249781
+    },
+    {
+      "implementation": "spart-octree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1942072132305635,
+      "upper_median_ratio_bound": 0.1942072132305635
+    },
+    {
+      "implementation": "spart-quadtree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.24947940721294473,
+      "upper_median_ratio_bound": 0.24947940721294473
+    },
+    {
+      "implementation": "acap-kd",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6742138915652097,
+      "upper_median_ratio_bound": 0.6742138915652097
+    },
+    {
+      "implementation": "acap-flat-kd",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.9401813795841094,
+      "upper_median_ratio_bound": 0.9401813795841094
+    },
+    {
+      "implementation": "acap-vp",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3175667313007962,
+      "upper_median_ratio_bound": 0.3175667313007962
+    },
+    {
+      "implementation": "acap-flat-vp",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.50167823508326,
+      "upper_median_ratio_bound": 0.50167823508326
+    },
+    {
+      "implementation": "acap-exhaustive",
+      "scenario": "small",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 2.3530760412686282,
+      "upper_median_ratio_bound": 2.3530760412686282
+    },
+    {
+      "implementation": "vpsearch",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6493725614257092,
+      "upper_median_ratio_bound": 0.6493725614257092
+    },
+    {
+      "implementation": "petal-ball",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2939351414306307,
+      "upper_median_ratio_bound": 0.2939351414306307
+    },
+    {
+      "implementation": "neighbourhood-owned",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4745976940625193,
+      "upper_median_ratio_bound": 0.4745976940625193
+    },
+    {
+      "implementation": "neighbourhood-index",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3385004397537379,
+      "upper_median_ratio_bound": 0.3385004397537379
+    },
+    {
+      "implementation": "quadtree-f64",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.22584407296839357,
+      "upper_median_ratio_bound": 0.22584407296839357
+    },
+    {
+      "implementation": "quadtree-rs",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.10611167400729238,
+      "upper_median_ratio_bound": 0.10611167400729238
+    },
+    {
+      "implementation": "rust-octree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5229723991507431,
+      "upper_median_ratio_bound": 0.5229723991507431
+    },
+    {
+      "implementation": "spatial-linear",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5051101596207163,
+      "upper_median_ratio_bound": 0.5051101596207163
+    },
+    {
+      "implementation": "spatial-quadratic",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3820905153692466,
+      "upper_median_ratio_bound": 0.3820905153692466
+    },
+    {
+      "implementation": "spatial-rstar",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2324475313302129,
+      "upper_median_ratio_bound": 0.2324475313302129
+    },
+    {
+      "implementation": "nabo",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.49361934077209185,
+      "upper_median_ratio_bound": 0.49361934077209185
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.01358856354010546,
+      "upper_median_ratio_bound": 0.01358856354010546
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.011534902539626642,
+      "upper_median_ratio_bound": 0.011534902539626642
+    },
+    {
+      "implementation": "flatbush",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.023605934987461025,
+      "upper_median_ratio_bound": 0.023605934987461025
+    },
+    {
+      "implementation": "kdbush",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.025195553995324214,
+      "upper_median_ratio_bound": 0.025195553995324214
+    },
+    {
+      "implementation": "static-kdtree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.007118935234798854,
+      "upper_median_ratio_bound": 0.007118935234798854
+    },
+    {
+      "implementation": "d3-quadtree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.021820753740852506,
+      "upper_median_ratio_bound": 0.021820753740852506
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.00840692005016302,
+      "upper_median_ratio_bound": 0.00840692005016302
+    },
+    {
+      "implementation": "js-quadtree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.01972717679689337,
+      "upper_median_ratio_bound": 0.01972717679689337
+    },
+    {
+      "implementation": "@timohausmann/quadtree-js",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.014670057122219825,
+      "upper_median_ratio_bound": 0.014670057122219825
+    },
+    {
+      "implementation": "quadtree-lib",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.009074343303715236,
+      "upper_median_ratio_bound": 0.009074343303715236
+    },
+    {
+      "implementation": "rtree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.011126059080493913,
+      "upper_median_ratio_bound": 0.011126059080493913
+    },
+    {
+      "implementation": "mnemonist-vp",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.023701352185620306,
+      "upper_median_ratio_bound": 0.023701352185620306
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.00011777643852396386,
+      "upper_median_ratio_bound": 0.00011777643852396386
+    },
+    {
+      "implementation": "flatten-planar",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.006509795879102583,
+      "upper_median_ratio_bound": 0.006509795879102583
+    },
+    {
+      "implementation": "box-intersect",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.020685225817634104,
+      "upper_median_ratio_bound": 0.020685225817634104
+    },
+    {
+      "implementation": "quadtree2",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.005791358367901542,
+      "upper_median_ratio_bound": 0.005791358367901542
+    },
+    {
+      "implementation": "mnemonist-kd",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.00613927276236568,
+      "upper_median_ratio_bound": 0.00613927276236568
+    },
+    {
+      "implementation": "nanoflann",
+      "scenario": "small",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 1.0123294427091896,
+      "upper_median_ratio_bound": 1.0123294427091896
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "small",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 1.140328135994963,
+      "upper_median_ratio_bound": 1.140328135994963
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4321464160900504,
+      "upper_median_ratio_bound": 0.4321464160900504
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2538502127098242,
+      "upper_median_ratio_bound": 0.2538502127098242
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1286486667168058,
+      "upper_median_ratio_bound": 0.1286486667168058
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "small",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.38326528579964153,
+      "upper_median_ratio_bound": 0.38326528579964153
+    },
+    {
+      "implementation": "brute-force",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.21368057209573293,
+      "upper_median_ratio_bound": 0.21368057209573293
+    },
+    {
+      "implementation": "rstar",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1969400910021143,
+      "upper_median_ratio_bound": 0.1969400910021143
+    },
+    {
+      "implementation": "kdtree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1577607611721826,
+      "upper_median_ratio_bound": 0.1577607611721826
+    },
+    {
+      "implementation": "kd-tree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.44490508321732464,
+      "upper_median_ratio_bound": 0.44490508321732464
+    },
+    {
+      "implementation": "kiddo-mutable",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7282365402025499,
+      "upper_median_ratio_bound": 0.7282365402025499
+    },
+    {
+      "implementation": "kiddo-immutable",
+      "scenario": "uniform",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 1.2152958813601924,
+      "upper_median_ratio_bound": 1.2152958813601924
+    },
+    {
+      "implementation": "static-aabb2d",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6237949544983297,
+      "upper_median_ratio_bound": 0.6237949544983297
+    },
+    {
+      "implementation": "geo-index-kd",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.864282266837592,
+      "upper_median_ratio_bound": 0.864282266837592
+    },
+    {
+      "implementation": "geo-index-rtree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.775312062602656,
+      "upper_median_ratio_bound": 0.775312062602656
+    },
+    {
+      "implementation": "spart-kd",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3469106349393453,
+      "upper_median_ratio_bound": 0.3469106349393453
+    },
+    {
+      "implementation": "spart-rtree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.11136661932443333,
+      "upper_median_ratio_bound": 0.11136661932443333
+    },
+    {
+      "implementation": "spart-rstar",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.10965274563779558,
+      "upper_median_ratio_bound": 0.10965274563779558
+    },
+    {
+      "implementation": "spart-octree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3565814312501531,
+      "upper_median_ratio_bound": 0.3565814312501531
+    },
+    {
+      "implementation": "spart-quadtree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.47030424766974127,
+      "upper_median_ratio_bound": 0.47030424766974127
+    },
+    {
+      "implementation": "acap-kd",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6662626149283584,
+      "upper_median_ratio_bound": 0.6662626149283584
+    },
+    {
+      "implementation": "acap-flat-kd",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4634351735873743,
+      "upper_median_ratio_bound": 0.4634351735873743
+    },
+    {
+      "implementation": "acap-vp",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3802026506518786,
+      "upper_median_ratio_bound": 0.3802026506518786
+    },
+    {
+      "implementation": "acap-flat-vp",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.41847723104591256,
+      "upper_median_ratio_bound": 0.41847723104591256
+    },
+    {
+      "implementation": "acap-exhaustive",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.25689452718796346,
+      "upper_median_ratio_bound": 0.25689452718796346
+    },
+    {
+      "implementation": "vpsearch",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6821965079651432,
+      "upper_median_ratio_bound": 0.6821965079651432
+    },
+    {
+      "implementation": "petal-ball",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2811197686571178,
+      "upper_median_ratio_bound": 0.2811197686571178
+    },
+    {
+      "implementation": "neighbourhood-owned",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4825848726567048,
+      "upper_median_ratio_bound": 0.4825848726567048
+    },
+    {
+      "implementation": "neighbourhood-index",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5008397945721894,
+      "upper_median_ratio_bound": 0.5008397945721894
+    },
+    {
+      "implementation": "quadtree-f64",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2798822493767834,
+      "upper_median_ratio_bound": 0.2798822493767834
+    },
+    {
+      "implementation": "quadtree-rs",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.13571782454650316,
+      "upper_median_ratio_bound": 0.13571782454650316
+    },
+    {
+      "implementation": "rust-octree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3885504572199888,
+      "upper_median_ratio_bound": 0.3885504572199888
+    },
+    {
+      "implementation": "spatial-linear",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2427236652126697,
+      "upper_median_ratio_bound": 0.2427236652126697
+    },
+    {
+      "implementation": "spatial-quadratic",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1977371521483427,
+      "upper_median_ratio_bound": 0.1977371521483427
+    },
+    {
+      "implementation": "spatial-rstar",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0696860626639278,
+      "upper_median_ratio_bound": 0.0696860626639278
+    },
+    {
+      "implementation": "nabo",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5195978904292872,
+      "upper_median_ratio_bound": 0.5195978904292872
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.09983064515891156,
+      "upper_median_ratio_bound": 0.09983064515891156
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.06887550001589876,
+      "upper_median_ratio_bound": 0.06887550001589876
+    },
+    {
+      "implementation": "flatbush",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1366321259002056,
+      "upper_median_ratio_bound": 0.1366321259002056
+    },
+    {
+      "implementation": "kdbush",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.23510634473543587,
+      "upper_median_ratio_bound": 0.23510634473543587
+    },
+    {
+      "implementation": "static-kdtree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.04938845176644601,
+      "upper_median_ratio_bound": 0.04938845176644601
+    },
+    {
+      "implementation": "d3-quadtree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07901657619798051,
+      "upper_median_ratio_bound": 0.07901657619798051
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.00610455096488237,
+      "upper_median_ratio_bound": 0.00610455096488237
+    },
+    {
+      "implementation": "js-quadtree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08069545904713991,
+      "upper_median_ratio_bound": 0.08069545904713991
+    },
+    {
+      "implementation": "@timohausmann/quadtree-js",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07303314020799964,
+      "upper_median_ratio_bound": 0.07303314020799964
+    },
+    {
+      "implementation": "quadtree-lib",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.010416467817220814,
+      "upper_median_ratio_bound": 0.010416467817220814
+    },
+    {
+      "implementation": "rtree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.03890096821757125,
+      "upper_median_ratio_bound": 0.03890096821757125
+    },
+    {
+      "implementation": "mnemonist-vp",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0789112184601485,
+      "upper_median_ratio_bound": 0.0789112184601485
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07383911115401785,
+      "upper_median_ratio_bound": 0.07383911115401785
+    },
+    {
+      "implementation": "flatten-planar",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.022731538029143745,
+      "upper_median_ratio_bound": 0.022731538029143745
+    },
+    {
+      "implementation": "box-intersect",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07810895226973558,
+      "upper_median_ratio_bound": 0.07810895226973558
+    },
+    {
+      "implementation": "quadtree2",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.00469127588623947,
+      "upper_median_ratio_bound": 0.00469127588623947
+    },
+    {
+      "implementation": "mnemonist-kd",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0009985164998237246,
+      "upper_median_ratio_bound": 0.0009985164998237246
+    },
+    {
+      "implementation": "nanoflann",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7988541694941658,
+      "upper_median_ratio_bound": 0.7988541694941658
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "uniform",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 1.062769609517103,
+      "upper_median_ratio_bound": 1.062769609517103
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.25370496416473204,
+      "upper_median_ratio_bound": 0.25370496416473204
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.17769784078230622,
+      "upper_median_ratio_bound": 0.17769784078230622
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1086066662056455,
+      "upper_median_ratio_bound": 0.1086066662056455
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "uniform",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4123221738398146,
+      "upper_median_ratio_bound": 0.4123221738398146
+    },
+    {
+      "implementation": "brute-force",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3530514219836195,
+      "upper_median_ratio_bound": 0.3530514219836195
+    },
+    {
+      "implementation": "rstar",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.25291416559083274,
+      "upper_median_ratio_bound": 0.25291416559083274
+    },
+    {
+      "implementation": "kdtree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2777836837996849,
+      "upper_median_ratio_bound": 0.2777836837996849
+    },
+    {
+      "implementation": "kd-tree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5893359154371645,
+      "upper_median_ratio_bound": 0.5893359154371645
+    },
+    {
+      "implementation": "kiddo-mutable",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.8908676715666823,
+      "upper_median_ratio_bound": 0.8908676715666823
+    },
+    {
+      "implementation": "kiddo-immutable",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7740999737739312,
+      "upper_median_ratio_bound": 0.7740999737739312
+    },
+    {
+      "implementation": "static-aabb2d",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5092160382233306,
+      "upper_median_ratio_bound": 0.5092160382233306
+    },
+    {
+      "implementation": "geo-index-kd",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6617176320582181,
+      "upper_median_ratio_bound": 0.6617176320582181
+    },
+    {
+      "implementation": "geo-index-rtree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6797366699930912,
+      "upper_median_ratio_bound": 0.6797366699930912
+    },
+    {
+      "implementation": "spart-kd",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.35474304557085823,
+      "upper_median_ratio_bound": 0.35474304557085823
+    },
+    {
+      "implementation": "spart-rtree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.25654860960036113,
+      "upper_median_ratio_bound": 0.25654860960036113
+    },
+    {
+      "implementation": "spart-rstar",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2823674281559714,
+      "upper_median_ratio_bound": 0.2823674281559714
+    },
+    {
+      "implementation": "spart-octree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3152604143643513,
+      "upper_median_ratio_bound": 0.3152604143643513
+    },
+    {
+      "implementation": "spart-quadtree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.412642770407633,
+      "upper_median_ratio_bound": 0.412642770407633
+    },
+    {
+      "implementation": "acap-kd",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4374014690404433,
+      "upper_median_ratio_bound": 0.4374014690404433
+    },
+    {
+      "implementation": "acap-flat-kd",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5457112853128235,
+      "upper_median_ratio_bound": 0.5457112853128235
+    },
+    {
+      "implementation": "acap-vp",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7290928593222135,
+      "upper_median_ratio_bound": 0.7290928593222135
+    },
+    {
+      "implementation": "acap-flat-vp",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6753473425561015,
+      "upper_median_ratio_bound": 0.6753473425561015
+    },
+    {
+      "implementation": "acap-exhaustive",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4229281352506559,
+      "upper_median_ratio_bound": 0.4229281352506559
+    },
+    {
+      "implementation": "vpsearch",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5970154035648555,
+      "upper_median_ratio_bound": 0.5970154035648555
+    },
+    {
+      "implementation": "petal-ball",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.36363027701332457,
+      "upper_median_ratio_bound": 0.36363027701332457
+    },
+    {
+      "implementation": "neighbourhood-owned",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.589728406564753,
+      "upper_median_ratio_bound": 0.589728406564753
+    },
+    {
+      "implementation": "neighbourhood-index",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.412731274911362,
+      "upper_median_ratio_bound": 0.412731274911362
+    },
+    {
+      "implementation": "quadtree-f64",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3014143187093137,
+      "upper_median_ratio_bound": 0.3014143187093137
+    },
+    {
+      "implementation": "quadtree-rs",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08538811064970757,
+      "upper_median_ratio_bound": 0.08538811064970757
+    },
+    {
+      "implementation": "rust-octree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.33498509726274106,
+      "upper_median_ratio_bound": 0.33498509726274106
+    },
+    {
+      "implementation": "spatial-linear",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2662714915729199,
+      "upper_median_ratio_bound": 0.2662714915729199
+    },
+    {
+      "implementation": "spatial-quadratic",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.31570778776121916,
+      "upper_median_ratio_bound": 0.31570778776121916
+    },
+    {
+      "implementation": "spatial-rstar",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2520105794398532,
+      "upper_median_ratio_bound": 0.2520105794398532
+    },
+    {
+      "implementation": "nabo",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3793268536794766,
+      "upper_median_ratio_bound": 0.3793268536794766
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.18205211648914907,
+      "upper_median_ratio_bound": 0.18205211648914907
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.15395647537425125,
+      "upper_median_ratio_bound": 0.15395647537425125
+    },
+    {
+      "implementation": "flatbush",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2110383380416905,
+      "upper_median_ratio_bound": 0.2110383380416905
+    },
+    {
+      "implementation": "kdbush",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.29072590452426295,
+      "upper_median_ratio_bound": 0.29072590452426295
+    },
+    {
+      "implementation": "static-kdtree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1376881878959667,
+      "upper_median_ratio_bound": 0.1376881878959667
+    },
+    {
+      "implementation": "d3-quadtree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.12423274760295533,
+      "upper_median_ratio_bound": 0.12423274760295533
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.013733247318155105,
+      "upper_median_ratio_bound": 0.013733247318155105
+    },
+    {
+      "implementation": "js-quadtree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.19109459231195158,
+      "upper_median_ratio_bound": 0.19109459231195158
+    },
+    {
+      "implementation": "@timohausmann/quadtree-js",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07445509535877468,
+      "upper_median_ratio_bound": 0.07445509535877468
+    },
+    {
+      "implementation": "quadtree-lib",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.03201508879117601,
+      "upper_median_ratio_bound": 0.03201508879117601
+    },
+    {
+      "implementation": "rtree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08826983229862524,
+      "upper_median_ratio_bound": 0.08826983229862524
+    },
+    {
+      "implementation": "mnemonist-vp",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1473962756089041,
+      "upper_median_ratio_bound": 0.1473962756089041
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "clusters",
+      "status": "missing",
+      "process_pairs": 0,
+      "median_ratio": null,
+      "upper_median_ratio_bound": null
+    },
+    {
+      "implementation": "flatten-planar",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.028833795054577796,
+      "upper_median_ratio_bound": 0.028833795054577796
+    },
+    {
+      "implementation": "box-intersect",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.12650176431291912,
+      "upper_median_ratio_bound": 0.12650176431291912
+    },
+    {
+      "implementation": "quadtree2",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.004873065898612691,
+      "upper_median_ratio_bound": 0.004873065898612691
+    },
+    {
+      "implementation": "mnemonist-kd",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0034415613932381084,
+      "upper_median_ratio_bound": 0.0034415613932381084
+    },
+    {
+      "implementation": "nanoflann",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7150837072094707,
+      "upper_median_ratio_bound": 0.7150837072094707
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.8519215269264374,
+      "upper_median_ratio_bound": 0.8519215269264374
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.11008473172927022,
+      "upper_median_ratio_bound": 0.11008473172927022
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1057396759664442,
+      "upper_median_ratio_bound": 0.1057396759664442
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.06741983297083635,
+      "upper_median_ratio_bound": 0.06741983297083635
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "clusters",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.22427538137704953,
+      "upper_median_ratio_bound": 0.22427538137704953
+    },
+    {
+      "implementation": "brute-force",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4915603554057781,
+      "upper_median_ratio_bound": 0.4915603554057781
+    },
+    {
+      "implementation": "rstar",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.318536529075744,
+      "upper_median_ratio_bound": 0.318536529075744
+    },
+    {
+      "implementation": "kdtree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.17193704183834238,
+      "upper_median_ratio_bound": 0.17193704183834238
+    },
+    {
+      "implementation": "kd-tree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.40829392857142854,
+      "upper_median_ratio_bound": 0.40829392857142854
+    },
+    {
+      "implementation": "kiddo-mutable",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6088604563261922,
+      "upper_median_ratio_bound": 0.6088604563261922
+    },
+    {
+      "implementation": "kiddo-immutable",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.8312497368767962,
+      "upper_median_ratio_bound": 0.8312497368767962
+    },
+    {
+      "implementation": "static-aabb2d",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.765948639996173,
+      "upper_median_ratio_bound": 0.765948639996173
+    },
+    {
+      "implementation": "geo-index-kd",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6748518552297162,
+      "upper_median_ratio_bound": 0.6748518552297162
+    },
+    {
+      "implementation": "geo-index-rtree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7649791148910674,
+      "upper_median_ratio_bound": 0.7649791148910674
+    },
+    {
+      "implementation": "spart-kd",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3938783875331867,
+      "upper_median_ratio_bound": 0.3938783875331867
+    },
+    {
+      "implementation": "spart-rtree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2896481205909169,
+      "upper_median_ratio_bound": 0.2896481205909169
+    },
+    {
+      "implementation": "spart-rstar",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4218074413607857,
+      "upper_median_ratio_bound": 0.4218074413607857
+    },
+    {
+      "implementation": "spart-octree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.491501393046513,
+      "upper_median_ratio_bound": 0.491501393046513
+    },
+    {
+      "implementation": "spart-quadtree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5386981602098599,
+      "upper_median_ratio_bound": 0.5386981602098599
+    },
+    {
+      "implementation": "acap-kd",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7079410538226252,
+      "upper_median_ratio_bound": 0.7079410538226252
+    },
+    {
+      "implementation": "acap-flat-kd",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5568435496669052,
+      "upper_median_ratio_bound": 0.5568435496669052
+    },
+    {
+      "implementation": "acap-vp",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7232326279152436,
+      "upper_median_ratio_bound": 0.7232326279152436
+    },
+    {
+      "implementation": "acap-flat-vp",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.349414486536466,
+      "upper_median_ratio_bound": 0.349414486536466
+    },
+    {
+      "implementation": "acap-exhaustive",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5195080741050271,
+      "upper_median_ratio_bound": 0.5195080741050271
+    },
+    {
+      "implementation": "vpsearch",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5126598815188463,
+      "upper_median_ratio_bound": 0.5126598815188463
+    },
+    {
+      "implementation": "petal-ball",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3685775220176067,
+      "upper_median_ratio_bound": 0.3685775220176067
+    },
+    {
+      "implementation": "neighbourhood-owned",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5186694092559576,
+      "upper_median_ratio_bound": 0.5186694092559576
+    },
+    {
+      "implementation": "neighbourhood-index",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.35644821713221164,
+      "upper_median_ratio_bound": 0.35644821713221164
+    },
+    {
+      "implementation": "quadtree-f64",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.18444007575055776,
+      "upper_median_ratio_bound": 0.18444007575055776
+    },
+    {
+      "implementation": "quadtree-rs",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.04786676117956651,
+      "upper_median_ratio_bound": 0.04786676117956651
+    },
+    {
+      "implementation": "rust-octree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3678957436876352,
+      "upper_median_ratio_bound": 0.3678957436876352
+    },
+    {
+      "implementation": "spatial-linear",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.37834942921500775,
+      "upper_median_ratio_bound": 0.37834942921500775
+    },
+    {
+      "implementation": "spatial-quadratic",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.48554594438092213,
+      "upper_median_ratio_bound": 0.48554594438092213
+    },
+    {
+      "implementation": "spatial-rstar",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.41886304749088515,
+      "upper_median_ratio_bound": 0.41886304749088515
+    },
+    {
+      "implementation": "nabo",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.19955098092467502,
+      "upper_median_ratio_bound": 0.19955098092467502
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1398209520612376,
+      "upper_median_ratio_bound": 0.1398209520612376
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1256780432854418,
+      "upper_median_ratio_bound": 0.1256780432854418
+    },
+    {
+      "implementation": "flatbush",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.29935174186438257,
+      "upper_median_ratio_bound": 0.29935174186438257
+    },
+    {
+      "implementation": "kdbush",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.24471251946602157,
+      "upper_median_ratio_bound": 0.24471251946602157
+    },
+    {
+      "implementation": "static-kdtree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.13594756315922749,
+      "upper_median_ratio_bound": 0.13594756315922749
+    },
+    {
+      "implementation": "d3-quadtree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.09838138003580418,
+      "upper_median_ratio_bound": 0.09838138003580418
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.014162634593563055,
+      "upper_median_ratio_bound": 0.014162634593563055
+    },
+    {
+      "implementation": "js-quadtree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1501427667182945,
+      "upper_median_ratio_bound": 0.1501427667182945
+    },
+    {
+      "implementation": "@timohausmann/quadtree-js",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.04426624858567786,
+      "upper_median_ratio_bound": 0.04426624858567786
+    },
+    {
+      "implementation": "quadtree-lib",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.10195724405713798,
+      "upper_median_ratio_bound": 0.10195724405713798
+    },
+    {
+      "implementation": "rtree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08886135527412237,
+      "upper_median_ratio_bound": 0.08886135527412237
+    },
+    {
+      "implementation": "mnemonist-vp",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.13431036913461314,
+      "upper_median_ratio_bound": 0.13431036913461314
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "dense",
+      "status": "missing",
+      "process_pairs": 0,
+      "median_ratio": null,
+      "upper_median_ratio_bound": null
+    },
+    {
+      "implementation": "flatten-planar",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0418690378519471,
+      "upper_median_ratio_bound": 0.0418690378519471
+    },
+    {
+      "implementation": "box-intersect",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.09855579483505006,
+      "upper_median_ratio_bound": 0.09855579483505006
+    },
+    {
+      "implementation": "quadtree2",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0022469452825435456,
+      "upper_median_ratio_bound": 0.0022469452825435456
+    },
+    {
+      "implementation": "mnemonist-kd",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.017415774536859895,
+      "upper_median_ratio_bound": 0.017415774536859895
+    },
+    {
+      "implementation": "nanoflann",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4842510900672175,
+      "upper_median_ratio_bound": 0.4842510900672175
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5922227313584459,
+      "upper_median_ratio_bound": 0.5922227313584459
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07657852968048101,
+      "upper_median_ratio_bound": 0.07657852968048101
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07680852177972944,
+      "upper_median_ratio_bound": 0.07680852177972944
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.03525847063242832,
+      "upper_median_ratio_bound": 0.03525847063242832
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "dense",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2809085759881541,
+      "upper_median_ratio_bound": 0.2809085759881541
+    },
+    {
+      "implementation": "brute-force",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.35416099297044745,
+      "upper_median_ratio_bound": 0.35416099297044745
+    },
+    {
+      "implementation": "rstar",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07785917760106206,
+      "upper_median_ratio_bound": 0.07785917760106206
+    },
+    {
+      "implementation": "kdtree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.025503285888119547,
+      "upper_median_ratio_bound": 0.025503285888119547
+    },
+    {
+      "implementation": "kd-tree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.11713039535111358,
+      "upper_median_ratio_bound": 0.11713039535111358
+    },
+    {
+      "implementation": "kiddo-mutable",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2255407532356816,
+      "upper_median_ratio_bound": 0.2255407532356816
+    },
+    {
+      "implementation": "kiddo-immutable",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2558201062633262,
+      "upper_median_ratio_bound": 0.2558201062633262
+    },
+    {
+      "implementation": "static-aabb2d",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1929196763760434,
+      "upper_median_ratio_bound": 0.1929196763760434
+    },
+    {
+      "implementation": "geo-index-kd",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.17266358226380327,
+      "upper_median_ratio_bound": 0.17266358226380327
+    },
+    {
+      "implementation": "geo-index-rtree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1616832758614186,
+      "upper_median_ratio_bound": 0.1616832758614186
+    },
+    {
+      "implementation": "spart-kd",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.11138062376767306,
+      "upper_median_ratio_bound": 0.11138062376767306
+    },
+    {
+      "implementation": "spart-rtree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.11210107917752461,
+      "upper_median_ratio_bound": 0.11210107917752461
+    },
+    {
+      "implementation": "spart-rstar",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.10012326939836673,
+      "upper_median_ratio_bound": 0.10012326939836673
+    },
+    {
+      "implementation": "spart-octree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07012694133227115,
+      "upper_median_ratio_bound": 0.07012694133227115
+    },
+    {
+      "implementation": "spart-quadtree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.13099935432701437,
+      "upper_median_ratio_bound": 0.13099935432701437
+    },
+    {
+      "implementation": "acap-kd",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.16667390956959396,
+      "upper_median_ratio_bound": 0.16667390956959396
+    },
+    {
+      "implementation": "acap-flat-kd",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.15908057373199275,
+      "upper_median_ratio_bound": 0.15908057373199275
+    },
+    {
+      "implementation": "acap-vp",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.17777307122650635,
+      "upper_median_ratio_bound": 0.17777307122650635
+    },
+    {
+      "implementation": "acap-flat-vp",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.19118354338224758,
+      "upper_median_ratio_bound": 0.19118354338224758
+    },
+    {
+      "implementation": "acap-exhaustive",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.41520469757710227,
+      "upper_median_ratio_bound": 0.41520469757710227
+    },
+    {
+      "implementation": "vpsearch",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.12135577048946133,
+      "upper_median_ratio_bound": 0.12135577048946133
+    },
+    {
+      "implementation": "petal-ball",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.31573462829930216,
+      "upper_median_ratio_bound": 0.31573462829930216
+    },
+    {
+      "implementation": "neighbourhood-owned",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.18330299638179928,
+      "upper_median_ratio_bound": 0.18330299638179928
+    },
+    {
+      "implementation": "neighbourhood-index",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.11928377447478986,
+      "upper_median_ratio_bound": 0.11928377447478986
+    },
+    {
+      "implementation": "quadtree-f64",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.04045337296248615,
+      "upper_median_ratio_bound": 0.04045337296248615
+    },
+    {
+      "implementation": "quadtree-rs",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.01236992834856657,
+      "upper_median_ratio_bound": 0.01236992834856657
+    },
+    {
+      "implementation": "rust-octree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1791009223291908,
+      "upper_median_ratio_bound": 0.1791009223291908
+    },
+    {
+      "implementation": "spatial-linear",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1526881850801131,
+      "upper_median_ratio_bound": 0.1526881850801131
+    },
+    {
+      "implementation": "spatial-quadratic",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.15860293095499872,
+      "upper_median_ratio_bound": 0.15860293095499872
+    },
+    {
+      "implementation": "spatial-rstar",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08870446575710685,
+      "upper_median_ratio_bound": 0.08870446575710685
+    },
+    {
+      "implementation": "nabo",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.03180049634208679,
+      "upper_median_ratio_bound": 0.03180049634208679
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.036348052750086436,
+      "upper_median_ratio_bound": 0.036348052750086436
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.030871773408734943,
+      "upper_median_ratio_bound": 0.030871773408734943
+    },
+    {
+      "implementation": "flatbush",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0527536761795084,
+      "upper_median_ratio_bound": 0.0527536761795084
+    },
+    {
+      "implementation": "kdbush",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.03688164958625635,
+      "upper_median_ratio_bound": 0.03688164958625635
+    },
+    {
+      "implementation": "static-kdtree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.01796216695432035,
+      "upper_median_ratio_bound": 0.01796216695432035
+    },
+    {
+      "implementation": "d3-quadtree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.01909845880777243,
+      "upper_median_ratio_bound": 0.01909845880777243
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "contained",
+      "status": "missing",
+      "process_pairs": 0,
+      "median_ratio": null,
+      "upper_median_ratio_bound": null
+    },
+    {
+      "implementation": "js-quadtree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.03194662577404837,
+      "upper_median_ratio_bound": 0.03194662577404837
+    },
+    {
+      "implementation": "@timohausmann/quadtree-js",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.007818296378736093,
+      "upper_median_ratio_bound": 0.007818296378736093
+    },
+    {
+      "implementation": "quadtree-lib",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0042582967918463905,
+      "upper_median_ratio_bound": 0.0042582967918463905
+    },
+    {
+      "implementation": "rtree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0125311351434102,
+      "upper_median_ratio_bound": 0.0125311351434102
+    },
+    {
+      "implementation": "mnemonist-vp",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.024421419666341815,
+      "upper_median_ratio_bound": 0.024421419666341815
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.002325553640233826,
+      "upper_median_ratio_bound": 0.002325553640233826
+    },
+    {
+      "implementation": "flatten-planar",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0077696857376567145,
+      "upper_median_ratio_bound": 0.0077696857376567145
+    },
+    {
+      "implementation": "box-intersect",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.022389421650066563,
+      "upper_median_ratio_bound": 0.022389421650066563
+    },
+    {
+      "implementation": "quadtree2",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.001118941020558308,
+      "upper_median_ratio_bound": 0.001118941020558308
+    },
+    {
+      "implementation": "mnemonist-kd",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.005475851596530111,
+      "upper_median_ratio_bound": 0.005475851596530111
+    },
+    {
+      "implementation": "nanoflann",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.11825612244590084,
+      "upper_median_ratio_bound": 0.11825612244590084
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.13036809308525446,
+      "upper_median_ratio_bound": 0.13036809308525446
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.021267531756080545,
+      "upper_median_ratio_bound": 0.021267531756080545
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.00865076946796664,
+      "upper_median_ratio_bound": 0.00865076946796664
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.007918172512906612,
+      "upper_median_ratio_bound": 0.007918172512906612
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "contained",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.05788241703434038,
+      "upper_median_ratio_bound": 0.05788241703434038
+    },
+    {
+      "implementation": "brute-force",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3298951160656629,
+      "upper_median_ratio_bound": 0.3298951160656629
+    },
+    {
+      "implementation": "rstar",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2612387661859506,
+      "upper_median_ratio_bound": 0.2612387661859506
+    },
+    {
+      "implementation": "kdtree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2114100251152349,
+      "upper_median_ratio_bound": 0.2114100251152349
+    },
+    {
+      "implementation": "kd-tree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5030276483968523,
+      "upper_median_ratio_bound": 0.5030276483968523
+    },
+    {
+      "implementation": "kiddo-mutable",
+      "scenario": "floors",
+      "status": "missing",
+      "process_pairs": 0,
+      "median_ratio": null,
+      "upper_median_ratio_bound": null
+    },
+    {
+      "implementation": "kiddo-immutable",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.9857649366202104,
+      "upper_median_ratio_bound": 0.9857649366202104
+    },
+    {
+      "implementation": "static-aabb2d",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5325489808794887,
+      "upper_median_ratio_bound": 0.5325489808794887
+    },
+    {
+      "implementation": "geo-index-kd",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.36267454440862307,
+      "upper_median_ratio_bound": 0.36267454440862307
+    },
+    {
+      "implementation": "geo-index-rtree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5946158268149114,
+      "upper_median_ratio_bound": 0.5946158268149114
+    },
+    {
+      "implementation": "spart-kd",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.41523672825848507,
+      "upper_median_ratio_bound": 0.41523672825848507
+    },
+    {
+      "implementation": "spart-rtree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08972093634436912,
+      "upper_median_ratio_bound": 0.08972093634436912
+    },
+    {
+      "implementation": "spart-rstar",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.12928990838768484,
+      "upper_median_ratio_bound": 0.12928990838768484
+    },
+    {
+      "implementation": "spart-octree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.35928494977008585,
+      "upper_median_ratio_bound": 0.35928494977008585
+    },
+    {
+      "implementation": "spart-quadtree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3672347651643133,
+      "upper_median_ratio_bound": 0.3672347651643133
+    },
+    {
+      "implementation": "acap-kd",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5494405122562006,
+      "upper_median_ratio_bound": 0.5494405122562006
+    },
+    {
+      "implementation": "acap-flat-kd",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5191291234821369,
+      "upper_median_ratio_bound": 0.5191291234821369
+    },
+    {
+      "implementation": "acap-vp",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4461564145191046,
+      "upper_median_ratio_bound": 0.4461564145191046
+    },
+    {
+      "implementation": "acap-flat-vp",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.38281143638884557,
+      "upper_median_ratio_bound": 0.38281143638884557
+    },
+    {
+      "implementation": "acap-exhaustive",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3676032678256362,
+      "upper_median_ratio_bound": 0.3676032678256362
+    },
+    {
+      "implementation": "vpsearch",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.47632270095200707,
+      "upper_median_ratio_bound": 0.47632270095200707
+    },
+    {
+      "implementation": "petal-ball",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.21354010698010656,
+      "upper_median_ratio_bound": 0.21354010698010656
+    },
+    {
+      "implementation": "neighbourhood-owned",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7533468875955527,
+      "upper_median_ratio_bound": 0.7533468875955527
+    },
+    {
+      "implementation": "neighbourhood-index",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5975195301053934,
+      "upper_median_ratio_bound": 0.5975195301053934
+    },
+    {
+      "implementation": "quadtree-f64",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2194114184037606,
+      "upper_median_ratio_bound": 0.2194114184037606
+    },
+    {
+      "implementation": "quadtree-rs",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08249527270368577,
+      "upper_median_ratio_bound": 0.08249527270368577
+    },
+    {
+      "implementation": "rust-octree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.41961652516764336,
+      "upper_median_ratio_bound": 0.41961652516764336
+    },
+    {
+      "implementation": "spatial-linear",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.14510421726962067,
+      "upper_median_ratio_bound": 0.14510421726962067
+    },
+    {
+      "implementation": "spatial-quadratic",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.19507356500154388,
+      "upper_median_ratio_bound": 0.19507356500154388
+    },
+    {
+      "implementation": "spatial-rstar",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.13860459239742592,
+      "upper_median_ratio_bound": 0.13860459239742592
+    },
+    {
+      "implementation": "nabo",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6336667015711455,
+      "upper_median_ratio_bound": 0.6336667015711455
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.10860565015445235,
+      "upper_median_ratio_bound": 0.10860565015445235
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.10632506421564591,
+      "upper_median_ratio_bound": 0.10632506421564591
+    },
+    {
+      "implementation": "flatbush",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.17671699519950432,
+      "upper_median_ratio_bound": 0.17671699519950432
+    },
+    {
+      "implementation": "kdbush",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.21302152779551767,
+      "upper_median_ratio_bound": 0.21302152779551767
+    },
+    {
+      "implementation": "static-kdtree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.10340000686030773,
+      "upper_median_ratio_bound": 0.10340000686030773
+    },
+    {
+      "implementation": "d3-quadtree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.11840112667716259,
+      "upper_median_ratio_bound": 0.11840112667716259
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "floors",
+      "status": "missing",
+      "process_pairs": 0,
+      "median_ratio": null,
+      "upper_median_ratio_bound": null
+    },
+    {
+      "implementation": "js-quadtree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.14127764013327207,
+      "upper_median_ratio_bound": 0.14127764013327207
+    },
+    {
+      "implementation": "@timohausmann/quadtree-js",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.04913781732340393,
+      "upper_median_ratio_bound": 0.04913781732340393
+    },
+    {
+      "implementation": "quadtree-lib",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.02162936949182757,
+      "upper_median_ratio_bound": 0.02162936949182757
+    },
+    {
+      "implementation": "rtree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.05709781186145508,
+      "upper_median_ratio_bound": 0.05709781186145508
+    },
+    {
+      "implementation": "mnemonist-vp",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.10970197467315686,
+      "upper_median_ratio_bound": 0.10970197467315686
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.014112293912396975,
+      "upper_median_ratio_bound": 0.014112293912396975
+    },
+    {
+      "implementation": "flatten-planar",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.020873244405284663,
+      "upper_median_ratio_bound": 0.020873244405284663
+    },
+    {
+      "implementation": "box-intersect",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.06940752618821788,
+      "upper_median_ratio_bound": 0.06940752618821788
+    },
+    {
+      "implementation": "quadtree2",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.004192844710880692,
+      "upper_median_ratio_bound": 0.004192844710880692
+    },
+    {
+      "implementation": "mnemonist-kd",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0015273091070121118,
+      "upper_median_ratio_bound": 0.0015273091070121118
+    },
+    {
+      "implementation": "nanoflann",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.8831844087193599,
+      "upper_median_ratio_bound": 0.8831844087193599
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6630953646397925,
+      "upper_median_ratio_bound": 0.6630953646397925
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2627925344154791,
+      "upper_median_ratio_bound": 0.2627925344154791
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.23794729366044837,
+      "upper_median_ratio_bound": 0.23794729366044837
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.11379566033602045,
+      "upper_median_ratio_bound": 0.11379566033602045
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "floors",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.46159163521069857,
+      "upper_median_ratio_bound": 0.46159163521069857
+    },
+    {
+      "implementation": "brute-force",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.15910403645768242,
+      "upper_median_ratio_bound": 0.15910403645768242
+    },
+    {
+      "implementation": "rstar",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.15855165574663055,
+      "upper_median_ratio_bound": 0.15855165574663055
+    },
+    {
+      "implementation": "kdtree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08009383765180302,
+      "upper_median_ratio_bound": 0.08009383765180302
+    },
+    {
+      "implementation": "kd-tree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.45964161178855384,
+      "upper_median_ratio_bound": 0.45964161178855384
+    },
+    {
+      "implementation": "kiddo-mutable",
+      "scenario": "boundaries",
+      "status": "missing",
+      "process_pairs": 0,
+      "median_ratio": null,
+      "upper_median_ratio_bound": null
+    },
+    {
+      "implementation": "kiddo-immutable",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5886051156519312,
+      "upper_median_ratio_bound": 0.5886051156519312
+    },
+    {
+      "implementation": "static-aabb2d",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.9416928245391777,
+      "upper_median_ratio_bound": 0.9416928245391777
+    },
+    {
+      "implementation": "geo-index-kd",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7560267208829509,
+      "upper_median_ratio_bound": 0.7560267208829509
+    },
+    {
+      "implementation": "geo-index-rtree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7818811300202169,
+      "upper_median_ratio_bound": 0.7818811300202169
+    },
+    {
+      "implementation": "spart-kd",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.18153594152744815,
+      "upper_median_ratio_bound": 0.18153594152744815
+    },
+    {
+      "implementation": "spart-rtree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.056340706111284174,
+      "upper_median_ratio_bound": 0.056340706111284174
+    },
+    {
+      "implementation": "spart-rstar",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.09241648003506564,
+      "upper_median_ratio_bound": 0.09241648003506564
+    },
+    {
+      "implementation": "spart-octree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.20404162733955633,
+      "upper_median_ratio_bound": 0.20404162733955633
+    },
+    {
+      "implementation": "spart-quadtree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3369013469183121,
+      "upper_median_ratio_bound": 0.3369013469183121
+    },
+    {
+      "implementation": "acap-kd",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4881967994913099,
+      "upper_median_ratio_bound": 0.4881967994913099
+    },
+    {
+      "implementation": "acap-flat-kd",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.30064686519094125,
+      "upper_median_ratio_bound": 0.30064686519094125
+    },
+    {
+      "implementation": "acap-vp",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4028373225450872,
+      "upper_median_ratio_bound": 0.4028373225450872
+    },
+    {
+      "implementation": "acap-flat-vp",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.36592595534619166,
+      "upper_median_ratio_bound": 0.36592595534619166
+    },
+    {
+      "implementation": "acap-exhaustive",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.21608836141883025,
+      "upper_median_ratio_bound": 0.21608836141883025
+    },
+    {
+      "implementation": "vpsearch",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5142440203756691,
+      "upper_median_ratio_bound": 0.5142440203756691
+    },
+    {
+      "implementation": "petal-ball",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.18312645942966957,
+      "upper_median_ratio_bound": 0.18312645942966957
+    },
+    {
+      "implementation": "neighbourhood-owned",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.43393993629785754,
+      "upper_median_ratio_bound": 0.43393993629785754
+    },
+    {
+      "implementation": "neighbourhood-index",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4183199859008098,
+      "upper_median_ratio_bound": 0.4183199859008098
+    },
+    {
+      "implementation": "quadtree-f64",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.22381857132171823,
+      "upper_median_ratio_bound": 0.22381857132171823
+    },
+    {
+      "implementation": "quadtree-rs",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.09081509559548595,
+      "upper_median_ratio_bound": 0.09081509559548595
+    },
+    {
+      "implementation": "rust-octree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.24595264071532794,
+      "upper_median_ratio_bound": 0.24595264071532794
+    },
+    {
+      "implementation": "spatial-linear",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1238181295727327,
+      "upper_median_ratio_bound": 0.1238181295727327
+    },
+    {
+      "implementation": "spatial-quadratic",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1505814866837684,
+      "upper_median_ratio_bound": 0.1505814866837684
+    },
+    {
+      "implementation": "spatial-rstar",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08854576728401915,
+      "upper_median_ratio_bound": 0.08854576728401915
+    },
+    {
+      "implementation": "nabo",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.39814643704578523,
+      "upper_median_ratio_bound": 0.39814643704578523
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08646132533563779,
+      "upper_median_ratio_bound": 0.08646132533563779
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07066849691063068,
+      "upper_median_ratio_bound": 0.07066849691063068
+    },
+    {
+      "implementation": "flatbush",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.13772587003740905,
+      "upper_median_ratio_bound": 0.13772587003740905
+    },
+    {
+      "implementation": "kdbush",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.22796131468097536,
+      "upper_median_ratio_bound": 0.22796131468097536
+    },
+    {
+      "implementation": "static-kdtree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07043228514470008,
+      "upper_median_ratio_bound": 0.07043228514470008
+    },
+    {
+      "implementation": "d3-quadtree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0863711041341149,
+      "upper_median_ratio_bound": 0.0863711041341149
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "boundaries",
+      "status": "missing",
+      "process_pairs": 0,
+      "median_ratio": null,
+      "upper_median_ratio_bound": null
+    },
+    {
+      "implementation": "js-quadtree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.06559047345834773,
+      "upper_median_ratio_bound": 0.06559047345834773
+    },
+    {
+      "implementation": "@timohausmann/quadtree-js",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07445363994060782,
+      "upper_median_ratio_bound": 0.07445363994060782
+    },
+    {
+      "implementation": "quadtree-lib",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.015091081156747179,
+      "upper_median_ratio_bound": 0.015091081156747179
+    },
+    {
+      "implementation": "rtree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.030830275635627562,
+      "upper_median_ratio_bound": 0.030830275635627562
+    },
+    {
+      "implementation": "mnemonist-vp",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07335627204260865,
+      "upper_median_ratio_bound": 0.07335627204260865
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0193522010801278,
+      "upper_median_ratio_bound": 0.0193522010801278
+    },
+    {
+      "implementation": "flatten-planar",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.02636582117020225,
+      "upper_median_ratio_bound": 0.02636582117020225
+    },
+    {
+      "implementation": "box-intersect",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08967792090696489,
+      "upper_median_ratio_bound": 0.08967792090696489
+    },
+    {
+      "implementation": "quadtree2",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.003940839218254501,
+      "upper_median_ratio_bound": 0.003940839218254501
+    },
+    {
+      "implementation": "mnemonist-kd",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0009317793956274177,
+      "upper_median_ratio_bound": 0.0009317793956274177
+    },
+    {
+      "implementation": "nanoflann",
+      "scenario": "boundaries",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 1.052744972749483,
+      "upper_median_ratio_bound": 1.052744972749483
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.8794730750414643,
+      "upper_median_ratio_bound": 0.8794730750414643
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.06299009233866597,
+      "upper_median_ratio_bound": 0.06299009233866597
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.12921579144388531,
+      "upper_median_ratio_bound": 0.12921579144388531
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07137534334769745,
+      "upper_median_ratio_bound": 0.07137534334769745
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "boundaries",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3469411315855973,
+      "upper_median_ratio_bound": 0.3469411315855973
+    },
+    {
+      "implementation": "brute-force",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2277079441874075,
+      "upper_median_ratio_bound": 0.2277079441874075
+    },
+    {
+      "implementation": "rstar",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.25586316106793827,
+      "upper_median_ratio_bound": 0.25586316106793827
+    },
+    {
+      "implementation": "kdtree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.13842019731634916,
+      "upper_median_ratio_bound": 0.13842019731634916
+    },
+    {
+      "implementation": "kd-tree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5917567802699542,
+      "upper_median_ratio_bound": 0.5917567802699542
+    },
+    {
+      "implementation": "kiddo-mutable",
+      "scenario": "teleports",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 1.059685947706997,
+      "upper_median_ratio_bound": 1.059685947706997
+    },
+    {
+      "implementation": "kiddo-immutable",
+      "scenario": "teleports",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 1.1965480143304723,
+      "upper_median_ratio_bound": 1.1965480143304723
+    },
+    {
+      "implementation": "static-aabb2d",
+      "scenario": "teleports",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 1.1270552984008677,
+      "upper_median_ratio_bound": 1.1270552984008677
+    },
+    {
+      "implementation": "geo-index-kd",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.8257657339670236,
+      "upper_median_ratio_bound": 0.8257657339670236
+    },
+    {
+      "implementation": "geo-index-rtree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7729448851374742,
+      "upper_median_ratio_bound": 0.7729448851374742
+    },
+    {
+      "implementation": "spart-kd",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3899216021401501,
+      "upper_median_ratio_bound": 0.3899216021401501
+    },
+    {
+      "implementation": "spart-rtree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07750952020729714,
+      "upper_median_ratio_bound": 0.07750952020729714
+    },
+    {
+      "implementation": "spart-rstar",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0990110746564673,
+      "upper_median_ratio_bound": 0.0990110746564673
+    },
+    {
+      "implementation": "spart-octree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.37460718373462104,
+      "upper_median_ratio_bound": 0.37460718373462104
+    },
+    {
+      "implementation": "spart-quadtree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3995401454891563,
+      "upper_median_ratio_bound": 0.3995401454891563
+    },
+    {
+      "implementation": "acap-kd",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6565566558179671,
+      "upper_median_ratio_bound": 0.6565566558179671
+    },
+    {
+      "implementation": "acap-flat-kd",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6087991911456974,
+      "upper_median_ratio_bound": 0.6087991911456974
+    },
+    {
+      "implementation": "acap-vp",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4972857947452932,
+      "upper_median_ratio_bound": 0.4972857947452932
+    },
+    {
+      "implementation": "acap-flat-vp",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.35367123027823155,
+      "upper_median_ratio_bound": 0.35367123027823155
+    },
+    {
+      "implementation": "acap-exhaustive",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2884738780767479,
+      "upper_median_ratio_bound": 0.2884738780767479
+    },
+    {
+      "implementation": "vpsearch",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6007707909091653,
+      "upper_median_ratio_bound": 0.6007707909091653
+    },
+    {
+      "implementation": "petal-ball",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2815768205357401,
+      "upper_median_ratio_bound": 0.2815768205357401
+    },
+    {
+      "implementation": "neighbourhood-owned",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6259723239442321,
+      "upper_median_ratio_bound": 0.6259723239442321
+    },
+    {
+      "implementation": "neighbourhood-index",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.517175602077138,
+      "upper_median_ratio_bound": 0.517175602077138
+    },
+    {
+      "implementation": "quadtree-f64",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.28247006368226657,
+      "upper_median_ratio_bound": 0.28247006368226657
+    },
+    {
+      "implementation": "quadtree-rs",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.09473700840002347,
+      "upper_median_ratio_bound": 0.09473700840002347
+    },
+    {
+      "implementation": "rust-octree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3517764217383663,
+      "upper_median_ratio_bound": 0.3517764217383663
+    },
+    {
+      "implementation": "spatial-linear",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.20279399047735386,
+      "upper_median_ratio_bound": 0.20279399047735386
+    },
+    {
+      "implementation": "spatial-quadratic",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.17752736299531727,
+      "upper_median_ratio_bound": 0.17752736299531727
+    },
+    {
+      "implementation": "spatial-rstar",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08802293327259077,
+      "upper_median_ratio_bound": 0.08802293327259077
+    },
+    {
+      "implementation": "nabo",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.615407975457553,
+      "upper_median_ratio_bound": 0.615407975457553
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.12234020761402417,
+      "upper_median_ratio_bound": 0.12234020761402417
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.06446891272080753,
+      "upper_median_ratio_bound": 0.06446891272080753
+    },
+    {
+      "implementation": "flatbush",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.16290007817869692,
+      "upper_median_ratio_bound": 0.16290007817869692
+    },
+    {
+      "implementation": "kdbush",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.22816752102134935,
+      "upper_median_ratio_bound": 0.22816752102134935
+    },
+    {
+      "implementation": "static-kdtree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.054064145692927765,
+      "upper_median_ratio_bound": 0.054064145692927765
+    },
+    {
+      "implementation": "d3-quadtree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.13172921509611862,
+      "upper_median_ratio_bound": 0.13172921509611862
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.00605115777745763,
+      "upper_median_ratio_bound": 0.00605115777745763
+    },
+    {
+      "implementation": "js-quadtree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.09534539879175821,
+      "upper_median_ratio_bound": 0.09534539879175821
+    },
+    {
+      "implementation": "@timohausmann/quadtree-js",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0754585276730334,
+      "upper_median_ratio_bound": 0.0754585276730334
+    },
+    {
+      "implementation": "quadtree-lib",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.04365105373628091,
+      "upper_median_ratio_bound": 0.04365105373628091
+    },
+    {
+      "implementation": "rtree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.04041863457104144,
+      "upper_median_ratio_bound": 0.04041863457104144
+    },
+    {
+      "implementation": "mnemonist-vp",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08376253864843256,
+      "upper_median_ratio_bound": 0.08376253864843256
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.06937635094056747,
+      "upper_median_ratio_bound": 0.06937635094056747
+    },
+    {
+      "implementation": "flatten-planar",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.01598416293789465,
+      "upper_median_ratio_bound": 0.01598416293789465
+    },
+    {
+      "implementation": "box-intersect",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08674318188715213,
+      "upper_median_ratio_bound": 0.08674318188715213
+    },
+    {
+      "implementation": "quadtree2",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.005232508428375505,
+      "upper_median_ratio_bound": 0.005232508428375505
+    },
+    {
+      "implementation": "mnemonist-kd",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0009124119588635862,
+      "upper_median_ratio_bound": 0.0009124119588635862
+    },
+    {
+      "implementation": "nanoflann",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.9979337762378834,
+      "upper_median_ratio_bound": 0.9979337762378834
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.8746161076726079,
+      "upper_median_ratio_bound": 0.8746161076726079
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.32369160389837576,
+      "upper_median_ratio_bound": 0.32369160389837576
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2616248455893993,
+      "upper_median_ratio_bound": 0.2616248455893993
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.10490791373697593,
+      "upper_median_ratio_bound": 0.10490791373697593
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "teleports",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.47018404334678615,
+      "upper_median_ratio_bound": 0.47018404334678615
+    },
+    {
+      "implementation": "brute-force",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07822729883813104,
+      "upper_median_ratio_bound": 0.07822729883813104
+    },
+    {
+      "implementation": "rstar",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.11898519813792076,
+      "upper_median_ratio_bound": 0.11898519813792076
+    },
+    {
+      "implementation": "kdtree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0032978902345595284,
+      "upper_median_ratio_bound": 0.0032978902345595284
+    },
+    {
+      "implementation": "kd-tree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.686031251570561,
+      "upper_median_ratio_bound": 0.686031251570561
+    },
+    {
+      "implementation": "kiddo-mutable",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.711525554047786,
+      "upper_median_ratio_bound": 0.711525554047786
+    },
+    {
+      "implementation": "kiddo-immutable",
+      "scenario": "large",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 1.235113127884025,
+      "upper_median_ratio_bound": 1.235113127884025
+    },
+    {
+      "implementation": "static-aabb2d",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.8851650860680671,
+      "upper_median_ratio_bound": 0.8851650860680671
+    },
+    {
+      "implementation": "geo-index-kd",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.5709576363114587,
+      "upper_median_ratio_bound": 0.5709576363114587
+    },
+    {
+      "implementation": "geo-index-rtree",
+      "scenario": "large",
+      "status": "loss-or-tie",
+      "process_pairs": 1,
+      "median_ratio": 1.2402744370614391,
+      "upper_median_ratio_bound": 1.2402744370614391
+    },
+    {
+      "implementation": "spart-kd",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2014065563797239,
+      "upper_median_ratio_bound": 0.2014065563797239
+    },
+    {
+      "implementation": "spart-rtree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.02634044791943738,
+      "upper_median_ratio_bound": 0.02634044791943738
+    },
+    {
+      "implementation": "spart-rstar",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.03909753276927635,
+      "upper_median_ratio_bound": 0.03909753276927635
+    },
+    {
+      "implementation": "spart-octree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.27633676864206974,
+      "upper_median_ratio_bound": 0.27633676864206974
+    },
+    {
+      "implementation": "spart-quadtree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.26297510839595756,
+      "upper_median_ratio_bound": 0.26297510839595756
+    },
+    {
+      "implementation": "acap-kd",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.2852839685385615,
+      "upper_median_ratio_bound": 0.2852839685385615
+    },
+    {
+      "implementation": "acap-flat-kd",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.19387713606332602,
+      "upper_median_ratio_bound": 0.19387713606332602
+    },
+    {
+      "implementation": "acap-vp",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.24219305289212026,
+      "upper_median_ratio_bound": 0.24219305289212026
+    },
+    {
+      "implementation": "acap-flat-vp",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.19864221969953333,
+      "upper_median_ratio_bound": 0.19864221969953333
+    },
+    {
+      "implementation": "acap-exhaustive",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.09280376698339798,
+      "upper_median_ratio_bound": 0.09280376698339798
+    },
+    {
+      "implementation": "vpsearch",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.3322177818769621,
+      "upper_median_ratio_bound": 0.3322177818769621
+    },
+    {
+      "implementation": "petal-ball",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.16642202109431553,
+      "upper_median_ratio_bound": 0.16642202109431553
+    },
+    {
+      "implementation": "neighbourhood-owned",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.4338440241873329,
+      "upper_median_ratio_bound": 0.4338440241873329
+    },
+    {
+      "implementation": "neighbourhood-index",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.7029715137891641,
+      "upper_median_ratio_bound": 0.7029715137891641
+    },
+    {
+      "implementation": "quadtree-f64",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.13697082185789164,
+      "upper_median_ratio_bound": 0.13697082185789164
+    },
+    {
+      "implementation": "quadtree-rs",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0739207924513343,
+      "upper_median_ratio_bound": 0.0739207924513343
+    },
+    {
+      "implementation": "rust-octree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6961160735695184,
+      "upper_median_ratio_bound": 0.6961160735695184
+    },
+    {
+      "implementation": "spatial-linear",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.052288480032705385,
+      "upper_median_ratio_bound": 0.052288480032705385
+    },
+    {
+      "implementation": "spatial-quadratic",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08176764594906646,
+      "upper_median_ratio_bound": 0.08176764594906646
+    },
+    {
+      "implementation": "spatial-rstar",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.025712231244660804,
+      "upper_median_ratio_bound": 0.025712231244660804
+    },
+    {
+      "implementation": "nabo",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.38863927776121665,
+      "upper_median_ratio_bound": 0.38863927776121665
+    },
+    {
+      "implementation": "rbush",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07152776058727438,
+      "upper_median_ratio_bound": 0.07152776058727438
+    },
+    {
+      "implementation": "rbush-3d",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0602893990447927,
+      "upper_median_ratio_bound": 0.0602893990447927
+    },
+    {
+      "implementation": "flatbush",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.18100268866273717,
+      "upper_median_ratio_bound": 0.18100268866273717
+    },
+    {
+      "implementation": "kdbush",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.26736363347455566,
+      "upper_median_ratio_bound": 0.26736363347455566
+    },
+    {
+      "implementation": "static-kdtree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07860068519858286,
+      "upper_median_ratio_bound": 0.07860068519858286
+    },
+    {
+      "implementation": "d3-quadtree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.11044587232543879,
+      "upper_median_ratio_bound": 0.11044587232543879
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.0019230079273784787,
+      "upper_median_ratio_bound": 0.0019230079273784787
+    },
+    {
+      "implementation": "js-quadtree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.08232721444423463,
+      "upper_median_ratio_bound": 0.08232721444423463
+    },
+    {
+      "implementation": "@timohausmann/quadtree-js",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.07268409630467443,
+      "upper_median_ratio_bound": 0.07268409630467443
+    },
+    {
+      "implementation": "quadtree-lib",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.024056258497854012,
+      "upper_median_ratio_bound": 0.024056258497854012
+    },
+    {
+      "implementation": "rtree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.012497690110686521,
+      "upper_median_ratio_bound": 0.012497690110686521
+    },
+    {
+      "implementation": "mnemonist-vp",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.03870218724925467,
+      "upper_median_ratio_bound": 0.03870218724925467
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1163925266548087,
+      "upper_median_ratio_bound": 0.1163925266548087
+    },
+    {
+      "implementation": "flatten-planar",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.007966306469284229,
+      "upper_median_ratio_bound": 0.007966306469284229
+    },
+    {
+      "implementation": "box-intersect",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.09686106946269187,
+      "upper_median_ratio_bound": 0.09686106946269187
+    },
+    {
+      "implementation": "quadtree2",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.009248277957588064,
+      "upper_median_ratio_bound": 0.009248277957588064
+    },
+    {
+      "implementation": "mnemonist-kd",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.00023005471603622406,
+      "upper_median_ratio_bound": 0.00023005471603622406
+    },
+    {
+      "implementation": "nanoflann",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.6117271759844081,
+      "upper_median_ratio_bound": 0.6117271759844081
+    },
+    {
+      "implementation": "pico-tree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.8313352159863728,
+      "upper_median_ratio_bound": 0.8313352159863728
+    },
+    {
+      "implementation": "libkdtree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.1807894576268322,
+      "upper_median_ratio_bound": 0.1807894576268322
+    },
+    {
+      "implementation": "kdtree-cpp",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.10318055595278265,
+      "upper_median_ratio_bound": 0.10318055595278265
+    },
+    {
+      "implementation": "crvs-kdtree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.10194051818172256,
+      "upper_median_ratio_bound": 0.10194051818172256
+    },
+    {
+      "implementation": "gishi-kdtree",
+      "scenario": "large",
+      "status": "insufficient-processes",
+      "process_pairs": 1,
+      "median_ratio": 0.26428781467709533,
+      "upper_median_ratio_bound": 0.26428781467709533
+    }
+  ]
+}
