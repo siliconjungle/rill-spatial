@@ -1,0 +1,22 @@
+[package]
+name = "rill-spatial-dual-tree"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[lib]
+name = "rill_spatial"
+
+[[example]]
+name = "probe"
+path = "../../../examples/probe.rs"
+
+[profile.dev]
+debug = 0
+incremental = false
+
+[profile.test]
+debug = 0
+incremental = false

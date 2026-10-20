@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "tasks": [
+    {
+      "id": "capacity_research",
+      "concurrencyKey": "research-20k",
+      "status": "running",
+      "agent": "/root/capacity_research"
+    },
+    {
+      "id": "cell_readview",
+      "concurrencyKey": "cell-readview",
+      "status": "running",
+      "agent": "/root/cell_readview"
+    },
+    {
+      "id": "dual_tree",
+      "concurrencyKey": "dual-tree",
+      "status": "running",
+      "agent": "/root/dual_tree"
+    },
+    {
+      "id": "root",
+      "concurrencyKey": "main-integration",
+      "status": "running",
+      "agent": "root"
+    }
+  ]
+}

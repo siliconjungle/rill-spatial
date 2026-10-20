@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "keep": [
+    {
+      "path": "Cargo.toml",
+      "reason": "Minimal reproducible independent candidate"
+    },
+    {
+      "path": "Cargo.lock",
+      "reason": "Dependency-free build pin"
+    },
+    {
+      "path": "src/lib.rs",
+      "reason": "Independent packed-cell implementation"
+    },
+    {
+      "path": "tests/oracle.rs",
+      "reason": "Correctness proof inputs"
+    },
+    {
+      "path": "examples/stream_probe.rs",
+      "reason": "Bounded-output diagnostic methodology"
+    },
+    {
+      "path": "README.md",
+      "reason": "Methodology and input references"
+    },
+    {
+      "path": "storage-retention.json",
+      "reason": "Explicit retention declaration"
+    },
+    {
+      "path": "run_diagnostics.py",
+      "reason": "Sequential bounded diagnostic reproduction input"
+    },
+    {
+      "path": "evidence/build-release.txt",
+      "reason": "Reproducible proof or explicitly exploratory measurement evidence"
+    },
+    {
+      "path": "evidence/holdout-exploratory.json",
+      "reason": "Reproducible proof or explicitly exploratory measurement evidence"
+    },
+    {
+      "path": "evidence/oracle-release.txt",
+      "reason": "Reproducible proof or explicitly exploratory measurement evidence"
+    },
+    {
+      "path": "evidence/twenty-k-exploratory.json",
+      "reason": "Reproducible proof or explicitly exploratory measurement evidence"
+    },
+    {
+      "path": "evidence/summary.json",
+      "reason": "Source-hash verified proof summary and exact generated build disposition"
+    },
+    {
+      "path": "tests/batch_oracle.rs",
+      "reason": "Required exact coherent batching proof, reproduction input or explicitly labelled exploratory evidence"
+    },
+    {
+      "path": "examples/batch_probe.rs",
+      "reason": "Required exact coherent batching proof, reproduction input or explicitly labelled exploratory evidence"
+    },
+    {
+      "path": "run_batch_diagnostics.py",
+      "reason": "Required exact coherent batching proof, reproduction input or explicitly labelled exploratory evidence"
+    },
+    {
+      "path": "evidence/batch-oracle-release.txt",
+      "reason": "Required exact coherent batching proof, reproduction input or explicitly labelled exploratory evidence"
+    },
+    {
+      "path": "evidence/batch-build-release.txt",
+      "reason": "Required exact coherent batching proof, reproduction input or explicitly labelled exploratory evidence"
+    },
+    {
+      "path": "evidence/batch-holdout-exploratory.json",
+      "reason": "Required exact coherent batching proof, reproduction input or explicitly labelled exploratory evidence"
+    },
+    {
+      "path": "evidence/batch-twenty-k-exploratory.json",
+      "reason": "Required exact coherent batching proof, reproduction input or explicitly labelled exploratory evidence"
+    },
+    {
+      "path": "evidence/batch-summary.json",
+      "reason": "Required exact coherent batching proof, reproduction input or explicitly labelled exploratory evidence"
+    }
+  ],
+  "safe_to_remove": [
+    {
+      "path": ".build",
+      "reason": "All local proof and diagnostic processes completed; generated compiler objects/binaries are reproducible from retained sources and shared inputs. Parent serial harness builds independently.",
+      "status": "removed_after_completion"
+    },
+    {
+      "path": ".batch-build",
+      "reason": "All local coherent batching tests and diagnostics completed; reproducible generated outputs retired while other agents continue",
+      "status": "removed_after_completion"
+    }
+  ]
+}

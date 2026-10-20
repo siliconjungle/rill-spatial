@@ -1,0 +1,77 @@
+{
+  "seed": 97123,
+  "fixtures": [
+    {
+      "name": "small",
+      "path": "benchmarks/holdout-97123/small.json",
+      "sha256": "24184d41b21cec260cb169e0283485c3182433cdda6b4ff50ca0dfe5667b218e",
+      "bytes": 10603,
+      "points": 47,
+      "queries": 94
+    },
+    {
+      "name": "uniform",
+      "path": "benchmarks/holdout-97123/uniform.json",
+      "sha256": "623b60122ae133148ca4e36bd2b23836182cb021fe84c103a87a0727c02459f1",
+      "bytes": 694652,
+      "points": 4096,
+      "queries": 4000
+    },
+    {
+      "name": "clusters",
+      "path": "benchmarks/holdout-97123/clusters.json",
+      "sha256": "5bfdad77ded17b68b13cc23a70de687f9438fefe9a7e6563ef6a25803dd63d98",
+      "bytes": 445811,
+      "points": 2048,
+      "queries": 4000
+    },
+    {
+      "name": "dense",
+      "path": "benchmarks/holdout-97123/dense.json",
+      "sha256": "06b98a8e94294570ac6ecb93a87f3ebc220ee34cf9bb291f7d3b2738ab3a27a1",
+      "bytes": 439630,
+      "points": 2048,
+      "queries": 4000
+    },
+    {
+      "name": "contained",
+      "path": "benchmarks/holdout-97123/contained.json",
+      "sha256": "cc6b7f8de45ca724df2d93b00b8956a1d1faa508b6b70a1cd420698875eb10a0",
+      "bytes": 410234,
+      "points": 2048,
+      "queries": 4000
+    },
+    {
+      "name": "floors",
+      "path": "benchmarks/holdout-97123/floors.json",
+      "sha256": "fed8d7cca125bb213d2a71fba55dce280e73a06226eacb6001db10260ed4b70c",
+      "bytes": 370188,
+      "points": 2048,
+      "queries": 4000
+    },
+    {
+      "name": "boundaries",
+      "path": "benchmarks/holdout-97123/boundaries.json",
+      "sha256": "914439d679bc3793b10b45254db0f5fb2994b6cd5b7465dc6b603728ce47ef8a",
+      "bytes": 390224,
+      "points": 2048,
+      "queries": 4000
+    },
+    {
+      "name": "teleports",
+      "path": "benchmarks/holdout-97123/teleports.json",
+      "sha256": "ac76e6525ea7e25d60befb8097090a1e729938b956f7a8b7c4af1f9bdbf8b21c",
+      "bytes": 472680,
+      "points": 2048,
+      "queries": 4000
+    },
+    {
+      "name": "large",
+      "path": "benchmarks/holdout-97123/large.json",
+      "sha256": "d8b17fd585986e36f4c1f2e350274069c11cb7c4775b5f0b3b8ba1e045fc8cb9",
+      "bytes": 3847949,
+      "points": 32768,
+      "queries": 4000
+    }
+  ]
+}

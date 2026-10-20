@@ -87,6 +87,39 @@ if(name==='rbush'||name==='rbush-3d'){
  }};
 }else throw new Error('No adapter for '+name);
 
+function boundedExpected(points,p,r,lo,hi){
+ const far=p.map((x,d)=>Math.max(Math.abs(x-lo[d]),Math.abs(x-hi[d])));if(squared(far,[0,0,0])<=r*r)return{all:true,count:points.length};
+ const words=Math.ceil(points.length/32);let ids=[],bits=null,count=0;
+ for(let i=0;i<points.length;i++)if(squared(points[i],p)<=r*r){count++;if(bits)bits[i>>>5]|=1<<(i&31);else{ids.push(i);if(ids.length>words/2){bits=new Uint32Array(words);for(const id of ids)bits[id>>>5]|=1<<(id&31);ids=null;}}}
+ return{ids,bits,count};
+}
+function boundedValidate(expected,actual,seen,n){
+ assert.equal(actual.length,expected.count,'result count');seen.fill(0);
+ for(const id of actual){assert(Number.isSafeInteger(id)&&id>=0&&id<n,'ID range');const mask=1<<(id&31),word=id>>>5;assert.equal(seen[word]&mask,0,'duplicate ID');seen[word]|=mask;if(expected.bits)assert.notEqual(expected.bits[word]&mask,0,'unexpected ID');}
+ if(expected.ids)for(const id of expected.ids)assert.notEqual(seen[id>>>5]&(1<<(id&31)),0,'missing ID');
+}
+function runBounded(){
+ assert(fixture.points.length<=100000&&fixture.frames.every(f=>f.queries.length<=20000),'bounded runner admission');
+ assert(fixture.points.flat().every(x=>Number.isFinite(x)&&Math.abs(x)<=1e6));
+ assert(fixture.frames.every(f=>f.updates.every(([id,p])=>id>=0&&id<fixture.points.length&&p.every(x=>Number.isFinite(x)&&Math.abs(x)<=1e6))&&f.queries.every(q=>q.point.every(x=>Number.isFinite(x)&&Math.abs(x)<=1e6)&&q.radius>=1e-100&&q.radius<=1e100)));
+ const samples=[],matchCounts=[];let peakLogicalOutput=0,validationMs=0;
+ for(let sample=0;sample<sampleCount;sample++){
+  const reference=fixture.points.slice(),seen=new Uint32Array(Math.ceil(reference.length/32));let start=performance.now(),index=make(fixture.points),build_ns=Math.round((performance.now()-start)*1e6),update_ns=0,query_ns=0,results=0;
+  for(const frame of fixture.frames){start=performance.now();index.update(frame.updates);if(frame.queries.length)index.prepare?.();update_ns+=Math.round((performance.now()-start)*1e6);for(const[id,p]of frame.updates)reference[id]=p;if(!frame.queries.length)continue;
+   const lo=[Infinity,Infinity,Infinity],hi=[-Infinity,-Infinity,-Infinity];for(const p of reference)for(let d=0;d<3;d++){lo[d]=Math.min(lo[d],p[d]);hi[d]=Math.max(hi[d],p[d]);}
+   start=performance.now();const outputs=Array.from({length:64},()=>[]);let excluded=0;
+   for(let begin=0;begin<frame.queries.length;begin+=64){const queries=frame.queries.slice(begin,begin+64),out=outputs.slice(0,queries.length);
+    if(index.queryBatch)index.queryBatch(queries,out);else for(let i=0;i<queries.length;i++)index.query(queries[i].point,queries[i].radius,out[i]);
+    const pause=performance.now();for(let i=0;i<queries.length;i++){const q=queries[i];boundedValidate(boundedExpected(reference,q.point,q.radius,lo,hi),out[i],seen,reference.length);results+=out[i].length;if(!sample)matchCounts.push(out[i].length);}peakLogicalOutput=Math.max(peakLogicalOutput,out.reduce((sum,v)=>sum+v.length*8,0));excluded+=performance.now()-pause;
+   }
+   query_ns+=Math.round((performance.now()-start-excluded)*1e6);validationMs+=excluded;
+  }
+  index.dispose?.();samples.push({build_ns,update_ns,query_ns,total_ns:build_ns+update_ns+query_ns,results});
+ }
+ matchCounts.sort((a,b)=>a-b);console.log(JSON.stringify({implementation:name,scenario:fixture.name,points:fixture.points.length,queries:matchCounts.length,correct:true,runtime:process.version,materialization:'64 reusable full-query number arrays; every ID produced and full membership validated',timing_scope:'summed kernel service time, oracle pauses excluded; GC may cross pauses; not uninterrupted tick wall latency',output_logical_peak_bytes:peakLogicalOutput,excluded_validation_ns:Math.round(validationMs*1e6),matches_per_query:{mean:matchCounts.reduce((a,b)=>a+b,0)/matchCounts.length,p99:matchCounts[Math.floor(matchCounts.length*.99)],max:matchCounts.at(-1)},samples}));
+}
+
+if(fixture.bounded){runBounded();}else{
 const expected=[];{const points=fixture.points.slice();for(const frame of fixture.frames){for(const[id,p]of frame.updates)points[id]=p;for(const q of frame.queries){const ids=[];for(let i=0;i<points.length;i++)if(squared(points[i],q.point)<=q.radius*q.radius)ids.push(i);expected.push(ids);}}}
 const samples=[];
 for(let sample=0;sample<sampleCount;sample++){
@@ -97,3 +130,5 @@ for(let sample=0;sample<sampleCount;sample++){
  index.dispose?.();samples.push({build_ns,update_ns,query_ns,total_ns:build_ns+update_ns+query_ns,results});
 }
 console.log(JSON.stringify({implementation:name,scenario:fixture.name,points:fixture.points.length,queries:expected.length,correct:true,runtime:process.version,samples}));
+
+}

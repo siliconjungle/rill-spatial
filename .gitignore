@@ -8,3 +8,6 @@ __pycache__/
 /benchmarks/fixtures/*.bin
 
 /benchmarks/.frozen-*.mjs
+/benchmarks/**/*.bin
+/research/variants/**/target/
+/research/variants/**/.build/

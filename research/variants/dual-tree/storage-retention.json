@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "keep": [
+    {"path":"Cargo.toml","reason":"Minimal isolated crate, profile and read-only shared probe entry point"},
+    {"path":"Cargo.lock","reason":"Exact dependency-free reproduction lock"},
+    {"path":"src/lib.rs","reason":"Exact generic dual-tree batch, bounded materialization and mutation fallback prototype"},
+    {"path":"tests/oracle.rs","reason":"Required independent full-membership correctness proofs including 20k by 20k"},
+    {"path":"examples/batch_probe.rs","reason":"Bounded-memory comparative representation diagnostics and full materialized oracle"},
+    {"path":"README.md","reason":"Correctness argument, primary research references, limitations and reproduction instructions"},
+    {"path":"validation.json","reason":"Selected exact proof command, coverage and resource evidence"},
+    {"path":"validation.log","reason":"Retained complete seven-test validation output"},
+    {"path":"diagnostics.jsonl","reason":"Selected corrected 20k exploratory raw timing evidence, explicitly not acceptance"},
+    {"path":"diagnostics-resources.json","reason":"Selected diagnostic commands, source/input hashes, protocol and measured resource evidence"},
+    {"path":"storage-retention.json","reason":"Exact local retention contract"}
+  ],
+  "safe_to_remove": [
+    {"path":"target","reason":"Completed generated crate validation/example artifacts; all source and useful proof/measurement evidence retained separately, approximately 6.8 MiB"}
+  ],
+  "read_only_reproduction_inputs": [
+    "../../../examples/probe.rs",
+    "../../../benchmarks/fixtures",
+    "../../../benchmarks/holdout-97123",
+    "../../../benchmarks/twenty-k/bounded64.bin",
+    "../../../benchmarks/twenty-k/contained.bin"
+  ],
+  "storage_status": "Preexisting free-space reserve deficit (~23 GiB free versus 100 GB requested); no protected input removed and no other worker paused or killed"
+}

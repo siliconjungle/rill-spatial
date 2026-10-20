@@ -110,3 +110,20 @@ not established by these experiments. Runtime, memory, capabilities and correctn
 are separate dimensions; the project reports negative results explicitly.
 
 License: MIT OR Apache-2.0.
+
+## 20,000-observer research
+
+The next target is 20,000 observers at60Hz movement /20Hz relevance, including
+bounded-density worlds, crowds, all-visible output pressure, teleports and100,000
+targets with20,000 moving observers. This is a kernel workload, not20,000 live
+network connections or proven server capacity.
+
+The bounded driver admits at most100,000 targets and20,000 queries/frame, holds
+at most64 complete result vectors, and validates every ID against an independent
+window oracle, including omissions and duplicates. Reported service time excludes
+oracle pauses; it does not establish uninterrupted tick or network latency.
+
+Independent packed-cell and dual-tree candidates live under `research/variants`.
+Their tests and concurrent exploratory measurements are separate from acceptance.
+See [the primary-source research](research/20k/research.md) and
+[worker ownership](research/20k/agent-ownership.json). The superiority gate is OPEN.

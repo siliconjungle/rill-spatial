@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-import json,struct
+import json,struct,sys
 from pathlib import Path
-for path in Path('benchmarks/fixtures').glob('*.json'):
+for path in Path(sys.argv[1]if len(sys.argv)>1 else'benchmarks/fixtures').glob('*.json'):
  if path.name=='manifest.json':continue
  f=json.loads(path.read_text());name=f['name'].encode();b=bytearray(b'RILLv001');b+=struct.pack('<I',len(name))+name+struct.pack('<dII',f['cell_size'],len(f['points']),len(f['frames']))
  for p in f['points']:b+=struct.pack('<3d',*p)

@@ -1,0 +1,69 @@
+{
+  "seed": 20671,
+  "profile": "20k-v1",
+  "fixtures": [
+    {
+      "name": "uniform",
+      "path": "benchmarks/twenty-k/uniform.json",
+      "sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "bytes": 4617439,
+      "points": 20000,
+      "observers": 20000,
+      "queries": 40000
+    },
+    {
+      "name": "bounded64",
+      "path": "benchmarks/twenty-k/bounded64.json",
+      "sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "bytes": 4615094,
+      "points": 20000,
+      "observers": 20000,
+      "queries": 40000
+    },
+    {
+      "name": "crowd",
+      "path": "benchmarks/twenty-k/crowd.json",
+      "sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "bytes": 4367709,
+      "points": 20000,
+      "observers": 20000,
+      "queries": 40000
+    },
+    {
+      "name": "contained",
+      "path": "benchmarks/twenty-k/contained.json",
+      "sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "bytes": 4130421,
+      "points": 20000,
+      "observers": 20000,
+      "queries": 40000
+    },
+    {
+      "name": "floors",
+      "path": "benchmarks/twenty-k/floors.json",
+      "sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "bytes": 3748106,
+      "points": 20000,
+      "observers": 20000,
+      "queries": 40000
+    },
+    {
+      "name": "teleports",
+      "path": "benchmarks/twenty-k/teleports.json",
+      "sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "bytes": 4615067,
+      "points": 20000,
+      "observers": 20000,
+      "queries": 40000
+    },
+    {
+      "name": "many-objects",
+      "path": "benchmarks/twenty-k/many-objects.json",
+      "sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "bytes": 7689138,
+      "points": 100000,
+      "observers": 20000,
+      "queries": 40000
+    }
+  ]
+}

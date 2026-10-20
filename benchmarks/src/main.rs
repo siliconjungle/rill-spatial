@@ -1,5 +1,7 @@
+mod bounded;
 mod more_adapters;
 mod rust_adapters;
+mod studies;
 use serde::{Deserialize, Serialize};
 use std::hint::black_box;
 use std::time::Instant;
@@ -20,6 +22,8 @@ pub struct Fixture {
     pub name: String,
     pub points: Vec<Point>,
     pub cell_size: f64,
+    #[serde(default)]
+    pub bounded: bool,
     pub frames: Vec<Frame>,
 }
 pub trait Adapter {
@@ -27,6 +31,28 @@ pub trait Adapter {
     fn update(&mut self, updates: &[(usize, Point)]);
     fn prepare(&mut self) {}
     fn query(&self, point: Point, radius: f64, out: &mut Vec<u64>);
+    fn query_batch(&self, queries: &[Query], outputs: &mut [Vec<u64>]) {
+        for (q, out) in queries.iter().zip(outputs) {
+            self.query(q.point, q.radius, out);
+        }
+    }
+    fn visit_groups(
+        &self,
+        queries: &[Query],
+        max_queries: usize,
+        emit: &mut dyn FnMut(&[usize], &[Vec<u64>]),
+    ) {
+        let mut outputs: Vec<Vec<u64>> = (0..max_queries.min(queries.len()))
+            .map(|_| Vec::new())
+            .collect();
+        let mut indices = Vec::with_capacity(max_queries);
+        for (begin, chunk) in queries.chunks(max_queries).enumerate() {
+            indices.clear();
+            indices.extend(begin * max_queries..begin * max_queries + chunk.len());
+            self.query_batch(chunk, &mut outputs[..chunk.len()]);
+            emit(&indices, &outputs[..chunk.len()]);
+        }
+    }
 }
 #[inline]
 pub fn squared(a: &Point, b: &Point) -> f64 {
@@ -66,6 +92,10 @@ fn oracle(f: &Fixture) -> Vec<Vec<u64>> {
 }
 
 fn run<A: Adapter>(name: &str, f: &Fixture, samples: usize) {
+    if f.bounded {
+        bounded::run::<A>(name, f, samples);
+        return;
+    }
     let expected = oracle(f);
     let count = expected.len();
     let mut rows = Vec::new();
@@ -131,6 +161,15 @@ fn main() {
     use rust_adapters::*;
     match args[1].as_str() {
         "rill-spatial" => run::<Rill>(&args[1], &fixture, samples),
+        "rill-cell-sorted" => run::<studies::Cell<0>>(&args[1], &fixture, samples),
+        "rill-cell-hybrid" => run::<studies::Cell<1>>(&args[1], &fixture, samples),
+        "rill-cell-hash" => run::<studies::Cell<2>>(&args[1], &fixture, samples),
+        "rill-cell-occupied" => run::<studies::Cell<3>>(&args[1], &fixture, samples),
+        "rill-dual" => run::<studies::Dual>(&args[1], &fixture, samples),
+        "rill-cell-batch-sorted" => run::<studies::CellCoherent<0>>(&args[1], &fixture, samples),
+        "rill-cell-batch-hybrid" => run::<studies::CellCoherent<1>>(&args[1], &fixture, samples),
+        "rill-cell-batch-hash" => run::<studies::CellCoherent<2>>(&args[1], &fixture, samples),
+        "rill-cell-batch-occupied" => run::<studies::CellCoherent<3>>(&args[1], &fixture, samples),
         "brute-force" => run::<Brute>(&args[1], &fixture, samples),
         "rstar" => run::<Rstar>(&args[1], &fixture, samples),
         "kdtree" => run::<KdTree>(&args[1], &fixture, samples),

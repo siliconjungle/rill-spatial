@@ -76,6 +76,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "cell-readview-candidate"
+version = "0.1.0"
+
+[[package]]
 name = "cfg-if"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -712,6 +716,7 @@ name = "rill-spatial-benchmarks"
 version = "0.1.0"
 dependencies = [
  "acap",
+ "cell-readview-candidate",
  "geo-index",
  "kd-tree",
  "kdtree",
@@ -724,6 +729,7 @@ dependencies = [
  "quadtree-f32",
  "quadtree_rs",
  "rill-spatial",
+ "rill-spatial-dual-tree",
  "rstar",
  "self_cell",
  "serde",
@@ -734,6 +740,10 @@ dependencies = [
  "typenum",
  "vpsearch",
 ]
+
+[[package]]
+name = "rill-spatial-dual-tree"
+version = "0.1.0"
 
 [[package]]
 name = "rstar"

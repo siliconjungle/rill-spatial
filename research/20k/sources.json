@@ -1,0 +1,640 @@
+{
+  "schema": 1,
+  "research_date": "2026-10-20",
+  "source_count": 36,
+  "selection": "Primary papers, author publications/repositories and official engine/library/standard documentation. Mechanisms are hypotheses until measured against the current contract.",
+  "source_revision": "ef1fbbc44cfcd62c54ec7d6ab3e1892d734f15a1",
+  "experiments": {
+    "E1": "Baseline and output accounting",
+    "E2": "Coherent cell/packed read views",
+    "E3": "Dual-tree batch radius reporting",
+    "E4": "Refit/static-dynamic/adaptive rebuild",
+    "E5": "Exact eligibility plus replication deltas/sharing/fair queues",
+    "E6": "Bounded multicore ownership and end-to-end server",
+    "E7": "Standing-query cuts/candidate supersets",
+    "E8": "Conservative GPU broadphase plus CPU f64 exact filter",
+    "F1": "Explicitly changed replication fidelity/admission policy"
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Interest Management for Massively Multiplayer Games",
+      "url": "https://www.cs.mcgill.ca/~jboula2/thesis.pdf",
+      "type": "author_thesis",
+      "author_or_owner": "Jean-Sebastien Boulanger, 2006",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Interest management separates relevant recipients from full broadcast.",
+        "AOI strategy must be evaluated against actual world and movement workloads."
+      ],
+      "applicable_experiments": [
+        "E1",
+        "F1"
+      ],
+      "limitations": "Historical prototype and visibility/AOI semantics differ from this exact f64 radius API."
+    },
+    {
+      "id": "S02",
+      "title": "Colyseus: A Distributed Architecture for Online Multiplayer Games",
+      "url": "https://www.usenix.org/legacy/event/nsdi06/tech/full_papers/bharambe/bharambe_html/",
+      "type": "conference_paper",
+      "author_or_owner": "Bharambe, Pang and Seshan, NSDI 2006",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Primary-copy authority with read-only weakly consistent replicas.",
+        "Predictable locality and prefetching can hide distributed object discovery latency."
+      ],
+      "applicable_experiments": [
+        "E5",
+        "E6",
+        "F1"
+      ],
+      "limitations": "Hundreds-player historical evaluation; weak consistency and game-specific assumptions do not demonstrate 20k capacity."
+    },
+    {
+      "id": "S03",
+      "title": "A Scalable Server for 3D Metaverses",
+      "url": "https://www.usenix.org/system/files/conference/atc12/atc12-final18.pdf",
+      "type": "conference_paper",
+      "author_or_owner": "Cheslack-Postava et al., USENIX ATC 2012",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Standing query cuts reduce repeated traversal.",
+        "Conservative query aggregation exploits nearby queriers.",
+        "Static/dynamic LBVHs and solid-angle object aggregation support scalable discovery."
+      ],
+      "applicable_experiments": [
+        "E3",
+        "E4",
+        "E7",
+        "F1"
+      ],
+      "limitations": "Solid-angle queries and aggregate objects change radius-report semantics; static-heavy measured worlds are not all-moving crowds."
+    },
+    {
+      "id": "S04",
+      "title": "Replication Graph in Unreal Engine",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/replication-graph-in-unreal-engine",
+      "type": "official_engine_documentation",
+      "author_or_owner": "Epic Games",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Persistent shared nodes maintain reusable replication lists across frames/connections.",
+        "Per-actor per-connection evaluation can be expensive."
+      ],
+      "applicable_experiments": [
+        "E2",
+        "E5"
+      ],
+      "limitations": "Engine-specific actor relevance; cited example is not a 20k connected-server benchmark."
+    },
+    {
+      "id": "S05",
+      "title": "Iris Filtering in Unreal Engine",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/iris-filtering-in-unreal-engine",
+      "type": "official_engine_documentation",
+      "author_or_owner": "Epic Games",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Filtering selects which connections receive an object.",
+        "Owner, connection, group and dynamic filtering are distinct eligibility mechanisms."
+      ],
+      "applicable_experiments": [
+        "E5",
+        "F1"
+      ],
+      "limitations": "Filtering policy does not implement this library predicate; documented feature status can vary with engine version."
+    },
+    {
+      "id": "S06",
+      "title": "Iris Prioritization in Unreal Engine",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/iris-prioritization-in-unreal-engine",
+      "type": "official_engine_documentation",
+      "author_or_owner": "Epic Games",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Bandwidth prevents all objects/properties being sent every frame.",
+        "Priorities select objects considered for replication."
+      ],
+      "applicable_experiments": [
+        "E5",
+        "F1"
+      ],
+      "limitations": "Priority/deferral changes delivery age and fidelity; not an exact radius-query optimization."
+    },
+    {
+      "id": "S07",
+      "title": "Ghost snapshots and synchronization",
+      "url": "https://docs.unity.cn/Packages/com.unity.netcode%401.5/manual/ghost-snapshots.html",
+      "type": "official_engine_documentation",
+      "author_or_owner": "Unity Technologies, Netcode for Entities 1.5.0-exp.2",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Ghost snapshot processing uses entity chunks.",
+        "Snapshots support delta compression and partial snapshots.",
+        "Network and simulation tick rates can differ and send work can be spread across connections."
+      ],
+      "applicable_experiments": [
+        "E5",
+        "E6",
+        "F1"
+      ],
+      "limitations": "Version-pinned documentation; eventual consistency, quantization and partial delivery need explicit application guarantees."
+    },
+    {
+      "id": "S08",
+      "title": "Optimizing your game",
+      "url": "https://docs.unity.cn/Packages/com.unity.netcode%401.5/manual/optimizations.html",
+      "type": "official_engine_documentation",
+      "author_or_owner": "Unity Technologies, Netcode for Entities 1.5.0-exp.2",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Relevancy selects connection/ghost pairs.",
+        "Chunk importance includes age and optional distance scaling.",
+        "Snapshot size/send limits and serialization checks have CPU and bandwidth consequences."
+      ],
+      "applicable_experiments": [
+        "E2",
+        "E5",
+        "F1"
+      ],
+      "limitations": "Per-chunk soft limits and deferred snapshots do not ensure per-entity freshness; version-specific behavior."
+    },
+    {
+      "id": "S09",
+      "title": "Spatial Hashing: Spatial Hash Interest Management",
+      "url": "https://mirror-networking.gitbook.io/docs/manual/interest-management/spatial-hashing",
+      "type": "official_project_documentation",
+      "author_or_owner": "Mirror Networking",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Grid locality replaces every-entity/every-connection distance checks.",
+        "Documented implementation sends neighboring grid entries."
+      ],
+      "applicable_experiments": [
+        "E2",
+        "F1"
+      ],
+      "limitations": "Neighbor-cell membership is not arbitrary closed Euclidean radius reporting; historical speedup is not transferable evidence."
+    },
+    {
+      "id": "S10",
+      "title": "N-Body Problems in Statistical Learning",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2000/file/7385db9a3f11415bc0e9e2625fae3734-Paper.pdf",
+      "type": "conference_paper",
+      "author_or_owner": "Alexander Gray and Andrew Moore, NeurIPS 2000",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Dual kd-trees compare node pairs to accelerate all-point-pairs problems.",
+        "Geometric pruning/aggregation can share work across query and reference sets."
+      ],
+      "applicable_experiments": [
+        "E3"
+      ],
+      "limitations": "Aggregation for sums/counts can avoid work that explicit ID reporting still must perform; no blanket linear complexity guarantee."
+    },
+    {
+      "id": "S11",
+      "title": "Tree-Independent Dual-Tree Algorithms",
+      "url": "https://proceedings.mlr.press/v28/curtin13.html",
+      "type": "conference_paper",
+      "author_or_owner": "Curtin et al., ICML 2013",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Separates tree, traversal, base case and pruning rule.",
+        "Supports reuse of branch-and-bound reasoning across tree families and parallel extensions."
+      ],
+      "applicable_experiments": [
+        "E3",
+        "E6"
+      ],
+      "limitations": "Framework supplies no ready-made proof of variable-radius f64 bounds or workload-independent runtime."
+    },
+    {
+      "id": "S12",
+      "title": "Efficient processing of spatial joins using R-trees",
+      "url": "https://sigmodrecord.org/1993/06/03/efficient-processing-of-spatial-joins-using-r-trees/",
+      "type": "conference_paper",
+      "author_or_owner": "Brinkhoff, Kriegel and Seeger, SIGMOD 1993",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Spatial join treats two indexed sets jointly rather than repeating independent searches.",
+        "R-tree overlap filtering motivates paired hierarchy traversal."
+      ],
+      "applicable_experiments": [
+        "E3"
+      ],
+      "limitations": "Rectangle joins and external-memory-era settings differ from point-radius CPU batches."
+    },
+    {
+      "id": "S13",
+      "title": "scipy.spatial.cKDTree.query_ball_tree",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.cKDTree.query_ball_tree.html",
+      "type": "official_library_documentation",
+      "author_or_owner": "SciPy",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Finds point pairs at distance at most a common radius.",
+        "Nonzero eps enables approximate pruning/bulk addition."
+      ],
+      "applicable_experiments": [
+        "E3"
+      ],
+      "limitations": "Common-radius API; exact mathematical query meaning is not binary operation parity with the Rust oracle. eps>0 changes semantics."
+    },
+    {
+      "id": "S14",
+      "title": "scipy.spatial.cKDTree.query_ball_point",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.cKDTree.query_ball_point.html",
+      "type": "official_library_documentation",
+      "author_or_owner": "SciPy",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Batched query centers and broadcastable radii support coherent range-query workloads.",
+        "Workers, sorted results and count-only results are independently configurable."
+      ],
+      "applicable_experiments": [
+        "E1",
+        "E2",
+        "E3",
+        "E6"
+      ],
+      "limitations": "Count-only output and sorting/worker settings must not be mixed with materialized-report comparisons."
+    },
+    {
+      "id": "S15",
+      "title": "ST_DWithin",
+      "url": "https://postgis.net/docs/manual-dev/en/ST_DWithin.html",
+      "type": "official_database_documentation",
+      "author_or_owner": "PostGIS Project",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Index-aware distance search includes a bounding-box comparison.",
+        "2D and 3D predicates are distinct."
+      ],
+      "applicable_experiments": [
+        "E2",
+        "E3"
+      ],
+      "limitations": "Database geometry/geography and coordinate-system contracts differ; source illustrates broad/narrow filtering, not kernel performance."
+    },
+    {
+      "id": "S16",
+      "title": "Box2D: Dynamic Tree",
+      "url": "https://box2d.org/documentation/group__tree.html",
+      "type": "official_engine_documentation",
+      "author_or_owner": "Erin Catto / Box2D",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "AABB tree uses pooled node indices, proxy move/enlarge operations and partial rebuilds.",
+        "Node/leaf visits, area ratio and bytes can diagnose quality and memory."
+      ],
+      "applicable_experiments": [
+        "E4"
+      ],
+      "limitations": "Broad-phase AABB results require precise radius filtering; Box2D floating arithmetic and dimension differ."
+    },
+    {
+      "id": "S17",
+      "title": "Dynamic AABB Tree",
+      "url": "https://box2d.org/files/ErinCatto_DynamicBVH_Full.pdf",
+      "type": "author_technical_presentation",
+      "author_or_owner": "Erin Catto, 2019",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Dynamic hierarchy quality, incremental updates and rebuilding are practical broad-phase design concerns."
+      ],
+      "applicable_experiments": [
+        "E4"
+      ],
+      "limitations": "Physics broad phase is not an exact point-radius reporter; tuning must be measured on this workload."
+    },
+    {
+      "id": "S18",
+      "title": "Scene Queries — PhysX 5.4.1",
+      "url": "https://nvidia-omniverse.github.io/PhysX/physx/5.4.1/docs/SceneQueries.html",
+      "type": "official_engine_documentation",
+      "author_or_owner": "NVIDIA",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Main tree refit plus secondary pruner supports additions during incremental rebuild.",
+        "Long-lived topology can degrade query quality; rebuild quality/build time trade off.",
+        "GPU broadphase does not automatically provide GPU scene queries."
+      ],
+      "applicable_experiments": [
+        "E4",
+        "E8"
+      ],
+      "limitations": "PhysX engine contract differs; excluding new objects through a disabled secondary pruner is unacceptable for immediate exact queries."
+    },
+    {
+      "id": "S19",
+      "title": "Thinking Parallel, Part II: Tree Traversal on the GPU",
+      "url": "https://developer.nvidia.com/blog/thinking-parallel-part-ii-tree-traversal-gpu/",
+      "type": "author_technical_article",
+      "author_or_owner": "Tero Karras, NVIDIA, 2012",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Iterative traversal and query ordering improve coherence.",
+        "Simultaneous traversal may reduce geometric work but lose to execution divergence."
+      ],
+      "applicable_experiments": [
+        "E2",
+        "E3",
+        "E8"
+      ],
+      "limitations": "Historical GPU-specific timings are not modern CPU/GPU predictions; all-pairs duplicate suppression assumes a particular collision task."
+    },
+    {
+      "id": "S20",
+      "title": "Maximizing Parallelism in the Construction of BVHs, Octrees, and k-d Trees",
+      "url": "https://developer.nvidia.com/blog/parallelforall/wp-content/uploads/2012/11/karras2012hpg_paper.pdf",
+      "type": "conference_paper",
+      "author_or_owner": "Tero Karras, HPG 2012",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Parallel radix-tree construction over sorted Morton codes enables parallel BVH/octree/kd-tree construction."
+      ],
+      "applicable_experiments": [
+        "E4",
+        "E8"
+      ],
+      "limitations": "Morton sorting, duplicate keys, build quality and exact boundary filtering remain costs; paper is not an AOI benchmark."
+    },
+    {
+      "id": "S21",
+      "title": "GPU Gems 3, Chapter 32: Broad-Phase Collision Detection with CUDA",
+      "url": "https://developer.nvidia.com/gpugems/gpugems3/part-v-physics-simulation/chapter-32-broad-phase-collision-detection-cuda",
+      "type": "author_book_chapter",
+      "author_or_owner": "Scott Le Grand / NVIDIA",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Sort/sweep and spatial subdivision expose parallel candidate generation.",
+        "Multi-cell overlap creates duplicate/conflicting-work concerns."
+      ],
+      "applicable_experiments": [
+        "E2",
+        "E8"
+      ],
+      "limitations": "Collision broad phase and CUDA hardware assumptions differ from exact radius reports on Apple/WebGPU."
+    },
+    {
+      "id": "S22",
+      "title": "GPU Gems 3, Chapter 39: Parallel Prefix Sum (Scan) with CUDA",
+      "url": "https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-39-parallel-prefix-sum-scan-cuda",
+      "type": "author_book_chapter",
+      "author_or_owner": "Harris, Sengupta and Owens",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Work-efficient scan supports compacting accepted candidates into dense output.",
+        "Scan plus scatter can reduce transfer of rejected candidates."
+      ],
+      "applicable_experiments": [
+        "E8"
+      ],
+      "limitations": "Multiple passes and synchronization must be included; compaction cannot shrink a genuinely all-visible result."
+    },
+    {
+      "id": "S23",
+      "title": "WebGPU",
+      "url": "https://www.w3.org/TR/webgpu/",
+      "type": "official_standard",
+      "author_or_owner": "W3C GPU for the Web Working Group",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Buffer mapping is asynchronous and waits for GPU use to finish.",
+        "Mapped buffers cannot simultaneously be used by the GPU."
+      ],
+      "applicable_experiments": [
+        "E8"
+      ],
+      "limitations": "Specification defines ordering rather than device latency; adapter/backend capabilities require measurement."
+    },
+    {
+      "id": "S24",
+      "title": "WebGPU Shading Language",
+      "url": "https://www.w3.org/TR/WGSL/",
+      "type": "official_standard",
+      "author_or_owner": "W3C GPU for the Web Working Group",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Concrete floating scalar types are f32 and optional f16.",
+        "Floating evaluation and conversions have explicit portability rules."
+      ],
+      "applicable_experiments": [
+        "E8"
+      ],
+      "limitations": "No direct runtime f64 parity with this API; AbstractFloat is not a general f64 storage/computation replacement."
+    },
+    {
+      "id": "S25",
+      "title": "MTLStorageMode.shared",
+      "url": "https://developer.apple.com/documentation/metal/mtlstoragemode/shared",
+      "type": "official_gpu_documentation",
+      "author_or_owner": "Apple",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "CPU and GPU share system-memory resources on Apple silicon.",
+        "Application must synchronize producer completion before the other processor accesses a resource."
+      ],
+      "applicable_experiments": [
+        "E8"
+      ],
+      "limitations": "Shared storage removes neither synchronization nor contention; does not establish throughput or scalar precision support."
+    },
+    {
+      "id": "S26",
+      "title": "Shared-nothing Design",
+      "url": "https://seastar.io/shared-nothing/",
+      "type": "official_project_documentation",
+      "author_or_owner": "Seastar Project",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "One application thread per core and explicit message passing make ownership/cross-core communication visible."
+      ],
+      "applicable_experiments": [
+        "E6"
+      ],
+      "limitations": "C++ framework design reference only; locality, load imbalance and cross-shard traffic must be tested in Rust."
+    },
+    {
+      "id": "S27",
+      "title": "Userspace RCU",
+      "url": "https://liburcu.org/",
+      "type": "official_project_documentation",
+      "author_or_owner": "Userspace RCU Project",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Read-copy-update supports concurrent read-mostly structures with deferred reclamation."
+      ],
+      "applicable_experiments": [
+        "E6"
+      ],
+      "limitations": "C library and reported scaling are not a Rust implementation proof; epoch memory and reader lifetimes need explicit bounds."
+    },
+    {
+      "id": "S28",
+      "title": "tokio::task::spawn_blocking",
+      "url": "https://docs.rs/tokio/latest/tokio/task/fn.spawn_blocking.html",
+      "type": "official_library_documentation",
+      "author_or_owner": "Tokio Project",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "CPU-bound blocking tasks require concurrency limits because the blocking pool upper bound is large.",
+        "Dedicated CPU executors such as Rayon may suit CPU work."
+      ],
+      "applicable_experiments": [
+        "E6"
+      ],
+      "limitations": "No fixed thread-count or latency guarantee follows from using spawn_blocking; running work must not be aborted for cleanup."
+    },
+    {
+      "id": "S29",
+      "title": "rayon::ThreadPoolBuilder",
+      "url": "https://docs.rs/rayon/latest/rayon/struct.ThreadPoolBuilder.html",
+      "type": "official_library_documentation",
+      "author_or_owner": "Rayon Project",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Explicit num_threads bounds worker count and avoids dependence on changing default selection."
+      ],
+      "applicable_experiments": [
+        "E6"
+      ],
+      "limitations": "Worker count alone does not reserve cores for I/O/simulation or prove parallel speedup."
+    },
+    {
+      "id": "S30",
+      "title": "Scaling in the Linux Networking Stack",
+      "url": "https://docs.kernel.org/networking/scaling.html",
+      "type": "official_operating_system_documentation",
+      "author_or_owner": "Linux Kernel Project",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "RSS/RPS/RFS/XPS distribute packet work and influence flow/CPU locality.",
+        "Queue count, flow imbalance and interprocessor overhead affect scaling."
+      ],
+      "applicable_experiments": [
+        "E6"
+      ],
+      "limitations": "Linux/server-NIC specific; not a measurement of macOS or the current M2."
+    },
+    {
+      "id": "S31",
+      "title": "Snapshot Compression",
+      "url": "https://gafferongames.com/post/snapshot_compression/",
+      "type": "author_implementation_article",
+      "author_or_owner": "Glenn Fiedler, 2015",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Delta snapshots must reference a baseline acknowledged by the receiver.",
+        "Initial state and changed-index/bitmask choices affect bandwidth.",
+        "Quantization is distinct from lossless delta coding of an agreed representation."
+      ],
+      "applicable_experiments": [
+        "E5",
+        "F1"
+      ],
+      "limitations": "Example compression ratios and data distribution do not transfer; per-client history, churn and packet loss need measurement."
+    },
+    {
+      "id": "S32",
+      "title": "RFC 8085: UDP Usage Guidelines",
+      "url": "https://www.rfc-editor.org/info/rfc8085/",
+      "type": "official_standard",
+      "author_or_owner": "IETF, Eggert, Fairhurst and Shepherd, 2017",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "UDP has no inherent congestion control.",
+        "Applications need congestion/rate/burst and message-size handling appropriate to their traffic."
+      ],
+      "applicable_experiments": [
+        "E5",
+        "E6",
+        "F1"
+      ],
+      "limitations": "Guidance is not an application transport implementation or capacity guarantee; RFC notes updates including RFC 8899."
+    },
+    {
+      "id": "S33",
+      "title": "Google Benchmark User Guide",
+      "url": "https://github.com/google/benchmark/blob/main/docs/user_guide.md",
+      "type": "official_project_documentation",
+      "author_or_owner": "Google Benchmark Project",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Repetitions, warmup and random interleaving control common measurement variation.",
+        "Memory counters and reporting context help interpretation."
+      ],
+      "applicable_experiments": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "limitations": "Methodology reference; randomization does not remove all bias or authorize changing existing acceptance rules."
+    },
+    {
+      "id": "S34",
+      "title": "Benchmarking tips",
+      "url": "https://llvm.org/docs/Benchmarking.html",
+      "type": "official_project_documentation",
+      "author_or_owner": "LLVM Project",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Repeated controlled runs help distinguish noise.",
+        "Low noise is necessary but does not eliminate measurement bias."
+      ],
+      "applicable_experiments": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "limitations": "Its process-disabling advice is superseded here by user instruction: never suspend/kill active workers; use an isolated host later."
+    },
+    {
+      "id": "S35",
+      "title": "wrk2: A constant throughput, correct latency recording variant of wrk",
+      "url": "https://github.com/giltene/wrk2",
+      "type": "author_repository",
+      "author_or_owner": "Gil Tene and contributors",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Measure latency from intended scheduled send time to avoid coordinated omission.",
+        "Offered constant load differs from a response-paced closed loop."
+      ],
+      "applicable_experiments": [
+        "E5",
+        "E6"
+      ],
+      "limitations": "HTTP implementation and timing granularity are not a game-server harness; reuse the measurement principle, not claimed capacity."
+    },
+    {
+      "id": "S36",
+      "title": "HdrHistogram: A High Dynamic Range Histogram",
+      "url": "https://github.com/HdrHistogram/HdrHistogram",
+      "type": "author_repository",
+      "author_or_owner": "Gil Tene and contributors",
+      "accessed": "2026-10-20",
+      "claims_supported": [
+        "Histogram footprint depends on configured range/precision rather than sample count.",
+        "Latency distributions can be retained without unbounded raw samples."
+      ],
+      "applicable_experiments": [
+        "E1",
+        "E5",
+        "E6"
+      ],
+      "limitations": "Quantization/overflow range and merge semantics need configuration; old recording nanosecond figures are not current-machine evidence."
+    }
+  ]
+}

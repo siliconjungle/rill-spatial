@@ -75,3 +75,14 @@ fixtures/generators, correctness evidence and raw measurement data. Declare exac
 completed generated paths safe to retire. Required work may proceed below the
 100 GB reserve; no unrelated protected inputs or active workers are disturbed.
 
+
+## Holdout registration (before measuring the revised candidate)
+
+The development trace uses seed 2051. The first holdout uses seed 97123 and the
+`holdout` generator profile: populations 47 / 4096 / 2048 / 2048 / 2048 / 2048 /
+2048 / 2048 / 32768 across the same nine scenario families; radii 11 / 37 / 31 /
+67 / 96 / 23 / 13 / 89 / 73. It changes cluster widths, dense volume, floor count
+and spacing, boundary-grid dimensions and dispersed density. It retains 2,000
+observers where the population supports them. This is an unseen validation trace,
+not a replacement for any development loss. Subsequent changes informed by it
+require another unseen trace before a generalization claim.

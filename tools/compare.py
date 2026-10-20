@@ -5,6 +5,7 @@ from pathlib import Path
 RUST=['rill-spatial','brute-force','rstar','kdtree','kd-tree','kiddo-mutable','kiddo-immutable','static-aabb2d','geo-index-kd','geo-index-rtree','spart-kd','spart-rtree','spart-rstar','spart-octree','spart-quadtree']
 RUST+=['acap-kd','acap-flat-kd','acap-vp','acap-flat-vp','acap-exhaustive','vpsearch','petal-ball','neighbourhood-owned','neighbourhood-index','quadtree-f64','quadtree-rs','rust-octree','spatial-linear','spatial-quadratic','spatial-rstar','nabo']
 JS=['rbush','rbush-3d','flatbush','kdbush','static-kdtree','d3-quadtree','kd-tree-javascript','js-quadtree','@timohausmann/quadtree-js','quadtree-lib','rtree','mnemonist-vp','spatial-hash','flatten-planar','box-intersect','quadtree2','mnemonist-kd']
+VARIANTS=['rill-cell-sorted','rill-cell-hybrid','rill-cell-hash','rill-cell-occupied','rill-dual','rill-cell-batch-sorted','rill-cell-batch-hybrid','rill-cell-batch-hash','rill-cell-batch-occupied']
 CPP=['nanoflann','pico-tree','libkdtree','kdtree-cpp','crvs-kdtree','gishi-kdtree']
 def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def output(cmd):return subprocess.check_output(cmd,text=True).strip()
@@ -17,14 +18,14 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--implementations',default=','.join(RUST+JS+CPP));p.add_argument('--scenarios',default='small,uniform,clusters,dense,contained,floors,boundaries,teleports,large');p.add_argument('--samples',type=int,default=5);p.add_argument('--processes',type=int,default=3);p.add_argument('--out',default='results/comparison.json');p.add_argument('--fixtures',default='benchmarks/fixtures');p.add_argument('--seed',type=int,default=17);p.add_argument('--timeout',type=int,default=300);a=p.parse_args()
  names=a.implementations.split(',');scenarios=a.scenarios.split(',')
  assert a.samples>0 and a.processes>0
- assert not(set(names)-set(RUST+JS+CPP)), 'Unknown implementation'
+ assert not(set(names)-set(RUST+JS+CPP+VARIANTS)), 'Unknown implementation'
  out=Path(a.out);out.parent.mkdir(parents=True,exist_ok=True)
  # Freeze executable artifacts before measurements. A concurrent later build cannot
  # replace the code being measured. The JS copy stays by its imports, whose hashes
  # are checked after every job. Registry lockfiles identify transitive code.
  frozen=Path('build/frozen')/out.stem;frozen.mkdir(parents=True,exist_ok=False)
  artifacts={}
- if set(names)&set(RUST):
+ if set(names)&set(RUST+VARIANTS):
   path=frozen/'rust';shutil.copy2('build/target/release/rill-spatial-benchmarks',path);artifacts['rust']={'path':str(path),'sha256':digest(path)}
  if set(names)&set(JS):
   path=Path('benchmarks')/('.frozen-'+out.stem+'.mjs');assert not path.exists();shutil.copy2('benchmarks/javascript.mjs',path);artifacts['js']={'path':str(path),'sha256':digest(path)}
@@ -34,7 +35,9 @@ def main():
  jobs=[(i,s,n)for i in range(a.processes)for s in scenarios for n in names];random.Random(a.seed).shuffle(jobs)
  for ordinal,(process,scenario,name)in enumerate(jobs):
   fixture=Path(a.fixtures)/(scenario+'.json');input_path=fixture
-  if name in RUST:artifact=artifacts['rust'];cmd=[artifact['path'],name,str(fixture),str(a.samples)]
+  bounded=json.loads(fixture.read_text()).get('bounded',False)
+  if bounded and name not in RUST+VARIANTS+JS:raise RuntimeError('20k bounded driver for this ecosystem is not implemented yet; refusing a giant retained output allocation')
+  if name in RUST+VARIANTS:artifact=artifacts['rust'];cmd=[artifact['path'],name,str(fixture),str(a.samples)]
   elif name in JS:artifact=artifacts['js'];cmd=['node',artifact['path'],name,str(fixture),str(a.samples)]
   else:artifact=artifacts[name];input_path=fixture.with_suffix('.bin');cmd=[artifact['path'],str(input_path),str(a.samples)]
   assert digest(artifact['path'])==artifact['sha256'],'Measured executable changed'
