@@ -18,6 +18,6 @@ for(const[name,n,radius]of configs){let rng=seed>>>0;const rand=()=>{rng=(Math.i
  }
  const queries=t%3===2?Array.from({length:Math.min(n,2000)},(_,i)=>({point:current[(i*3571)%n].slice(),radius:radius*(name==='contained'?1:.5+(i%3)*.5)})):[];
  frames.push({updates,queries});}
- const fixture={name:name+'-seed'+seed,seed,cell_size:radius,points,frames};const bytes=JSON.stringify(fixture)+'\n',path=out+'/'+name+'.json';writeFileSync(path,bytes);manifest.push({name,path,sha256:createHash('sha256').update(bytes).digest('hex'),points:n,queries:Math.min(n,2000)*2});
+ const fixture={name:name+'-seed'+seed,seed,cell_size:radius,points,frames};const bytes=JSON.stringify(fixture)+'\n',path=out+'/'+name+'.json';writeFileSync(path,bytes);manifest.push({name,path,sha256:createHash('sha256').update(bytes).digest('hex'),bytes:Buffer.byteLength(bytes),points:n,queries:Math.min(n,2000)*2});
 }
-writeFileSync(out+'/manifest.json',JSON.stringify({seed,fixtures:manifest},null,2)+'\n');console.log(JSON.stringify({seed,fixtures:manifest.length,totalBytes:manifest.reduce((s,x)=>s+0,0)}));
+writeFileSync(out+'/manifest.json',JSON.stringify({seed,fixtures:manifest},null,2)+'\n');console.log(JSON.stringify({seed,fixtures:manifest.length,totalBytes:manifest.reduce((s,x)=>s+x.bytes,0)}));

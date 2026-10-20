@@ -1,0 +1,1161 @@
+{
+  "schema": 2,
+  "status": "COMPLETE_WITH_FAILURES",
+  "created_utc": "2026-10-20T03:56:21.523144+00:00",
+  "host": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "identity": {
+    "git_commit": "3157c33ac9da0ea1797aaada56cbe7eab69bc529",
+    "git_status": "M Cargo.lock\n M benchmarks/Cargo.toml\n M benchmarks/javascript.mjs\n M benchmarks/native.cpp\n M benchmarks/src/main.rs\n M research/inventory.json\n M src/hierarchy.rs\n M src/lib.rs\n M tests/correctness.rs\n M tools/add-cpp.mjs\n M tools/build-cpp.py\n M tools/compare.py\n M tools/fixtures.mjs\n?? benchmarks/src/more_adapters.rs\n?? results/native-additional-smoke.json\n?? results/repair-screen.json",
+    "source_sha256": {
+      "benchmarks/src/more_adapters.rs": "e64015fa4aac586ba226f9328baf2b8749c1efb4a173ac0b871dd8ed55fdf3f1",
+      ".github/workflows/ci.yml": "ad111064e2f06a4d546c57d90d118383158e98afcf313c18a0ea7bed303082f1",
+      ".gitignore": "1a3bf9bec30021b7c3816c920e39f8e4d2398c96c5004d6297e8f49b82623dc3",
+      "Cargo.lock": "392b4d9cfdff6e5d4633e3aebd0901e21c5f46d160b4ee8b261c92122cbe1472",
+      "Cargo.toml": "2c5fa0fb7794e765bfec937f54a286000854aee1c15bb900e299e9efae17efab",
+      "LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "LICENSE-MIT": "079adec67563038bee5dac86b57a3cf1546cffc112f51f85c68b13c3d0369428",
+      "README.md": "72da715d7c277a78747cf168a60882ec64e806955b2e2d8b6986cc579f4b8474",
+      "benchmarks/Cargo.toml": "ef157bbaed76de7b5f7f95a326d4ea16f878afd8b5f68690172d6298bbdaae3a",
+      "benchmarks/fixtures/boundaries.json": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "benchmarks/fixtures/clusters.json": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "benchmarks/fixtures/contained.json": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "benchmarks/fixtures/dense.json": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "benchmarks/fixtures/floors.json": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "benchmarks/fixtures/large.json": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "benchmarks/fixtures/manifest.json": "33319e1ff2e497d49b18d70a1607c1c496f299e144428918785467b1c3478086",
+      "benchmarks/fixtures/small.json": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "benchmarks/fixtures/teleports.json": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "benchmarks/fixtures/uniform.json": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "benchmarks/javascript.mjs": "117af22947a25783cf5b60a791421bca3e3fab6e2811c6faf99cf6aeb71774cd",
+      "benchmarks/native.cpp": "bb1d59b8256696a851e90d618091e8baf7101f7adec948e5bfe98194280140b7",
+      "benchmarks/src/main.rs": "7f5ff59a9db0b9c42987fcb146a1f463e42ebdf9565292bb67ffc1c993ddae42",
+      "benchmarks/src/rust_adapters.rs": "fd9b957d0f1923d607f33305231d195c6c64f92d44bc6638868931785300f841",
+      "research/discovery.json": "7007a4cfa08ccb2477313d7082d9862f3001e87ca57ee3f82911caaf39222633",
+      "research/inventory.json": "6817449721475ab8757e091b63a4c6d1f19f2a3423e877123481aca3110eb794",
+      "research/npm/package-lock.json": "cbb268cad3d328a828475020e22a1f4180deff6a83820923157c78ea1e3ecc50",
+      "research/npm/package.json": "f577e233d61564d7685eb4b6c4ad71d16303d3d6988cac88d4e5771b56bca95d",
+      "research/protocol.md": "d2932803d52aff13a36d5d71e49a29f40f0b824ea1021bfeb6c66173293710ca",
+      "src/hierarchy.rs": "21e20a75cbe5fa112b288a18edb0fc0ae91c864514697d20949fc9e9b3a91184",
+      "src/lib.rs": "ce46d744ce5db93710a819f51c4abe12e9a35c9268f4befa318d7926ec60988d",
+      "storage-retention.json": "057d479d0173f740f61bf169daf01430d2707038c31f65e3a00c5494d29d9697",
+      "tests/correctness.rs": "db7d7f6a679c5a4dfed68bece63ec4ab7a69e203330959cbd6509b9977f5bf29",
+      "tools/add-cpp.mjs": "e7dc33bb244f0c2eb831af816e67ac1edd99721a9870f742c8d35a6b17192626",
+      "tools/binary-fixtures.py": "0131d087c1f8a3929632d4e279635600aba5c2b67e643c54b9a91cb0daa24f2f",
+      "tools/build-cpp.py": "60d3af7ead7428c49cb5b073a5261e2d7bf8ea837c6abd9abc84232dc6b9d0d1",
+      "tools/compare.py": "c2f08abf8d08620f53ce17ea614681a9bee177842f4851d77fa7d092c00dbd9d",
+      "tools/discover.mjs": "94744085b7e0d4daa6318ee36fe475171ba194637590398a1d6aad2b031f1d66",
+      "tools/fetch-sources.mjs": "47871b9d40a7a7710f75d9db044598876e694027b20dfd31973bc6eb4008193c",
+      "tools/fixtures.mjs": "8d10f2d773b05d2789588dbc2fdc244136d879323806fef0d46d99e580adb4f5"
+    },
+    "toolchains": {
+      "rust": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+      "node": "v26.1.0",
+      "clang": "Apple clang version 14.0.0 (clang-1400.0.29.202)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+      "cpu": "Apple M2"
+    }
+  },
+  "artifacts": {
+    "rust": {
+      "path": "build/frozen/refit-screen/rust",
+      "sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc"
+    }
+  },
+  "implementations": [
+    "rill-spatial",
+    "kiddo-immutable",
+    "static-aabb2d",
+    "brute-force",
+    "quadtree-f64"
+  ],
+  "scenarios": [
+    "small",
+    "uniform",
+    "dense",
+    "floors",
+    "large"
+  ],
+  "notes": [
+    "Other user workers left running; shared-machine diagnostics",
+    "Process RSS includes reference oracle and retained result vectors; not isolated index bytes"
+  ],
+  "samples_per_process": 3,
+  "requested_processes": 1,
+  "rows": [
+    {
+      "implementation": "quadtree-f64",
+      "scenario": "dense",
+      "status": "failed",
+      "exit_code": -6,
+      "error": "\nthread 'main' (47980133) has overflowed its stack\nfatal runtime error: stack overflow, aborting\ntime: command terminated abnormally\n        1.77 real         0.19 user         0.01 sys\n            82558976  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                5179  page reclaims\n                  18  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   1  signals received\n                   2  voluntary context switches\n                1611  involuntary context switches\n          1000738773  instructions retired\n           431222867  cycles elapsed\n            81707392  peak memory footprint\n",
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "quadtree-f64",
+        "benchmarks/fixtures/dense.json",
+        "3"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 1.7917561669601128
+    },
+    {
+      "correct": true,
+      "implementation": "static-aabb2d",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 41167,
+          "query_ns": 30001,
+          "results": 130,
+          "total_ns": 78751,
+          "update_ns": 7583
+        },
+        {
+          "build_ns": 1750,
+          "query_ns": 48958,
+          "results": 130,
+          "total_ns": 53917,
+          "update_ns": 3209
+        },
+        {
+          "build_ns": 1542,
+          "query_ns": 20001,
+          "results": 130,
+          "total_ns": 24541,
+          "update_ns": 2998
+        }
+      ],
+      "scenario": "small",
+      "status": "measured",
+      "process_peak_rss_bytes": 2031616,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "static-aabb2d",
+        "benchmarks/fixtures/small.json",
+        "3"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.018228166038170457
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 22000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 3771666,
+          "query_ns": 6285041,
+          "results": 11330,
+          "total_ns": 15335250,
+          "update_ns": 5278543
+        },
+        {
+          "build_ns": 3027208,
+          "query_ns": 3053875,
+          "results": 11330,
+          "total_ns": 12300749,
+          "update_ns": 6219666
+        },
+        {
+          "build_ns": 2435208,
+          "query_ns": 3056083,
+          "results": 11330,
+          "total_ns": 13606791,
+          "update_ns": 8115500
+        }
+      ],
+      "scenario": "large",
+      "status": "measured",
+      "process_peak_rss_bytes": 13860864,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/large.json",
+        "3"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.2515881669241935
+    },
+    {
+      "correct": true,
+      "implementation": "static-aabb2d",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 162750,
+          "query_ns": 1502916,
+          "results": 6672,
+          "total_ns": 2486457,
+          "update_ns": 820791
+        },
+        {
+          "build_ns": 138084,
+          "query_ns": 1393083,
+          "results": 6672,
+          "total_ns": 1770834,
+          "update_ns": 239667
+        },
+        {
+          "build_ns": 113666,
+          "query_ns": 1612459,
+          "results": 6672,
+          "total_ns": 1935125,
+          "update_ns": 209000
+        }
+      ],
+      "scenario": "uniform",
+      "status": "measured",
+      "process_peak_rss_bytes": 3604480,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "static-aabb2d",
+        "benchmarks/fixtures/uniform.json",
+        "3"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.040884791989810765
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 250209,
+          "query_ns": 3440542,
+          "results": 24856,
+          "total_ns": 4171210,
+          "update_ns": 480459
+        },
+        {
+          "build_ns": 149083,
+          "query_ns": 3882250,
+          "results": 24856,
+          "total_ns": 4308668,
+          "update_ns": 277335
+        },
+        {
+          "build_ns": 96375,
+          "query_ns": 3524793,
+          "results": 24856,
+          "total_ns": 3861087,
+          "update_ns": 239919
+        }
+      ],
+      "scenario": "floors",
+      "status": "measured",
+      "process_peak_rss_bytes": 4603904,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/floors.json",
+        "3"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.05094570806249976
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 94291,
+          "query_ns": 34636583,
+          "results": 3786052,
+          "total_ns": 35148832,
+          "update_ns": 417958
+        },
+        {
+          "build_ns": 96583,
+          "query_ns": 38118208,
+          "results": 3786052,
+          "total_ns": 38594792,
+          "update_ns": 380001
+        },
+        {
+          "build_ns": 45792,
+          "query_ns": 26001959,
+          "results": 3786052,
+          "total_ns": 26402790,
+          "update_ns": 355039
+        }
+      ],
+      "scenario": "dense",
+      "status": "measured",
+      "process_peak_rss_bytes": 88096768,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/dense.json",
+        "3"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.3868195420363918
+    },
+    {
+      "correct": true,
+      "implementation": "kiddo-immutable",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 49000,
+          "query_ns": 24457,
+          "results": 130,
+          "total_ns": 79039,
+          "update_ns": 5582
+        },
+        {
+          "build_ns": 1791,
+          "query_ns": 20959,
+          "results": 130,
+          "total_ns": 25624,
+          "update_ns": 2874
+        },
+        {
+          "build_ns": 1250,
+          "query_ns": 19708,
+          "results": 130,
+          "total_ns": 25083,
+          "update_ns": 4125
+        }
+      ],
+      "scenario": "small",
+      "status": "measured",
+      "process_peak_rss_bytes": 2097152,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "kiddo-immutable",
+        "benchmarks/fixtures/small.json",
+        "3"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.021851166966371238
+    },
+    {
+      "correct": true,
+      "implementation": "static-aabb2d",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 189750,
+          "query_ns": 44801248,
+          "results": 3786052,
+          "total_ns": 45316496,
+          "update_ns": 325498
+        },
+        {
+          "build_ns": 149750,
+          "query_ns": 39913708,
+          "results": 3786052,
+          "total_ns": 40364209,
+          "update_ns": 300751
+        },
+        {
+          "build_ns": 156791,
+          "query_ns": 49245501,
+          "results": 3786052,
+          "total_ns": 49798959,
+          "update_ns": 396667
+        }
+      ],
+      "scenario": "dense",
+      "status": "measured",
+      "process_peak_rss_bytes": 85622784,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "static-aabb2d",
+        "benchmarks/fixtures/dense.json",
+        "3"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.4522235830081627
+    },
+    {
+      "correct": true,
+      "implementation": "quadtree-f64",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 1540459,
+          "query_ns": 17260542,
+          "results": 24856,
+          "total_ns": 24723876,
+          "update_ns": 5922875
+        },
+        {
+          "build_ns": 1617792,
+          "query_ns": 15535750,
+          "results": 24856,
+          "total_ns": 31532624,
+          "update_ns": 14379082
+        },
+        {
+          "build_ns": 1010292,
+          "query_ns": 17832959,
+          "results": 24856,
+          "total_ns": 24879669,
+          "update_ns": 6036418
+        }
+      ],
+      "scenario": "floors",
+      "status": "measured",
+      "process_peak_rss_bytes": 4636672,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "quadtree-f64",
+        "benchmarks/fixtures/floors.json",
+        "3"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.1270382080692798
+    },
+    {
+      "correct": true,
+      "implementation": "brute-force",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 14083,
+          "query_ns": 11645290,
+          "results": 24856,
+          "total_ns": 11675457,
+          "update_ns": 16084
+        },
+        {
+          "build_ns": 2416,
+          "query_ns": 9567291,
+          "results": 24856,
+          "total_ns": 9576334,
+          "update_ns": 6627
+        },
+        {
+          "build_ns": 2750,
+          "query_ns": 15590583,
+          "results": 24856,
+          "total_ns": 15599207,
+          "update_ns": 5874
+        }
+      ],
+      "scenario": "floors",
+      "status": "measured",
+      "process_peak_rss_bytes": 3424256,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "brute-force",
+        "benchmarks/fixtures/floors.json",
+        "3"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.08420512499287724
+    },
+    {
+      "correct": true,
+      "implementation": "quadtree-f64",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 56958,
+          "query_ns": 88751,
+          "results": 130,
+          "total_ns": 289501,
+          "update_ns": 143792
+        },
+        {
+          "build_ns": 37708,
+          "query_ns": 65917,
+          "results": 130,
+          "total_ns": 254626,
+          "update_ns": 151001
+        },
+        {
+          "build_ns": 31458,
+          "query_ns": 103083,
+          "results": 130,
+          "total_ns": 231417,
+          "update_ns": 96876
+        }
+      ],
+      "scenario": "small",
+      "status": "measured",
+      "process_peak_rss_bytes": 2048000,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "quadtree-f64",
+        "benchmarks/fixtures/small.json",
+        "3"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.01559120905585587
+    },
+    {
+      "correct": true,
+      "implementation": "brute-force",
+      "points": 22000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 117625,
+          "query_ns": 134414042,
+          "results": 11330,
+          "total_ns": 134674126,
+          "update_ns": 142459
+        },
+        {
+          "build_ns": 22542,
+          "query_ns": 142144543,
+          "results": 11330,
+          "total_ns": 142257334,
+          "update_ns": 90249
+        },
+        {
+          "build_ns": 22958,
+          "query_ns": 214089042,
+          "results": 11330,
+          "total_ns": 214195792,
+          "update_ns": 83792
+        }
+      ],
+      "scenario": "large",
+      "status": "measured",
+      "process_peak_rss_bytes": 8241152,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "brute-force",
+        "benchmarks/fixtures/large.json",
+        "3"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.7467571250163019
+    },
+    {
+      "correct": true,
+      "implementation": "kiddo-immutable",
+      "points": 22000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 2191875,
+          "query_ns": 3079292,
+          "results": 11330,
+          "total_ns": 9440042,
+          "update_ns": 4168875
+        },
+        {
+          "build_ns": 1992042,
+          "query_ns": 4243001,
+          "results": 11330,
+          "total_ns": 10433584,
+          "update_ns": 4198541
+        },
+        {
+          "build_ns": 1837708,
+          "query_ns": 3108958,
+          "results": 11330,
+          "total_ns": 8779665,
+          "update_ns": 3832999
+        }
+      ],
+      "scenario": "large",
+      "status": "measured",
+      "process_peak_rss_bytes": 10977280,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "kiddo-immutable",
+        "benchmarks/fixtures/large.json",
+        "3"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.20512291707564145
+    },
+    {
+      "correct": true,
+      "implementation": "kiddo-immutable",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 179417,
+          "query_ns": 1762541,
+          "results": 6672,
+          "total_ns": 2200375,
+          "update_ns": 258417
+        },
+        {
+          "build_ns": 129500,
+          "query_ns": 1674292,
+          "results": 6672,
+          "total_ns": 2040333,
+          "update_ns": 236541
+        },
+        {
+          "build_ns": 114541,
+          "query_ns": 1675542,
+          "results": 6672,
+          "total_ns": 2030541,
+          "update_ns": 240458
+        }
+      ],
+      "scenario": "uniform",
+      "status": "measured",
+      "process_peak_rss_bytes": 3620864,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "kiddo-immutable",
+        "benchmarks/fixtures/uniform.json",
+        "3"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.04140599991660565
+    },
+    {
+      "correct": true,
+      "implementation": "quadtree-f64",
+      "points": 22000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 14370166,
+          "query_ns": 9821749,
+          "results": 11330,
+          "total_ns": 80976041,
+          "update_ns": 56784126
+        },
+        {
+          "build_ns": 14038000,
+          "query_ns": 10050292,
+          "results": 11330,
+          "total_ns": 85294542,
+          "update_ns": 61206250
+        },
+        {
+          "build_ns": 15565667,
+          "query_ns": 10895208,
+          "results": 11330,
+          "total_ns": 83141125,
+          "update_ns": 56680250
+        }
+      ],
+      "scenario": "large",
+      "status": "measured",
+      "process_peak_rss_bytes": 16678912,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "quadtree-f64",
+        "benchmarks/fixtures/large.json",
+        "3"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.442932500038296
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 9417,
+          "query_ns": 21334,
+          "results": 130,
+          "total_ns": 32999,
+          "update_ns": 2248
+        },
+        {
+          "build_ns": 3042,
+          "query_ns": 21209,
+          "results": 130,
+          "total_ns": 26376,
+          "update_ns": 2125
+        },
+        {
+          "build_ns": 1167,
+          "query_ns": 20333,
+          "results": 130,
+          "total_ns": 23541,
+          "update_ns": 2041
+        }
+      ],
+      "scenario": "small",
+      "status": "measured",
+      "process_peak_rss_bytes": 1966080,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/small.json",
+        "3"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.02097800001502037
+    },
+    {
+      "correct": true,
+      "implementation": "brute-force",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 291,
+          "query_ns": 19500,
+          "results": 130,
+          "total_ns": 20125,
+          "update_ns": 334
+        },
+        {
+          "build_ns": 208,
+          "query_ns": 14543,
+          "results": 130,
+          "total_ns": 15083,
+          "update_ns": 332
+        },
+        {
+          "build_ns": 125,
+          "query_ns": 15126,
+          "results": 130,
+          "total_ns": 15542,
+          "update_ns": 291
+        }
+      ],
+      "scenario": "small",
+      "status": "measured",
+      "process_peak_rss_bytes": 1949696,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "brute-force",
+        "benchmarks/fixtures/small.json",
+        "3"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.022055999957956374
+    },
+    {
+      "correct": true,
+      "implementation": "brute-force",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 7417,
+          "query_ns": 12263875,
+          "results": 6672,
+          "total_ns": 12282167,
+          "update_ns": 10875
+        },
+        {
+          "build_ns": 2500,
+          "query_ns": 11360833,
+          "results": 6672,
+          "total_ns": 11376500,
+          "update_ns": 13167
+        },
+        {
+          "build_ns": 6458,
+          "query_ns": 10357541,
+          "results": 6672,
+          "total_ns": 10373248,
+          "update_ns": 9249
+        }
+      ],
+      "scenario": "uniform",
+      "status": "measured",
+      "process_peak_rss_bytes": 3342336,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "brute-force",
+        "benchmarks/fixtures/uniform.json",
+        "3"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.07385649997740984
+    },
+    {
+      "correct": true,
+      "implementation": "static-aabb2d",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 195334,
+          "query_ns": 4735584,
+          "results": 24856,
+          "total_ns": 5284336,
+          "update_ns": 353418
+        },
+        {
+          "build_ns": 144292,
+          "query_ns": 5589083,
+          "results": 24856,
+          "total_ns": 6044875,
+          "update_ns": 311500
+        },
+        {
+          "build_ns": 166583,
+          "query_ns": 5220456,
+          "results": 24856,
+          "total_ns": 5698957,
+          "update_ns": 311918
+        }
+      ],
+      "scenario": "floors",
+      "status": "measured",
+      "process_peak_rss_bytes": 3997696,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "static-aabb2d",
+        "benchmarks/fixtures/floors.json",
+        "3"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.059490125044249
+    },
+    {
+      "correct": true,
+      "implementation": "rill-spatial",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 196250,
+          "query_ns": 2546791,
+          "results": 6672,
+          "total_ns": 3214458,
+          "update_ns": 471417
+        },
+        {
+          "build_ns": 95959,
+          "query_ns": 1440834,
+          "results": 6672,
+          "total_ns": 1923001,
+          "update_ns": 386208
+        },
+        {
+          "build_ns": 243542,
+          "query_ns": 1433126,
+          "results": 6672,
+          "total_ns": 2026584,
+          "update_ns": 349916
+        }
+      ],
+      "scenario": "uniform",
+      "status": "measured",
+      "process_peak_rss_bytes": 4194304,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "rill-spatial",
+        "benchmarks/fixtures/uniform.json",
+        "3"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.050868666963651776
+    },
+    {
+      "correct": true,
+      "implementation": "static-aabb2d",
+      "points": 22000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 2448250,
+          "query_ns": 3387582,
+          "results": 11330,
+          "total_ns": 10869497,
+          "update_ns": 5033665
+        },
+        {
+          "build_ns": 2287459,
+          "query_ns": 4190958,
+          "results": 11330,
+          "total_ns": 11548541,
+          "update_ns": 5070124
+        },
+        {
+          "build_ns": 2233958,
+          "query_ns": 3723000,
+          "results": 11330,
+          "total_ns": 10631416,
+          "update_ns": 4674458
+        }
+      ],
+      "scenario": "large",
+      "status": "measured",
+      "process_peak_rss_bytes": 11386880,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "static-aabb2d",
+        "benchmarks/fixtures/large.json",
+        "3"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.22250599996186793
+    },
+    {
+      "correct": true,
+      "implementation": "kiddo-immutable",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 162250,
+          "query_ns": 53010041,
+          "results": 3786052,
+          "total_ns": 53978292,
+          "update_ns": 806001
+        },
+        {
+          "build_ns": 127083,
+          "query_ns": 42082041,
+          "results": 3786052,
+          "total_ns": 42441790,
+          "update_ns": 232666
+        },
+        {
+          "build_ns": 110791,
+          "query_ns": 39706958,
+          "results": 3786052,
+          "total_ns": 40053039,
+          "update_ns": 235290
+        }
+      ],
+      "scenario": "dense",
+      "status": "measured",
+      "process_peak_rss_bytes": 79134720,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "kiddo-immutable",
+        "benchmarks/fixtures/dense.json",
+        "3"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.41977320797741413
+    },
+    {
+      "correct": true,
+      "implementation": "quadtree-f64",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 2063459,
+          "query_ns": 3843042,
+          "results": 6672,
+          "total_ns": 9921585,
+          "update_ns": 4015084
+        },
+        {
+          "build_ns": 897416,
+          "query_ns": 3266667,
+          "results": 6672,
+          "total_ns": 7826168,
+          "update_ns": 3662085
+        },
+        {
+          "build_ns": 718542,
+          "query_ns": 3542125,
+          "results": 6672,
+          "total_ns": 7896543,
+          "update_ns": 3635876
+        }
+      ],
+      "scenario": "uniform",
+      "status": "measured",
+      "process_peak_rss_bytes": 4194304,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "quadtree-f64",
+        "benchmarks/fixtures/uniform.json",
+        "3"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.06660529191140085
+    },
+    {
+      "correct": true,
+      "implementation": "brute-force",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 9666,
+          "query_ns": 72586748,
+          "results": 3786052,
+          "total_ns": 72609957,
+          "update_ns": 13543
+        },
+        {
+          "build_ns": 2750,
+          "query_ns": 76660834,
+          "results": 3786052,
+          "total_ns": 76670502,
+          "update_ns": 6918
+        },
+        {
+          "build_ns": 2416,
+          "query_ns": 94996623,
+          "results": 3786052,
+          "total_ns": 95005247,
+          "update_ns": 6208
+        }
+      ],
+      "scenario": "dense",
+      "status": "measured",
+      "process_peak_rss_bytes": 85262336,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "brute-force",
+        "benchmarks/fixtures/dense.json",
+        "3"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.37812887504696846
+    },
+    {
+      "correct": true,
+      "implementation": "kiddo-immutable",
+      "points": 2000,
+      "queries": 4000,
+      "samples": [
+        {
+          "build_ns": 120250,
+          "query_ns": 2452085,
+          "results": 24856,
+          "total_ns": 2768044,
+          "update_ns": 195709
+        },
+        {
+          "build_ns": 90417,
+          "query_ns": 2327541,
+          "results": 24856,
+          "total_ns": 2598708,
+          "update_ns": 180750
+        },
+        {
+          "build_ns": 89708,
+          "query_ns": 2263501,
+          "results": 24856,
+          "total_ns": 2529918,
+          "update_ns": 176709
+        }
+      ],
+      "scenario": "floors",
+      "status": "measured",
+      "process_peak_rss_bytes": 3670016,
+      "process": 0,
+      "command": [
+        "build/frozen/refit-screen/rust",
+        "kiddo-immutable",
+        "benchmarks/fixtures/floors.json",
+        "3"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "artifact_sha256": "d050a3cc12a7326dcf1fce19a10ed557ce40e8c1bd7e27995145b0e8fc8c06fc",
+      "load_average": "{ 12.24 9.57 10.14 }",
+      "process_wall_seconds": 0.04496316600125283
+    }
+  ]
+}

@@ -19,6 +19,6 @@ async function worker(){while(cursor<jobs.length){const j=jobs[cursor++];try{
 await Promise.all(Array.from({length:4},worker));rows.sort((a,b)=>a.ecosystem.localeCompare(b.ecosystem)||a.name.localeCompare(b.name));
 writeFileSync('research/discovery.json',JSON.stringify({retrieved_at:new Date().toISOString(),sources:rows},null,2)+'\n');
 const existing=existsSync('research/inventory.json')?JSON.parse(readFileSync('research/inventory.json','utf8')).implementations:[];
-const implementations=rows.filter(x=>x.status==='pending').map(x=>existing.find(e=>e.id===x.id)||x);
+const found=rows.filter(x=>x.status==='pending');const implementations=[...found.map(x=>existing.find(e=>e.id===x.id)||x),...existing.filter(e=>!found.some(x=>x.id===e.id))];
 writeFileSync('research/inventory.json',JSON.stringify({schema:1,contract:'exact-radius-reporting-f64-2d-3d-v1',gate:'OPEN',implementations},null,2)+'\n');
 console.log(JSON.stringify({found:implementations.length,failed:rows.filter(x=>x.status!=='pending').map(x=>x.name)},null,2));

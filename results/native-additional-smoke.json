@@ -1,0 +1,402 @@
+{
+  "schema": 1,
+  "status": "COMPLETE_WITH_FAILURES",
+  "host": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "notes": [
+    "Other user workers left running; shared-machine diagnostics",
+    "Process RSS includes reference oracle and retained result vectors; not isolated index bytes"
+  ],
+  "samples_per_process": 1,
+  "requested_processes": 1,
+  "rows": [
+    {
+      "correct": true,
+      "implementation": "petal-ball",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 40834,
+          "query_ns": 56709,
+          "results": 130,
+          "total_ns": 124417,
+          "update_ns": 26874
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2031616,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "petal-ball",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.36409545806236565
+    },
+    {
+      "correct": true,
+      "implementation": "quadtree-rs",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 70125,
+          "query_ns": 151375,
+          "results": 130,
+          "total_ns": 273791,
+          "update_ns": 52291
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2260992,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "quadtree-rs",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005646709003485739
+    },
+    {
+      "implementation": "spatial-rstar",
+      "scenario": "small",
+      "status": "failed",
+      "exit_code": 101,
+      "error": "\nthread 'main' (47914028) panicked at benchmarks/src/main.rs:45:103:\nassertion `left == right` failed: spatial-rstar small-seed2051 sample 0 query 0\n  left: [0, 0]\n right: [0]\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n        0.00 real         0.00 user         0.00 sys\n             2260992  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 299  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                   4  involuntary context switches\n            17714242  instructions retired\n             6268158  cycles elapsed\n             1147168  peak memory footprint\n",
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spatial-rstar",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.004990166984498501
+    },
+    {
+      "implementation": "quadtree-f64",
+      "scenario": "small",
+      "status": "failed",
+      "exit_code": 101,
+      "error": "\nthread 'main' (47914032) panicked at benchmarks/src/more_adapters.rs:72:57:\nassertion failed: self.tree.remove(quadtree_f32::ItemId(i), quadpoint(self.points[i]))\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n        0.00 real         0.00 user         0.00 sys\n             2162688  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 293  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                   7  involuntary context switches\n            17297999  instructions retired\n             5977372  cycles elapsed\n             1179936  peak memory footprint\n",
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "quadtree-f64",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.004871790995821357
+    },
+    {
+      "correct": true,
+      "implementation": "acap-flat-vp",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 44584,
+          "query_ns": 24292,
+          "results": 130,
+          "total_ns": 84084,
+          "update_ns": 15208
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1998848,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "acap-flat-vp",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.004976542084477842
+    },
+    {
+      "correct": true,
+      "implementation": "neighbourhood-owned",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 34875,
+          "query_ns": 16583,
+          "results": 130,
+          "total_ns": 75168,
+          "update_ns": 23710
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2048000,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "neighbourhood-owned",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.004810999962501228
+    },
+    {
+      "correct": true,
+      "implementation": "acap-kd",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 13542,
+          "query_ns": 14584,
+          "results": 130,
+          "total_ns": 38751,
+          "update_ns": 10625
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2015232,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "acap-kd",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.004901333013549447
+    },
+    {
+      "correct": true,
+      "implementation": "acap-flat-kd",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 31041,
+          "query_ns": 15833,
+          "results": 130,
+          "total_ns": 56584,
+          "update_ns": 9710
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2015232,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "acap-flat-kd",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.00469562504440546
+    },
+    {
+      "correct": true,
+      "implementation": "rust-octree",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 6875,
+          "query_ns": 50375,
+          "results": 130,
+          "total_ns": 64209,
+          "update_ns": 6959
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 2031616,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "rust-octree",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.004872540943324566
+    },
+    {
+      "correct": true,
+      "implementation": "neighbourhood-index",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 11917,
+          "query_ns": 36958,
+          "results": 130,
+          "total_ns": 57792,
+          "update_ns": 8917
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1998848,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "neighbourhood-index",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005449792020954192
+    },
+    {
+      "correct": true,
+      "implementation": "acap-vp",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 16583,
+          "query_ns": 22167,
+          "results": 130,
+          "total_ns": 57542,
+          "update_ns": 18792
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1982464,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "acap-vp",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005067958030849695
+    },
+    {
+      "correct": true,
+      "implementation": "nabo",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 7458,
+          "query_ns": 38708,
+          "results": 130,
+          "total_ns": 53833,
+          "update_ns": 7667
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1966080,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "nabo",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.004542749957181513
+    },
+    {
+      "correct": true,
+      "implementation": "vpsearch",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 21000,
+          "query_ns": 26125,
+          "results": 130,
+          "total_ns": 54209,
+          "update_ns": 7084
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1982464,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "vpsearch",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.004782082978636026
+    },
+    {
+      "correct": true,
+      "implementation": "acap-exhaustive",
+      "points": 64,
+      "queries": 128,
+      "samples": [
+        {
+          "build_ns": 250,
+          "query_ns": 9791,
+          "results": 130,
+          "total_ns": 11291,
+          "update_ns": 1250
+        }
+      ],
+      "scenario": "small-seed2051",
+      "status": "measured",
+      "process_peak_rss_bytes": 1916928,
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "acap-exhaustive",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.004589042044244707
+    },
+    {
+      "implementation": "spatial-linear",
+      "scenario": "small",
+      "status": "failed",
+      "exit_code": 101,
+      "error": "\nthread 'main' (47914076) panicked at benchmarks/src/main.rs:45:103:\nassertion `left == right` failed: spatial-linear small-seed2051 sample 0 query 0\n  left: [0, 0]\n right: [0]\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n        0.00 real         0.00 user         0.00 sys\n             2162688  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 293  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                   5  involuntary context switches\n            17091613  instructions retired\n             5611133  cycles elapsed\n             1147168  peak memory footprint\n",
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spatial-linear",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005112875020131469
+    },
+    {
+      "implementation": "spatial-quadratic",
+      "scenario": "small",
+      "status": "failed",
+      "exit_code": 101,
+      "error": "\nthread 'main' (47914080) panicked at benchmarks/src/main.rs:45:103:\nassertion `left == right` failed: spatial-quadratic small-seed2051 sample 0 query 0\n  left: [0, 0]\n right: [0]\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n        0.00 real         0.00 user         0.00 sys\n             2129920  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 291  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                   6  involuntary context switches\n            16964722  instructions retired\n             5508283  cycles elapsed\n             1114400  peak memory footprint\n",
+      "process": 0,
+      "command": [
+        "build/target/release/rill-spatial-benchmarks",
+        "spatial-quadratic",
+        "benchmarks/fixtures/small.json",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "process_wall_seconds": 0.005022417055442929
+    }
+  ]
+}
