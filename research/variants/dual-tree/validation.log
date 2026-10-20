@@ -1,0 +1,26 @@
+$ cargo test --manifest-path research/variants/dual-tree/Cargo.toml --release -- --test-threads=1
+    Finished `release` profile [optimized] target(s) in 2.10s
+     Running unittests src/lib.rs (research/variants/dual-tree/target/release/deps/rill_spatial-4382ae71e6a7527c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/oracle.rs (research/variants/dual-tree/target/release/deps/oracle-a4042b19dea361fc)
+
+running 7 tests
+test arbitrary_ids_centres_variable_radii_and_mutations ... ok
+test numeric_closed_boundaries_overflow_underflow_and_2d ... ok
+test shared_fixtures_full_membership ... ok
+test spatial_partition_visitor_full_membership_and_limits ... ok
+test twenty_thousand_dense_full_membership_bounded_memory ... ok
+test twenty_thousand_sparse_variable_radius_full_membership ... ok
+test validation_is_atomic_empty_and_duplicate_upsert ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.14s
+
+   Doc-tests rill_spatial
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

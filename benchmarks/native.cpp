@@ -69,7 +69,41 @@ class Native{std::vector<Point>points;std::vector<GPoint>gp;std::unique_ptr<kdt:
 
 using Clock=std::chrono::steady_clock;
 uint64_t elapsed(Clock::time_point t){return std::chrono::duration_cast<std::chrono::nanoseconds>(Clock::now()-t).count();}
-int main(int argc,char**argv){try{if(argc<2)return 2;auto f=load(argv[1]);size_t samples=argc>2?std::stoul(argv[2]):5;auto points=f.points;std::vector<std::vector<uint64_t>>expected;
+struct Expected{bool all=false;size_t count=0;std::vector<uint32_t>ids;std::vector<uint64_t>bits;};
+Expected expected_window(const std::vector<Point>&points,const Query&q,const Point&lo,const Point&hi){
+ Expected e;Point far;for(size_t d=0;d<3;d++)far[d]=std::max(std::abs(q.point[d]-lo[d]),std::abs(q.point[d]-hi[d]));
+ if(squared(far,Point{0,0,0})<=q.radius*q.radius){e.all=true;e.count=points.size();return e;}
+ size_t words=(points.size()+63)/64;
+ for(size_t i=0;i<points.size();i++)if(squared(points[i],q.point)<=q.radius*q.radius){e.count++;if(e.bits.empty()){e.ids.push_back(uint32_t(i));if(e.ids.size()>words*2){e.bits.resize(words,0);for(auto id:e.ids)e.bits[id/64]|=uint64_t(1)<<(id%64);e.ids.clear();}}else e.bits[i/64]|=uint64_t(1)<<(i%64);}
+ return e;
+}
+void validate_window(const Expected&e,const std::vector<uint64_t>&out,std::vector<uint64_t>&seen,size_t n){
+ if(out.size()!=e.count)throw std::runtime_error("result count mismatch");std::fill(seen.begin(),seen.end(),0);
+ for(auto id:out){if(id>=n)throw std::runtime_error("ID range");auto mask=uint64_t(1)<<(id%64);if(seen[id/64]&mask)throw std::runtime_error("duplicate ID");seen[id/64]|=mask;if(!e.bits.empty()&&!(e.bits[id/64]&mask))throw std::runtime_error("unexpected ID");}
+ for(auto id:e.ids)if(!(seen[id/64]&(uint64_t(1)<<(id%64))))throw std::runtime_error("missing ID");
+}
+int run_bounded(const Fixture&f,size_t samples){
+ size_t window=std::getenv("RILL_OUTPUT_WINDOW")?std::stoul(std::getenv("RILL_OUTPUT_WINDOW")):64;if(window<1||window>64)throw std::runtime_error("output window admission");
+ if(f.points.size()>100000)throw std::runtime_error("bounded population admission");for(auto&p:f.points)for(auto x:p)if(!std::isfinite(x)||std::abs(x)>1e6)throw std::runtime_error("bounded coordinate domain");
+ for(auto&fr:f.frames){if(fr.queries.size()>20000)throw std::runtime_error("bounded query admission");for(auto&q:fr.queries){if(!(q.radius>=1e-100&&q.radius<=1e100))throw std::runtime_error("bounded radius domain");for(auto x:q.point)if(!std::isfinite(x)||std::abs(x)>1e6)throw std::runtime_error("bounded coordinate domain");}for(auto&u:fr.updates){if(u.first>=f.points.size())throw std::runtime_error("update ID range");for(auto x:u.second)if(!std::isfinite(x)||std::abs(x)>1e6)throw std::runtime_error("bounded coordinate domain");}}
+ size_t query_count=0;for(auto&fr:f.frames)query_count+=fr.queries.size();size_t peak=0;std::vector<size_t>counts;uint64_t excluded_total=0;
+ std::cout<<"{\"implementation\":\""<<IMPLEMENTATION_NAME<<"\",\"scenario\":\""<<f.name<<"\",\"points\":"<<f.points.size()<<",\"queries\":"<<query_count<<",\"correct\":true,\"materialization\":\"bounded reusable complete u64 result vectors; every ID independently verified\",\"timing_scope\":\"summed kernel service time with oracle pauses excluded; not uninterrupted tick latency\",\"samples\":[";
+ for(size_t sample=0;sample<samples;sample++){
+  auto reference=f.points;std::vector<uint64_t>seen((reference.size()+63)/64);auto t=Clock::now();Native index(f.points,f.cell_size);auto build=elapsed(t);uint64_t updates=0,queries=0;size_t results=0;
+  for(auto&fr:f.frames){t=Clock::now();index.update(fr.updates);if(!fr.queries.empty())index.prepare();updates+=elapsed(t);for(auto&u:fr.updates)reference[u.first]=u.second;if(fr.queries.empty())continue;
+   Point lo{INFINITY,INFINITY,INFINITY},hi{-INFINITY,-INFINITY,-INFINITY};for(auto&p:reference)for(size_t d=0;d<3;d++){lo[d]=std::min(lo[d],p[d]);hi[d]=std::max(hi[d],p[d]);}
+   auto start=Clock::now();std::vector<std::vector<uint64_t>>outputs(window);uint64_t excluded=0;
+   for(size_t begin=0;begin<fr.queries.size();begin+=window){size_t len=std::min(window,fr.queries.size()-begin);for(size_t i=0;i<len;i++){auto&q=fr.queries[begin+i];index.query(q.point,q.radius,outputs[i]);}
+    auto pause=Clock::now();for(size_t i=0;i<len;i++){validate_window(expected_window(reference,fr.queries[begin+i],lo,hi),outputs[i],seen,reference.size());results+=outputs[i].size();if(!sample)counts.push_back(outputs[i].size());}size_t capacity=0;for(auto&out:outputs)capacity+=out.capacity()*8;peak=std::max(peak,capacity);excluded+=elapsed(pause);
+   }queries+=elapsed(start)-excluded;excluded_total+=excluded;
+  }
+  if(sample)std::cout<<",";std::cout<<"{\"build_ns\":"<<build<<",\"update_ns\":"<<updates<<",\"query_ns\":"<<queries<<",\"total_ns\":"<<build+updates+queries<<",\"results\":"<<results<<"}";
+ }
+ std::sort(counts.begin(),counts.end());double mean=0;for(auto x:counts)mean+=x;mean/=std::max(size_t(1),counts.size());size_t p99=counts.empty()?0:counts[std::min(counts.size()-1,counts.size()*99/100)],maximum=counts.empty()?0:counts.back();
+ std::cout<<"],\"output_window_queries\":"<<window<<",\"output_buffer_capacity_bytes\":"<<peak<<",\"excluded_validation_ns\":"<<excluded_total<<",\"matches_per_query\":{\"mean\":"<<mean<<",\"p99\":"<<p99<<",\"max\":"<<maximum<<"}}\n";return 0;
+}
+
+int main(int argc,char**argv){try{if(argc<2)return 2;auto f=load(argv[1]);size_t samples=argc>2?std::stoul(argv[2]):5;if(argc>3&&std::string(argv[3])=="bounded")return run_bounded(f,samples);auto points=f.points;std::vector<std::vector<uint64_t>>expected;
  for(auto&frame:f.frames){for(auto&u:frame.updates)points[u.first]=u.second;for(auto&q:frame.queries){std::vector<uint64_t>out;for(size_t i=0;i<points.size();i++)if(squared(points[i],q.point)<=q.radius*q.radius)out.push_back(i);expected.push_back(std::move(out));}}
  std::cout<<"{\"implementation\":\""<<IMPLEMENTATION_NAME<<"\",\"scenario\":\""<<f.name<<"\",\"points\":"<<points.size()<<",\"queries\":"<<expected.size()<<",\"correct\":true,\"samples\":[";
  for(size_t s=0;s<samples;s++){std::vector<std::vector<uint64_t>>out(expected.size());auto t=Clock::now();Native index(f.points,f.cell_size);auto build=elapsed(t);uint64_t updates=0,queries=0;size_t cursor=0;

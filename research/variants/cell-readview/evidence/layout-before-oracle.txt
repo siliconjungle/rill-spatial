@@ -1,0 +1,37 @@
+   Compiling cell-readview-candidate v0.1.0 (/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview)
+    Finished `release` profile [optimized] target(s) in 10.80s
+     Running unittests src/lib.rs (research/variants/cell-readview/.layout-build/release/deps/rill_spatial-2b2255abc31df62e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/batch_oracle.rs (research/variants/cell-readview/.layout-build/release/deps/batch_oracle-15041604ff2a1247)
+
+running 5 tests
+test a_query_cell_shares_discovery_across_output_partitions ... ok
+test batch_validation_is_atomic_and_empty_queries_are_visited ... ok
+test exceptional_scales_and_underflow_are_exact ... ok
+test variable_radii_dense_teleports_2d ... ok
+test variable_radii_dense_teleports_3d ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running tests/oracle.rs (research/variants/cell-readview/.layout-build/release/deps/oracle-97176b274a02195f)
+
+running 6 tests
+test invalid_operations_are_atomic_and_ids_unique ... ok
+test extreme_float_2d ... ok
+test extreme_float_3d ... ok
+test oracle_mutations_3d ... ok
+test oracle_mutations_2d ... ok
+test near_boundaries_and_arbitrary_centres ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.28s
+
+   Doc-tests rill_spatial
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

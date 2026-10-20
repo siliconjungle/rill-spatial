@@ -1,0 +1,74 @@
+diff --git a/research/variants/cell-readview/src/lib.rs b/research/variants/cell-readview/src/lib.rs
+index c44129f..144e9f0 100644
+--- a/research/variants/cell-readview/src/lib.rs
++++ b/research/variants/cell-readview/src/lib.rs
+@@ -92,7 +92,8 @@ struct Cell<const D: usize> {
+ }
+ #[derive(Clone)]
+ struct View<const D: usize> {
+-    points: Vec<Entry<D>>,
++    points: Vec<[f64; D]>,
++    ids: Vec<u64>,
+     cells: Vec<Cell<D>>,
+     map: HashMap<[i64; D], usize, BuildHasherDefault<CellHasher>>,
+ }
+@@ -315,12 +316,12 @@ impl<const D: usize> SpatialIndex<D> {
+                         if self.containment && far <= r2 {
+                             stats.accepted_pairs += 1;
+                             stats.blocks += 1;
+-                            out.extend(points.iter().map(|p| p.id));
++                            out.extend_from_slice(&view.ids[b.start..b.end]);
+                         } else {
+                             stats.point_tests += points.len() as u64;
+-                            for p in points {
+-                                if distance(p.point, c) <= r2 {
+-                                    out.push(p.id);
++                            for (&p, &id) in points.iter().zip(&view.ids[b.start..b.end]) {
++                                if distance(p, c) <= r2 {
++                                    out.push(id);
+                                 }
+                             }
+                         }
+@@ -425,6 +426,7 @@ impl<const D: usize> SpatialIndex<D> {
+         }
+         keyed.sort_unstable_by_key(|(key, _)| *key);
+         let mut points = Vec::with_capacity(keyed.len());
++        let mut ids = Vec::with_capacity(keyed.len());
+         let mut cells: Vec<Cell<D>> = Vec::new();
+         for (key, e) in keyed {
+             if cells.last().is_none_or(|c| c.key != key) {
+@@ -442,10 +444,16 @@ impl<const D: usize> SpatialIndex<D> {
+                 cell.hi[i] = cell.hi[i].max(e.point[i]);
+             }
+             cell.end += 1;
+-            points.push(e);
++            points.push(e.point);
++            ids.push(e.id);
+         }
+         let map = cells.iter().enumerate().map(|(i, c)| (c.key, i)).collect();
+-        self.view = Some(View { points, cells, map });
++        self.view = Some(View {
++            points,
++            ids,
++            cells,
++            map,
++        });
+     }
+     fn bounds(&self, c: [f64; D], r2: f64) -> Option<([i64; D], [i64; D], usize)> {
+         // Squared-distance underflow/overflow follows the scalar oracle exactly.
+@@ -516,11 +524,11 @@ impl<const D: usize> SpatialIndex<D> {
+             }
+             let entries = &v.points[cell.start..cell.end];
+             if self.containment && farthest <= r2 {
+-                out.extend(entries.iter().map(|e| e.id));
++                out.extend_from_slice(&v.ids[cell.start..cell.end]);
+             } else {
+-                for e in entries {
+-                    if distance(e.point, centre) <= r2 {
+-                        out.push(e.id);
++                for (&point, &id) in entries.iter().zip(&v.ids[cell.start..cell.end]) {
++                    if distance(point, centre) <= r2 {
++                        out.push(id);
+                     }
+                 }
+             }

@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "date": "2026-10-20",
+  "machine": "Apple M2, 8 GB RAM",
+  "status": "correctness_passed_performance_not_accepted",
+  "source_preflight": {
+    "command": "ink-cache prepare-sources /Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/dual-tree --offline",
+    "source_config": null,
+    "direct_cargo_arguments": [],
+    "dependencies": []
+  },
+  "full_suite": {
+    "command": "cargo test --manifest-path research/variants/dual-tree/Cargo.toml --release -- --test-threads=1",
+    "tests_passed": 7,
+    "tests_failed": 0,
+    "test_seconds": 5.14,
+    "coverage": ["18 shared fixtures across seeds 2051 and 97123", "arbitrary stable u64 IDs", "arbitrary query centres", "variable radii", "2D and 3D", "closed boundary", "overflow and underflow", "random finite f64 bit patterns", "immediate mutation fallback", "remove and insert", "atomic validation", "20k by 20k dense full membership", "20k by 20k sparse full membership"],
+    "oracle": "Independent scalar all-pairs predicate, every present and absent membership verified using compact bits, duplicate outputs rejected"
+  },
+  "dense_proof_resource_check": {
+    "command": "/usr/bin/time -l research/variants/dual-tree/target/release/deps/oracle-a4042b19dea361fc twenty_thousand_dense_full_membership_bounded_memory --exact --nocapture",
+    "passed": true,
+    "reported_memberships": 400000000,
+    "membership_bits_bytes": 50000000,
+    "maximum_resident_set_size_bytes": 57147392,
+    "real_seconds": 3.83,
+    "purpose": "Measured resource bound of retained exact proof, not query performance evidence"
+  },
+  "compatibility": {
+    "command": "cargo build --release --manifest-path research/variants/dual-tree/Cargo.toml --examples",
+    "passed": true,
+    "shared_probe": "../../../examples/probe.rs",
+    "batch_probe": "examples/batch_probe.rs"
+  },
+  "timing_policy": "All concurrent development timings are exploratory; serial root acceptance required"
+}

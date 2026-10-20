@@ -1,27 +1,162 @@
 {
   "schema": 1,
   "keep": [
-    {"path":"Cargo.toml","reason":"Minimal isolated crate, profile and read-only shared probe entry point"},
-    {"path":"Cargo.lock","reason":"Exact dependency-free reproduction lock"},
-    {"path":"src/lib.rs","reason":"Exact generic dual-tree batch, bounded materialization and mutation fallback prototype"},
-    {"path":"tests/oracle.rs","reason":"Required independent full-membership correctness proofs including 20k by 20k"},
-    {"path":"examples/batch_probe.rs","reason":"Bounded-memory comparative representation diagnostics and full materialized oracle"},
-    {"path":"README.md","reason":"Correctness argument, primary research references, limitations and reproduction instructions"},
-    {"path":"validation.json","reason":"Selected exact proof command, coverage and resource evidence"},
-    {"path":"validation.log","reason":"Retained complete seven-test validation output"},
-    {"path":"diagnostics.jsonl","reason":"Selected corrected 20k exploratory raw timing evidence, explicitly not acceptance"},
-    {"path":"diagnostics-resources.json","reason":"Selected diagnostic commands, source/input hashes, protocol and measured resource evidence"},
-    {"path":"storage-retention.json","reason":"Exact local retention contract"}
+    {
+      "path": "Cargo.toml",
+      "reason": "Minimal isolated crate, profile and read-only shared probe entry point"
+    },
+    {
+      "path": "Cargo.lock",
+      "reason": "Exact dependency-free reproduction lock"
+    },
+    {
+      "path": "src/lib.rs",
+      "reason": "Exact generic dual-tree batch, bounded materialization and mutation fallback prototype"
+    },
+    {
+      "path": "tests/oracle.rs",
+      "reason": "Required independent full-membership correctness proofs including 20k by 20k"
+    },
+    {
+      "path": "examples/batch_probe.rs",
+      "reason": "Bounded-memory comparative representation diagnostics and full materialized oracle"
+    },
+    {
+      "path": "examples/support/cohort.rs",
+      "reason": "Experiment-only exact spatial cohort ordering, bounded materialization and scoped1/2/4-worker runner"
+    },
+    {
+      "path": "examples/threaded_cohort.rs",
+      "reason": "Required full parallel fixture proofs before separate source-pinned timing runs"
+    },
+    {
+      "path": "examples/refit_diagnostic.rs",
+      "reason": "Actual main-library full-oracle normal-refit versus charged reconstruction diagnostic"
+    },
+    {
+      "path": "tests/threaded_cohort.rs",
+      "reason": "Independent exact parallel membership, stable ID, mutation and boundary regression proofs"
+    },
+    {
+      "path": "README.md",
+      "reason": "Correctness argument, primary research references, limitations and reproduction instructions"
+    },
+    {
+      "path": "THREADED.md",
+      "reason": "Scoped-thread protocol, all worker outcomes including regressions, limitations and reproduction"
+    },
+    {
+      "path": "REFIT.md",
+      "reason": "Frozen-main refit investigation, negative result, protocol caveats and exact reproduction"
+    },
+    {
+      "path": "repro/original-Cargo.toml",
+      "reason": "Explicit selected original manifest baseline required to reproduce retained pre-dev-dependency proofs/timings"
+    },
+    {
+      "path": "repro/original-Cargo.lock",
+      "reason": "Exact dependency-free lock for the selected original reproduction baseline"
+    },
+    {
+      "path": "validation.json",
+      "reason": "Selected exact proof command, coverage and resource evidence"
+    },
+    {
+      "path": "validation.log",
+      "reason": "Retained complete seven-test validation output"
+    },
+    {
+      "path": "diagnostics.jsonl",
+      "reason": "Selected corrected 20k exploratory raw timing evidence, explicitly not acceptance"
+    },
+    {
+      "path": "diagnostics-resources.json",
+      "reason": "Selected diagnostic commands, source/input hashes, protocol and measured resource evidence"
+    },
+    {
+      "path": "threaded-validation.log",
+      "reason": "Selected final scoped-thread unit-test proof output"
+    },
+    {
+      "path": "threaded-results.json",
+      "reason": "Selected source/input-pinned full parallel proofs,1/2/4-worker raw summary samples, aggregate outcomes and measured resources"
+    },
+    {
+      "path": "threaded-bounded64.jsonl",
+      "reason": "All selected bounded64 full-membership proof and timing output rows, including every worker count and repetition"
+    },
+    {
+      "path": "threaded-contained.jsonl",
+      "reason": "All selected dense full-membership proof and timing output rows, including every worker count and repetition"
+    },
+    {
+      "path": "refit-results.json",
+      "reason": "Source/input-pinned main-library refit diagnostics, all proof configurations, repetitions, phase timings and resource evidence"
+    },
+    {
+      "path": "refit-bounded64.jsonl",
+      "reason": "Selected complete main-library bounded64 oracle and normal/reconstruction timing output"
+    },
+    {
+      "path": "refit-uniform.jsonl",
+      "reason": "Selected complete main-library uniform oracle and normal/reconstruction timing output"
+    },
+    {
+      "path": "refit-floors.jsonl",
+      "reason": "Selected complete main-library floors oracle and normal/reconstruction timing output"
+    },
+    {
+      "path": "refit-teleports.jsonl",
+      "reason": "Selected complete main-library teleports oracle and normal/reconstruction timing output"
+    },
+    {
+      "path": "storage-retention.json",
+      "reason": "Exact local retention contract"
+    }
   ],
   "safe_to_remove": [
-    {"path":"target","reason":"Completed generated crate validation/example artifacts; all source and useful proof/measurement evidence retained separately, approximately 6.8 MiB"}
+    {
+      "path": "target",
+      "reason": "Completed generated crate validation/example artifacts; all source and useful proof/measurement evidence retained separately, approximately 21 MiB"
+    },
+    {
+      "path": "threaded-bounded64.raw.log",
+      "reason": "Completed duplicate capture; exact useful JSON rows and measured resources retained in selected JSONL/results evidence; retired"
+    },
+    {
+      "path": "threaded-contained.raw.log",
+      "reason": "Completed duplicate capture; exact useful JSON rows and measured resources retained in selected JSONL/results evidence; retired"
+    },
+    {
+      "path": "refit-bounded64.raw.log",
+      "reason": "Completed duplicate capture; exact JSON rows/resources retained in selected refit JSONL/results; retired"
+    },
+    {
+      "path": "refit-uniform.raw.log",
+      "reason": "Completed duplicate capture; exact JSON rows/resources retained in selected refit JSONL/results; retired"
+    },
+    {
+      "path": "refit-floors.raw.log",
+      "reason": "Completed duplicate capture; exact JSON rows/resources retained in selected refit JSONL/results; retired"
+    },
+    {
+      "path": "refit-teleports.raw.log",
+      "reason": "Completed duplicate capture; exact JSON rows/resources retained in selected refit JSONL/results; retired"
+    }
   ],
   "read_only_reproduction_inputs": [
     "../../../examples/probe.rs",
     "../../../benchmarks/fixtures",
     "../../../benchmarks/holdout-97123",
     "../../../benchmarks/twenty-k/bounded64.bin",
-    "../../../benchmarks/twenty-k/contained.bin"
+    "../../../benchmarks/twenty-k/contained.bin",
+    "../../../benchmarks/twenty-k/uniform.bin",
+    "../../../benchmarks/twenty-k/floors.bin",
+    "../../../benchmarks/twenty-k/teleports.bin",
+    "../../../src/lib.rs",
+    "../../../src/hierarchy.rs",
+    "../../../Cargo.toml",
+    "../../../Cargo.lock"
   ],
   "storage_status": "Preexisting free-space reserve deficit (~23 GiB free versus 100 GB requested); no protected input removed and no other worker paused or killed"
 }

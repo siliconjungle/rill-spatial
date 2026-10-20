@@ -9,6 +9,9 @@ publish = false
 [lib]
 name = "rill_spatial"
 
+[dev-dependencies]
+main_rill = { package = "rill-spatial", path = "../../.." }
+
 [[example]]
 name = "probe"
 path = "../../../examples/probe.rs"

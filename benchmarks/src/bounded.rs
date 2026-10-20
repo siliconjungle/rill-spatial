@@ -2,7 +2,7 @@
 //! windows, then checked for membership, omissions and duplicates outside timing.
 use crate::{Adapter, Fixture, Point, Sample, squared};
 use std::{hint::black_box, time::Instant};
-const WINDOW: usize = 64;
+
 enum Expected {
     All,
     Sparse(Vec<u32>),
@@ -92,11 +92,23 @@ pub(crate) fn run<A: Adapter>(name: &str, f: &Fixture, samples: usize) {
                 && q.radius <= 1e100
         })
     }));
+    let window: usize = std::env::var("RILL_OUTPUT_WINDOW")
+        .unwrap_or_else(|_| "64".into())
+        .parse()
+        .expect("output window integer");
+    assert!(
+        (1..=64).contains(&window),
+        "output window admission: 1..=64"
+    );
+    let continuous = std::env::var("RILL_CONTINUOUS").as_deref() == Ok("1");
+    let mut frame_samples = Vec::new();
     let mut rows = Vec::new();
     let mut peak_capacity = 0;
     let mut match_counts = Vec::new();
     let mut validation_ns = 0u128;
-    for sample in 0..samples {
+    for sample in 0..samples + usize::from(continuous) {
+        let verify = !continuous || sample == 0;
+        let mut checksum = 0u64;
         let mut reference = f.points.clone();
         let mut seen = vec![0; f.points.len().div_ceil(64)];
         let mut visited_queries = Vec::new();
@@ -104,25 +116,31 @@ pub(crate) fn run<A: Adapter>(name: &str, f: &Fixture, samples: usize) {
         let mut index = A::build(black_box(&f.points), f.cell_size);
         let build_ns = t.elapsed().as_nanos() as u64;
         let (mut update_ns, mut query_ns, mut results) = (0, 0, 0);
-        for frame in &f.frames {
+        for (frame_number, frame) in f.frames.iter().enumerate() {
+            let frame_start = Instant::now();
             let t = Instant::now();
             index.update(black_box(&frame.updates));
             if !frame.queries.is_empty() {
                 index.prepare();
             }
-            update_ns += t.elapsed().as_nanos() as u64;
-            for &(id, p) in &frame.updates {
-                reference[id] = p;
+            let frame_update_ns = t.elapsed().as_nanos() as u64;
+            update_ns += frame_update_ns;
+            if verify {
+                for &(id, p) in &frame.updates {
+                    reference[id] = p;
+                }
             }
             if frame.queries.is_empty() {
                 continue;
             }
             let mut lo = [f64::INFINITY; 3];
             let mut hi = [f64::NEG_INFINITY; 3];
-            for p in &reference {
-                for d in 0..3 {
-                    lo[d] = lo[d].min(p[d]);
-                    hi[d] = hi[d].max(p[d]);
+            if verify {
+                for p in &reference {
+                    for d in 0..3 {
+                        lo[d] = lo[d].min(p[d]);
+                        hi[d] = hi[d].max(p[d]);
+                    }
                 }
             }
             visited_queries.clear();
@@ -131,11 +149,12 @@ pub(crate) fn run<A: Adapter>(name: &str, f: &Fixture, samples: usize) {
             let t = Instant::now();
             index.visit_groups(
                 black_box(&frame.queries),
-                WINDOW,
+                window,
                 &mut |indices, outputs| {
-                    let pause = Instant::now();
+                    let pause = verify.then(Instant::now);
+                    black_box(outputs);
                     assert_eq!(indices.len(), outputs.len());
-                    assert!(indices.len() <= WINDOW);
+                    assert!(indices.len() <= window);
                     for (&q, out) in indices.iter().zip(outputs) {
                         assert!(
                             q < frame.queries.len() && !visited_queries[q],
@@ -143,11 +162,17 @@ pub(crate) fn run<A: Adapter>(name: &str, f: &Fixture, samples: usize) {
                         );
                         visited_queries[q] = true;
                         let query = &frame.queries[q];
-                        Expected::new(&reference, &query.point, query.radius, &lo, &hi).validate(
-                            out,
-                            &mut seen,
-                            reference.len(),
-                        );
+                        if verify {
+                            Expected::new(&reference, &query.point, query.radius, &lo, &hi)
+                                .validate(out, &mut seen, reference.len());
+                        } else {
+                            let mut row_hash = q as u64;
+                            for &id in out {
+                                row_hash =
+                                    row_hash.wrapping_add(id.wrapping_mul(0x9e3779b97f4a7c15));
+                            }
+                            checksum ^= black_box(row_hash);
+                        }
                         results += out.len();
                         if sample == 0 {
                             match_counts.push(out.len());
@@ -155,7 +180,9 @@ pub(crate) fn run<A: Adapter>(name: &str, f: &Fixture, samples: usize) {
                     }
                     peak_capacity =
                         peak_capacity.max(outputs.iter().map(|v| v.capacity() * 8).sum::<usize>());
-                    excluded += pause.elapsed().as_nanos();
+                    if let Some(pause) = pause {
+                        excluded += pause.elapsed().as_nanos();
+                    }
                 },
             );
             let wall = t.elapsed().as_nanos();
@@ -163,7 +190,15 @@ pub(crate) fn run<A: Adapter>(name: &str, f: &Fixture, samples: usize) {
                 .checked_sub(excluded)
                 .expect("invalid timing exclusion") as u64;
             validation_ns += excluded;
+            let frame_service_ns = frame_start.elapsed().as_nanos() as u64;
+            if continuous && !verify {
+                frame_samples.push(serde_json::json!({"sample":sample-1,"frame":frame_number,"update_prepare_ns":frame_update_ns,"query_wall_ns":wall as u64,"frame_service_ns":frame_service_ns,"queries":frame.queries.len()}));
+            }
             assert!(visited_queries.iter().all(|x| *x), "missing query result");
+        }
+        black_box(checksum);
+        if continuous && verify {
+            continue;
         }
         rows.push(Sample {
             build_ns,
@@ -181,6 +216,6 @@ pub(crate) fn run<A: Adapter>(name: &str, f: &Fixture, samples: usize) {
         .unwrap_or(0);
     println!(
         "{}",
-        serde_json::json!({"implementation":name,"scenario":f.name,"points":f.points.len(),"queries":f.frames.iter().map(|x|x.queries.len()).sum::<usize>(),"correct":true,"materialization":"<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward","timing_scope":"summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency","excluded_validation_ns":validation_ns.to_string(),"output_buffer_capacity_bytes":peak_capacity,"matches_per_query":{"mean":mean,"p99":p99,"max":match_counts.last().copied().unwrap_or(0)},"samples":rows})
+        serde_json::json!({"implementation":name,"scenario":f.name,"points":f.points.len(),"queries":f.frames.iter().map(|x|x.queries.len()).sum::<usize>(),"correct":true,"output_window_queries":window,"materialization":"bounded reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward","timing_scope":if continuous {"proof pass precedes separate uninterrupted query timing; full u64 materialization and every-ID consumption; frame service includes updates, prepare, ordering, dispatch, threads, output and consumption; no network/game simulation"} else {"summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency"},"continuous_full_consumption":continuous,"frame_samples":frame_samples,"excluded_validation_ns":validation_ns.to_string(),"largest_emitted_group_capacity_bytes":peak_capacity,"capacity_scope":"one emitted group, not sum of concurrently live worker buffers","matches_per_query":{"mean":mean,"p99":p99,"max":match_counts.last().copied().unwrap_or(0)},"samples":rows})
     );
 }

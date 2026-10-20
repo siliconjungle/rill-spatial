@@ -56,7 +56,7 @@ fn check(
     );
     assert!(visited.iter().all(|b| b.load(Ordering::Relaxed)));
     assert_eq!(stats.queries, queries.len() as u64);
-    assert!(stats.ordering_ns<=stats.wall_ns);
+    assert!(stats.ordering_ns <= stats.wall_ns);
 }
 
 #[test]

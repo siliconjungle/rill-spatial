@@ -158,41 +158,75 @@ impl Adapter for KdTreeStatic {
         out.extend(self.tree.within_radius(&p, r).into_iter().map(|x| x.1));
     }
 }
+// One mutable implementation with a supported wider-leaf fallback for tied
+// construction splits. This parameter fallback is not another competitor.
+type KiddoWide =
+    kiddo::KdTree<f64, u32, kiddo::Eytzinger, kiddo::VecOfArrays<f64, u32, 3, 512>, 3, 512>;
+enum KiddoMutableTree {
+    Default(kiddo::MutableKdTree<f64, 3>),
+    Wide(KiddoWide),
+}
+impl KiddoMutableTree {
+    fn build(points: &[Point]) -> Self {
+        match kiddo::MutableKdTree::new_from_slice(points) {
+            Ok(tree) => Self::Default(tree),
+            Err(_) => Self::Wide(
+                KiddoWide::new_from_slice(points)
+                    .expect("Kiddo wider-leaf construction fallback failed"),
+            ),
+        }
+    }
+}
 pub struct KiddoMutable {
-    tree: kiddo::MutableKdTree<f64, 3>,
+    tree: KiddoMutableTree,
     points: Vec<Point>,
 }
 impl Adapter for KiddoMutable {
     fn build(p: &[Point], _: f64) -> Self {
-        let tree = kiddo::MutableKdTree::new_from_slice(p).unwrap();
         Self {
-            tree,
+            tree: KiddoMutableTree::build(p),
             points: p.to_vec(),
         }
     }
     fn update(&mut self, u: &[(usize, Point)]) {
         for &(id, p) in u {
-            self.tree.remove(&self.points[id], id as u32);
-            self.points[id] = p;
-            // The upstream mutable alias can fail removal at tied split planes,
-            // or reject a split with an UnsplittableBucket error. Charge the
-            // supported bulk reconstruction fallback instead of losing IDs.
-            if self.tree.size() != self.points.len() - 1 || self.tree.add(&p, id as u32).is_err() {
-                self.tree = kiddo::MutableKdTree::new_from_slice(&self.points).unwrap();
+            let old = std::mem::replace(&mut self.points[id], p);
+            let failed = match &mut self.tree {
+                KiddoMutableTree::Default(tree) => {
+                    tree.remove(&old, id as u32);
+                    tree.size() != self.points.len() - 1 || tree.add(&p, id as u32).is_err()
+                }
+                KiddoMutableTree::Wide(tree) => {
+                    tree.remove(&old, id as u32);
+                    tree.size() != self.points.len() - 1 || tree.add(&p, id as u32).is_err()
+                }
+            };
+            // Charge reconstruction after a failed tied-plane removal/split.
+            if failed {
+                self.tree = KiddoMutableTree::build(&self.points);
             }
         }
     }
     fn query(&self, p: Point, r: f64, out: &mut Vec<u64>) {
         out.clear();
-        out.extend(
-            self.tree
-                .query(&p)
-                .within::<kiddo::SquaredEuclidean<f64>>(r * r)
-                .unsorted()
-                .execute()
-                .into_iter()
-                .map(|x| x.item as u64),
-        );
+        match &self.tree {
+            KiddoMutableTree::Default(tree) => out.extend(
+                tree.query(&p)
+                    .within::<kiddo::SquaredEuclidean<f64>>(r * r)
+                    .unsorted()
+                    .execute()
+                    .into_iter()
+                    .map(|x| x.item as u64),
+            ),
+            KiddoMutableTree::Wide(tree) => out.extend(
+                tree.query(&p)
+                    .within::<kiddo::SquaredEuclidean<f64>>(r * r)
+                    .unsorted()
+                    .execute()
+                    .into_iter()
+                    .map(|x| x.item as u64),
+            ),
+        }
     }
 }
 pub struct KiddoImmutable {

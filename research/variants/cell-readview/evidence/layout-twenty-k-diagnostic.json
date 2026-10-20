@@ -1,0 +1,3222 @@
+[
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 0,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "fixture_sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1505208,
+      "update_ns": 8580082,
+      "single_ns": 47236208,
+      "batch_ns": 38482514,
+      "reported_pairs": 2771102,
+      "oracle_queries": 414,
+      "query_cells": 2167,
+      "candidate_cells": 44390,
+      "point_tests": 5289904
+    },
+    "stderr": "        0.11 real         0.10 user         0.00 sys\n            11517952  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 864  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   1  voluntary context switches\n                  85  involuntary context switches\n           652099127  instructions retired\n           275849290  cycles elapsed\n            10895696  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 0,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "fixture_sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1302916,
+      "update_ns": 8584334,
+      "single_ns": 48046917,
+      "batch_ns": 39817758,
+      "reported_pairs": 2771102,
+      "oracle_queries": 414,
+      "query_cells": 2167,
+      "candidate_cells": 44390,
+      "point_tests": 5289904
+    },
+    "stderr": "        0.11 real         0.10 user         0.00 sys\n            11567104  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 866  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  47  involuntary context switches\n           660365578  instructions retired\n           281244450  cycles elapsed\n            10928464  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 0,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "fixture_sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1328333,
+      "update_ns": 3275374,
+      "single_ns": 128134541,
+      "batch_ns": 122395025,
+      "reported_pairs": 800000000,
+      "oracle_queries": 414,
+      "query_cells": 14,
+      "candidate_cells": 98,
+      "point_tests": 0
+    },
+    "stderr": "        0.37 real         0.36 user         0.00 sys\n            33210368  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2187  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   4  voluntary context switches\n                 178  involuntary context switches\n          3761870863  instructions retired\n           943642312  cycles elapsed\n            32588136  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 0,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "fixture_sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1262666,
+      "update_ns": 2734583,
+      "single_ns": 347644208,
+      "batch_ns": 346847910,
+      "reported_pairs": 800000000,
+      "oracle_queries": 414,
+      "query_cells": 14,
+      "candidate_cells": 98,
+      "point_tests": 0
+    },
+    "stderr": "        0.81 real         0.80 user         0.00 sys\n            33374208  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2198  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 708  involuntary context switches\n          4767965015  instructions retired\n          2075053479  cycles elapsed\n            32768360  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 0,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "fixture_sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1313292,
+      "update_ns": 6951334,
+      "single_ns": 219109291,
+      "batch_ns": 189071170,
+      "reported_pairs": 21790287,
+      "oracle_queries": 414,
+      "query_cells": 409,
+      "candidate_cells": 9066,
+      "point_tests": 47279974
+    },
+    "stderr": "        0.43 real         0.42 user         0.00 sys\n            13746176  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1000  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   2  voluntary context switches\n                 238  involuntary context switches\n          2152077818  instructions retired\n          1110712970  cycles elapsed\n            13123920  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 0,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "fixture_sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1301458,
+      "update_ns": 6642665,
+      "single_ns": 221037833,
+      "batch_ns": 199485738,
+      "reported_pairs": 21790287,
+      "oracle_queries": 414,
+      "query_cells": 409,
+      "candidate_cells": 9066,
+      "point_tests": 47279974
+    },
+    "stderr": "        0.44 real         0.43 user         0.00 sys\n            13910016  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1009  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 481  involuntary context switches\n          2217123264  instructions retired\n          1168027340  cycles elapsed\n            13271376  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 0,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "fixture_sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1190458,
+      "update_ns": 10724500,
+      "single_ns": 84761335,
+      "batch_ns": 70872597,
+      "reported_pairs": 588829,
+      "oracle_queries": 414,
+      "query_cells": 14891,
+      "candidate_cells": 328827,
+      "point_tests": 931579
+    },
+    "stderr": "        0.18 real         0.17 user         0.00 sys\n            12648448  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 932  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   3  voluntary context switches\n                 167  involuntary context switches\n          1348529173  instructions retired\n           483638932  cycles elapsed\n            12009808  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 0,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "fixture_sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1251459,
+      "update_ns": 11162626,
+      "single_ns": 84445583,
+      "batch_ns": 71724376,
+      "reported_pairs": 588829,
+      "oracle_queries": 414,
+      "query_cells": 14891,
+      "candidate_cells": 328827,
+      "point_tests": 931579
+    },
+    "stderr": "        0.18 real         0.17 user         0.00 sys\n            12632064  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 932  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 582  involuntary context switches\n          1340615687  instructions retired\n           482724165  cycles elapsed\n            12009808  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 0,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "fixture_sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 100000,
+      "queries": 40000,
+      "max_outputs": 20,
+      "build_ns": 5937333,
+      "update_ns": 41966833,
+      "single_ns": 63335875,
+      "batch_ns": 51600534,
+      "reported_pairs": 3428653,
+      "oracle_queries": 414,
+      "query_cells": 8240,
+      "candidate_cells": 141627,
+      "point_tests": 7016564
+    },
+    "stderr": "        0.20 real         0.19 user         0.00 sys\n            34390016  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2260  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   2  voluntary context switches\n                 370  involuntary context switches\n          1719761544  instructions retired\n           542118259  cycles elapsed\n            33784168  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 0,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "fixture_sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 100000,
+      "queries": 40000,
+      "max_outputs": 20,
+      "build_ns": 6205958,
+      "update_ns": 42114459,
+      "single_ns": 70057458,
+      "batch_ns": 54571778,
+      "reported_pairs": 3428653,
+      "oracle_queries": 414,
+      "query_cells": 8240,
+      "candidate_cells": 141627,
+      "point_tests": 7016564
+    },
+    "stderr": "        0.22 real         0.21 user         0.00 sys\n            33554432  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2208  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 252  involuntary context switches\n          1730680994  instructions retired\n           554003514  cycles elapsed\n            32932200  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 0,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "fixture_sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1264750,
+      "update_ns": 8076291,
+      "single_ns": 45252790,
+      "batch_ns": 37324083,
+      "reported_pairs": 2785123,
+      "oracle_queries": 414,
+      "query_cells": 2048,
+      "candidate_cells": 41869,
+      "point_tests": 5328714
+    },
+    "stderr": "        0.10 real         0.10 user         0.00 sys\n            11534336  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 864  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   1  voluntary context switches\n                  22  involuntary context switches\n           652471155  instructions retired\n           271839157  cycles elapsed\n            10895696  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 0,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "fixture_sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1202291,
+      "update_ns": 7540626,
+      "single_ns": 42445292,
+      "batch_ns": 34990538,
+      "reported_pairs": 2785123,
+      "oracle_queries": 414,
+      "query_cells": 2048,
+      "candidate_cells": 41869,
+      "point_tests": 5328714
+    },
+    "stderr": "        0.09 real         0.09 user         0.00 sys\n            11649024  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 872  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  11  involuntary context switches\n           641228967  instructions retired\n           265052158  cycles elapsed\n            11026768  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 0,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "fixture_sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1201709,
+      "update_ns": 10660374,
+      "single_ns": 57839416,
+      "batch_ns": 57834458,
+      "reported_pairs": 303865,
+      "oracle_queries": 414,
+      "query_cells": 23153,
+      "candidate_cells": 222794,
+      "point_tests": 287860
+    },
+    "stderr": "        0.13 real         0.13 user         0.00 sys\n            13041664  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 957  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   1  voluntary context switches\n                  26  involuntary context switches\n          1144260767  instructions retired\n           376141024  cycles elapsed\n            12419408  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 0,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "fixture_sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1176084,
+      "update_ns": 9926457,
+      "single_ns": 57238916,
+      "batch_ns": 55278794,
+      "reported_pairs": 303865,
+      "oracle_queries": 414,
+      "query_cells": 23153,
+      "candidate_cells": 222794,
+      "point_tests": 287860
+    },
+    "stderr": "        0.13 real         0.13 user         0.00 sys\n            13058048  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 957  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  21  involuntary context switches\n          1148384740  instructions retired\n           383292103  cycles elapsed\n            12419408  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 1,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "fixture_sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1149167,
+      "update_ns": 7144583,
+      "single_ns": 42669333,
+      "batch_ns": 34723365,
+      "reported_pairs": 2771102,
+      "oracle_queries": 414,
+      "query_cells": 2167,
+      "candidate_cells": 44390,
+      "point_tests": 5289904
+    },
+    "stderr": "        0.09 real         0.09 user         0.00 sys\n            11583488  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 867  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                   8  involuntary context switches\n           658686630  instructions retired\n           276769024  cycles elapsed\n            10944848  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 1,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "fixture_sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1094500,
+      "update_ns": 6945042,
+      "single_ns": 39952584,
+      "batch_ns": 32387135,
+      "reported_pairs": 2771102,
+      "oracle_queries": 414,
+      "query_cells": 2167,
+      "candidate_cells": 44390,
+      "point_tests": 5289904
+    },
+    "stderr": "        0.09 real         0.08 user         0.00 sys\n            11583488  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 868  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  12  involuntary context switches\n           648430258  instructions retired\n           270611634  cycles elapsed\n            10961232  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 1,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "fixture_sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1099208,
+      "update_ns": 2274375,
+      "single_ns": 334449748,
+      "batch_ns": 319089496,
+      "reported_pairs": 800000000,
+      "oracle_queries": 414,
+      "query_cells": 14,
+      "candidate_cells": 98,
+      "point_tests": 0
+    },
+    "stderr": "        0.75 real         0.74 user         0.00 sys\n            33046528  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2178  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 117  involuntary context switches\n          4758501802  instructions retired\n          2236102346  cycles elapsed\n            32440680  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 1,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "fixture_sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1125833,
+      "update_ns": 2424042,
+      "single_ns": 112882625,
+      "batch_ns": 125138551,
+      "reported_pairs": 800000000,
+      "oracle_queries": 414,
+      "query_cells": 14,
+      "candidate_cells": 98,
+      "point_tests": 0
+    },
+    "stderr": "        0.35 real         0.34 user         0.00 sys\n            33374208  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2197  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 245  involuntary context switches\n          3758421464  instructions retired\n           973492359  cycles elapsed\n            32751976  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 1,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "fixture_sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1254750,
+      "update_ns": 6892665,
+      "single_ns": 215289835,
+      "batch_ns": 192022482,
+      "reported_pairs": 21790287,
+      "oracle_queries": 414,
+      "query_cells": 409,
+      "candidate_cells": 9066,
+      "point_tests": 47279974
+    },
+    "stderr": "        0.43 real         0.42 user         0.00 sys\n            13893632  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1008  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 277  involuntary context switches\n          2211051655  instructions retired\n          1155944030  cycles elapsed\n            13254992  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 1,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "fixture_sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1195958,
+      "update_ns": 6405626,
+      "single_ns": 210430458,
+      "batch_ns": 182210550,
+      "reported_pairs": 21790287,
+      "oracle_queries": 414,
+      "query_cells": 409,
+      "candidate_cells": 9066,
+      "point_tests": 47279974
+    },
+    "stderr": "        0.41 real         0.41 user         0.00 sys\n            13926400  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1011  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 229  involuntary context switches\n          2148775685  instructions retired\n          1112924513  cycles elapsed\n            13304144  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 1,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "fixture_sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1378958,
+      "update_ns": 11501541,
+      "single_ns": 87669125,
+      "batch_ns": 73977149,
+      "reported_pairs": 588829,
+      "oracle_queries": 414,
+      "query_cells": 14891,
+      "candidate_cells": 328827,
+      "point_tests": 931579
+    },
+    "stderr": "        0.18 real         0.18 user         0.00 sys\n            12648448  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 933  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 139  involuntary context switches\n          1336358565  instructions retired\n           476735164  cycles elapsed\n            12026192  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 1,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "fixture_sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1282375,
+      "update_ns": 12396999,
+      "single_ns": 91959002,
+      "batch_ns": 74575104,
+      "reported_pairs": 588829,
+      "oracle_queries": 414,
+      "query_cells": 14891,
+      "candidate_cells": 328827,
+      "point_tests": 931579
+    },
+    "stderr": "        0.19 real         0.18 user         0.00 sys\n            12845056  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 946  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  97  involuntary context switches\n          1344776147  instructions retired\n           490317519  cycles elapsed\n            12206416  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 1,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "fixture_sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 100000,
+      "queries": 40000,
+      "max_outputs": 20,
+      "build_ns": 6743875,
+      "update_ns": 45958165,
+      "single_ns": 69051582,
+      "batch_ns": 58131747,
+      "reported_pairs": 3428653,
+      "oracle_queries": 414,
+      "query_cells": 8240,
+      "candidate_cells": 141627,
+      "point_tests": 7016564
+    },
+    "stderr": "        0.23 real         0.22 user         0.00 sys\n            33570816  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2209  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 134  involuntary context switches\n          1730115282  instructions retired\n           559824319  cycles elapsed\n            32964992  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 1,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "fixture_sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 100000,
+      "queries": 40000,
+      "max_outputs": 20,
+      "build_ns": 6410458,
+      "update_ns": 44363252,
+      "single_ns": 67807959,
+      "batch_ns": 55337482,
+      "reported_pairs": 3428653,
+      "oracle_queries": 414,
+      "query_cells": 8240,
+      "candidate_cells": 141627,
+      "point_tests": 7016564
+    },
+    "stderr": "        0.22 real         0.21 user         0.00 sys\n            34308096  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2255  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 297  involuntary context switches\n          1717946820  instructions retired\n           545286691  cycles elapsed\n            33702248  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 1,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "fixture_sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1801084,
+      "update_ns": 9071541,
+      "single_ns": 47729791,
+      "batch_ns": 40500029,
+      "reported_pairs": 2785123,
+      "oracle_queries": 414,
+      "query_cells": 2048,
+      "candidate_cells": 41869,
+      "point_tests": 5328714
+    },
+    "stderr": "        0.11 real         0.10 user         0.00 sys\n            12664832  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 934  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  67  involuntary context switches\n           642414086  instructions retired\n           273277784  cycles elapsed\n            12042576  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 1,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "fixture_sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1271958,
+      "update_ns": 8567667,
+      "single_ns": 52126624,
+      "batch_ns": 41967946,
+      "reported_pairs": 2785123,
+      "oracle_queries": 414,
+      "query_cells": 2048,
+      "candidate_cells": 41869,
+      "point_tests": 5328714
+    },
+    "stderr": "        0.11 real         0.11 user         0.00 sys\n            11534336  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 864  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 100  involuntary context switches\n           651717483  instructions retired\n           283648438  cycles elapsed\n            10895696  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 1,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "fixture_sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1372917,
+      "update_ns": 12604375,
+      "single_ns": 69848502,
+      "batch_ns": 68226301,
+      "reported_pairs": 303865,
+      "oracle_queries": 414,
+      "query_cells": 23153,
+      "candidate_cells": 222794,
+      "point_tests": 287860
+    },
+    "stderr": "        0.16 real         0.16 user         0.00 sys\n            13041664  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 956  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  64  involuntary context switches\n          1150251467  instructions retired\n           393294297  cycles elapsed\n            12403024  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 1,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "fixture_sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1397250,
+      "update_ns": 14103916,
+      "single_ns": 73261459,
+      "batch_ns": 82139006,
+      "reported_pairs": 303865,
+      "oracle_queries": 414,
+      "query_cells": 23153,
+      "candidate_cells": 222794,
+      "point_tests": 287860
+    },
+    "stderr": "        0.18 real         0.17 user         0.00 sys\n            14516224  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1049  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 124  involuntary context switches\n          1146155823  instructions retired\n           427067246  cycles elapsed\n            13910376  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 2,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "fixture_sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1485875,
+      "update_ns": 11330332,
+      "single_ns": 56216250,
+      "batch_ns": 44015989,
+      "reported_pairs": 2771102,
+      "oracle_queries": 414,
+      "query_cells": 2167,
+      "candidate_cells": 44390,
+      "point_tests": 5289904
+    },
+    "stderr": "        0.12 real         0.12 user         0.00 sys\n            13549568  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 990  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  36  involuntary context switches\n           650510244  instructions retired\n           290219656  cycles elapsed\n            12943720  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 2,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "fixture_sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1530209,
+      "update_ns": 10192459,
+      "single_ns": 58692377,
+      "batch_ns": 47388789,
+      "reported_pairs": 2771102,
+      "oracle_queries": 414,
+      "query_cells": 2167,
+      "candidate_cells": 44390,
+      "point_tests": 5289904
+    },
+    "stderr": "        0.13 real         0.13 user         0.00 sys\n            13434880  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 980  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  46  involuntary context switches\n           660915261  instructions retired\n           308612718  cycles elapsed\n            12812648  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 2,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "fixture_sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1545708,
+      "update_ns": 3387625,
+      "single_ns": 148634041,
+      "batch_ns": 148937280,
+      "reported_pairs": 800000000,
+      "oracle_queries": 414,
+      "query_cells": 14,
+      "candidate_cells": 98,
+      "point_tests": 0
+    },
+    "stderr": "        0.43 real         0.42 user         0.00 sys\n            44318720  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2867  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 197  involuntary context switches\n          3764706259  instructions retired\n           975048391  cycles elapsed\n            43696488  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 2,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "fixture_sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1538791,
+      "update_ns": 3162666,
+      "single_ns": 391582999,
+      "batch_ns": 392867149,
+      "reported_pairs": 800000000,
+      "oracle_queries": 414,
+      "query_cells": 14,
+      "candidate_cells": 98,
+      "point_tests": 0
+    },
+    "stderr": "        0.92 real         0.91 user         0.00 sys\n            33357824  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2197  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 338  involuntary context switches\n          4761531082  instructions retired\n          2043575363  cycles elapsed\n            32751976  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 2,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "fixture_sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1409750,
+      "update_ns": 7493166,
+      "single_ns": 252075792,
+      "batch_ns": 217892346,
+      "reported_pairs": 21790287,
+      "oracle_queries": 414,
+      "query_cells": 409,
+      "candidate_cells": 9066,
+      "point_tests": 47279974
+    },
+    "stderr": "        0.50 real         0.49 user         0.00 sys\n            14761984  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1062  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 275  involuntary context switches\n          2148903983  instructions retired\n          1124592666  cycles elapsed\n            14156136  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 2,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "fixture_sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1367250,
+      "update_ns": 7506584,
+      "single_ns": 255201249,
+      "batch_ns": 225651749,
+      "reported_pairs": 21790287,
+      "oracle_queries": 414,
+      "query_cells": 409,
+      "candidate_cells": 9066,
+      "point_tests": 47279974
+    },
+    "stderr": "        0.51 real         0.50 user         0.00 sys\n            13942784  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1011  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 158  involuntary context switches\n          2210758662  instructions retired\n          1150552821  cycles elapsed\n            13304144  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 2,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "fixture_sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1352083,
+      "update_ns": 12752084,
+      "single_ns": 100611790,
+      "batch_ns": 81249651,
+      "reported_pairs": 588829,
+      "oracle_queries": 414,
+      "query_cells": 14891,
+      "candidate_cells": 328827,
+      "point_tests": 931579
+    },
+    "stderr": "        0.21 real         0.20 user         0.00 sys\n            12664832  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 933  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  63  involuntary context switches\n          1344670957  instructions retired\n           476721976  cycles elapsed\n            12026192  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 2,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "fixture_sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1531000,
+      "update_ns": 12208127,
+      "single_ns": 98432168,
+      "batch_ns": 82107764,
+      "reported_pairs": 588829,
+      "oracle_queries": 414,
+      "query_cells": 14891,
+      "candidate_cells": 328827,
+      "point_tests": 931579
+    },
+    "stderr": "        0.20 real         0.20 user         0.00 sys\n            12877824  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 947  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  69  involuntary context switches\n          1336174203  instructions retired\n           471163877  cycles elapsed\n            12255568  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 2,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "fixture_sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 100000,
+      "queries": 40000,
+      "max_outputs": 20,
+      "build_ns": 6992791,
+      "update_ns": 45670124,
+      "single_ns": 72668667,
+      "batch_ns": 56851766,
+      "reported_pairs": 3428653,
+      "oracle_queries": 414,
+      "query_cells": 8240,
+      "candidate_cells": 141627,
+      "point_tests": 7016564
+    },
+    "stderr": "        0.23 real         0.22 user         0.00 sys\n            34340864  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2257  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  66  involuntary context switches\n          1715981716  instructions retired\n           542118296  cycles elapsed\n            33751424  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 2,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "fixture_sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 100000,
+      "queries": 40000,
+      "max_outputs": 20,
+      "build_ns": 7617709,
+      "update_ns": 46651999,
+      "single_ns": 70928874,
+      "batch_ns": 60070612,
+      "reported_pairs": 3428653,
+      "oracle_queries": 414,
+      "query_cells": 8240,
+      "candidate_cells": 141627,
+      "point_tests": 7016564
+    },
+    "stderr": "        0.23 real         0.23 user         0.00 sys\n            33587200  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2210  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  70  involuntary context switches\n          1729034246  instructions retired\n           548197287  cycles elapsed\n            32964968  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 2,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "fixture_sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1469750,
+      "update_ns": 9599666,
+      "single_ns": 51435624,
+      "batch_ns": 43517304,
+      "reported_pairs": 2785123,
+      "oracle_queries": 414,
+      "query_cells": 2048,
+      "candidate_cells": 41869,
+      "point_tests": 5328714
+    },
+    "stderr": "        0.12 real         0.11 user         0.00 sys\n            11681792  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 873  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  50  involuntary context switches\n           652269199  instructions retired\n           275491644  cycles elapsed\n            11043152  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 2,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "fixture_sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1364042,
+      "update_ns": 8982708,
+      "single_ns": 50658208,
+      "batch_ns": 41972464,
+      "reported_pairs": 2785123,
+      "oracle_queries": 414,
+      "query_cells": 2048,
+      "candidate_cells": 41869,
+      "point_tests": 5328714
+    },
+    "stderr": "        0.11 real         0.11 user         0.00 sys\n            11632640  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 871  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  35  involuntary context switches\n           641797045  instructions retired\n           268502157  cycles elapsed\n            11010384  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 2,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "fixture_sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1467458,
+      "update_ns": 12792916,
+      "single_ns": 67888001,
+      "batch_ns": 69451132,
+      "reported_pairs": 303865,
+      "oracle_queries": 414,
+      "query_cells": 23153,
+      "candidate_cells": 222794,
+      "point_tests": 287860
+    },
+    "stderr": "        0.16 real         0.16 user         0.00 sys\n            13041664  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 957  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  40  involuntary context switches\n          1143764573  instructions retired\n           380603402  cycles elapsed\n            12419408  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 2,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "fixture_sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1335250,
+      "update_ns": 12212583,
+      "single_ns": 71599708,
+      "batch_ns": 70924767,
+      "reported_pairs": 303865,
+      "oracle_queries": 414,
+      "query_cells": 23153,
+      "candidate_cells": 222794,
+      "point_tests": 287860
+    },
+    "stderr": "        0.17 real         0.16 user         0.00 sys\n            13041664  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 956  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  59  involuntary context switches\n          1149393685  instructions retired\n           388863308  cycles elapsed\n            12403024  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 3,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "fixture_sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1688750,
+      "update_ns": 9265167,
+      "single_ns": 54514292,
+      "batch_ns": 44293802,
+      "reported_pairs": 2771102,
+      "oracle_queries": 414,
+      "query_cells": 2167,
+      "candidate_cells": 44390,
+      "point_tests": 5289904
+    },
+    "stderr": "        0.12 real         0.11 user         0.00 sys\n            11780096  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 879  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 186  involuntary context switches\n           660996734  instructions retired\n           282543776  cycles elapsed\n            11141456  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 3,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "fixture_sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1372125,
+      "update_ns": 8748460,
+      "single_ns": 51585543,
+      "batch_ns": 42785321,
+      "reported_pairs": 2771102,
+      "oracle_queries": 414,
+      "query_cells": 2167,
+      "candidate_cells": 44390,
+      "point_tests": 5289904
+    },
+    "stderr": "        0.11 real         0.11 user         0.00 sys\n            11567104  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 867  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  36  involuntary context switches\n           649214361  instructions retired\n           275319508  cycles elapsed\n            10944848  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 3,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "fixture_sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1354541,
+      "update_ns": 3231082,
+      "single_ns": 390535458,
+      "batch_ns": 381727734,
+      "reported_pairs": 800000000,
+      "oracle_queries": 414,
+      "query_cells": 14,
+      "candidate_cells": 98,
+      "point_tests": 0
+    },
+    "stderr": "        0.90 real         0.89 user         0.00 sys\n            33406976  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2200  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 358  involuntary context switches\n          4763052124  instructions retired\n          2045273748  cycles elapsed\n            32801128  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 3,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "fixture_sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1406458,
+      "update_ns": 2984624,
+      "single_ns": 141567251,
+      "batch_ns": 139082536,
+      "reported_pairs": 800000000,
+      "oracle_queries": 414,
+      "query_cells": 14,
+      "candidate_cells": 98,
+      "point_tests": 0
+    },
+    "stderr": "        0.41 real         0.40 user         0.00 sys\n            33669120  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2215  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 456  involuntary context switches\n          3762617988  instructions retired\n           962612065  cycles elapsed\n            33046888  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 3,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "fixture_sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1359666,
+      "update_ns": 7134502,
+      "single_ns": 240181458,
+      "batch_ns": 213444756,
+      "reported_pairs": 21790287,
+      "oracle_queries": 414,
+      "query_cells": 409,
+      "candidate_cells": 9066,
+      "point_tests": 47279974
+    },
+    "stderr": "        0.48 real         0.47 user         0.00 sys\n            13795328  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1002  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 267  involuntary context switches\n          2209646739  instructions retired\n          1149580598  cycles elapsed\n            13156688  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 3,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "fixture_sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1364833,
+      "update_ns": 7143333,
+      "single_ns": 232573417,
+      "batch_ns": 205306701,
+      "reported_pairs": 21790287,
+      "oracle_queries": 414,
+      "query_cells": 409,
+      "candidate_cells": 9066,
+      "point_tests": 47279974
+    },
+    "stderr": "        0.46 real         0.46 user         0.00 sys\n            13893632  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1009  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 150  involuntary context switches\n          2147177514  instructions retired\n          1106844644  cycles elapsed\n            13271376  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 3,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "fixture_sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1377208,
+      "update_ns": 12638501,
+      "single_ns": 92749666,
+      "batch_ns": 78266200,
+      "reported_pairs": 588829,
+      "oracle_queries": 414,
+      "query_cells": 14891,
+      "candidate_cells": 328827,
+      "point_tests": 931579
+    },
+    "stderr": "        0.19 real         0.19 user         0.00 sys\n            12664832  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 934  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  95  involuntary context switches\n          1335967288  instructions retired\n           468940194  cycles elapsed\n            12042576  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 3,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "fixture_sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1348542,
+      "update_ns": 12397541,
+      "single_ns": 95495874,
+      "batch_ns": 77831758,
+      "reported_pairs": 588829,
+      "oracle_queries": 414,
+      "query_cells": 14891,
+      "candidate_cells": 328827,
+      "point_tests": 931579
+    },
+    "stderr": "        0.20 real         0.19 user         0.00 sys\n            12648448  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 932  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  57  involuntary context switches\n          1344172850  instructions retired\n           477022789  cycles elapsed\n            12009808  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 3,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "fixture_sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 100000,
+      "queries": 40000,
+      "max_outputs": 20,
+      "build_ns": 6437000,
+      "update_ns": 42205373,
+      "single_ns": 67627083,
+      "batch_ns": 53818583,
+      "reported_pairs": 3428653,
+      "oracle_queries": 414,
+      "query_cells": 8240,
+      "candidate_cells": 141627,
+      "point_tests": 7016564
+    },
+    "stderr": "        0.21 real         0.21 user         0.00 sys\n            33554432  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2208  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  80  involuntary context switches\n          1727845164  instructions retired\n           549464350  cycles elapsed\n            32932200  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 3,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "fixture_sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 100000,
+      "queries": 40000,
+      "max_outputs": 20,
+      "build_ns": 6545833,
+      "update_ns": 41743917,
+      "single_ns": 62612291,
+      "batch_ns": 51984656,
+      "reported_pairs": 3428653,
+      "oracle_queries": 414,
+      "query_cells": 8240,
+      "candidate_cells": 141627,
+      "point_tests": 7016564
+    },
+    "stderr": "        0.20 real         0.20 user         0.00 sys\n            34750464  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2282  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  55  involuntary context switches\n          1715015608  instructions retired\n           531263542  cycles elapsed\n            34161024  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 3,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "fixture_sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1287417,
+      "update_ns": 8290625,
+      "single_ns": 45611290,
+      "batch_ns": 38574534,
+      "reported_pairs": 2785123,
+      "oracle_queries": 414,
+      "query_cells": 2048,
+      "candidate_cells": 41869,
+      "point_tests": 5328714
+    },
+    "stderr": "        0.10 real         0.10 user         0.00 sys\n            11632640  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 871  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  43  involuntary context switches\n           642077014  instructions retired\n           272633449  cycles elapsed\n            11010384  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 3,
+    "invocation_order": [
+      "before",
+      "after"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "fixture_sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1271875,
+      "update_ns": 8207500,
+      "single_ns": 46298666,
+      "batch_ns": 38827671,
+      "reported_pairs": 2785123,
+      "oracle_queries": 414,
+      "query_cells": 2048,
+      "candidate_cells": 41869,
+      "point_tests": 5328714
+    },
+    "stderr": "        0.10 real         0.10 user         0.00 sys\n            11649024  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 871  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  30  involuntary context switches\n           651664043  instructions retired\n           273604115  cycles elapsed\n            11010384  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "after",
+    "trial": 3,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "fixture_sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "after_oracle": "layout-after-oracle.txt",
+      "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-build/release/examples/batch_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1295666,
+      "update_ns": 11487374,
+      "single_ns": 64682916,
+      "batch_ns": 62903708,
+      "reported_pairs": 303865,
+      "oracle_queries": 414,
+      "query_cells": 23153,
+      "candidate_cells": 222794,
+      "point_tests": 287860
+    },
+    "stderr": "        0.15 real         0.14 user         0.00 sys\n            13058048  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 957  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  43  involuntary context switches\n          1149757325  instructions retired\n           389657055  cycles elapsed\n            12419408  peak memory footprint\n"
+  },
+  {
+    "experiment": "prepared_id_layout",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "layout": "before",
+    "trial": 3,
+    "invocation_order": [
+      "after",
+      "before"
+    ],
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "fixture_sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "manifest": {
+      "experiment": "prepared_id_layout",
+      "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "source_sha256": {
+        "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+        "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+        "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+        "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+        "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+        "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+      },
+      "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+      "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "baseline_oracle": "layout-before-oracle.txt",
+      "baseline_commit_scope": [
+        "src/lib.rs"
+      ],
+      "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+    },
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.layout-before-probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "result": {
+      "experiment": "query_cell_candidate_reuse",
+      "timing_status": "exploratory_concurrent_not_acceptance",
+      "strategy": "sorted",
+      "repetition": 0,
+      "points": 20000,
+      "queries": 40000,
+      "max_outputs": 64,
+      "build_ns": 1319833,
+      "update_ns": 11252584,
+      "single_ns": 81722999,
+      "batch_ns": 89282125,
+      "reported_pairs": 303865,
+      "oracle_queries": 414,
+      "query_cells": 23153,
+      "candidate_cells": 222794,
+      "point_tests": 287860
+    },
+    "stderr": "        0.20 real         0.16 user         0.00 sys\n            13090816  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 960  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 114  involuntary context switches\n          1145383005  instructions retired\n           431939016  cycles elapsed\n            12484968  peak memory footprint\n"
+  }
+]

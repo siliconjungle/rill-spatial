@@ -1,0 +1,4671 @@
+{
+  "schema": 2,
+  "status": "COMPLETE",
+  "created_utc": "2026-10-20T04:25:22.775337+00:00",
+  "host": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "identity": {
+    "git_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+    "git_status": "M research/variants/dual-tree/tests/threaded_cohort.rs\n?? research/variants/cell-readview/evidence/\n?? research/variants/cell-readview/examples/\n?? research/variants/cell-readview/run_batch_diagnostics.py\n?? research/variants/cell-readview/run_diagnostics.py\n?? research/variants/dual-tree/diagnostics-resources.json\n?? research/variants/dual-tree/diagnostics.jsonl\n?? research/variants/dual-tree/examples/\n?? research/variants/dual-tree/validation.json\n?? research/variants/dual-tree/validation.log\n?? results/finalists-v3.json\n?? results/javascript-repairs-v3.json",
+    "source_sha256": {
+      "research/variants/cell-readview/evidence/batch-build-release.txt": "64d0cbd4b7e4c6329fde55978dd3d261407b55f34c21add0feebf7e0575ee531",
+      "research/variants/cell-readview/evidence/batch-holdout-exploratory.json": "0021730530275dd63860352a065516f650278e072619a0706e32816d8913860b",
+      "research/variants/cell-readview/evidence/batch-oracle-release.txt": "b6c425e3225e36ab99997c5f29bcbf943b810dca3c90ddcc559327ed980d3f6f",
+      "research/variants/cell-readview/evidence/batch-summary.json": "353ad113aad8ccaef4c43a2eec08548ab985b8adf30f8f40eeddffc983ebdcb0",
+      "research/variants/cell-readview/evidence/batch-twenty-k-exploratory.json": "64c5d755fe33ab48713523f3cb6a565fbe0bdeeb878f49b6e3bfb84f610ae563",
+      "research/variants/cell-readview/evidence/build-release.txt": "64d0cbd4b7e4c6329fde55978dd3d261407b55f34c21add0feebf7e0575ee531",
+      "research/variants/cell-readview/evidence/holdout-exploratory.json": "d72b6c43a6b286b25a96f86f0d1cbdb5557aaf5740b725ff306ce22ff8d88201",
+      "research/variants/cell-readview/evidence/oracle-release.txt": "ac1e1ba5811b75bc950c7aff97a7371b1fcb88ef5762ec39ded96ff31cee124d",
+      "research/variants/cell-readview/evidence/summary.json": "6a97f1fb51e51cf619dafbd94b759efc5aa9b9c6cde724de427ceab70a80789a",
+      "research/variants/cell-readview/evidence/twenty-k-exploratory.json": "ce86e745bd670f6a6a56c605b7931a4e415c56ab01d7cf8aad4c15d218b6d252",
+      "research/variants/cell-readview/examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+      "research/variants/cell-readview/examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904",
+      "research/variants/cell-readview/run_batch_diagnostics.py": "dcf938e8e205500211c1deeea648c05709e31cda778bec5f47a4ed46916b5f9f",
+      "research/variants/cell-readview/run_diagnostics.py": "6f35a503c4dc4e111c701faf895ab8f27f110a8217e1e08ad4d14f611f255d39",
+      "research/variants/dual-tree/diagnostics-resources.json": "e5f3476b26a123da92b7f932ee981e0d7777fd9bcfff19423878cc82c3089dcb",
+      "research/variants/dual-tree/diagnostics.jsonl": "be932a1abe0276ff312b1f70da65054d13c1c95f574f5fda72b138fb74555f7e",
+      "research/variants/dual-tree/examples/batch_probe.rs": "d7b3debdf6390222650191cca5b31ab6d6b1b6a2d1008ccde0193df0f853f2d0",
+      "research/variants/dual-tree/examples/support/cohort.rs": "61895eead65c70b62d9ab8ddcae203cce8b3b41757f08e2f9355720b1aa6cbf8",
+      "research/variants/dual-tree/examples/threaded_cohort.rs": "795edf4e0d411284ad1e800c8e8762a2b9fb8042a19958e37b35ef91b89a540e",
+      "research/variants/dual-tree/validation.json": "ee567e8604397f79b0d8b629da340ab26ad22c72181b6a6b66d985b53f360476",
+      "research/variants/dual-tree/validation.log": "08c5199b5861dc1f20fdf005068ec25e414f3dc68f10a7bb2663beaec3f2e256",
+      ".github/workflows/ci.yml": "92afeec10af9401560aa805f2c417a78106c400dc27327b9ca1be9081d4034b9",
+      ".gitignore": "cc8bdcd033ed79d3b1439ec7aa4e66b501139213dba6dc1f8b4bcdcb49c4f2aa",
+      "Cargo.lock": "f685d31c3bf80e19cde4867d6830748dbda9d1653ef3ba319fe67a7ed9a2c897",
+      "Cargo.toml": "70067f8559f532a565e86a2fc2d07df18c1f18d61847d30e92c14a292d81be38",
+      "LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "LICENSE-MIT": "079adec67563038bee5dac86b57a3cf1546cffc112f51f85c68b13c3d0369428",
+      "README.md": "deec33a45ac2f0fdf52fda1b8ffb750a2983e054eef7e790384318929cc1d103",
+      "benchmarks/Cargo.toml": "a280ecde6da786a29146ea10a7493aa6b04498750f3dfd152752a4afb9168131",
+      "benchmarks/fixtures/boundaries.json": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "benchmarks/fixtures/clusters.json": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "benchmarks/fixtures/contained.json": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "benchmarks/fixtures/dense.json": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "benchmarks/fixtures/floors.json": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "benchmarks/fixtures/large.json": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "benchmarks/fixtures/manifest.json": "33319e1ff2e497d49b18d70a1607c1c496f299e144428918785467b1c3478086",
+      "benchmarks/fixtures/small.json": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "benchmarks/fixtures/teleports.json": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "benchmarks/fixtures/uniform.json": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "benchmarks/holdout-97123/boundaries.json": "914439d679bc3793b10b45254db0f5fb2994b6cd5b7465dc6b603728ce47ef8a",
+      "benchmarks/holdout-97123/clusters.json": "5bfdad77ded17b68b13cc23a70de687f9438fefe9a7e6563ef6a25803dd63d98",
+      "benchmarks/holdout-97123/contained.json": "cc6b7f8de45ca724df2d93b00b8956a1d1faa508b6b70a1cd420698875eb10a0",
+      "benchmarks/holdout-97123/dense.json": "06b98a8e94294570ac6ecb93a87f3ebc220ee34cf9bb291f7d3b2738ab3a27a1",
+      "benchmarks/holdout-97123/floors.json": "fed8d7cca125bb213d2a71fba55dce280e73a06226eacb6001db10260ed4b70c",
+      "benchmarks/holdout-97123/large.json": "d8b17fd585986e36f4c1f2e350274069c11cb7c4775b5f0b3b8ba1e045fc8cb9",
+      "benchmarks/holdout-97123/manifest.json": "6767c84fba702be8ead8fc8b8bf14f1d97a73f7a29caf045f80a50e4cb88cdba",
+      "benchmarks/holdout-97123/small.json": "24184d41b21cec260cb169e0283485c3182433cdda6b4ff50ca0dfe5667b218e",
+      "benchmarks/holdout-97123/teleports.json": "ac76e6525ea7e25d60befb8097090a1e729938b956f7a8b7c4af1f9bdbf8b21c",
+      "benchmarks/holdout-97123/uniform.json": "623b60122ae133148ca4e36bd2b23836182cb021fe84c103a87a0727c02459f1",
+      "benchmarks/javascript.mjs": "5ba1404621d46165d2ebcbd9090b41134d58209774b9ac6b20265cb3c91ba4cf",
+      "benchmarks/native.cpp": "bb1d59b8256696a851e90d618091e8baf7101f7adec948e5bfe98194280140b7",
+      "benchmarks/src/bounded.rs": "6e1cf06d5e4e18ce96ed9b212361af354382321955ad97f09103903af16f994b",
+      "benchmarks/src/main.rs": "c1df8ab73f888c9bdc122e60ebff2b8e6b35d3f0d19b607948fc08b5b9bdb325",
+      "benchmarks/src/more_adapters.rs": "222a1a1b8817ab18171256bb10c4c5324d54309ea25f81370c7d9c030e1a7ba2",
+      "benchmarks/src/rust_adapters.rs": "6ecdb4ddeab020b00db52fcd23f9994dda1eb96f0c880b3b5afed9a0d1ac551c",
+      "benchmarks/src/studies.rs": "83d10b16d961d9a2c17f493477fd9fb0d24ab9eb9900071c52b2f996af923108",
+      "benchmarks/twenty-k/bounded64.json": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "benchmarks/twenty-k/contained.json": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "benchmarks/twenty-k/crowd.json": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "benchmarks/twenty-k/floors.json": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "benchmarks/twenty-k/manifest.json": "8b7a73fa67d9d10f03e0ce4336d5c4d6ca0a32554fc3f1915f167acbe6a79788",
+      "benchmarks/twenty-k/many-objects.json": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "benchmarks/twenty-k/teleports.json": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "benchmarks/twenty-k/uniform.json": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "examples/probe.rs": "003d633bcdce4a5ea53980db62c3e437d818abf51b4e0d9d53ad17780241c8f6",
+      "research/20k/agent-ownership.json": "c021cc1d4f7a2f583ff0d1fa2de55d97c442c77dc6f80e710b5a5819d60cb1a0",
+      "research/20k/events.jsonl": "05be4e76c2aacaab1dee0a6792c5eca951c5488d04c9afab986972e826fd91d7",
+      "research/20k/research.md": "40210621aba9d9b27755a94b5d64d8f0f9984ffa8ca13bcd0f8da4c749f796cb",
+      "research/20k/sources.json": "4e1e4f3848b8fb90e676ad593dd59cbfa98f246cea500ea77bd7790640715051",
+      "research/20k/storage-retention.json": "3b65c02d2e5c3fe112fa20d96a720036f37af5a799dba6c6b7e99116e068fa60",
+      "research/20k/work-queue.json": "755d1cf10b4da24219a711c40f0506f8183a29beca9ce88fec743e674e3cea11",
+      "research/baselines.json": "23d061223bb44a1864bd57810f45e0d1622935dd2a23df460875905efa44dba8",
+      "research/discovery.json": "7007a4cfa08ccb2477313d7082d9862f3001e87ca57ee3f82911caaf39222633",
+      "research/inventory.json": "b610b8b2ce410ed01ba3350ac15cd7c3f8d979c9bd2c10395ad23c4a31c7944d",
+      "research/npm/package-lock.json": "cbb268cad3d328a828475020e22a1f4180deff6a83820923157c78ea1e3ecc50",
+      "research/npm/package.json": "f577e233d61564d7685eb4b6c4ad71d16303d3d6988cac88d4e5771b56bca95d",
+      "research/protocol.md": "0b89ac6189c6cfdf5fdcc47970637551f9cdef02fd32a52e039f8a329c87b15e",
+      "research/variants/cell-readview/Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "research/variants/cell-readview/Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "research/variants/cell-readview/README.md": "f7b3ed0566397165c024f4925c9182b19069fc0520e1b862d13bba405a7de448",
+      "research/variants/cell-readview/src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+      "research/variants/cell-readview/storage-retention.json": "d49e1a5e284e233d224646fadfd6774b4de789f903e45e972c203f8a8e49b7f7",
+      "research/variants/cell-readview/tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+      "research/variants/cell-readview/tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+      "research/variants/dual-tree/Cargo.lock": "c675898835fff55d9e161bce62b20b6dd26ccbcebcaf14e2efba493a525bbcd1",
+      "research/variants/dual-tree/Cargo.toml": "e37b6a478474e0374893b4c951bf824e37b65caed49b2944d5843e8b082cc9dc",
+      "research/variants/dual-tree/README.md": "a249541639c12e3c194b21c60a439dfae36def62becc1f1bd4a25054daaa0134",
+      "research/variants/dual-tree/src/lib.rs": "895d16e7425af0a7ed016a45f343769188d4682055e0385d762d01b0f0f59b90",
+      "research/variants/dual-tree/storage-retention.json": "df37b418a6dfa0576d7c928f0a83ce3d5e3c4e769a90852ac2c9acaf3de95dab",
+      "research/variants/dual-tree/tests/oracle.rs": "3cf3df911aaf20d82fe081078b7b1e85696e32d986fc6b9df91778593c01861c",
+      "research/variants/dual-tree/tests/threaded_cohort.rs": "6c62df29805d77cb529851c756975ad87c7916d6f02b5e435699a5200d643f0f",
+      "src/hierarchy.rs": "299cd36c34e398b51832a44d83d92153b13488ddbe61293b3d8a8b5273d618ca",
+      "src/lib.rs": "73c7390eb0f665d51b0c3049a72ae4a0b96673d5469d5e5bb8a35a73c8186a21",
+      "storage-retention.json": "291c0b4faf1c8e1d6f9e8d3b38e03a948f6a054c9583810675994002fcd58e19",
+      "tests/correctness.rs": "81bfbe90ad560d7570efdbca9fed39744b11e53e5363350e9186022b34685cb2",
+      "tools/add-cpp.mjs": "e7dc33bb244f0c2eb831af816e67ac1edd99721a9870f742c8d35a6b17192626",
+      "tools/binary-fixtures.py": "bb6c3e8d517be4831ab19a2cfea8a52bc8131a766a8339249e7108c30417cc1d",
+      "tools/build-cpp.py": "60d3af7ead7428c49cb5b073a5261e2d7bf8ea837c6abd9abc84232dc6b9d0d1",
+      "tools/compare.py": "b148b21022142d0b9f18b89b65d0e0366a113504baad3bf148ea3ec6503b04eb",
+      "tools/coverage.py": "5c1fd94217936b0094361137428da1bca4ed0eb3254732965e02f39db9c0a149",
+      "tools/discover.mjs": "10bc7da9a7fda07cc06f459336d7f00c8710e685b95fda99025279e654df19e4",
+      "tools/fetch-sources.mjs": "47871b9d40a7a7710f75d9db044598876e694027b20dfd31973bc6eb4008193c",
+      "tools/fixtures-20k.mjs": "ef30ecd1dcbe44b01f1fc79dd9e8678f87c6d9ef8e8bf584615b1b4f142d9528",
+      "tools/fixtures.mjs": "cf286c372fbff0d3b93ee00865979438696adfcb62275a0b149274ddb99f4ba1",
+      "tools/gate.py": "a34ef528f268e842c8d7932e567e3d7f677f9b400bacf5601ed5bbc7588c673e"
+    },
+    "toolchains": {
+      "rust": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+      "node": "v26.1.0",
+      "clang": "Apple clang version 14.0.0 (clang-1400.0.29.202)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+      "cpu": "Apple M2"
+    }
+  },
+  "artifacts": {
+    "rust": {
+      "path": "build/frozen/twenty-k-screen-v1/rust",
+      "sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236"
+    }
+  },
+  "implementations": [
+    "rill-spatial",
+    "rill-cell-sorted",
+    "rill-cell-hybrid",
+    "rill-cell-hash",
+    "rill-cell-occupied",
+    "rill-cell-batch-sorted",
+    "rill-cell-batch-hybrid",
+    "rill-cell-batch-hash",
+    "rill-cell-batch-occupied",
+    "rill-dual",
+    "kiddo-immutable",
+    "static-aabb2d",
+    "geo-index-rtree",
+    "brute-force"
+  ],
+  "scenarios": [
+    "uniform",
+    "bounded64",
+    "crowd",
+    "contained",
+    "floors",
+    "teleports",
+    "many-objects"
+  ],
+  "notes": [
+    "Other user workers left running; shared-machine diagnostics",
+    "Process RSS includes reference oracle and retained result vectors; not isolated index bytes"
+  ],
+  "samples_per_process": 2,
+  "requested_processes": 1,
+  "rows": [
+    {
+      "correct": true,
+      "excluded_validation_ns": "5144760751",
+      "implementation": "rill-cell-hybrid",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131904,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 5703166,
+          "query_ns": 64658377,
+          "results": 3428653,
+          "total_ns": 82800169,
+          "update_ns": 12438626
+        },
+        {
+          "build_ns": 5376375,
+          "query_ns": 65802039,
+          "results": 3428653,
+          "total_ns": 82826332,
+          "update_ns": 11647918
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 37076992,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hybrid",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 3.22 4.01 5.46 }",
+      "process_wall_seconds": 5.710736541077495
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1221153061",
+      "implementation": "rill-spatial",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 191375,
+          "query_ns": 31165438,
+          "results": 588829,
+          "total_ns": 33218187,
+          "update_ns": 1861374
+        },
+        {
+          "build_ns": 85250,
+          "query_ns": 34150959,
+          "results": 588829,
+          "total_ns": 37006290,
+          "update_ns": 2770081
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 14139392,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-spatial",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 3.22 4.01 5.46 }",
+      "process_wall_seconds": 1.3263030840316787
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1170244726",
+      "implementation": "rill-cell-occupied",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131840,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1272417,
+          "query_ns": 188038113,
+          "results": 2771102,
+          "total_ns": 192576821,
+          "update_ns": 3266291
+        },
+        {
+          "build_ns": 1148958,
+          "query_ns": 195152993,
+          "results": 2771102,
+          "total_ns": 199414784,
+          "update_ns": 3112833
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15122432,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-occupied",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 3.22 4.01 5.46 }",
+      "process_wall_seconds": 1.5894580000313
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1124810063",
+      "implementation": "rill-cell-batch-sorted",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 5184,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1937750,
+          "query_ns": 71688375,
+          "results": 588829,
+          "total_ns": 79942167,
+          "update_ns": 6316042
+        },
+        {
+          "build_ns": 1265584,
+          "query_ns": 61664813,
+          "results": 588829,
+          "total_ns": 66784312,
+          "update_ns": 3853915
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 20561920,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-sorted",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 3.61 4.08 5.48 }",
+      "process_wall_seconds": 1.296662750071846
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "3156593429",
+      "implementation": "rill-cell-hybrid",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 10240000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1241625,
+          "query_ns": 324148455,
+          "results": 800000000,
+          "total_ns": 327088037,
+          "update_ns": 1697957
+        },
+        {
+          "build_ns": 1197834,
+          "query_ns": 328993951,
+          "results": 800000000,
+          "total_ns": 331723410,
+          "update_ns": 1531625
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 25903104,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hybrid",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 3.61 4.08 5.48 }",
+      "process_wall_seconds": 3.841969290981069
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "3241985617",
+      "implementation": "brute-force",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 16777216,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 39708,
+          "query_ns": 1422359011,
+          "results": 800000000,
+          "total_ns": 1422478510,
+          "update_ns": 79791
+        },
+        {
+          "build_ns": 25459,
+          "query_ns": 1414880413,
+          "results": 800000000,
+          "total_ns": 1414990998,
+          "update_ns": 85126
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 23560192,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "brute-force",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 3.82 4.10 5.47 }",
+      "process_wall_seconds": 6.1059003750560805
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1205000710",
+      "implementation": "rill-cell-batch-hybrid",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 67552,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1188167,
+          "query_ns": 35891253,
+          "results": 2771102,
+          "total_ns": 40307002,
+          "update_ns": 3227582
+        },
+        {
+          "build_ns": 1185958,
+          "query_ns": 30106702,
+          "results": 2771102,
+          "total_ns": 34190367,
+          "update_ns": 2897707
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16531456,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hybrid",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 3.82 4.10 5.47 }",
+      "process_wall_seconds": 1.3049867079826072
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "5256693695",
+      "implementation": "rill-cell-batch-sorted",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32000,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 5618125,
+          "query_ns": 45524335,
+          "results": 3428653,
+          "total_ns": 64054835,
+          "update_ns": 12912375
+        },
+        {
+          "build_ns": 5928292,
+          "query_ns": 46621094,
+          "results": 3428653,
+          "total_ns": 65022718,
+          "update_ns": 12473332
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 37076992,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-sorted",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 3.99 4.14 5.47 }",
+      "process_wall_seconds": 5.424794333055615
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1038448552",
+      "implementation": "geo-index-rtree",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 16384,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 894417,
+          "query_ns": 34405621,
+          "results": 303865,
+          "total_ns": 36932412,
+          "update_ns": 1632374
+        },
+        {
+          "build_ns": 700041,
+          "query_ns": 33754910,
+          "results": 303865,
+          "total_ns": 35951243,
+          "update_ns": 1496292
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 14303232,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "geo-index-rtree",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 3.99 4.14 5.47 }",
+      "process_wall_seconds": 1.1372392909834161
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1776290613",
+      "implementation": "brute-force",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1048576,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 72750,
+          "query_ns": 771049508,
+          "results": 21790287,
+          "total_ns": 771215967,
+          "update_ns": 93709
+        },
+        {
+          "build_ns": 8458,
+          "query_ns": 780071380,
+          "results": 21790287,
+          "total_ns": 780164130,
+          "update_ns": 84292
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 12599296,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "brute-force",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 3.99 4.13 5.47 }",
+      "process_wall_seconds": 3.3535600419854745
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1137283327",
+      "implementation": "rill-cell-hybrid",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131840,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1285959,
+          "query_ns": 40419800,
+          "results": 2771102,
+          "total_ns": 44778259,
+          "update_ns": 3072500
+        },
+        {
+          "build_ns": 1178584,
+          "query_ns": 39728040,
+          "results": 2771102,
+          "total_ns": 44068374,
+          "update_ns": 3161750
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15089664,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hybrid",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 3.99 4.13 5.47 }",
+      "process_wall_seconds": 1.2519487499957904
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1203597436",
+      "implementation": "geo-index-rtree",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 16777216,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 858542,
+          "query_ns": 3571023080,
+          "results": 800000000,
+          "total_ns": 3573943246,
+          "update_ns": 2061624
+        },
+        {
+          "build_ns": 1902875,
+          "query_ns": 3788991358,
+          "results": 800000000,
+          "total_ns": 3795348067,
+          "update_ns": 4453834
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 30654464,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "geo-index-rtree",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.18 4.38 5.54 }",
+      "process_wall_seconds": 8.59953491599299
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "3482143194",
+      "implementation": "rill-cell-batch-occupied",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 10240000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1324167,
+          "query_ns": 319396014,
+          "results": 800000000,
+          "total_ns": 322711346,
+          "update_ns": 1991165
+        },
+        {
+          "build_ns": 1368250,
+          "query_ns": 345086876,
+          "results": 800000000,
+          "total_ns": 348242417,
+          "update_ns": 1787291
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 25657344,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-occupied",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.48 4.45 5.56 }",
+      "process_wall_seconds": 4.198854791000485
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1886881305",
+      "implementation": "rill-cell-sorted",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1051904,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1396375,
+          "query_ns": 188749081,
+          "results": 21790287,
+          "total_ns": 192944332,
+          "update_ns": 2798876
+        },
+        {
+          "build_ns": 1191291,
+          "query_ns": 194943281,
+          "results": 21790287,
+          "total_ns": 198961823,
+          "update_ns": 2827251
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16072704,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-sorted",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.48 4.45 5.56 }",
+      "process_wall_seconds": 2.3055695419898257
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1231767375",
+      "implementation": "geo-index-rtree",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131072,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 898958,
+          "query_ns": 68719586,
+          "results": 2785123,
+          "total_ns": 71304294,
+          "update_ns": 1685750
+        },
+        {
+          "build_ns": 785375,
+          "query_ns": 72189539,
+          "results": 2785123,
+          "total_ns": 74983456,
+          "update_ns": 2008542
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 14516224,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "geo-index-rtree",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.68 4.51 5.57 }",
+      "process_wall_seconds": 1.405402124975808
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "5531992033",
+      "implementation": "kiddo-immutable",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 173024,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 5495083,
+          "query_ns": 176794337,
+          "results": 3428653,
+          "total_ns": 192777086,
+          "update_ns": 10487666
+        },
+        {
+          "build_ns": 4891208,
+          "query_ns": 170179672,
+          "results": 3428653,
+          "total_ns": 184446004,
+          "update_ns": 9375124
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 27164672,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "kiddo-immutable",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.87 4.57 5.58 }",
+      "process_wall_seconds": 5.948993833037093
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1285277533",
+      "implementation": "rill-cell-batch-sorted",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1632,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1384375,
+          "query_ns": 160738105,
+          "results": 303865,
+          "total_ns": 166562190,
+          "update_ns": 4439710
+        },
+        {
+          "build_ns": 1723708,
+          "query_ns": 64076821,
+          "results": 303865,
+          "total_ns": 70602697,
+          "update_ns": 4802168
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 17367040,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-sorted",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.87 4.57 5.58 }",
+      "process_wall_seconds": 1.5498691669199616
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1180303923",
+      "implementation": "kiddo-immutable",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 141088,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1071625,
+          "query_ns": 86994951,
+          "results": 2785123,
+          "total_ns": 90062034,
+          "update_ns": 1995458
+        },
+        {
+          "build_ns": 870375,
+          "query_ns": 83723501,
+          "results": 2785123,
+          "total_ns": 86424877,
+          "update_ns": 1831001
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 13385728,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "kiddo-immutable",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.87 4.57 5.58 }",
+      "process_wall_seconds": 1.3836839169962332
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1072770830",
+      "implementation": "static-aabb2d",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 16384,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1164375,
+          "query_ns": 26713585,
+          "results": 303865,
+          "total_ns": 30283878,
+          "update_ns": 2405918
+        },
+        {
+          "build_ns": 1104916,
+          "query_ns": 25672168,
+          "results": 303865,
+          "total_ns": 29121376,
+          "update_ns": 2344292
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 13205504,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "static-aabb2d",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.88 4.59 5.59 }",
+      "process_wall_seconds": 1.1570815000450239
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1166190297",
+      "implementation": "rill-cell-batch-hash",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 5184,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1297250,
+          "query_ns": 83602168,
+          "results": 588829,
+          "total_ns": 89385128,
+          "update_ns": 4485710
+        },
+        {
+          "build_ns": 1151542,
+          "query_ns": 82004118,
+          "results": 588829,
+          "total_ns": 88206076,
+          "update_ns": 5050416
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16613376,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hash",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.88 4.59 5.59 }",
+      "process_wall_seconds": 1.3684904580004513
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1967808411",
+      "implementation": "rill-spatial",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1052800,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 158291,
+          "query_ns": 167977042,
+          "results": 21790287,
+          "total_ns": 170251000,
+          "update_ns": 2115667
+        },
+        {
+          "build_ns": 88208,
+          "query_ns": 144769838,
+          "results": 21790287,
+          "total_ns": 147027670,
+          "update_ns": 2169624
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15695872,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-spatial",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.88 4.59 5.59 }",
+      "process_wall_seconds": 2.3109202090417966
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1130356539",
+      "implementation": "rill-cell-occupied",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 16384,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1315917,
+          "query_ns": 1909394849,
+          "results": 303865,
+          "total_ns": 1915003098,
+          "update_ns": 4292332
+        },
+        {
+          "build_ns": 1172334,
+          "query_ns": 1889035736,
+          "results": 303865,
+          "total_ns": 1894561196,
+          "update_ns": 4353126
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15138816,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-occupied",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.61 4.77 5.64 }",
+      "process_wall_seconds": 4.966518750065006
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1113131945",
+      "implementation": "rill-cell-sorted",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32256,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1321708,
+          "query_ns": 75927475,
+          "results": 588829,
+          "total_ns": 81571975,
+          "update_ns": 4322792
+        },
+        {
+          "build_ns": 1133375,
+          "query_ns": 75482747,
+          "results": 588829,
+          "total_ns": 80732914,
+          "update_ns": 4116792
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15925248,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-sorted",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.80 4.84 5.66 }",
+      "process_wall_seconds": 1.299995500012301
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1199347620",
+      "implementation": "kiddo-immutable",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 139840,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1108625,
+          "query_ns": 86481872,
+          "results": 2771102,
+          "total_ns": 89748580,
+          "update_ns": 2158083
+        },
+        {
+          "build_ns": 895375,
+          "query_ns": 88095049,
+          "results": 2771102,
+          "total_ns": 90987966,
+          "update_ns": 1997542
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 13385728,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "kiddo-immutable",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.80 4.84 5.66 }",
+      "process_wall_seconds": 1.407402041950263
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "5469167997",
+      "implementation": "rill-cell-occupied",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131904,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 6136750,
+          "query_ns": 715969760,
+          "results": 3428653,
+          "total_ns": 736100926,
+          "update_ns": 13994416
+        },
+        {
+          "build_ns": 5889041,
+          "query_ns": 694155868,
+          "results": 3428653,
+          "total_ns": 712557327,
+          "update_ns": 12512418
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 37060608,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-occupied",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.74 4.85 5.66 }",
+      "process_wall_seconds": 6.95579475001432
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1389602696",
+      "implementation": "rill-cell-hybrid",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 132352,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1348000,
+          "query_ns": 49656586,
+          "results": 2785123,
+          "total_ns": 54278003,
+          "update_ns": 3273417
+        },
+        {
+          "build_ns": 1194833,
+          "query_ns": 53731051,
+          "results": 2785123,
+          "total_ns": 58528468,
+          "update_ns": 3602584
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15106048,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hybrid",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.32 5.42 5.86 }",
+      "process_wall_seconds": 1.5307933340081945
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "2178971100",
+      "implementation": "rill-cell-batch-hybrid",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 955584,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1354917,
+          "query_ns": 169690140,
+          "results": 21790287,
+          "total_ns": 174123724,
+          "update_ns": 3078667
+        },
+        {
+          "build_ns": 1327416,
+          "query_ns": 178488094,
+          "results": 21790287,
+          "total_ns": 182961010,
+          "update_ns": 3145500
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 17727488,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hybrid",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.32 5.42 5.86 }",
+      "process_wall_seconds": 2.5644326669862494
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1490521002",
+      "implementation": "rill-cell-batch-hybrid",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1632,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1464416,
+          "query_ns": 100655982,
+          "results": 303865,
+          "total_ns": 106760397,
+          "update_ns": 4639999
+        },
+        {
+          "build_ns": 1375250,
+          "query_ns": 128264517,
+          "results": 303865,
+          "total_ns": 134087061,
+          "update_ns": 4447294
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 17383424,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hybrid",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 12.42 6.13 6.10 }",
+      "process_wall_seconds": 1.7623447090154514
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1410025978",
+      "implementation": "static-aabb2d",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1415917,
+          "query_ns": 73473005,
+          "results": 588829,
+          "total_ns": 77791507,
+          "update_ns": 2902585
+        },
+        {
+          "build_ns": 1221875,
+          "query_ns": 55924808,
+          "results": 588829,
+          "total_ns": 59677224,
+          "update_ns": 2530541
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 12468224,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "static-aabb2d",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 12.42 6.13 6.10 }",
+      "process_wall_seconds": 1.5751873750705272
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1333025166",
+      "implementation": "rill-cell-batch-hybrid",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 5184,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1547833,
+          "query_ns": 98142671,
+          "results": 588829,
+          "total_ns": 104770671,
+          "update_ns": 5080167
+        },
+        {
+          "build_ns": 1335291,
+          "query_ns": 86068206,
+          "results": 588829,
+          "total_ns": 91851997,
+          "update_ns": 4448500
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16646144,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hybrid",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 12.42 6.13 6.10 }",
+      "process_wall_seconds": 1.55658095900435
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1222082185",
+      "implementation": "rill-cell-hybrid",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 16384,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1387542,
+          "query_ns": 94390561,
+          "results": 303865,
+          "total_ns": 100493187,
+          "update_ns": 4715084
+        },
+        {
+          "build_ns": 1582292,
+          "query_ns": 99251921,
+          "results": 303865,
+          "total_ns": 105558547,
+          "update_ns": 4724334
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 18350080,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hybrid",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 11.82 6.11 6.10 }",
+      "process_wall_seconds": 1.4597178749972954
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1609036932",
+      "implementation": "rill-cell-occupied",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 132352,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1425166,
+          "query_ns": 233937684,
+          "results": 2785123,
+          "total_ns": 239227851,
+          "update_ns": 3865001
+        },
+        {
+          "build_ns": 1664000,
+          "query_ns": 239215092,
+          "results": 2785123,
+          "total_ns": 244748342,
+          "update_ns": 3869250
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15925248,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-occupied",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 11.82 6.11 6.10 }",
+      "process_wall_seconds": 2.1284639169462025
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "3444818019",
+      "implementation": "rill-cell-hash",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 10240000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1399625,
+          "query_ns": 394229961,
+          "results": 800000000,
+          "total_ns": 397917337,
+          "update_ns": 2287751
+        },
+        {
+          "build_ns": 1147834,
+          "query_ns": 313502978,
+          "results": 800000000,
+          "total_ns": 316373313,
+          "update_ns": 1722501
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 26034176,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hash",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 11.28 6.09 6.09 }",
+      "process_wall_seconds": 4.18748795799911
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1083729168",
+      "implementation": "rill-cell-hash",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32256,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1463083,
+          "query_ns": 74938870,
+          "results": 588829,
+          "total_ns": 80716952,
+          "update_ns": 4314999
+        },
+        {
+          "build_ns": 1327291,
+          "query_ns": 73414837,
+          "results": 588829,
+          "total_ns": 79954085,
+          "update_ns": 5211957
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15876096,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hash",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 11.28 6.09 6.09 }",
+      "process_wall_seconds": 1.2845505829900503
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1778578404",
+      "implementation": "rill-cell-batch-sorted",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 955584,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1316958,
+          "query_ns": 159486307,
+          "results": 21790287,
+          "total_ns": 163596139,
+          "update_ns": 2792874
+        },
+        {
+          "build_ns": 1263709,
+          "query_ns": 147318664,
+          "results": 21790287,
+          "total_ns": 151149289,
+          "update_ns": 2566916
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 17809408,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-sorted",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 10.69 6.05 6.08 }",
+      "process_wall_seconds": 2.1174579999642447
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "5143601422",
+      "implementation": "brute-force",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131072,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 235792,
+          "query_ns": 2378994283,
+          "results": 3428653,
+          "total_ns": 2379277492,
+          "update_ns": 47417
+        },
+        {
+          "build_ns": 42541,
+          "query_ns": 2391623462,
+          "results": 3428653,
+          "total_ns": 2391773543,
+          "update_ns": 107540
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 20611072,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "brute-force",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.58 5.97 6.05 }",
+      "process_wall_seconds": 9.950900334049948
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1019224383",
+      "implementation": "brute-force",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 16384,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 44500,
+          "query_ns": 471017360,
+          "results": 303865,
+          "total_ns": 471107403,
+          "update_ns": 45543
+        },
+        {
+          "build_ns": 7583,
+          "query_ns": 474060716,
+          "results": 303865,
+          "total_ns": 474163174,
+          "update_ns": 94875
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 11403264,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "brute-force",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.58 5.97 6.05 }",
+      "process_wall_seconds": 1.9901676670415327
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "4985676098",
+      "implementation": "rill-cell-hash",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131904,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 6413833,
+          "query_ns": 75641112,
+          "results": 3428653,
+          "total_ns": 95567820,
+          "update_ns": 13512875
+        },
+        {
+          "build_ns": 5405417,
+          "query_ns": 73444915,
+          "results": 3428653,
+          "total_ns": 90360999,
+          "update_ns": 11510667
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 37060608,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hash",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.13 5.94 6.04 }",
+      "process_wall_seconds": 5.219124249997549
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1090198205",
+      "implementation": "rill-cell-batch-sorted",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 74432,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1275000,
+          "query_ns": 30409050,
+          "results": 2785123,
+          "total_ns": 34693300,
+          "update_ns": 3009250
+        },
+        {
+          "build_ns": 1148333,
+          "query_ns": 30777953,
+          "results": 2785123,
+          "total_ns": 34654410,
+          "update_ns": 2728124
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16564224,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-sorted",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.13 5.94 6.04 }",
+      "process_wall_seconds": 1.1887103749904782
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1077480199",
+      "implementation": "rill-cell-sorted",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 132352,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1398666,
+          "query_ns": 35237132,
+          "results": 2785123,
+          "total_ns": 39523090,
+          "update_ns": 2887292
+        },
+        {
+          "build_ns": 1083083,
+          "query_ns": 35217585,
+          "results": 2785123,
+          "total_ns": 39068211,
+          "update_ns": 2767543
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15007744,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-sorted",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.13 5.94 6.04 }",
+      "process_wall_seconds": 1.179232917027548
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1083489661",
+      "implementation": "rill-cell-hash",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 132352,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1239833,
+          "query_ns": 62520049,
+          "results": 2785123,
+          "total_ns": 66742132,
+          "update_ns": 2982250
+        },
+        {
+          "build_ns": 1027917,
+          "query_ns": 62324331,
+          "results": 2785123,
+          "total_ns": 66182790,
+          "update_ns": 2830542
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15089664,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hash",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.04 5.97 6.05 }",
+      "process_wall_seconds": 1.2396915419958532
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "990838518",
+      "implementation": "rill-spatial",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 16384,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 169167,
+          "query_ns": 18510072,
+          "results": 303865,
+          "total_ns": 20559779,
+          "update_ns": 1880540
+        },
+        {
+          "build_ns": 80917,
+          "query_ns": 17941576,
+          "results": 303865,
+          "total_ns": 19573160,
+          "update_ns": 1550667
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 14925824,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-spatial",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.04 5.97 6.05 }",
+      "process_wall_seconds": 1.055688374908641
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "5014757097",
+      "implementation": "rill-dual",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 104064,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 5758667,
+          "query_ns": 63639492,
+          "results": 3428653,
+          "total_ns": 88940991,
+          "update_ns": 19542832
+        },
+        {
+          "build_ns": 5559584,
+          "query_ns": 62480993,
+          "results": 3428653,
+          "total_ns": 87404911,
+          "update_ns": 19364334
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 29458432,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-dual",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 8.40 5.89 6.02 }",
+      "process_wall_seconds": 5.224162583006546
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1096069592",
+      "implementation": "rill-cell-hybrid",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32256,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1200125,
+          "query_ns": 71851075,
+          "results": 588829,
+          "total_ns": 76828200,
+          "update_ns": 3777000
+        },
+        {
+          "build_ns": 1050458,
+          "query_ns": 94804624,
+          "results": 588829,
+          "total_ns": 99518290,
+          "update_ns": 3663208
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15794176,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hybrid",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 8.40 5.89 6.02 }",
+      "process_wall_seconds": 1.2940252909902483
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1666318253",
+      "implementation": "rill-cell-hybrid",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1051904,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1230500,
+          "query_ns": 168612339,
+          "results": 21790287,
+          "total_ns": 172464256,
+          "update_ns": 2621417
+        },
+        {
+          "build_ns": 1049083,
+          "query_ns": 168271533,
+          "results": 21790287,
+          "total_ns": 171782158,
+          "update_ns": 2461542
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16072704,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hybrid",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 7.88 5.82 5.99 }",
+      "process_wall_seconds": 2.0343929580412805
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1108535931",
+      "implementation": "brute-force",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131072,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 34375,
+          "query_ns": 491466567,
+          "results": 2785123,
+          "total_ns": 491559983,
+          "update_ns": 59041
+        },
+        {
+          "build_ns": 7208,
+          "query_ns": 511370376,
+          "results": 2785123,
+          "total_ns": 511468166,
+          "update_ns": 90582
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 11665408,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "brute-force",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 7.88 5.82 5.99 }",
+      "process_wall_seconds": 2.134842292056419
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "4983917378",
+      "implementation": "rill-cell-batch-occupied",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32000,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 5644042,
+          "query_ns": 175008792,
+          "results": 3428653,
+          "total_ns": 193192001,
+          "update_ns": 12539167
+        },
+        {
+          "build_ns": 5131958,
+          "query_ns": 174443122,
+          "results": 3428653,
+          "total_ns": 191192205,
+          "update_ns": 11617125
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 37076992,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-occupied",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 7.49 5.78 5.98 }",
+      "process_wall_seconds": 5.403831291012466
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "3039788199",
+      "implementation": "rill-cell-batch-sorted",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 10240000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1340542,
+          "query_ns": 312646132,
+          "results": 800000000,
+          "total_ns": 315651174,
+          "update_ns": 1664500
+        },
+        {
+          "build_ns": 1069666,
+          "query_ns": 311262253,
+          "results": 800000000,
+          "total_ns": 313783295,
+          "update_ns": 1451376
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 25755648,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-sorted",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 7.13 5.73 5.96 }",
+      "process_wall_seconds": 3.6945610829861835
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "3094353908",
+      "implementation": "rill-cell-batch-hybrid",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 10240000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1258083,
+          "query_ns": 306543957,
+          "results": 800000000,
+          "total_ns": 309467374,
+          "update_ns": 1665334
+        },
+        {
+          "build_ns": 1067375,
+          "query_ns": 316133969,
+          "results": 800000000,
+          "total_ns": 318692886,
+          "update_ns": 1491542
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 25804800,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hybrid",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.80 5.68 5.94 }",
+      "process_wall_seconds": 3.748252666904591
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "4957262401",
+      "implementation": "rill-cell-sorted",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131904,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 5956375,
+          "query_ns": 52777128,
+          "results": 3428653,
+          "total_ns": 71836337,
+          "update_ns": 13102834
+        },
+        {
+          "build_ns": 5507917,
+          "query_ns": 50966721,
+          "results": 3428653,
+          "total_ns": 67976679,
+          "update_ns": 11502041
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 37076992,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-sorted",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.50 5.64 5.92 }",
+      "process_wall_seconds": 5.132160625071265
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1709961549",
+      "implementation": "rill-cell-batch-occupied",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 955584,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1168708,
+          "query_ns": 145650958,
+          "results": 21790287,
+          "total_ns": 149431750,
+          "update_ns": 2612084
+        },
+        {
+          "build_ns": 1211041,
+          "query_ns": 147808451,
+          "results": 21790287,
+          "total_ns": 151819908,
+          "update_ns": 2800416
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 17711104,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-occupied",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.50 5.64 5.92 }",
+      "process_wall_seconds": 2.035313457949087
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1115624418",
+      "implementation": "rill-dual",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 89472,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1257791,
+          "query_ns": 43278352,
+          "results": 2771102,
+          "total_ns": 48889476,
+          "update_ns": 4353333
+        },
+        {
+          "build_ns": 1237292,
+          "query_ns": 42220771,
+          "results": 2771102,
+          "total_ns": 47774148,
+          "update_ns": 4316085
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15433728,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-dual",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.50 5.64 5.92 }",
+      "process_wall_seconds": 1.2369583749677986
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1767371451",
+      "implementation": "brute-force",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131072,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 34375,
+          "query_ns": 648649325,
+          "results": 2771102,
+          "total_ns": 648760284,
+          "update_ns": 76584
+        },
+        {
+          "build_ns": 9209,
+          "query_ns": 922040474,
+          "results": 2771102,
+          "total_ns": 922133974,
+          "update_ns": 84291
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 11649024,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "brute-force",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.38 5.63 5.92 }",
+      "process_wall_seconds": 3.3696979170199484
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1008631664",
+      "implementation": "rill-cell-sorted",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 16384,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1243417,
+          "query_ns": 49432157,
+          "results": 303865,
+          "total_ns": 54626742,
+          "update_ns": 3951168
+        },
+        {
+          "build_ns": 1058292,
+          "query_ns": 48088511,
+          "results": 303865,
+          "total_ns": 53040552,
+          "update_ns": 3893749
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 17203200,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-sorted",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.38 5.63 5.92 }",
+      "process_wall_seconds": 1.1444797919830307
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1128367182",
+      "implementation": "rill-cell-batch-hash",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 67552,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1243625,
+          "query_ns": 34699600,
+          "results": 2771102,
+          "total_ns": 39229558,
+          "update_ns": 3286333
+        },
+        {
+          "build_ns": 1238000,
+          "query_ns": 34699425,
+          "results": 2771102,
+          "total_ns": 38930968,
+          "update_ns": 2993543
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16547840,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hash",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.03 5.57 5.89 }",
+      "process_wall_seconds": 1.2317417910089716
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1116227039",
+      "implementation": "static-aabb2d",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131072,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1149042,
+          "query_ns": 50626460,
+          "results": 2785123,
+          "total_ns": 54100420,
+          "update_ns": 2324918
+        },
+        {
+          "build_ns": 1079583,
+          "query_ns": 49175083,
+          "results": 2785123,
+          "total_ns": 52434709,
+          "update_ns": 2180043
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 13434880,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "static-aabb2d",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.03 5.57 5.89 }",
+      "process_wall_seconds": 1.2474227079655975
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1030388199",
+      "implementation": "rill-dual",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 23616,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1206250,
+          "query_ns": 32622991,
+          "results": 588829,
+          "total_ns": 38285741,
+          "update_ns": 4456500
+        },
+        {
+          "build_ns": 1137459,
+          "query_ns": 33205769,
+          "results": 588829,
+          "total_ns": 38714436,
+          "update_ns": 4371208
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 14450688,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-dual",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.03 5.57 5.89 }",
+      "process_wall_seconds": 1.129848457989283
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1132166016",
+      "implementation": "rill-cell-batch-hybrid",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 74432,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1222583,
+          "query_ns": 30278278,
+          "results": 2785123,
+          "total_ns": 34538070,
+          "update_ns": 3037209
+        },
+        {
+          "build_ns": 1160917,
+          "query_ns": 31231039,
+          "results": 2785123,
+          "total_ns": 35489581,
+          "update_ns": 3097625
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16547840,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hybrid",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.03 5.57 5.89 }",
+      "process_wall_seconds": 1.2292104579973966
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1118964571",
+      "implementation": "rill-cell-batch-occupied",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 74432,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1232167,
+          "query_ns": 38197746,
+          "results": 2785123,
+          "total_ns": 42520704,
+          "update_ns": 3090791
+        },
+        {
+          "build_ns": 1212459,
+          "query_ns": 37263767,
+          "results": 2785123,
+          "total_ns": 41351101,
+          "update_ns": 2874875
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16547840,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-occupied",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.86 5.54 5.88 }",
+      "process_wall_seconds": 1.2281230830121785
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "3114859446",
+      "implementation": "rill-cell-sorted",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 10240000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1205750,
+          "query_ns": 320269417,
+          "results": 800000000,
+          "total_ns": 323042045,
+          "update_ns": 1566878
+        },
+        {
+          "build_ns": 1081458,
+          "query_ns": 314938262,
+          "results": 800000000,
+          "total_ns": 317485177,
+          "update_ns": 1465457
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 25870336,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-sorted",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.86 5.54 5.88 }",
+      "process_wall_seconds": 3.779898750013672
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1016584824",
+      "implementation": "rill-dual",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 11568,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1258917,
+          "query_ns": 21085030,
+          "results": 303865,
+          "total_ns": 26802113,
+          "update_ns": 4458166
+        },
+        {
+          "build_ns": 1053584,
+          "query_ns": 21003729,
+          "results": 303865,
+          "total_ns": 26407439,
+          "update_ns": 4350126
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15220736,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-dual",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.87 5.55 5.88 }",
+      "process_wall_seconds": 1.0948871249565855
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "5167064805",
+      "implementation": "static-aabb2d",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131072,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 7302459,
+          "query_ns": 87104525,
+          "results": 3428653,
+          "total_ns": 107072860,
+          "update_ns": 12665876
+        },
+        {
+          "build_ns": 6163917,
+          "query_ns": 103962712,
+          "results": 3428653,
+          "total_ns": 122720964,
+          "update_ns": 12594335
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 29835264,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "static-aabb2d",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.72 5.52 5.87 }",
+      "process_wall_seconds": 5.433552791015245
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1137339293",
+      "implementation": "rill-dual",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 89728,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1202875,
+          "query_ns": 44629248,
+          "results": 2785123,
+          "total_ns": 50305537,
+          "update_ns": 4473414
+        },
+        {
+          "build_ns": 1083917,
+          "query_ns": 44670667,
+          "results": 2785123,
+          "total_ns": 50267627,
+          "update_ns": 4513043
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15417344,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-dual",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.72 5.52 5.87 }",
+      "process_wall_seconds": 1.2634084169985726
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1028199904",
+      "implementation": "rill-cell-occupied",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32256,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1188000,
+          "query_ns": 1115876962,
+          "results": 588829,
+          "total_ns": 1121110878,
+          "update_ns": 4045916
+        },
+        {
+          "build_ns": 1116625,
+          "query_ns": 1107130217,
+          "results": 588829,
+          "total_ns": 1112108507,
+          "update_ns": 3861665
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15908864,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-occupied",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.51 5.48 5.85 }",
+      "process_wall_seconds": 3.2865247919689864
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1131181760",
+      "implementation": "kiddo-immutable",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 20480,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 941834,
+          "query_ns": 24593996,
+          "results": 303865,
+          "total_ns": 27392787,
+          "update_ns": 1856957
+        },
+        {
+          "build_ns": 891292,
+          "query_ns": 20902329,
+          "results": 303865,
+          "total_ns": 23595330,
+          "update_ns": 1801709
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 13074432,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "kiddo-immutable",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.51 5.48 5.85 }",
+      "process_wall_seconds": 1.2072263750014827
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1009194228",
+      "implementation": "kiddo-immutable",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 10240000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 935917,
+          "query_ns": 1935474793,
+          "results": 800000000,
+          "total_ns": 1938324919,
+          "update_ns": 1914209
+        },
+        {
+          "build_ns": 850250,
+          "query_ns": 1906466854,
+          "results": 800000000,
+          "total_ns": 1909069854,
+          "update_ns": 1752750
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 26279936,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "kiddo-immutable",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.38 5.46 5.84 }",
+      "process_wall_seconds": 4.882413625018671
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1702337171",
+      "implementation": "static-aabb2d",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1048576,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1139500,
+          "query_ns": 187283533,
+          "results": 21790287,
+          "total_ns": 190677200,
+          "update_ns": 2254167
+        },
+        {
+          "build_ns": 1054958,
+          "query_ns": 187579089,
+          "results": 21790287,
+          "total_ns": 190811714,
+          "update_ns": 2177667
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 14368768,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "static-aabb2d",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.38 5.46 5.84 }",
+      "process_wall_seconds": 2.108870291034691
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1027147991",
+      "implementation": "rill-cell-batch-occupied",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1632,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1277750,
+          "query_ns": 1754089549,
+          "results": 303865,
+          "total_ns": 1759500174,
+          "update_ns": 4132875
+        },
+        {
+          "build_ns": 1061416,
+          "query_ns": 1756616877,
+          "results": 303865,
+          "total_ns": 1761601250,
+          "update_ns": 3922957
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 17367040,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-occupied",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.35 5.45 5.84 }",
+      "process_wall_seconds": 4.5737018750514835
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1119696601",
+      "implementation": "rill-cell-sorted",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131840,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1299125,
+          "query_ns": 38938452,
+          "results": 2771102,
+          "total_ns": 43344619,
+          "update_ns": 3107042
+        },
+        {
+          "build_ns": 1124917,
+          "query_ns": 37660739,
+          "results": 2771102,
+          "total_ns": 41890031,
+          "update_ns": 3104375
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15138816,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-sorted",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.35 5.45 5.84 }",
+      "process_wall_seconds": 1.2306844589766115
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1007545630",
+      "implementation": "rill-spatial",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 10240000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 163458,
+          "query_ns": 89482706,
+          "results": 800000000,
+          "total_ns": 92857164,
+          "update_ns": 3211000
+        },
+        {
+          "build_ns": 83875,
+          "query_ns": 87403915,
+          "results": 800000000,
+          "total_ns": 90337290,
+          "update_ns": 2849500
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 25952256,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-spatial",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.41 5.46 5.84 }",
+      "process_wall_seconds": 1.2156431670300663
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1136636664",
+      "implementation": "geo-index-rtree",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131072,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 834417,
+          "query_ns": 65701288,
+          "results": 2771102,
+          "total_ns": 68112914,
+          "update_ns": 1577209
+        },
+        {
+          "build_ns": 730958,
+          "query_ns": 64401882,
+          "results": 2771102,
+          "total_ns": 66746923,
+          "update_ns": 1614083
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 14499840,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "geo-index-rtree",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.41 5.46 5.84 }",
+      "process_wall_seconds": 1.2972442499594763
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1039875242",
+      "implementation": "geo-index-rtree",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 828083,
+          "query_ns": 62521506,
+          "results": 588829,
+          "total_ns": 64996173,
+          "update_ns": 1646584
+        },
+        {
+          "build_ns": 734583,
+          "query_ns": 63153793,
+          "results": 588829,
+          "total_ns": 65437792,
+          "update_ns": 1549416
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 13516800,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "geo-index-rtree",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.41 5.46 5.84 }",
+      "process_wall_seconds": 1.1934835000429302
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1156918148",
+      "implementation": "rill-cell-batch-sorted",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 67552,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1239750,
+          "query_ns": 31580981,
+          "results": 2771102,
+          "total_ns": 36161606,
+          "update_ns": 3340875
+        },
+        {
+          "build_ns": 1180625,
+          "query_ns": 32415496,
+          "results": 2771102,
+          "total_ns": 36596165,
+          "update_ns": 3000044
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16531456,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-sorted",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.41 5.46 5.84 }",
+      "process_wall_seconds": 1.254934291006066
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1156370141",
+      "implementation": "static-aabb2d",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131072,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1341625,
+          "query_ns": 52970568,
+          "results": 2771102,
+          "total_ns": 56750317,
+          "update_ns": 2438124
+        },
+        {
+          "build_ns": 1143709,
+          "query_ns": 50709749,
+          "results": 2771102,
+          "total_ns": 54218251,
+          "update_ns": 2364793
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 13418496,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "static-aabb2d",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.37 5.45 5.83 }",
+      "process_wall_seconds": 1.292738417047076
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1198473783",
+      "implementation": "rill-cell-batch-hash",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 74432,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1215958,
+          "query_ns": 35575600,
+          "results": 2785123,
+          "total_ns": 40972975,
+          "update_ns": 4181417
+        },
+        {
+          "build_ns": 1165417,
+          "query_ns": 36301741,
+          "results": 2785123,
+          "total_ns": 40683407,
+          "update_ns": 3216249
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16531456,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hash",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.37 5.45 5.83 }",
+      "process_wall_seconds": 1.3074596249498427
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1189681854",
+      "implementation": "rill-cell-batch-hash",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1632,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1326459,
+          "query_ns": 101272453,
+          "results": 303865,
+          "total_ns": 106732745,
+          "update_ns": 4133833
+        },
+        {
+          "build_ns": 1146458,
+          "query_ns": 96829026,
+          "results": 303865,
+          "total_ns": 101867067,
+          "update_ns": 3891583
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 17383424,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hash",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.37 5.45 5.83 }",
+      "process_wall_seconds": 1.4255016669631004
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1133670178",
+      "implementation": "rill-spatial",
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131712,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 185125,
+          "query_ns": 40313541,
+          "results": 2785123,
+          "total_ns": 43836917,
+          "update_ns": 3338251
+        },
+        {
+          "build_ns": 94209,
+          "query_ns": 39070198,
+          "results": 2785123,
+          "total_ns": 42012824,
+          "update_ns": 2848417
+        }
+      ],
+      "scenario": "teleports",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 17498112,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-spatial",
+        "benchmarks/twenty-k/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "input_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.18 5.41 5.82 }",
+      "process_wall_seconds": 1.2448927079094574
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1151557067",
+      "implementation": "rill-cell-hash",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131840,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1249292,
+          "query_ns": 68582843,
+          "results": 2771102,
+          "total_ns": 73064926,
+          "update_ns": 3232791
+        },
+        {
+          "build_ns": 1212875,
+          "query_ns": 70842589,
+          "results": 2771102,
+          "total_ns": 75179589,
+          "update_ns": 3124125
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15106048,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hash",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.18 5.41 5.82 }",
+      "process_wall_seconds": 1.3255795419681817
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1057752669",
+      "implementation": "rill-dual",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 6400000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1356375,
+          "query_ns": 103361669,
+          "results": 800000000,
+          "total_ns": 109575128,
+          "update_ns": 4857084
+        },
+        {
+          "build_ns": 1171042,
+          "query_ns": 99167704,
+          "results": 800000000,
+          "total_ns": 104804453,
+          "update_ns": 4465707
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 21823488,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-dual",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 5.18 5.41 5.82 }",
+      "process_wall_seconds": 1.3004463750403374
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1782987208",
+      "implementation": "geo-index-rtree",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1048576,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 824375,
+          "query_ns": 240740704,
+          "results": 21790287,
+          "total_ns": 243197538,
+          "update_ns": 1632459
+        },
+        {
+          "build_ns": 738500,
+          "query_ns": 243267172,
+          "results": 21790287,
+          "total_ns": 245601505,
+          "update_ns": 1595833
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15482880,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "geo-index-rtree",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 4.93 5.35 5.79 }",
+      "process_wall_seconds": 2.297198166954331
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1073285349",
+      "implementation": "rill-cell-batch-occupied",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 5184,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1283292,
+          "query_ns": 576718743,
+          "results": 588829,
+          "total_ns": 582065285,
+          "update_ns": 4063250
+        },
+        {
+          "build_ns": 1152916,
+          "query_ns": 573406284,
+          "results": 588829,
+          "total_ns": 578460033,
+          "update_ns": 3900833
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16629760,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-occupied",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 4.93 5.35 5.79 }",
+      "process_wall_seconds": 2.257515832898207
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1977215690",
+      "implementation": "rill-cell-occupied",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1051904,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1216500,
+          "query_ns": 209599539,
+          "results": 21790287,
+          "total_ns": 213566247,
+          "update_ns": 2750208
+        },
+        {
+          "build_ns": 1308000,
+          "query_ns": 209244021,
+          "results": 21790287,
+          "total_ns": 213645480,
+          "update_ns": 3093459
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15876096,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-occupied",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 4.77 5.31 5.78 }",
+      "process_wall_seconds": 2.4301507079508156
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "5370041439",
+      "implementation": "geo-index-rtree",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131072,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 4586791,
+          "query_ns": 110866966,
+          "results": 3428653,
+          "total_ns": 124713342,
+          "update_ns": 9259585
+        },
+        {
+          "build_ns": 4117000,
+          "query_ns": 111740262,
+          "results": 3428653,
+          "total_ns": 125025137,
+          "update_ns": 9167875
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 33865728,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "geo-index-rtree",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 4.63 5.27 5.76 }",
+      "process_wall_seconds": 5.655672499909997
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "3129104678",
+      "implementation": "rill-cell-batch-hash",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 10240000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1234833,
+          "query_ns": 317048082,
+          "results": 800000000,
+          "total_ns": 319931708,
+          "update_ns": 1648793
+        },
+        {
+          "build_ns": 1133292,
+          "query_ns": 319083990,
+          "results": 800000000,
+          "total_ns": 321877615,
+          "update_ns": 1660333
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 25640960,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hash",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 4.63 5.27 5.76 }",
+      "process_wall_seconds": 3.7958963330602273
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1928354713",
+      "implementation": "rill-cell-hash",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1051904,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1237667,
+          "query_ns": 247879367,
+          "results": 21790287,
+          "total_ns": 251902452,
+          "update_ns": 2785418
+        },
+        {
+          "build_ns": 1216250,
+          "query_ns": 261847171,
+          "results": 21790287,
+          "total_ns": 266258546,
+          "update_ns": 3195125
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16039936,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hash",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 4.66 5.27 5.76 }",
+      "process_wall_seconds": 2.4713903330266476
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1235354081",
+      "implementation": "rill-cell-hash",
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 16384,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1345541,
+          "query_ns": 86843828,
+          "results": 303865,
+          "total_ns": 92628203,
+          "update_ns": 4438834
+        },
+        {
+          "build_ns": 1214292,
+          "query_ns": 111485299,
+          "results": 303865,
+          "total_ns": 116977342,
+          "update_ns": 4277751
+        }
+      ],
+      "scenario": "uniform",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 17039360,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-hash",
+        "benchmarks/twenty-k/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "input_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 4.66 5.27 5.76 }",
+      "process_wall_seconds": 1.4846307089319453
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "3141160054",
+      "implementation": "rill-spatial",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 130752,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 313708,
+          "query_ns": 155357962,
+          "results": 2771102,
+          "total_ns": 159060878,
+          "update_ns": 3389208
+        },
+        {
+          "build_ns": 337084,
+          "query_ns": 106929275,
+          "results": 2771102,
+          "total_ns": 111454735,
+          "update_ns": 4188376
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 19611648,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-spatial",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 6.21 5.58 5.86 }",
+      "process_wall_seconds": 3.4561237499583513
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "4113549149",
+      "implementation": "rill-cell-batch-hash",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 955584,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1478625,
+          "query_ns": 344929074,
+          "results": 21790287,
+          "total_ns": 355028575,
+          "update_ns": 8620876
+        },
+        {
+          "build_ns": 1484458,
+          "query_ns": 279967277,
+          "results": 21790287,
+          "total_ns": 285748611,
+          "update_ns": 4296876
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 20086784,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hash",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 7.47 5.85 5.96 }",
+      "process_wall_seconds": 4.802224666927941
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "6144881914",
+      "implementation": "rill-spatial",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 131904,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1240708,
+          "query_ns": 91948211,
+          "results": 3428653,
+          "total_ns": 105968418,
+          "update_ns": 12779499
+        },
+        {
+          "build_ns": 497000,
+          "query_ns": 73226875,
+          "results": 3428653,
+          "total_ns": 83928125,
+          "update_ns": 10204250
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 36749312,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-spatial",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 7.43 5.87 5.96 }",
+      "process_wall_seconds": 6.385486459010281
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1137616841",
+      "implementation": "brute-force",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 36417,
+          "query_ns": 524784047,
+          "results": 588829,
+          "total_ns": 524890088,
+          "update_ns": 69624
+        },
+        {
+          "build_ns": 9042,
+          "query_ns": 520539863,
+          "results": 588829,
+          "total_ns": 520632988,
+          "update_ns": 84083
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 10567680,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "brute-force",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 7.08 5.82 5.94 }",
+      "process_wall_seconds": 2.2074025409528986
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "9115946725",
+      "implementation": "rill-cell-batch-hash",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32000,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 10883750,
+          "query_ns": 69957257,
+          "results": 3428653,
+          "total_ns": 95340800,
+          "update_ns": 14499793
+        },
+        {
+          "build_ns": 6405666,
+          "query_ns": 176046768,
+          "results": 3428653,
+          "total_ns": 202749893,
+          "update_ns": 20297459
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 41304064,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hash",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 11.00 6.68 6.24 }",
+      "process_wall_seconds": 9.469242624938488
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "8914214038",
+      "implementation": "rill-cell-batch-hybrid",
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 32000,
+      "points": 100000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 14897792,
+          "query_ns": 102538037,
+          "results": 3428653,
+          "total_ns": 139744913,
+          "update_ns": 22309084
+        },
+        {
+          "build_ns": 6962958,
+          "query_ns": 54903341,
+          "results": 3428653,
+          "total_ns": 77563506,
+          "update_ns": 15697207
+        }
+      ],
+      "scenario": "many-objects",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 41205760,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-hybrid",
+        "benchmarks/twenty-k/many-objects.json",
+        "2"
+      ],
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "input_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 10.60 6.66 6.24 }",
+      "process_wall_seconds": 9.23211945896037
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1287679284",
+      "implementation": "rill-cell-batch-occupied",
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 67552,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1228625,
+          "query_ns": 43832513,
+          "results": 2771102,
+          "total_ns": 48230555,
+          "update_ns": 3169417
+        },
+        {
+          "build_ns": 1191833,
+          "query_ns": 48632828,
+          "results": 2771102,
+          "total_ns": 53540329,
+          "update_ns": 3715668
+        }
+      ],
+      "scenario": "bounded64",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 16547840,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-batch-occupied",
+        "benchmarks/twenty-k/bounded64.json",
+        "2"
+      ],
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "input_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.99 6.60 6.22 }",
+      "process_wall_seconds": 1.4173964589135721
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "2261053712",
+      "implementation": "rill-dual",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 757760,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1573500,
+          "query_ns": 253086282,
+          "results": 21790287,
+          "total_ns": 262748657,
+          "update_ns": 8088875
+        },
+        {
+          "build_ns": 1426750,
+          "query_ns": 261884046,
+          "results": 21790287,
+          "total_ns": 269307921,
+          "update_ns": 5997125
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 17514496,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-dual",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.99 6.60 6.22 }",
+      "process_wall_seconds": 2.824129124986939
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "3709361978",
+      "implementation": "rill-cell-occupied",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 10240000,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1460250,
+          "query_ns": 377038031,
+          "results": 800000000,
+          "total_ns": 380528697,
+          "update_ns": 2030416
+        },
+        {
+          "build_ns": 1342292,
+          "query_ns": 351632408,
+          "results": 800000000,
+          "total_ns": 354739785,
+          "update_ns": 1765085
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 25903104,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "rill-cell-occupied",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.83 6.63 6.23 }",
+      "process_wall_seconds": 4.474336749990471
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "2134840763",
+      "implementation": "kiddo-immutable",
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 1168272,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1162709,
+          "query_ns": 323908007,
+          "results": 21790287,
+          "total_ns": 327358716,
+          "update_ns": 2288000
+        },
+        {
+          "build_ns": 1118542,
+          "query_ns": 309008438,
+          "results": 21790287,
+          "total_ns": 312396064,
+          "update_ns": 2269084
+        }
+      ],
+      "scenario": "crowd",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 15056896,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "kiddo-immutable",
+        "benchmarks/twenty-k/crowd.json",
+        "2"
+      ],
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "input_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 9.44 6.60 6.23 }",
+      "process_wall_seconds": 2.802848291932605
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1279865921",
+      "implementation": "static-aabb2d",
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 16777216,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1352292,
+          "query_ns": 2336767420,
+          "results": 800000000,
+          "total_ns": 2340771754,
+          "update_ns": 2652042
+        },
+        {
+          "build_ns": 1421542,
+          "query_ns": 2425281243,
+          "results": 800000000,
+          "total_ns": 2429463953,
+          "update_ns": 2761168
+        }
+      ],
+      "scenario": "contained",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 25378816,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "static-aabb2d",
+        "benchmarks/twenty-k/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "input_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 8.93 6.54 6.21 }",
+      "process_wall_seconds": 6.079522125073709
+    },
+    {
+      "correct": true,
+      "excluded_validation_ns": "1346217353",
+      "implementation": "kiddo-immutable",
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "materialization": "<=64 reusable complete-query u64 outputs; every ID materialized in timing and exact window oracle validated afterward",
+      "output_buffer_capacity_bytes": 33344,
+      "points": 20000,
+      "queries": 40000,
+      "samples": [
+        {
+          "build_ns": 1169208,
+          "query_ns": 34989073,
+          "results": 588829,
+          "total_ns": 38423115,
+          "update_ns": 2264834
+        },
+        {
+          "build_ns": 1086583,
+          "query_ns": 34264075,
+          "results": 588829,
+          "total_ns": 37532783,
+          "update_ns": 2182125
+        }
+      ],
+      "scenario": "floors",
+      "timing_scope": "summed kernel service time; oracle callback time excluded; not uninterrupted tick wall latency",
+      "status": "measured",
+      "process_peak_rss_bytes": 12369920,
+      "process": 0,
+      "command": [
+        "build/frozen/twenty-k-screen-v1/rust",
+        "kiddo-immutable",
+        "benchmarks/twenty-k/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "input_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "load_average": "{ 8.93 6.54 6.21 }",
+      "process_wall_seconds": 1.453512042062357
+    }
+  ]
+}

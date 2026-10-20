@@ -84,6 +84,50 @@
     {
       "path": "evidence/batch-summary.json",
       "reason": "Required exact coherent batching proof, reproduction input or explicitly labelled exploratory evidence"
+    },
+    {
+      "path": "run_layout_diagnostics.py",
+      "reason": "Source-pinned focused prepared-ID layout proof, diagnostic measurement or reproduction input"
+    },
+    {
+      "path": "evidence/layout-before-oracle.txt",
+      "reason": "Source-pinned focused prepared-ID layout proof, diagnostic measurement or reproduction input"
+    },
+    {
+      "path": "evidence/layout-after-oracle.txt",
+      "reason": "Source-pinned focused prepared-ID layout proof, diagnostic measurement or reproduction input"
+    },
+    {
+      "path": "evidence/layout-before-build.txt",
+      "reason": "Source-pinned focused prepared-ID layout proof, diagnostic measurement or reproduction input"
+    },
+    {
+      "path": "evidence/layout-after-build.txt",
+      "reason": "Source-pinned focused prepared-ID layout proof, diagnostic measurement or reproduction input"
+    },
+    {
+      "path": "evidence/layout-before-manifest.json",
+      "reason": "Source-pinned focused prepared-ID layout proof, diagnostic measurement or reproduction input"
+    },
+    {
+      "path": "evidence/layout-after-manifest.json",
+      "reason": "Source-pinned focused prepared-ID layout proof, diagnostic measurement or reproduction input"
+    },
+    {
+      "path": "evidence/layout-change.patch",
+      "reason": "Source-pinned focused prepared-ID layout proof, diagnostic measurement or reproduction input"
+    },
+    {
+      "path": "evidence/layout-holdout-proof.json",
+      "reason": "Source-pinned focused prepared-ID layout proof, diagnostic measurement or reproduction input"
+    },
+    {
+      "path": "evidence/layout-twenty-k-diagnostic.json",
+      "reason": "Source-pinned focused prepared-ID layout proof, diagnostic measurement or reproduction input"
+    },
+    {
+      "path": "evidence/layout-summary.json",
+      "reason": "Source-pinned focused prepared-ID layout proof, diagnostic measurement or reproduction input"
     }
   ],
   "safe_to_remove": [
@@ -95,6 +139,16 @@
     {
       "path": ".batch-build",
       "reason": "All local coherent batching tests and diagnostics completed; reproducible generated outputs retired while other agents continue",
+      "status": "removed_after_completion"
+    },
+    {
+      "path": ".layout-build",
+      "reason": "All before/after oracle and bounded diagnostic processes completed; reproducible compiler outputs retired",
+      "status": "removed_after_completion"
+    },
+    {
+      "path": ".layout-before-probe",
+      "reason": "Frozen original diagnostic executable retired after paired measurements; Git baseline and exact common inputs remain",
       "status": "removed_after_completion"
     }
   ]

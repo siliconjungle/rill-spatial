@@ -1,0 +1,54 @@
+{
+  "status": "independent_proofs_passed_exploratory_timings_only",
+  "source_preflight": {
+    "command": "ink-cache prepare-sources /Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview",
+    "source_config": null,
+    "direct_cargo_arguments": []
+  },
+  "tests": {
+    "suites": 6,
+    "passed": 6,
+    "failed": 0,
+    "command": "CARGO_TARGET_DIR=$PWD/.build CARGO_INCREMENTAL=0 cargo test --release -- --nocapture"
+  },
+  "suites": {
+    "holdout-exploratory": {
+      "runs": 36,
+      "oracle_queries": 128376,
+      "max_rss_bytes": 20807680,
+      "all_strategy_match_totals_equal": true,
+      "per_fixture_total_matches": {
+        "boundaries": 4000,
+        "clusters": 365792,
+        "contained": 8192000,
+        "dense": 2248039,
+        "floors": 67783,
+        "large": 19894,
+        "small": 96,
+        "teleports": 5747,
+        "uniform": 4343
+      }
+    },
+    "twenty-k-exploratory": {
+      "runs": 28,
+      "oracle_queries": 11592,
+      "max_rss_bytes": 33964032,
+      "all_strategy_match_totals_equal": true,
+      "per_fixture_total_matches": {
+        "bounded64": 2771102,
+        "contained": 800000000,
+        "crowd": 21790287,
+        "floors": 588829,
+        "many-objects": 3428653,
+        "teleports": 2785123,
+        "uniform": 303865
+      }
+    }
+  },
+  "build_disposition": {
+    "path": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build",
+    "generated_bytes_before_removal": 8094433,
+    "status": "removed_after_all_local_processes_completed",
+    "reason": "Reproducible generated validation outputs; parent benchmark compiles independently"
+  }
+}

@@ -1,0 +1,812 @@
+{
+  "schema": 2,
+  "status": "COMPLETE",
+  "created_utc": "2026-10-20T04:13:04.546723+00:00",
+  "host": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "identity": {
+    "git_commit": "ef1fbbc44cfcd62c54ec7d6ab3e1892d734f15a1",
+    "git_status": "M research/protocol.md\n M src/hierarchy.rs\n M tools/binary-fixtures.py\n M tools/fixtures.mjs\n?? benchmarks/holdout-97123/\n?? results/finalists-v3.json",
+    "source_sha256": {
+      "benchmarks/holdout-97123/boundaries.bin": "23edea7911580a557ca97f9fb9cd2d4f3bd31ccb86da1b88ee242e15bb006e7d",
+      "benchmarks/holdout-97123/boundaries.json": "914439d679bc3793b10b45254db0f5fb2994b6cd5b7465dc6b603728ce47ef8a",
+      "benchmarks/holdout-97123/clusters.bin": "05bec8cd678af2f0eade554706d6400b88e09f79afc10b797ccfebe0b9b68900",
+      "benchmarks/holdout-97123/clusters.json": "5bfdad77ded17b68b13cc23a70de687f9438fefe9a7e6563ef6a25803dd63d98",
+      "benchmarks/holdout-97123/contained.bin": "6003aa578ae5e1c6df9b3f827091cde79fa815cb8ce264c6c63bd681aba6b0a1",
+      "benchmarks/holdout-97123/contained.json": "cc6b7f8de45ca724df2d93b00b8956a1d1faa508b6b70a1cd420698875eb10a0",
+      "benchmarks/holdout-97123/dense.bin": "0b4df8c9f2bfa78b1b6a1597388b0ac5c5086daa6b89787ee753cd308ea39b93",
+      "benchmarks/holdout-97123/dense.json": "06b98a8e94294570ac6ecb93a87f3ebc220ee34cf9bb291f7d3b2738ab3a27a1",
+      "benchmarks/holdout-97123/floors.bin": "e6d1fa93886430c759e79b4665c87cefeee1d275403ab4c3db5ae32bc6405a1d",
+      "benchmarks/holdout-97123/floors.json": "fed8d7cca125bb213d2a71fba55dce280e73a06226eacb6001db10260ed4b70c",
+      "benchmarks/holdout-97123/large.bin": "19d1f535f5bda10a744bed5eda58a7c6fc56ddc26156fb7b5e91f35086de420f",
+      "benchmarks/holdout-97123/large.json": "d8b17fd585986e36f4c1f2e350274069c11cb7c4775b5f0b3b8ba1e045fc8cb9",
+      "benchmarks/holdout-97123/manifest.json": "6767c84fba702be8ead8fc8b8bf14f1d97a73f7a29caf045f80a50e4cb88cdba",
+      "benchmarks/holdout-97123/small.bin": "dc333e3f18e7d259c65979a7bb7e882f5f83b07d3715cc40e7258a1e8b59e719",
+      "benchmarks/holdout-97123/small.json": "24184d41b21cec260cb169e0283485c3182433cdda6b4ff50ca0dfe5667b218e",
+      "benchmarks/holdout-97123/teleports.bin": "111578a761c12f6b00e87f34e9cb8b97f90e539bed891c92618c3b7426e5afcf",
+      "benchmarks/holdout-97123/teleports.json": "ac76e6525ea7e25d60befb8097090a1e729938b956f7a8b7c4af1f9bdbf8b21c",
+      "benchmarks/holdout-97123/uniform.bin": "7c76f381719892592dc43c1ca028591270143b9c8b9dd7f42fed5f73d8a4009c",
+      "benchmarks/holdout-97123/uniform.json": "623b60122ae133148ca4e36bd2b23836182cb021fe84c103a87a0727c02459f1",
+      ".github/workflows/ci.yml": "92afeec10af9401560aa805f2c417a78106c400dc27327b9ca1be9081d4034b9",
+      ".gitignore": "992bb6ba2161eb31b16dd97a4a2fcf53803ffc3349a78d57ad2e08e6f0eab90b",
+      "Cargo.lock": "462459b0843bdf5d90dad0ed396645916156d9d324967e49104e3dfab9e4facc",
+      "Cargo.toml": "d0f0931befd711092462d3f75a52f1f213c0c3e4688046719c408c641269cfa8",
+      "LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "LICENSE-MIT": "079adec67563038bee5dac86b57a3cf1546cffc112f51f85c68b13c3d0369428",
+      "README.md": "43b7d238e6d9938d6adec8a115effcb9831d0ac8fbc62707fa707c1c1e761cf5",
+      "benchmarks/Cargo.toml": "ef157bbaed76de7b5f7f95a326d4ea16f878afd8b5f68690172d6298bbdaae3a",
+      "benchmarks/fixtures/boundaries.json": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "benchmarks/fixtures/clusters.json": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "benchmarks/fixtures/contained.json": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "benchmarks/fixtures/dense.json": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "benchmarks/fixtures/floors.json": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "benchmarks/fixtures/large.json": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "benchmarks/fixtures/manifest.json": "33319e1ff2e497d49b18d70a1607c1c496f299e144428918785467b1c3478086",
+      "benchmarks/fixtures/small.json": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "benchmarks/fixtures/teleports.json": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "benchmarks/fixtures/uniform.json": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "benchmarks/javascript.mjs": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "benchmarks/native.cpp": "bb1d59b8256696a851e90d618091e8baf7101f7adec948e5bfe98194280140b7",
+      "benchmarks/src/main.rs": "2be5f833bbfeda4bc359b9e966eca0e3d72c8e3cb58dcb9847d19362147af179",
+      "benchmarks/src/more_adapters.rs": "222a1a1b8817ab18171256bb10c4c5324d54309ea25f81370c7d9c030e1a7ba2",
+      "benchmarks/src/rust_adapters.rs": "6ecdb4ddeab020b00db52fcd23f9994dda1eb96f0c880b3b5afed9a0d1ac551c",
+      "examples/probe.rs": "003d633bcdce4a5ea53980db62c3e437d818abf51b4e0d9d53ad17780241c8f6",
+      "research/baselines.json": "23d061223bb44a1864bd57810f45e0d1622935dd2a23df460875905efa44dba8",
+      "research/discovery.json": "7007a4cfa08ccb2477313d7082d9862f3001e87ca57ee3f82911caaf39222633",
+      "research/inventory.json": "b610b8b2ce410ed01ba3350ac15cd7c3f8d979c9bd2c10395ad23c4a31c7944d",
+      "research/npm/package-lock.json": "cbb268cad3d328a828475020e22a1f4180deff6a83820923157c78ea1e3ecc50",
+      "research/npm/package.json": "f577e233d61564d7685eb4b6c4ad71d16303d3d6988cac88d4e5771b56bca95d",
+      "research/protocol.md": "0b89ac6189c6cfdf5fdcc47970637551f9cdef02fd32a52e039f8a329c87b15e",
+      "src/hierarchy.rs": "299cd36c34e398b51832a44d83d92153b13488ddbe61293b3d8a8b5273d618ca",
+      "src/lib.rs": "73c7390eb0f665d51b0c3049a72ae4a0b96673d5469d5e5bb8a35a73c8186a21",
+      "storage-retention.json": "291c0b4faf1c8e1d6f9e8d3b38e03a948f6a054c9583810675994002fcd58e19",
+      "tests/correctness.rs": "81bfbe90ad560d7570efdbca9fed39744b11e53e5363350e9186022b34685cb2",
+      "tools/add-cpp.mjs": "e7dc33bb244f0c2eb831af816e67ac1edd99721a9870f742c8d35a6b17192626",
+      "tools/binary-fixtures.py": "bb6c3e8d517be4831ab19a2cfea8a52bc8131a766a8339249e7108c30417cc1d",
+      "tools/build-cpp.py": "60d3af7ead7428c49cb5b073a5261e2d7bf8ea837c6abd9abc84232dc6b9d0d1",
+      "tools/compare.py": "5642e5c98baf12b47a5253c69869c853703dec87c395c67aef4eafa9c2faeb92",
+      "tools/coverage.py": "5c1fd94217936b0094361137428da1bca4ed0eb3254732965e02f39db9c0a149",
+      "tools/discover.mjs": "10bc7da9a7fda07cc06f459336d7f00c8710e685b95fda99025279e654df19e4",
+      "tools/fetch-sources.mjs": "47871b9d40a7a7710f75d9db044598876e694027b20dfd31973bc6eb4008193c",
+      "tools/fixtures.mjs": "cf286c372fbff0d3b93ee00865979438696adfcb62275a0b149274ddb99f4ba1",
+      "tools/gate.py": "a34ef528f268e842c8d7932e567e3d7f677f9b400bacf5601ed5bbc7588c673e"
+    },
+    "toolchains": {
+      "rust": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+      "node": "v26.1.0",
+      "clang": "Apple clang version 14.0.0 (clang-1400.0.29.202)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+      "cpu": "Apple M2"
+    }
+  },
+  "artifacts": {
+    "js": {
+      "path": "benchmarks/.frozen-javascript-repairs-v3.mjs",
+      "sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc"
+    }
+  },
+  "implementations": [
+    "kd-tree-javascript",
+    "spatial-hash"
+  ],
+  "scenarios": [
+    "small",
+    "uniform",
+    "clusters",
+    "dense",
+    "contained",
+    "floors",
+    "boundaries",
+    "teleports",
+    "large"
+  ],
+  "notes": [
+    "Other user workers left running; shared-machine diagnostics",
+    "Process RSS includes reference oracle and retained result vectors; not isolated index bytes"
+  ],
+  "samples_per_process": 2,
+  "requested_processes": 1,
+  "rows": [
+    {
+      "implementation": "spatial-hash",
+      "scenario": "dense",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 7275916,
+          "update_ns": 2472833,
+          "query_ns": 983898794,
+          "total_ns": 993647543,
+          "results": 3786052
+        },
+        {
+          "build_ns": 6503084,
+          "update_ns": 1165082,
+          "query_ns": 1045650125,
+          "total_ns": 1053318291,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 275152896,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "spatial-hash",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.51 5.41 7.60 }",
+      "process_wall_seconds": 3.0389443750027567
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "dense",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 3222375,
+          "update_ns": 5208083,
+          "query_ns": 1274908542,
+          "total_ns": 1283339000,
+          "results": 3786052
+        },
+        {
+          "build_ns": 2696875,
+          "update_ns": 4736417,
+          "query_ns": 1213567082,
+          "total_ns": 1221000374,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 256819200,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/dense.json",
+        "2"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.39 5.35 7.56 }",
+      "process_wall_seconds": 3.4811797089641914
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "teleports",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 9342875,
+          "update_ns": 1763541,
+          "query_ns": 4127667,
+          "total_ns": 15234083,
+          "results": 6828
+        },
+        {
+          "build_ns": 3921167,
+          "update_ns": 4050708,
+          "query_ns": 2816001,
+          "total_ns": 10787876,
+          "results": 6828
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 120946688,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "spatial-hash",
+        "benchmarks/fixtures/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "input_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.39 5.35 7.56 }",
+      "process_wall_seconds": 0.11078374995850027
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "boundaries",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 2851833,
+          "update_ns": 5643291,
+          "query_ns": 172535540,
+          "total_ns": 181030664,
+          "results": 14285
+        },
+        {
+          "build_ns": 2324542,
+          "update_ns": 4534208,
+          "query_ns": 165398999,
+          "total_ns": 172257749,
+          "results": 14285
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 107593728,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/boundaries.json",
+        "2"
+      ],
+      "fixture_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "input_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.39 5.35 7.56 }",
+      "process_wall_seconds": 0.45249858405441046
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "teleports",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 3718417,
+          "update_ns": 5481248,
+          "query_ns": 160989750,
+          "total_ns": 170189415,
+          "results": 6828
+        },
+        {
+          "build_ns": 2364417,
+          "update_ns": 4784875,
+          "query_ns": 330913375,
+          "total_ns": 338062667,
+          "results": 6828
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 107413504,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/teleports.json",
+        "2"
+      ],
+      "fixture_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "input_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.39 5.35 7.56 }",
+      "process_wall_seconds": 0.5912910419283435
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "uniform",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 9747500,
+          "update_ns": 4093001,
+          "query_ns": 3708126,
+          "total_ns": 17548627,
+          "results": 6672
+        },
+        {
+          "build_ns": 4455291,
+          "update_ns": 868501,
+          "query_ns": 4843292,
+          "total_ns": 10167084,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 125190144,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "spatial-hash",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.39 5.35 7.56 }",
+      "process_wall_seconds": 0.12552070803940296
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "floors",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 3410833,
+          "update_ns": 5312668,
+          "query_ns": 172676626,
+          "total_ns": 181400127,
+          "results": 24856
+        },
+        {
+          "build_ns": 2233584,
+          "update_ns": 4654376,
+          "query_ns": 165430333,
+          "total_ns": 172318293,
+          "results": 24856
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 108396544,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.39 5.35 7.56 }",
+      "process_wall_seconds": 0.43770954199135303
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "small",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 206541,
+          "update_ns": 146832,
+          "query_ns": 1573500,
+          "total_ns": 1926873,
+          "results": 130
+        },
+        {
+          "build_ns": 36375,
+          "update_ns": 70542,
+          "query_ns": 531667,
+          "total_ns": 638584,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 60112896,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.39 5.35 7.56 }",
+      "process_wall_seconds": 0.049202166963368654
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "small",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 140613958,
+          "update_ns": 178292,
+          "query_ns": 318168,
+          "total_ns": 141110418,
+          "results": 130
+        },
+        {
+          "build_ns": 61761583,
+          "update_ns": 70167,
+          "query_ns": 78709,
+          "total_ns": 61910459,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 508329984,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "spatial-hash",
+        "benchmarks/fixtures/small.json",
+        "2"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.39 5.35 7.56 }",
+      "process_wall_seconds": 0.26413420808967203
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "large",
+      "points": 22000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 9870584,
+          "update_ns": 19479792,
+          "query_ns": 12684585,
+          "total_ns": 42034961,
+          "results": 11330
+        },
+        {
+          "build_ns": 7532292,
+          "update_ns": 14380626,
+          "query_ns": 17278917,
+          "total_ns": 39191835,
+          "results": 11330
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 199933952,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "spatial-hash",
+        "benchmarks/fixtures/large.json",
+        "2"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.39 5.35 7.56 }",
+      "process_wall_seconds": 0.42614645895082504
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "contained",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 3045833,
+          "update_ns": 5611667,
+          "query_ns": 2249156832,
+          "total_ns": 2257814332,
+          "results": 8000000
+        },
+        {
+          "build_ns": 3655958,
+          "update_ns": 4929332,
+          "query_ns": 2171715208,
+          "total_ns": 2180300498,
+          "results": 8000000
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 804388864,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "input_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.32 5.27 7.51 }",
+      "process_wall_seconds": 6.417743165977299
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "floors",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 124428416,
+          "update_ns": 2448540,
+          "query_ns": 25227500,
+          "total_ns": 152104456,
+          "results": 24856
+        },
+        {
+          "build_ns": 55132709,
+          "update_ns": 762957,
+          "query_ns": 17108457,
+          "total_ns": 73004123,
+          "results": 24856
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 531070976,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "spatial-hash",
+        "benchmarks/fixtures/floors.json",
+        "2"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.32 5.27 7.51 }",
+      "process_wall_seconds": 0.3361223330721259
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "uniform",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 3757250,
+          "update_ns": 5761667,
+          "query_ns": 160663417,
+          "total_ns": 170182334,
+          "results": 6672
+        },
+        {
+          "build_ns": 2467333,
+          "update_ns": 4515166,
+          "query_ns": 145626000,
+          "total_ns": 152608499,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 107495424,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/uniform.json",
+        "2"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.32 5.27 7.51 }",
+      "process_wall_seconds": 0.408492875052616
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "clusters",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 3179834,
+          "update_ns": 5553708,
+          "query_ns": 268860874,
+          "total_ns": 277594416,
+          "results": 306662
+        },
+        {
+          "build_ns": 2523083,
+          "update_ns": 4784749,
+          "query_ns": 269181083,
+          "total_ns": 276488915,
+          "results": 306662
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 150847488,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/clusters.json",
+        "2"
+      ],
+      "fixture_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "input_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.32 5.27 7.51 }",
+      "process_wall_seconds": 0.7006610410753638
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "clusters",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 12657958,
+          "update_ns": 1943582,
+          "query_ns": 51423499,
+          "total_ns": 66025039,
+          "results": 306662
+        },
+        {
+          "build_ns": 3125333,
+          "update_ns": 2104166,
+          "query_ns": 44359375,
+          "total_ns": 49588874,
+          "results": 306662
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 183762944,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "spatial-hash",
+        "benchmarks/fixtures/clusters.json",
+        "2"
+      ],
+      "fixture_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "input_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.32 5.27 7.51 }",
+      "process_wall_seconds": 0.2641620000358671
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "contained",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 3560250,
+          "update_ns": 3574250,
+          "query_ns": 2191563501,
+          "total_ns": 2198698001,
+          "results": 8000000
+        },
+        {
+          "build_ns": 1264625,
+          "update_ns": 3262042,
+          "query_ns": 2164942500,
+          "total_ns": 2169469167,
+          "results": 8000000
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 436977664,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "spatial-hash",
+        "benchmarks/fixtures/contained.json",
+        "2"
+      ],
+      "fixture_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "input_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.38 5.25 7.49 }",
+      "process_wall_seconds": 5.845187542028725
+    },
+    {
+      "implementation": "spatial-hash",
+      "scenario": "boundaries",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 29207542,
+          "update_ns": 1803291,
+          "query_ns": 4726708,
+          "total_ns": 35737541,
+          "results": 14285
+        },
+        {
+          "build_ns": 16652167,
+          "update_ns": 789583,
+          "query_ns": 3346874,
+          "total_ns": 20788624,
+          "results": 14285
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 234962944,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "spatial-hash",
+        "benchmarks/fixtures/boundaries.json",
+        "2"
+      ],
+      "fixture_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "input_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.38 5.25 7.49 }",
+      "process_wall_seconds": 0.15018070791848004
+    },
+    {
+      "implementation": "kd-tree-javascript",
+      "scenario": "large",
+      "points": 22000,
+      "queries": 4000,
+      "correct": true,
+      "runtime": "v26.1.0",
+      "samples": [
+        {
+          "build_ns": 48823375,
+          "update_ns": 97731667,
+          "query_ns": 1969697208,
+          "total_ns": 2116252250,
+          "results": 11330
+        },
+        {
+          "build_ns": 45733459,
+          "update_ns": 93954501,
+          "query_ns": 1512626417,
+          "total_ns": 1652314377,
+          "results": 11330
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 310018048,
+      "process": 0,
+      "command": [
+        "node",
+        "benchmarks/.frozen-javascript-repairs-v3.mjs",
+        "kd-tree-javascript",
+        "benchmarks/fixtures/large.json",
+        "2"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "artifact_sha256": "b82d08d9161acd0f99f287e2be2eb7065d5b3c2ccb22dd4af1dd5bcd584e66dc",
+      "load_average": "{ 3.27 5.20 7.46 }",
+      "process_wall_seconds": 4.121145542012528
+    }
+  ]
+}

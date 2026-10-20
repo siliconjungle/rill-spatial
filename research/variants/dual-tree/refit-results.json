@@ -1,0 +1,1774 @@
+{
+  "schema": 1,
+  "date": "2026-10-20",
+  "status": "exploratory_concurrent_not_acceptance",
+  "machine": "Apple M2, 8 GB shared RAM",
+  "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "main_git_head": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+  "source_sha256": {
+    "src/lib.rs": "73c7390eb0f665d51b0c3049a72ae4a0b96673d5469d5e5bb8a35a73c8186a21",
+    "src/hierarchy.rs": "299cd36c34e398b51832a44d83d92153b13488ddbe61293b3d8a8b5273d618ca",
+    "Cargo.toml": "70067f8559f532a565e86a2fc2d07df18c1f18d61847d30e92c14a292d81be38",
+    "Cargo.lock": "f685d31c3bf80e19cde4867d6830748dbda9d1653ef3ba319fe67a7ed9a2c897",
+    "research/variants/dual-tree/examples/refit_diagnostic.rs": "687bc68da11cc858f27c4795b622f8730e2e1e59789ba6171852f4fae86d6207",
+    "research/variants/dual-tree/Cargo.toml": "f8601c1434fadb4482a2150250b62733a8886cf58a8789cf81570b4072bed56e",
+    "research/variants/dual-tree/Cargo.lock": "5a372ffb49c96d71dd6723ed5d28fa84016e90765a2ac68ca5ff6885bd318f43"
+  },
+  "main_source_before_after_identical": true,
+  "expected_main_source_sha256": {
+    "src/lib.rs": "73c7390eb0f665d51b0c3049a72ae4a0b96673d5469d5e5bb8a35a73c8186a21",
+    "src/hierarchy.rs": "299cd36c34e398b51832a44d83d92153b13488ddbe61293b3d8a8b5273d618ca"
+  },
+  "protocol": {
+    "dependency": "main_rill dev-only alias to package rill-spatial at ../../..; default SIMD features preserved",
+    "release_profile": "This isolated workspace default release profile; matched across normal/fresh modes, not claimed identical to root benchmark thin-LTO profile",
+    "modes": [
+      "same persistent index upserts + normal prepare at query phases",
+      "same persistent index upserts + discard/reconstruct from all current points + prepare at every query phase"
+    ],
+    "rebuild_cost": "Includes from_points allocation/construction and old-index destruction; both modes also pay identical upsert protocol even though fresh construction makes those prior updates redundant",
+    "windows": [
+      1,
+      64
+    ],
+    "repetitions": 3,
+    "timing_order": "Mode and window order reversed on odd repetitions",
+    "oracle": "Complete independent all-pairs membership proof, duplicate checks, same current inputs and arbitrary stable u64 IDs; every mode/window verified BEFORE any timings; no oracle inside measured runs",
+    "output": "Reusable materialized Vec<u64> results; complete-vector black_box plus one opaque original-query-index/stable-ID operation per output ID",
+    "timed_intervals": "Summed build/update/reconstruct/prepare/query/consume service intervals, not end-to-end wall latency; fixture parsing/current-authoritative-reference updates/oracle work excluded",
+    "initial_tree": "Initial from_points does NOT prepare; initial tree construction is included in first query-phase prepare",
+    "identity": "Bijective odd multiplication/xor remap of wire positions to arbitrary sparse u64 IDs; authoritative oracle maps IDs independently",
+    "scope": "Six simulation frames and two 20k-query phases per trace; no root source modifications; no universal claims or main refit decision instrumentation"
+  },
+  "preflight": {
+    "command": "ink-cache prepare-sources /Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/dual-tree --offline",
+    "source_config": null,
+    "direct_cargo_arguments": []
+  },
+  "build_command": "cargo build --manifest-path research/variants/dual-tree/Cargo.toml --release --example refit_diagnostic",
+  "dependency_versions": {
+    "wide": "0.7.33",
+    "safe_arch": "0.7.4",
+    "bytemuck": "1.25.2"
+  },
+  "runs": [
+    {
+      "fixture": "bounded64",
+      "command": "/usr/bin/time -l research/variants/dual-tree/target/release/examples/refit_diagnostic benchmarks/twenty-k/bounded64.bin 3",
+      "input_sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+      "proofs": [
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "bounded64-20k-seed20671",
+          "mode": "normal_prepare",
+          "window": 1,
+          "proof_wall_including_oracle_ns": 951452750,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "bounded64-20k-seed20671",
+          "mode": "force_reconstruct",
+          "window": 1,
+          "proof_wall_including_oracle_ns": 923744250,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "bounded64-20k-seed20671",
+          "mode": "normal_prepare",
+          "window": 64,
+          "proof_wall_including_oracle_ns": 932993750,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "bounded64-20k-seed20671",
+          "mode": "force_reconstruct",
+          "window": 64,
+          "proof_wall_including_oracle_ns": 904175250,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        }
+      ],
+      "maximum_resident_set_size_bytes": 21348352,
+      "process_time_including_all_proofs_and_repetitions": "4.66 real         4.18 user         0.03 sys",
+      "windows": [
+        {
+          "window": 1,
+          "modes": [
+            {
+              "mode": "normal_prepare",
+              "median_ms": {
+                "initial_build_ns": 0.715333,
+                "update_ns": 0.578625,
+                "reconstruct_ns": 0.0,
+                "prepare_ns": 1.285458,
+                "query_ns": 35.211997,
+                "consume_ns": 1.563896,
+                "total_ns_including_rebuild": 39.260559
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 1385545,
+                  "median_ms": {
+                    "update_ns": 0.077791,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 1.216875,
+                    "query_ns": 17.67679,
+                    "consume_ns": 0.781384,
+                    "summed_service_ns": 19.70432
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 1385557,
+                  "median_ms": {
+                    "update_ns": 0.098,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 0.068833,
+                    "query_ns": 17.535207,
+                    "consume_ns": 0.783657,
+                    "summed_service_ns": 18.475197
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 718625,
+                  "update_ns": 578625,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1285458,
+                  "query_ns": 35001638,
+                  "consume_ns": 1553312,
+                  "total_ns_including_rebuild": 39137658,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 715333,
+                  "update_ns": 637959,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1301458,
+                  "query_ns": 35531546,
+                  "consume_ns": 1577794,
+                  "total_ns_including_rebuild": 39764090,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 697083,
+                  "update_ns": 549250,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1238333,
+                  "query_ns": 35211997,
+                  "consume_ns": 1563896,
+                  "total_ns_including_rebuild": 39260559,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            },
+            {
+              "mode": "force_reconstruct",
+              "median_ms": {
+                "initial_build_ns": 0.706459,
+                "update_ns": 0.504958,
+                "reconstruct_ns": 1.419251,
+                "prepare_ns": 2.409416,
+                "query_ns": 35.237515,
+                "consume_ns": 1.567064,
+                "total_ns_including_rebuild": 41.944589
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 1385545,
+                  "median_ms": {
+                    "update_ns": 0.074917,
+                    "reconstruct_ns": 0.699792,
+                    "prepare_ns": 1.220333,
+                    "query_ns": 17.563203,
+                    "consume_ns": 0.784964,
+                    "summed_service_ns": 20.446754
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 1385557,
+                  "median_ms": {
+                    "update_ns": 0.08025,
+                    "reconstruct_ns": 0.707208,
+                    "prepare_ns": 1.181459,
+                    "query_ns": 17.674312,
+                    "consume_ns": 0.782009,
+                    "summed_service_ns": 20.434753
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 696417,
+                  "update_ns": 599498,
+                  "reconstruct_ns": 1407000,
+                  "prepare_ns": 2410875,
+                  "query_ns": 34943940,
+                  "consume_ns": 1567064,
+                  "total_ns_including_rebuild": 41624794,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 706459,
+                  "update_ns": 444666,
+                  "reconstruct_ns": 1419251,
+                  "prepare_ns": 2369001,
+                  "query_ns": 35452934,
+                  "consume_ns": 1566973,
+                  "total_ns_including_rebuild": 41959284,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 713291,
+                  "update_ns": 504958,
+                  "reconstruct_ns": 1501375,
+                  "prepare_ns": 2409416,
+                  "query_ns": 35237515,
+                  "consume_ns": 1578034,
+                  "total_ns_including_rebuild": 41944589,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "window": 64,
+          "modes": [
+            {
+              "mode": "normal_prepare",
+              "median_ms": {
+                "initial_build_ns": 0.705875,
+                "update_ns": 0.47975,
+                "reconstruct_ns": 0.0,
+                "prepare_ns": 1.240542,
+                "query_ns": 35.623822,
+                "consume_ns": 1.299347,
+                "total_ns_including_rebuild": 39.349336
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 1385545,
+                  "median_ms": {
+                    "update_ns": 0.069875,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 1.172042,
+                    "query_ns": 17.854822,
+                    "consume_ns": 0.649591,
+                    "summed_service_ns": 19.746121
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 1385557,
+                  "median_ms": {
+                    "update_ns": 0.079416,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 0.068375,
+                    "query_ns": 17.738255,
+                    "consume_ns": 0.649756,
+                    "summed_service_ns": 18.552452
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 701666,
+                  "update_ns": 456791,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1231959,
+                  "query_ns": 35196455,
+                  "consume_ns": 1289126,
+                  "total_ns_including_rebuild": 38875997,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 705875,
+                  "update_ns": 479750,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1240542,
+                  "query_ns": 35623822,
+                  "consume_ns": 1299347,
+                  "total_ns_including_rebuild": 39349336,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 723167,
+                  "update_ns": 521666,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1259250,
+                  "query_ns": 35766136,
+                  "consume_ns": 1319865,
+                  "total_ns_including_rebuild": 39590084,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            },
+            {
+              "mode": "force_reconstruct",
+              "median_ms": {
+                "initial_build_ns": 0.715167,
+                "update_ns": 0.500417,
+                "reconstruct_ns": 1.402626,
+                "prepare_ns": 2.370584,
+                "query_ns": 35.313461,
+                "consume_ns": 1.322299,
+                "total_ns_including_rebuild": 41.603903
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 1385545,
+                  "median_ms": {
+                    "update_ns": 0.07,
+                    "reconstruct_ns": 0.699209,
+                    "prepare_ns": 1.180375,
+                    "query_ns": 17.722074,
+                    "consume_ns": 0.650305,
+                    "summed_service_ns": 20.321604
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 1385557,
+                  "median_ms": {
+                    "update_ns": 0.079958,
+                    "reconstruct_ns": 0.702625,
+                    "prepare_ns": 1.181167,
+                    "query_ns": 17.596334,
+                    "consume_ns": 0.665911,
+                    "summed_service_ns": 20.22584
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 708417,
+                  "update_ns": 456625,
+                  "reconstruct_ns": 1402626,
+                  "prepare_ns": 2400208,
+                  "query_ns": 35195492,
+                  "consume_ns": 1282740,
+                  "total_ns_including_rebuild": 41446108,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 715167,
+                  "update_ns": 500417,
+                  "reconstruct_ns": 1389083,
+                  "prepare_ns": 2361542,
+                  "query_ns": 35313461,
+                  "consume_ns": 1324233,
+                  "total_ns_including_rebuild": 41603903,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "bounded64-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 2771102,
+                  "initial_build_ns": 731459,
+                  "update_ns": 547959,
+                  "reconstruct_ns": 1482167,
+                  "prepare_ns": 2370584,
+                  "query_ns": 35772010,
+                  "consume_ns": 1322299,
+                  "total_ns_including_rebuild": 42226478,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "uniform",
+      "command": "/usr/bin/time -l research/variants/dual-tree/target/release/examples/refit_diagnostic benchmarks/twenty-k/uniform.bin 3",
+      "input_sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+      "proofs": [
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "uniform-20k-seed20671",
+          "mode": "normal_prepare",
+          "window": 1,
+          "proof_wall_including_oracle_ns": 875823458,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "uniform-20k-seed20671",
+          "mode": "force_reconstruct",
+          "window": 1,
+          "proof_wall_including_oracle_ns": 871420417,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "uniform-20k-seed20671",
+          "mode": "normal_prepare",
+          "window": 64,
+          "proof_wall_including_oracle_ns": 861016166,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "uniform-20k-seed20671",
+          "mode": "force_reconstruct",
+          "window": 64,
+          "proof_wall_including_oracle_ns": 860128333,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        }
+      ],
+      "maximum_resident_set_size_bytes": 17301504,
+      "process_time_including_all_proofs_and_repetitions": "3.73 real         3.71 user         0.02 sys",
+      "windows": [
+        {
+          "window": 1,
+          "modes": [
+            {
+              "mode": "normal_prepare",
+              "median_ms": {
+                "initial_build_ns": 0.706416,
+                "update_ns": 0.463541,
+                "reconstruct_ns": 0.0,
+                "prepare_ns": 1.259874,
+                "query_ns": 16.360801,
+                "consume_ns": 0.765605,
+                "total_ns_including_rebuild": 19.554893
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 151938,
+                  "median_ms": {
+                    "update_ns": 0.069,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 1.188333,
+                    "query_ns": 8.229209,
+                    "consume_ns": 0.38256,
+                    "summed_service_ns": 9.870474
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 151927,
+                  "median_ms": {
+                    "update_ns": 0.080375,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 0.071541,
+                    "query_ns": 8.188899,
+                    "consume_ns": 0.384444,
+                    "summed_service_ns": 8.727884
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 706416,
+                  "update_ns": 536334,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1279833,
+                  "query_ns": 16454683,
+                  "consume_ns": 763005,
+                  "total_ns_including_rebuild": 19740271,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 716291,
+                  "update_ns": 463541,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1259874,
+                  "query_ns": 16346811,
+                  "consume_ns": 768376,
+                  "total_ns_including_rebuild": 19554893,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 697417,
+                  "update_ns": 440501,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1239250,
+                  "query_ns": 16360801,
+                  "consume_ns": 765605,
+                  "total_ns_including_rebuild": 19503574,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            },
+            {
+              "mode": "force_reconstruct",
+              "median_ms": {
+                "initial_build_ns": 0.697709,
+                "update_ns": 0.435958,
+                "reconstruct_ns": 1.416501,
+                "prepare_ns": 2.336834,
+                "query_ns": 16.5082,
+                "consume_ns": 0.761245,
+                "total_ns_including_rebuild": 22.144554
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 151938,
+                  "median_ms": {
+                    "update_ns": 0.069292,
+                    "reconstruct_ns": 0.692666,
+                    "prepare_ns": 1.178167,
+                    "query_ns": 8.237153,
+                    "consume_ns": 0.379615,
+                    "summed_service_ns": 10.540074
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 151927,
+                  "median_ms": {
+                    "update_ns": 0.075292,
+                    "reconstruct_ns": 0.7155,
+                    "prepare_ns": 1.163541,
+                    "query_ns": 8.221695,
+                    "consume_ns": 0.38163,
+                    "summed_service_ns": 10.578495
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 697709,
+                  "update_ns": 550627,
+                  "reconstruct_ns": 1416666,
+                  "prepare_ns": 2353375,
+                  "query_ns": 16538528,
+                  "consume_ns": 772112,
+                  "total_ns_including_rebuild": 22329017,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 706917,
+                  "update_ns": 435958,
+                  "reconstruct_ns": 1403250,
+                  "prepare_ns": 2334916,
+                  "query_ns": 16508200,
+                  "consume_ns": 755313,
+                  "total_ns_including_rebuild": 22144554,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 696708,
+                  "update_ns": 431916,
+                  "reconstruct_ns": 1416501,
+                  "prepare_ns": 2336834,
+                  "query_ns": 16362988,
+                  "consume_ns": 761245,
+                  "total_ns_including_rebuild": 22006192,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "window": 64,
+          "modes": [
+            {
+              "mode": "normal_prepare",
+              "median_ms": {
+                "initial_build_ns": 0.6985,
+                "update_ns": 0.437416,
+                "reconstruct_ns": 0.0,
+                "prepare_ns": 1.238168,
+                "query_ns": 16.921308,
+                "consume_ns": 0.332137,
+                "total_ns_including_rebuild": 19.645783
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 151938,
+                  "median_ms": {
+                    "update_ns": 0.069083,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 1.169584,
+                    "query_ns": 8.423821,
+                    "consume_ns": 0.166255,
+                    "summed_service_ns": 9.824623
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 151927,
+                  "median_ms": {
+                    "update_ns": 0.075709,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 0.068584,
+                    "query_ns": 8.413093,
+                    "consume_ns": 0.166044,
+                    "summed_service_ns": 8.73172
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 698500,
+                  "update_ns": 438708,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1238168,
+                  "query_ns": 16788749,
+                  "consume_ns": 332137,
+                  "total_ns_including_rebuild": 19496262,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 699333,
+                  "update_ns": 437416,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1236708,
+                  "query_ns": 16941909,
+                  "consume_ns": 330417,
+                  "total_ns_including_rebuild": 19645783,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 697292,
+                  "update_ns": 433416,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1342417,
+                  "query_ns": 16921308,
+                  "consume_ns": 332951,
+                  "total_ns_including_rebuild": 19727384,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            },
+            {
+              "mode": "force_reconstruct",
+              "median_ms": {
+                "initial_build_ns": 0.700666,
+                "update_ns": 0.466665,
+                "reconstruct_ns": 1.413916,
+                "prepare_ns": 2.362709,
+                "query_ns": 16.941416,
+                "consume_ns": 0.334922,
+                "total_ns_including_rebuild": 22.191117
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 151938,
+                  "median_ms": {
+                    "update_ns": 0.069375,
+                    "reconstruct_ns": 0.706625,
+                    "prepare_ns": 1.178542,
+                    "query_ns": 8.507664,
+                    "consume_ns": 0.167334,
+                    "summed_service_ns": 10.610123
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 151927,
+                  "median_ms": {
+                    "update_ns": 0.076125,
+                    "reconstruct_ns": 0.707291,
+                    "prepare_ns": 1.177791,
+                    "query_ns": 8.52483,
+                    "consume_ns": 0.165583,
+                    "summed_service_ns": 10.656871
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 700333,
+                  "update_ns": 552625,
+                  "reconstruct_ns": 1428792,
+                  "prepare_ns": 2362750,
+                  "query_ns": 17168440,
+                  "consume_ns": 341384,
+                  "total_ns_including_rebuild": 22554324,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 700666,
+                  "update_ns": 466665,
+                  "reconstruct_ns": 1399959,
+                  "prepare_ns": 2352333,
+                  "query_ns": 16936572,
+                  "consume_ns": 334922,
+                  "total_ns_including_rebuild": 22191117,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "uniform-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 303865,
+                  "initial_build_ns": 708667,
+                  "update_ns": 432333,
+                  "reconstruct_ns": 1413916,
+                  "prepare_ns": 2362709,
+                  "query_ns": 16941416,
+                  "consume_ns": 329873,
+                  "total_ns_including_rebuild": 22188914,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "floors",
+      "command": "/usr/bin/time -l research/variants/dual-tree/target/release/examples/refit_diagnostic benchmarks/twenty-k/floors.bin 3",
+      "input_sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+      "proofs": [
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "floors-20k-seed20671",
+          "mode": "normal_prepare",
+          "window": 1,
+          "proof_wall_including_oracle_ns": 887904750,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "floors-20k-seed20671",
+          "mode": "force_reconstruct",
+          "window": 1,
+          "proof_wall_including_oracle_ns": 885688500,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "floors-20k-seed20671",
+          "mode": "normal_prepare",
+          "window": 64,
+          "proof_wall_including_oracle_ns": 880987583,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "floors-20k-seed20671",
+          "mode": "force_reconstruct",
+          "window": 64,
+          "proof_wall_including_oracle_ns": 874236375,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        }
+      ],
+      "maximum_resident_set_size_bytes": 17317888,
+      "process_time_including_all_proofs_and_repetitions": "3.92 real         3.88 user         0.03 sys",
+      "windows": [
+        {
+          "window": 1,
+          "modes": [
+            {
+              "mode": "normal_prepare",
+              "median_ms": {
+                "initial_build_ns": 0.707958,
+                "update_ns": 0.565042,
+                "reconstruct_ns": 0.0,
+                "prepare_ns": 1.238543,
+                "query_ns": 25.813447,
+                "consume_ns": 0.857801,
+                "total_ns_including_rebuild": 29.193542
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 294408,
+                  "median_ms": {
+                    "update_ns": 0.068834,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 1.169334,
+                    "query_ns": 12.860302,
+                    "consume_ns": 0.437346,
+                    "summed_service_ns": 14.549732
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 294421,
+                  "median_ms": {
+                    "update_ns": 0.096875,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 0.069209,
+                    "query_ns": 12.975461,
+                    "consume_ns": 0.426085,
+                    "summed_service_ns": 13.56763
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 718709,
+                  "update_ns": 565042,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1238543,
+                  "query_ns": 25813447,
+                  "consume_ns": 857801,
+                  "total_ns_including_rebuild": 29193542,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 701833,
+                  "update_ns": 441709,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1252083,
+                  "query_ns": 25674005,
+                  "consume_ns": 855321,
+                  "total_ns_including_rebuild": 28924951,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 707958,
+                  "update_ns": 773708,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1205792,
+                  "query_ns": 27672722,
+                  "consume_ns": 920104,
+                  "total_ns_including_rebuild": 31280284,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            },
+            {
+              "mode": "force_reconstruct",
+              "median_ms": {
+                "initial_build_ns": 0.703375,
+                "update_ns": 0.504459,
+                "reconstruct_ns": 1.459125,
+                "prepare_ns": 2.360209,
+                "query_ns": 25.741124,
+                "consume_ns": 0.845892,
+                "total_ns_including_rebuild": 31.614184
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 294408,
+                  "median_ms": {
+                    "update_ns": 0.070292,
+                    "reconstruct_ns": 0.727833,
+                    "prepare_ns": 1.180125,
+                    "query_ns": 12.888921,
+                    "consume_ns": 0.42268,
+                    "summed_service_ns": 15.252226
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 294421,
+                  "median_ms": {
+                    "update_ns": 0.092417,
+                    "reconstruct_ns": 0.716459,
+                    "prepare_ns": 1.184959,
+                    "query_ns": 12.898531,
+                    "consume_ns": 0.424657,
+                    "summed_service_ns": 15.317023
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 703375,
+                  "update_ns": 504459,
+                  "reconstruct_ns": 1459125,
+                  "prepare_ns": 2360209,
+                  "query_ns": 25741124,
+                  "consume_ns": 845892,
+                  "total_ns_including_rebuild": 31614184,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 693541,
+                  "update_ns": 438293,
+                  "reconstruct_ns": 1389374,
+                  "prepare_ns": 2360167,
+                  "query_ns": 25724861,
+                  "consume_ns": 841886,
+                  "total_ns_including_rebuild": 31448122,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 720583,
+                  "update_ns": 732999,
+                  "reconstruct_ns": 1483792,
+                  "prepare_ns": 2464667,
+                  "query_ns": 26891660,
+                  "consume_ns": 863593,
+                  "total_ns_including_rebuild": 33157294,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "window": 64,
+          "modes": [
+            {
+              "mode": "normal_prepare",
+              "median_ms": {
+                "initial_build_ns": 0.721334,
+                "update_ns": 0.459667,
+                "reconstruct_ns": 0.0,
+                "prepare_ns": 1.232333,
+                "query_ns": 26.4583,
+                "consume_ns": 0.434106,
+                "total_ns_including_rebuild": 29.340847
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 294408,
+                  "median_ms": {
+                    "update_ns": 0.069458,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 1.163458,
+                    "query_ns": 13.153082,
+                    "consume_ns": 0.221214,
+                    "summed_service_ns": 14.581747
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 294421,
+                  "median_ms": {
+                    "update_ns": 0.077542,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 0.068875,
+                    "query_ns": 13.336714,
+                    "consume_ns": 0.221506,
+                    "summed_service_ns": 13.704637
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 758125,
+                  "update_ns": 459667,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1232333,
+                  "query_ns": 26458300,
+                  "consume_ns": 432422,
+                  "total_ns_including_rebuild": 29340847,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 709500,
+                  "update_ns": 436041,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1203875,
+                  "query_ns": 26221871,
+                  "consume_ns": 434106,
+                  "total_ns_including_rebuild": 29005393,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 721334,
+                  "update_ns": 627375,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 1268624,
+                  "query_ns": 27745369,
+                  "consume_ns": 448080,
+                  "total_ns_including_rebuild": 30810782,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            },
+            {
+              "mode": "force_reconstruct",
+              "median_ms": {
+                "initial_build_ns": 0.729375,
+                "update_ns": 0.449459,
+                "reconstruct_ns": 1.403417,
+                "prepare_ns": 2.299375,
+                "query_ns": 26.559622,
+                "consume_ns": 0.42663,
+                "total_ns_including_rebuild": 31.853126
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 294408,
+                  "median_ms": {
+                    "update_ns": 0.069042,
+                    "reconstruct_ns": 0.695958,
+                    "prepare_ns": 1.146,
+                    "query_ns": 13.238754,
+                    "consume_ns": 0.212749,
+                    "summed_service_ns": 15.359669
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 294421,
+                  "median_ms": {
+                    "update_ns": 0.078209,
+                    "reconstruct_ns": 0.707708,
+                    "prepare_ns": 1.154542,
+                    "query_ns": 13.320868,
+                    "consume_ns": 0.213881,
+                    "summed_service_ns": 15.46079
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 729375,
+                  "update_ns": 449459,
+                  "reconstruct_ns": 1389667,
+                  "prepare_ns": 2299375,
+                  "query_ns": 26559622,
+                  "consume_ns": 425628,
+                  "total_ns_including_rebuild": 31853126,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 720041,
+                  "update_ns": 442416,
+                  "reconstruct_ns": 1403417,
+                  "prepare_ns": 2298417,
+                  "query_ns": 26357338,
+                  "consume_ns": 426630,
+                  "total_ns_including_rebuild": 31648259,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "floors-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 588829,
+                  "initial_build_ns": 787417,
+                  "update_ns": 680126,
+                  "reconstruct_ns": 1554833,
+                  "prepare_ns": 2547417,
+                  "query_ns": 28410000,
+                  "consume_ns": 465359,
+                  "total_ns_including_rebuild": 34445152,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "teleports",
+      "command": "/usr/bin/time -l research/variants/dual-tree/target/release/examples/refit_diagnostic benchmarks/twenty-k/teleports.bin 3",
+      "input_sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+      "proofs": [
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "teleports-20k-seed20671",
+          "mode": "normal_prepare",
+          "window": 1,
+          "proof_wall_including_oracle_ns": 940079625,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "teleports-20k-seed20671",
+          "mode": "force_reconstruct",
+          "window": 1,
+          "proof_wall_including_oracle_ns": 943934791,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "teleports-20k-seed20671",
+          "mode": "normal_prepare",
+          "window": 64,
+          "proof_wall_including_oracle_ns": 906059625,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        },
+        {
+          "kind": "main_refit_full_membership_proof",
+          "fixture": "teleports-20k-seed20671",
+          "mode": "force_reconstruct",
+          "window": 64,
+          "proof_wall_including_oracle_ns": 903565667,
+          "arbitrary_stable_ids": true,
+          "all_present_absent_and_duplicate_memberships": true
+        }
+      ],
+      "maximum_resident_set_size_bytes": 17465344,
+      "process_time_including_all_proofs_and_repetitions": "4.20 real         4.17 user         0.02 sys",
+      "windows": [
+        {
+          "window": 1,
+          "modes": [
+            {
+              "mode": "normal_prepare",
+              "median_ms": {
+                "initial_build_ns": 0.708375,
+                "update_ns": 0.448959,
+                "reconstruct_ns": 0.0,
+                "prepare_ns": 2.364667,
+                "query_ns": 35.094662,
+                "consume_ns": 1.574123,
+                "total_ns_including_rebuild": 40.190953
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 1391371,
+                  "median_ms": {
+                    "update_ns": 0.070084,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 1.163417,
+                    "query_ns": 17.397271,
+                    "consume_ns": 0.78278,
+                    "summed_service_ns": 19.415804
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 1393752,
+                  "median_ms": {
+                    "update_ns": 0.07625,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 1.20125,
+                    "query_ns": 17.728905,
+                    "consume_ns": 0.794348,
+                    "summed_service_ns": 19.800586
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 708375,
+                  "update_ns": 606750,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 2440958,
+                  "query_ns": 35595083,
+                  "consume_ns": 1600757,
+                  "total_ns_including_rebuild": 40951923,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 708542,
+                  "update_ns": 448959,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 2364667,
+                  "query_ns": 35094662,
+                  "consume_ns": 1574123,
+                  "total_ns_including_rebuild": 40190953,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 1,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 701666,
+                  "update_ns": 444458,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 2350792,
+                  "query_ns": 34853033,
+                  "consume_ns": 1561552,
+                  "total_ns_including_rebuild": 39911501,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            },
+            {
+              "mode": "force_reconstruct",
+              "median_ms": {
+                "initial_build_ns": 0.706375,
+                "update_ns": 0.50725,
+                "reconstruct_ns": 1.395959,
+                "prepare_ns": 2.323458,
+                "query_ns": 34.942883,
+                "consume_ns": 1.570839,
+                "total_ns_including_rebuild": 41.466767
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 1391371,
+                  "median_ms": {
+                    "update_ns": 0.069209,
+                    "reconstruct_ns": 0.694208,
+                    "prepare_ns": 1.168917,
+                    "query_ns": 17.428453,
+                    "consume_ns": 0.780203,
+                    "summed_service_ns": 20.176237
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 1393752,
+                  "median_ms": {
+                    "update_ns": 0.089458,
+                    "reconstruct_ns": 0.701459,
+                    "prepare_ns": 1.154542,
+                    "query_ns": 17.470975,
+                    "consume_ns": 0.788605,
+                    "summed_service_ns": 20.227905
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 696250,
+                  "update_ns": 695790,
+                  "reconstruct_ns": 1395667,
+                  "prepare_ns": 2391917,
+                  "query_ns": 35037796,
+                  "consume_ns": 1566547,
+                  "total_ns_including_rebuild": 41783967,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 706375,
+                  "update_ns": 507250,
+                  "reconstruct_ns": 1395959,
+                  "prepare_ns": 2313875,
+                  "query_ns": 34942883,
+                  "consume_ns": 1600425,
+                  "total_ns_including_rebuild": 41466767,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 1,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 706833,
+                  "update_ns": 459499,
+                  "reconstruct_ns": 1429667,
+                  "prepare_ns": 2323458,
+                  "query_ns": 34727938,
+                  "consume_ns": 1570839,
+                  "total_ns_including_rebuild": 41218234,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "window": 64,
+          "modes": [
+            {
+              "mode": "normal_prepare",
+              "median_ms": {
+                "initial_build_ns": 0.708375,
+                "update_ns": 0.448541,
+                "reconstruct_ns": 0.0,
+                "prepare_ns": 2.371625,
+                "query_ns": 35.089419,
+                "consume_ns": 1.297408,
+                "total_ns_including_rebuild": 39.932169
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 1391371,
+                  "median_ms": {
+                    "update_ns": 0.07425,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 1.17275,
+                    "query_ns": 17.588747,
+                    "consume_ns": 0.649751,
+                    "summed_service_ns": 19.489914
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 1393752,
+                  "median_ms": {
+                    "update_ns": 0.076208,
+                    "reconstruct_ns": 0.0,
+                    "prepare_ns": 1.198875,
+                    "query_ns": 17.559496,
+                    "consume_ns": 0.648494,
+                    "summed_service_ns": 19.480615
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 708375,
+                  "update_ns": 538250,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 2371625,
+                  "query_ns": 35487287,
+                  "consume_ns": 1356003,
+                  "total_ns_including_rebuild": 40461540,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 714625,
+                  "update_ns": 448541,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 2355750,
+                  "query_ns": 35071337,
+                  "consume_ns": 1297408,
+                  "total_ns_including_rebuild": 39887661,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "normal_prepare",
+                  "window": 64,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 702667,
+                  "update_ns": 442458,
+                  "reconstruct_ns": 0,
+                  "prepare_ns": 2400833,
+                  "query_ns": 35089419,
+                  "consume_ns": 1296792,
+                  "total_ns_including_rebuild": 39932169,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            },
+            {
+              "mode": "force_reconstruct",
+              "median_ms": {
+                "initial_build_ns": 0.698125,
+                "update_ns": 0.522041,
+                "reconstruct_ns": 1.420417,
+                "prepare_ns": 2.348,
+                "query_ns": 35.310414,
+                "consume_ns": 1.299995,
+                "total_ns_including_rebuild": 41.752052
+              },
+              "query_phase_medians": [
+                {
+                  "frame": 2,
+                  "queries": 20000,
+                  "results": 1391371,
+                  "median_ms": {
+                    "update_ns": 0.069417,
+                    "reconstruct_ns": 0.713,
+                    "prepare_ns": 1.161834,
+                    "query_ns": 17.707292,
+                    "consume_ns": 0.647404,
+                    "summed_service_ns": 20.302589
+                  }
+                },
+                {
+                  "frame": 5,
+                  "queries": 20000,
+                  "results": 1393752,
+                  "median_ms": {
+                    "update_ns": 0.088625,
+                    "reconstruct_ns": 0.70625,
+                    "prepare_ns": 1.181083,
+                    "query_ns": 17.575725,
+                    "consume_ns": 0.652591,
+                    "summed_service_ns": 20.197088
+                  }
+                }
+              ],
+              "all_three_samples": [
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 0,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 750958,
+                  "update_ns": 624915,
+                  "reconstruct_ns": 1420417,
+                  "prepare_ns": 2348000,
+                  "query_ns": 35310414,
+                  "consume_ns": 1297348,
+                  "total_ns_including_rebuild": 41752052,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 1,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 697750,
+                  "update_ns": 456710,
+                  "reconstruct_ns": 1402250,
+                  "prepare_ns": 2342917,
+                  "query_ns": 35221973,
+                  "consume_ns": 1299995,
+                  "total_ns_including_rebuild": 41421595,
+                  "status": "exploratory_concurrent"
+                },
+                {
+                  "kind": "main_refit_summary",
+                  "fixture": "teleports-20k-seed20671",
+                  "mode": "force_reconstruct",
+                  "window": 64,
+                  "repetition": 2,
+                  "queries": 40000,
+                  "results": 2785123,
+                  "initial_build_ns": 698125,
+                  "update_ns": 522041,
+                  "reconstruct_ns": 1455417,
+                  "prepare_ns": 2348750,
+                  "query_ns": 35660798,
+                  "consume_ns": 1318790,
+                  "total_ns_including_rebuild": 42003921,
+                  "status": "exploratory_concurrent"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "reproduction_main_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+  "reproduction_main_commit_source_hashes_verified": true
+}

@@ -10,13 +10,17 @@
 
 use std::collections::HashMap;
 use std::hash::{BuildHasherDefault, Hasher};
+mod batch;
 mod hierarchy;
+pub use batch::{BatchOptions, BatchStats};
 
 /// A validation failure. Invalid operations leave the index unchanged.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Error {
     /// Only dimensions 2 and 3 are supported.
     Dimension,
+    /// Batch workers must be in 1..=64 and queries_per_group must be positive.
+    BatchConfiguration,
     /// A cell size must be finite and strictly positive.
     CellSize,
     /// Every coordinate must be finite.
@@ -28,6 +32,9 @@ pub enum Error {
 impl std::fmt::Display for Error {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         f.write_str(match self {
+            Self::BatchConfiguration => {
+                "batch workers must be in 1..=64 and group size must be positive"
+            }
             Self::Dimension => "only 2D and 3D indexes are supported",
             Self::CellSize => "cell size must be finite and positive",
             Self::Coordinate => "coordinates must be finite",

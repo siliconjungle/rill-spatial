@@ -1,0 +1,17 @@
+{
+  "experiment": "prepared_id_layout",
+  "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+  "source_sha256": {
+    "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+    "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+    "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+    "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+    "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+    "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+  },
+  "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+  "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+  "timing_status": "exploratory_concurrent_not_acceptance",
+  "after_oracle": "layout-after-oracle.txt",
+  "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+}

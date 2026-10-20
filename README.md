@@ -27,7 +27,6 @@ assert_eq!(ids, vec![101]);
 // Movement requires refitting before using the packed view; queries stay current.
 index.upsert(102, [0.0, 0.0, 0.0])?;
 index.remove(101);
-# Ok::<(), rill_spatial::Error>(())
 ```
 
 ## Contract
@@ -111,19 +110,55 @@ are separate dimensions; the project reports negative results explicitly.
 
 License: MIT OR Apache-2.0.
 
+## Bounded coherent batches
+
+`within_batch` shares one immutable index across up to 64 scoped workers and
+spatially orders queries. Every query retains its original index and returns its
+complete exact result, including empty rows. Callbacks are serialized. Validation
+finishes before the first callback; invalid batches emit nothing.
+
+```rust
+use rill_spatial::{BatchOptions, Index3};
+let mut index = Index3::from_points(16.0, [(10, [0.0, 0.0, 0.0])])?;
+index.prepare();
+let queries = [([1.0, 0.0, 0.0], 2.0)];
+let stats = index.within_batch(
+    &queries,
+    BatchOptions { workers: 4, queries_per_group: 32 },
+    |original_indices, complete_rows| {
+        assert_eq!(original_indices, &[0]);
+        assert_eq!(complete_rows[0], &[10]);
+    },
+)?;
+assert_eq!(stats.matches, 1);
+```
+
+Choose workers and group size together: each worker owns reusable result vectors,
+and a dense exact row may contain every indexed ID. The method creates threads
+per call; it does not provide a persistent executor. One worker uses the caller's
+thread. Existing `within_into` remains useful for caller-managed scheduling.
+
 ## 20,000-observer research
 
-The next target is 20,000 observers at60Hz movement /20Hz relevance, including
-bounded-density worlds, crowds, all-visible output pressure, teleports and100,000
-targets with20,000 moving observers. This is a kernel workload, not20,000 live
-network connections or proven server capacity.
+The target is 20,000 observers at 60 Hz movement / 20 Hz relevance, including sparse
+worlds, crowds, all-visible output pressure, teleports and 100,000 targets with
+20,000 moving observers. These are kernel workloads, not 20,000 live network
+connections or proven server capacity.
 
-The bounded driver admits at most100,000 targets and20,000 queries/frame, holds
-at most64 complete result vectors, and validates every ID against an independent
-window oracle, including omissions and duplicates. Reported service time excludes
-oracle pauses; it does not establish uninterrupted tick or network latency.
+The bounded driver admits at most 100,000 targets and 20,000 queries/frame. It
+checks every query for membership, omissions and duplicates using bounded oracle
+storage. `--window 1/8/64` selects complete result rows per worker. The original
+paused-oracle protocol reports summed service intervals and may disturb caches.
+The Rust `--continuous` protocol first validates the entire trace, then separately
+times uninterrupted query frames, including full ID materialization and every-ID
+consumption. Worker counts, output windows and timing contracts are distinct
+experimental dimensions; their results must not be pooled.
 
 Independent packed-cell and dual-tree candidates live under `research/variants`.
-Their tests and concurrent exploratory measurements are separate from acceptance.
-See [the primary-source research](research/20k/research.md) and
-[worker ownership](research/20k/agent-ownership.json). The superiority gate is OPEN.
+Their tests and exploratory measurements are separate from acceptance. See
+[the primary-source research](research/20k/research.md),
+[remaining adapter audit](research/20k/pending-adapters.md),
+[worker ownership](research/20k/agent-ownership.json) and
+[selected experiment results](research/20k/results.md).
+The superiority gate is OPEN. A faster spatial kernel alone does not establish
+simulation, replication, congestion-control or network capacity.

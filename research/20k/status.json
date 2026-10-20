@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-10-20T04:35:54.896483+00:00",
+  "acceptance": "OPEN",
+  "server_capacity": "UNPROVEN",
+  "host": {
+    "cpu": "Apple M2",
+    "ram_bytes": 8589934592,
+    "free_bytes": 23979855872,
+    "requested_free_reserve_bytes": 100000000000,
+    "reserve_status": "preexisting deficit; protected inputs preserved"
+  },
+  "completed": [
+    "36-source primary research bibliography",
+    "12-project pending adapter audit",
+    "98 exact bounded20k screening jobs (concurrent exploratory)",
+    "cell contiguous-ID before/after proof",
+    "dual-tree and scoped worker diagnostics",
+    "refit vs rebuild diagnostic (no refit penalty reproduced)",
+    "public bounded coherent batch API and exact2D/3D tests",
+    "JS and native bounded driver full-membership smoke proofs",
+    "Kiddo wider-leaf fallback full-membership proof"
+  ],
+  "in_progress": [
+    "fresh uninterrupted proof-then-timing screen",
+    "output window and worker-count combinations",
+    "source/evidence publication"
+  ],
+  "limits": [
+    "No live clients, networking, physics or complete server tested",
+    "Comparison has unresolved projects and losses; no universal superiority claim",
+    "Concurrent results and oracle-paused measurements are exploratory",
+    "Single/four-worker studies must be compared at equal resources"
+  ]
+}

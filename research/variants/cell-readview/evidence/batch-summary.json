@@ -1,0 +1,56 @@
+{
+  "experiment": "exact_query_cell_candidate_reuse",
+  "status": "full_independent_tests_passed_exploratory_diagnostics_only",
+  "tests": {
+    "batch_passed": 5,
+    "single_passed": 6,
+    "failed": 0
+  },
+  "source_sha256": {
+    "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+    "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+    "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+    "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+    "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+  },
+  "suites": {
+    "batch-holdout-exploratory": {
+      "runs": 36,
+      "oracle_queries": 128376,
+      "maximum_resident_set_bytes": 17301504,
+      "all_strategies_total_match_counts_equal": true,
+      "per_fixture_total_matches": {
+        "boundaries": 4000,
+        "clusters": 365792,
+        "contained": 8192000,
+        "dense": 2248039,
+        "floors": 67783,
+        "large": 19894,
+        "small": 96,
+        "teleports": 5747,
+        "uniform": 4343
+      }
+    },
+    "batch-twenty-k-exploratory": {
+      "runs": 28,
+      "oracle_queries": 11592,
+      "maximum_resident_set_bytes": 34390016,
+      "all_strategies_total_match_counts_equal": true,
+      "per_fixture_total_matches": {
+        "bounded64": 2771102,
+        "contained": 800000000,
+        "crowd": 21790287,
+        "floors": 588829,
+        "many-objects": 3428653,
+        "teleports": 2785123,
+        "uniform": 303865
+      }
+    }
+  },
+  "build_disposition": {
+    "path": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.batch-build",
+    "generated_bytes_before_removal": 6306058,
+    "status": "removed_after_all_local_processes_completed",
+    "reason": "Generated local proof/diagnostic outputs; root acceptance builds independently"
+  }
+}

@@ -4,26 +4,30 @@
     {
       "id": "capacity_research",
       "concurrencyKey": "research-20k",
-      "status": "running",
-      "agent": "/root/capacity_research"
+      "status": "complete",
+      "agent": "/root/capacity_research",
+      "phase": "pending adapter capability research"
     },
     {
       "id": "cell_readview",
       "concurrencyKey": "cell-readview",
-      "status": "running",
-      "agent": "/root/cell_readview"
+      "status": "complete",
+      "agent": "/root/cell_readview",
+      "phase": "contiguous-ID before/after experiment"
     },
     {
       "id": "dual_tree",
       "concurrencyKey": "dual-tree",
-      "status": "running",
-      "agent": "/root/dual_tree"
+      "status": "complete",
+      "agent": "/root/dual_tree",
+      "phase": "main BVH refit versus rebuild diagnostic"
     },
     {
       "id": "root",
       "concurrencyKey": "main-integration",
       "status": "running",
-      "agent": "root"
+      "agent": "root",
+      "phase": "bounded drivers, buffer-window sweep, competitor coverage"
     }
   ]
 }

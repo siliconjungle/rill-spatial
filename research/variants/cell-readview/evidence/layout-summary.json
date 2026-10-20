@@ -1,0 +1,238 @@
+{
+  "experiment": "prepared_id_layout_only",
+  "status": "oracle_passed_concurrent_diagnostic_not_acceptance",
+  "before": {
+    "experiment": "prepared_id_layout",
+    "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+    "source_sha256": {
+      "src/lib.rs": "53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb",
+      "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+      "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+      "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+    },
+    "binary_sha256": "6f6030a15874bcd428512079a861fc331b70cad664cd93faa397c3d9a3f06864",
+    "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "baseline_oracle": "layout-before-oracle.txt",
+    "baseline_commit_scope": [
+      "src/lib.rs"
+    ],
+    "other_inputs": "Retained unchanged files, independently SHA256 pinned; diagnostic example need not be present in baseline commit"
+  },
+  "after": {
+    "experiment": "prepared_id_layout",
+    "baseline_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+    "source_sha256": {
+      "src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+      "tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+      "tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+      "examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef"
+    },
+    "binary_sha256": "1cccf851433035971360d0b751d6f7c8beef1be13864ff20fd0ad2aa961b13e5",
+    "compiler": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+    "timing_status": "exploratory_concurrent_not_acceptance",
+    "after_oracle": "layout-after-oracle.txt",
+    "change_patch_sha256": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255"
+  },
+  "tests_per_layout": {
+    "single": 6,
+    "batch": 5,
+    "failed": 0
+  },
+  "full_holdout_oracle_queries": 64188,
+  "sampled_twenty_k_oracle_queries": 23184,
+  "passes": 4,
+  "strategy": "sorted",
+  "work_counters_identical": true,
+  "fixtures": {
+    "bounded64": {
+      "single_ns": {
+        "before_median_ns": 49410875.5,
+        "after_median_ns": 51280604.5,
+        "after_over_before_median_ratio": 1.037840434541582,
+        "paired_after_over_before_ratios": [
+          1.017162872176361,
+          1.0679993314074503,
+          1.0440464634336157,
+          1.0567746083432716
+        ]
+      },
+      "batch_ns": {
+        "before_median_ns": 40633917.5,
+        "after_median_ns": 42055780.0,
+        "after_over_before_median_ratio": 1.0349920112920443,
+        "paired_after_over_before_ratios": [
+          1.0346974212755435,
+          1.0721345064946313,
+          1.0766267003565455,
+          1.0352569751667868
+        ]
+      }
+    },
+    "contained": {
+      "single_ns": {
+        "before_median_ns": 369089833.0,
+        "after_median_ns": 134850896.0,
+        "after_over_before_median_ratio": 0.36536063565858234,
+        "paired_after_over_before_ratios": [
+          0.36857953635171736,
+          0.3375174467166888,
+          0.37957225257371296,
+          0.3624952564486475
+        ]
+      },
+      "batch_ns": {
+        "before_median_ns": 364287822.0,
+        "after_median_ns": 132110543.5,
+        "after_over_before_median_ratio": 0.3626542956464792,
+        "paired_after_over_before_ratios": [
+          0.3528780813469512,
+          0.39217383388891,
+          0.37910342053058754,
+          0.3643500946148178
+        ]
+      }
+    },
+    "crowd": {
+      "single_ns": {
+        "before_median_ns": 225841354.0,
+        "after_median_ns": 230609645.5,
+        "after_over_before_median_ratio": 1.021113456041359,
+        "paired_after_over_before_ratios": [
+          1.008801735386018,
+          1.0230925553562213,
+          1.0123988780326831,
+          1.032712427319241
+        ]
+      },
+      "batch_ns": {
+        "before_median_ns": 197188935.5,
+        "after_median_ns": 206465247.0,
+        "after_over_before_median_ratio": 1.0470427586440316,
+        "paired_after_over_before_ratios": [
+          1.055082792368609,
+          1.053849417610561,
+          1.0356111774573302,
+          1.0396385259729053
+        ]
+      }
+    },
+    "floors": {
+      "single_ns": {
+        "before_median_ns": 90209395.5,
+        "after_median_ns": 93727438.0,
+        "after_over_before_median_ratio": 1.038998626257284,
+        "paired_after_over_before_ratios": [
+          1.0037391180069182,
+          1.0489325860158865,
+          1.0221433911726907,
+          1.0296088182139653
+        ]
+      },
+      "batch_ns": {
+        "before_median_ns": 76121674.5,
+        "after_median_ns": 76203431.0,
+        "after_over_before_median_ratio": 1.0010740239299387,
+        "paired_after_over_before_ratios": [
+          0.9881242745144273,
+          1.0080829689719457,
+          0.9895489420464549,
+          0.9944491747395428
+        ]
+      }
+    },
+    "many-objects": {
+      "single_ns": {
+        "before_median_ns": 65571917.0,
+        "after_median_ns": 69554520.0,
+        "after_over_before_median_ratio": 1.0607364125102519,
+        "paired_after_over_before_ratios": [
+          1.106125998890834,
+          1.0183403691593196,
+          0.9760585535441293,
+          1.0800927728391219
+        ]
+      },
+      "batch_ns": {
+        "before_median_ns": 53661069.0,
+        "after_median_ns": 56351762.5,
+        "after_over_before_median_ratio": 1.0501423760305633,
+        "paired_after_over_before_ratios": [
+          1.057581652158871,
+          1.050494979153551,
+          1.0566182236097996,
+          1.035278236716619
+        ]
+      }
+    },
+    "teleports": {
+      "single_ns": {
+        "before_median_ns": 46670540.5,
+        "after_median_ns": 48867145.0,
+        "after_over_before_median_ratio": 1.0470661894305682,
+        "paired_after_over_before_ratios": [
+          1.066143920037115,
+          1.0921192594369415,
+          1.015346298866316,
+          1.0150703038655562
+        ]
+      },
+      "batch_ns": {
+        "before_median_ns": 39537281.5,
+        "after_median_ns": 40397808.5,
+        "after_over_before_median_ratio": 1.0217649511385856,
+        "paired_after_over_before_ratios": [
+          1.0666907436518982,
+          1.036244838244437,
+          1.0368060354998458,
+          1.0065622827744336
+        ]
+      }
+    },
+    "uniform": {
+      "single_ns": {
+        "before_median_ns": 70574730.0,
+        "after_median_ns": 67265709.0,
+        "after_over_before_median_ratio": 0.9531132318890911,
+        "paired_after_over_before_ratios": [
+          0.9896178066528196,
+          0.9534140181401519,
+          1.0546739769226672,
+          0.7914897494155837
+        ]
+      },
+      "batch_ns": {
+        "before_median_ns": 75795069.0,
+        "after_median_ns": 65565004.5,
+        "after_over_before_median_ratio": 0.8650299467370364,
+        "paired_after_over_before_ratios": [
+          0.9558107037157675,
+          0.8306199980067935,
+          1.0212183006606717,
+          0.7045498525040707
+        ]
+      }
+    }
+  },
+  "maximum_resident_set_bytes": {
+    "before": 34750464,
+    "after": 44318720
+  },
+  "interpretation": "Contained output-copy signal is promising. Other workloads vary and several regress mildly. Concurrency and four exploratory trials do not establish acceptance or a universal win.",
+  "generated_disposition": [
+    {
+      "path": ".layout-build",
+      "bytes_before_removal": 6350271,
+      "status": "removed_after_all_local_processes_completed"
+    },
+    {
+      "path": ".layout-before-probe",
+      "bytes_before_removal": 481952,
+      "status": "removed_after_all_local_processes_completed"
+    }
+  ]
+}

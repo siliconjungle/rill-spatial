@@ -8,7 +8,7 @@ index and output unchanged. Mutations immediately invalidate the prepared view;
 queries then scan until a subsequent `prepare` rebuilds it. Output order is
 unspecified and each matching ID appears once.
 
-`prepare` sorts integer cell keys, packs IDs and coordinates in CSR cell order,
+`prepare` sorts integer cell keys, packs IDs and coordinates in aligned CSR arrays,
 records actual per-cell point bounds, and builds an occupied-cell lookup map.
 The meaningful traversal alternatives are:
 
@@ -166,3 +166,45 @@ It was removed after every local test and diagnostic process completed; parent
 comparative measurements build the candidate independently. Source, lockfile and
 declared read-only shared fixture inputs reproduce it. Its disposition is recorded
 in `storage-retention.json`; no running workers were stopped or suspended.
+
+## Focused prepared-ID layout experiment
+
+The original prepared layout is preserved by Git commit
+`b7580ed1f698e3d14114c5a8f9c25a13dc081164`, whose `src/lib.rs` SHA256 is
+`53514fbd39120f73cca034e4bc73d206e26fd34d2570f4a034ba857a68af73eb`.
+The current source changes only prepared storage and the matching ID access:
+`Vec<Entry<D>>` becomes aligned `Vec<[f64; D]>` and `Vec<u64>`. Both single-query
+and coherent-batch containment paths use `extend_from_slice` over the ID range.
+Exact per-point filtering zips coordinates with the corresponding IDs. Mutable
+storage, sort permutation, cell ranges, grouping, traversal, bounds, validation
+and membership arithmetic remain the same. Arbitrary IDs are preserved.
+
+`evidence/layout-change.patch` records the entire library difference. Before and
+after manifests pin all common test/probe/manifest/lockfile inputs, the compiler,
+source hashes and binary hashes. Only the library source requires recovery from
+the baseline commit; the unchanged diagnostic example and tests are retained
+inputs. Each layout passed all 11 oracle suites, then complete membership checks
+for all nine holdout fixtures (64,188 query checks across layouts). The bounded
+20k diagnostic alternated invocation order over four trials per layout/fixture,
+used only the sorted traversal, and checked 23,184 sampled full memberships.
+Every reporting/work counter matched between layouts for each paired trial.
+
+The concurrent diagnostic's contained-case median over two frames changed from
+369.090 to 134.851 ms for single queries and from 364.288 to 132.111 ms for cell
+batching. Several other scenes were mildly slower; these observations are neither
+acceptance evidence nor a universal improvement. Peak measured RSS across these
+runs was 34,750,464 bytes before and 44,318,720 after. No ID matrix was retained.
+`evidence/layout-summary.json` has every scene and paired ratio.
+
+The experiment built the original and changed sources sequentially in the same
+private `.layout-build` directory, with the retained manifest's identical release
+flags. One 481,952-byte original executable was frozen as `.layout-before-probe`
+to permit alternating diagnostics. `run_layout_diagnostics.py` records the exact
+invocations and manifest pins. Reproduction uses the baseline library from Git
+and then the current library with the unchanged retained probe/tests and manifest;
+materialize only those declared inputs in a minimal replay crate, not a repository
+copy. Source preflight returned no extra configuration arguments.
+
+After both layouts' proofs and all diagnostics completed, the private build and
+frozen executable were retired. Root's earlier frozen screen binary was never
+modified. Root's coordinated serial comparison remains the acceptance authority.

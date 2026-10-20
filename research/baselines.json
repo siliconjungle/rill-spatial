@@ -7,6 +7,12 @@
       "artifact_sha256": "3ac69ed19caca2aff8e51e8a230413de03b9bb84ff1937da31f0dc822d174445",
       "branch": "evidence/screen-v2",
       "note": "Screening evidence only; gate remains open. Core sources match source hashes captured by the runner."
+    },
+    {
+      "name": "twenty-k-screen-v1",
+      "source_commit": "b7580ed1f698e3d14114c5a8f9c25a13dc081164",
+      "artifact_sha256": "8b246b92fa4e9c1cbb6d8fc30986bff99067003d6b237dd9fbf349c677f35236",
+      "note": "All core/harness source hashes match source_commit;98 complete-membership jobs, concurrent exploratory timings with oracle pauses. Not acceptance."
     }
   ]
 }

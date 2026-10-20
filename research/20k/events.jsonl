@@ -1,1 +1,2 @@
 {"event": "dispatch", "workers": ["capacity_research", "cell_readview", "dual_tree"], "source_commit": "ef1fbbc", "utc": "2026-10-20T04:13:46Z", "note": "Parallel research and isolated minimal crates; final comparisons serial"}
+{"at": "2026-10-20T04:30:39.591283+00:00", "event": "20k initial screen complete", "status": "98/98 full-membership checked jobs; concurrent exploratory measurements", "followup": ["contiguous cell ID output", "refit quality", "window1/8/64", "remaining competitor capabilities"]}

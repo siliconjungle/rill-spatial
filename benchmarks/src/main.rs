@@ -1,4 +1,5 @@
 mod bounded;
+mod cohorts;
 mod more_adapters;
 mod rust_adapters;
 mod studies;
@@ -7,7 +8,7 @@ use std::hint::black_box;
 use std::time::Instant;
 
 pub type Point = [f64; 3];
-#[derive(Deserialize)]
+#[derive(Clone, Copy, Deserialize)]
 pub struct Query {
     pub point: Point,
     pub radius: f64,
@@ -40,7 +41,7 @@ pub trait Adapter {
         &self,
         queries: &[Query],
         max_queries: usize,
-        emit: &mut dyn FnMut(&[usize], &[Vec<u64>]),
+        emit: &mut (dyn FnMut(&[usize], &[Vec<u64>]) + Send),
     ) {
         let mut outputs: Vec<Vec<u64>> = (0..max_queries.min(queries.len()))
             .map(|_| Vec::new())
@@ -161,6 +162,22 @@ fn main() {
     use rust_adapters::*;
     match args[1].as_str() {
         "rill-spatial" => run::<Rill>(&args[1], &fixture, samples),
+        "study-kiddo-1" => run::<cohorts::Coherent<KiddoImmutable, 1>>(&args[1], &fixture, samples),
+        "study-kiddo-4" => run::<cohorts::Coherent<KiddoImmutable, 4>>(&args[1], &fixture, samples),
+        "study-static-aabb-1" => {
+            run::<cohorts::Coherent<StaticAabb, 1>>(&args[1], &fixture, samples)
+        }
+        "study-static-aabb-4" => {
+            run::<cohorts::Coherent<StaticAabb, 4>>(&args[1], &fixture, samples)
+        }
+        "study-geo-rtree-1" => run::<cohorts::Coherent<GeoRtree, 1>>(&args[1], &fixture, samples),
+        "study-geo-rtree-4" => run::<cohorts::Coherent<GeoRtree, 4>>(&args[1], &fixture, samples),
+        "rill-batch-1" => run::<studies::PublicBatch<1>>(&args[1], &fixture, samples),
+        "rill-batch-2" => run::<studies::PublicBatch<2>>(&args[1], &fixture, samples),
+        "rill-batch-4" => run::<studies::PublicBatch<4>>(&args[1], &fixture, samples),
+        "rill-coherent-1" => run::<cohorts::Coherent<Rill, 1>>(&args[1], &fixture, samples),
+        "rill-coherent-2" => run::<cohorts::Coherent<Rill, 2>>(&args[1], &fixture, samples),
+        "rill-coherent-4" => run::<cohorts::Coherent<Rill, 4>>(&args[1], &fixture, samples),
         "rill-cell-sorted" => run::<studies::Cell<0>>(&args[1], &fixture, samples),
         "rill-cell-hybrid" => run::<studies::Cell<1>>(&args[1], &fixture, samples),
         "rill-cell-hash" => run::<studies::Cell<2>>(&args[1], &fixture, samples),

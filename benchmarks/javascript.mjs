@@ -99,6 +99,7 @@ function boundedValidate(expected,actual,seen,n){
  if(expected.ids)for(const id of expected.ids)assert.notEqual(seen[id>>>5]&(1<<(id&31)),0,'missing ID');
 }
 function runBounded(){
+ const window=Number(process.env.RILL_OUTPUT_WINDOW||64);assert(Number.isInteger(window)&&window>=1&&window<=64);
  assert(fixture.points.length<=100000&&fixture.frames.every(f=>f.queries.length<=20000),'bounded runner admission');
  assert(fixture.points.flat().every(x=>Number.isFinite(x)&&Math.abs(x)<=1e6));
  assert(fixture.frames.every(f=>f.updates.every(([id,p])=>id>=0&&id<fixture.points.length&&p.every(x=>Number.isFinite(x)&&Math.abs(x)<=1e6))&&f.queries.every(q=>q.point.every(x=>Number.isFinite(x)&&Math.abs(x)<=1e6)&&q.radius>=1e-100&&q.radius<=1e100)));
@@ -107,8 +108,8 @@ function runBounded(){
   const reference=fixture.points.slice(),seen=new Uint32Array(Math.ceil(reference.length/32));let start=performance.now(),index=make(fixture.points),build_ns=Math.round((performance.now()-start)*1e6),update_ns=0,query_ns=0,results=0;
   for(const frame of fixture.frames){start=performance.now();index.update(frame.updates);if(frame.queries.length)index.prepare?.();update_ns+=Math.round((performance.now()-start)*1e6);for(const[id,p]of frame.updates)reference[id]=p;if(!frame.queries.length)continue;
    const lo=[Infinity,Infinity,Infinity],hi=[-Infinity,-Infinity,-Infinity];for(const p of reference)for(let d=0;d<3;d++){lo[d]=Math.min(lo[d],p[d]);hi[d]=Math.max(hi[d],p[d]);}
-   start=performance.now();const outputs=Array.from({length:64},()=>[]);let excluded=0;
-   for(let begin=0;begin<frame.queries.length;begin+=64){const queries=frame.queries.slice(begin,begin+64),out=outputs.slice(0,queries.length);
+   start=performance.now();const outputs=Array.from({length:window},()=>[]);let excluded=0;
+   for(let begin=0;begin<frame.queries.length;begin+=window){const queries=frame.queries.slice(begin,begin+window),out=outputs.slice(0,queries.length);
     if(index.queryBatch)index.queryBatch(queries,out);else for(let i=0;i<queries.length;i++)index.query(queries[i].point,queries[i].radius,out[i]);
     const pause=performance.now();for(let i=0;i<queries.length;i++){const q=queries[i];boundedValidate(boundedExpected(reference,q.point,q.radius,lo,hi),out[i],seen,reference.length);results+=out[i].length;if(!sample)matchCounts.push(out[i].length);}peakLogicalOutput=Math.max(peakLogicalOutput,out.reduce((sum,v)=>sum+v.length*8,0));excluded+=performance.now()-pause;
    }
@@ -116,7 +117,7 @@ function runBounded(){
   }
   index.dispose?.();samples.push({build_ns,update_ns,query_ns,total_ns:build_ns+update_ns+query_ns,results});
  }
- matchCounts.sort((a,b)=>a-b);console.log(JSON.stringify({implementation:name,scenario:fixture.name,points:fixture.points.length,queries:matchCounts.length,correct:true,runtime:process.version,materialization:'64 reusable full-query number arrays; every ID produced and full membership validated',timing_scope:'summed kernel service time, oracle pauses excluded; GC may cross pauses; not uninterrupted tick wall latency',output_logical_peak_bytes:peakLogicalOutput,excluded_validation_ns:Math.round(validationMs*1e6),matches_per_query:{mean:matchCounts.reduce((a,b)=>a+b,0)/matchCounts.length,p99:matchCounts[Math.floor(matchCounts.length*.99)],max:matchCounts.at(-1)},samples}));
+ matchCounts.sort((a,b)=>a-b);console.log(JSON.stringify({implementation:name,scenario:fixture.name,points:fixture.points.length,queries:matchCounts.length,correct:true,runtime:process.version,output_window_queries:window,materialization:'bounded reusable full-query number arrays; every ID produced and full membership validated',timing_scope:'summed kernel service time, oracle pauses excluded; GC may cross pauses; not uninterrupted tick wall latency',output_logical_peak_bytes:peakLogicalOutput,excluded_validation_ns:Math.round(validationMs*1e6),matches_per_query:{mean:matchCounts.reduce((a,b)=>a+b,0)/matchCounts.length,p99:matchCounts[Math.floor(matchCounts.length*.99)],max:matchCounts.at(-1)},samples}));
 }
 
 if(fixture.bounded){runBounded();}else{

@@ -65,7 +65,7 @@ impl Adapter for Dual {
         &self,
         queries: &[Query],
         max_queries: usize,
-        emit: &mut dyn FnMut(&[usize], &[Vec<u64>]),
+        emit: &mut (dyn FnMut(&[usize], &[Vec<u64>]) + Send),
     ) {
         let queries: Vec<_> = queries.iter().map(|q| (q.point, q.radius)).collect();
         self.0
@@ -92,12 +92,58 @@ impl<const MODE: u8> Adapter for CellCoherent<MODE> {
         &self,
         queries: &[Query],
         max_queries: usize,
-        emit: &mut dyn FnMut(&[usize], &[Vec<u64>]),
+        emit: &mut (dyn FnMut(&[usize], &[Vec<u64>]) + Send),
     ) {
         let queries: Vec<_> = queries.iter().map(|q| (q.point, q.radius)).collect();
         self.0
             .0
             .batch_visit_groups(&queries, max_queries, emit)
+            .unwrap();
+    }
+}
+
+/// Public main-library batch surface, separate from generic scheduler prototype.
+pub struct PublicBatch<const WORKERS: usize>(rill_spatial::Index3);
+impl<const WORKERS: usize> Adapter for PublicBatch<WORKERS> {
+    fn build(points: &[Point], size: f64) -> Self {
+        Self(
+            rill_spatial::Index3::from_points(
+                size,
+                points.iter().enumerate().map(|(i, &p)| (i as u64, p)),
+            )
+            .unwrap(),
+        )
+    }
+    fn update(&mut self, changes: &[(usize, Point)]) {
+        for &(id, p) in changes {
+            self.0.upsert(id as u64, p).unwrap();
+        }
+    }
+    fn prepare(&mut self) {
+        self.0.prepare();
+    }
+    fn query(&self, p: Point, r: f64, out: &mut Vec<u64>) {
+        self.0.within_into(p, r, out).unwrap();
+    }
+    fn visit_groups(
+        &self,
+        queries: &[Query],
+        max_queries: usize,
+        emit: &mut (dyn FnMut(&[usize], &[Vec<u64>]) + Send),
+    ) {
+        if WORKERS > 1 {
+            assert_eq!(std::env::var("RILL_CONTINUOUS").as_deref(), Ok("1"));
+        }
+        let queries: Vec<_> = queries.iter().map(|q| (q.point, q.radius)).collect();
+        self.0
+            .within_batch(
+                &queries,
+                rill_spatial::BatchOptions {
+                    workers: WORKERS,
+                    queries_per_group: max_queries,
+                },
+                emit,
+            )
             .unwrap();
     }
 }

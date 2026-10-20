@@ -1,0 +1,954 @@
+[
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "strategy": "hybrid",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 859375,
+        "update_ns": 2338459,
+        "query_ns": 37207751,
+        "total_ns": 40405585,
+        "queries": 40000,
+        "matches": 2771102,
+        "checked_queries": 414,
+        "strategy": "hybrid"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.05 real         0.05 user         0.00 sys\n            11091968  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 837  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  65  involuntary context switches\n           481518380  instructions retired\n           180610760  cycles elapsed\n            10453328  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "strategy": "hash",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 900000,
+        "update_ns": 2573208,
+        "query_ns": 64732417,
+        "total_ns": 68205625,
+        "queries": 40000,
+        "matches": 2771102,
+        "checked_queries": 414,
+        "strategy": "hash"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.08 real         0.08 user         0.00 sys\n            11091968  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 837  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  77  involuntary context switches\n           626722842  instructions retired\n           270354658  cycles elapsed\n            10453328  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "strategy": "sorted",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 890500,
+        "update_ns": 2498502,
+        "query_ns": 36427333,
+        "total_ns": 39816335,
+        "queries": 40000,
+        "matches": 2771102,
+        "checked_queries": 414,
+        "strategy": "sorted"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.05 real         0.05 user         0.00 sys\n            11091968  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 837  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  13  involuntary context switches\n           481991707  instructions retired\n           181406379  cycles elapsed\n            10453328  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+    "sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+    "strategy": "occupied",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/bounded64.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 869083,
+        "update_ns": 2510875,
+        "query_ns": 187794877,
+        "total_ns": 191174835,
+        "queries": 40000,
+        "matches": 2771102,
+        "checked_queries": 414,
+        "strategy": "occupied"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.20 real         0.20 user         0.00 sys\n            11091968  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 837  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  92  involuntary context switches\n          2444413010  instructions retired\n           668909107  cycles elapsed\n            10453328  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "strategy": "hybrid",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 967583,
+        "update_ns": 1360001,
+        "query_ns": 277750915,
+        "total_ns": 280078499,
+        "queries": 40000,
+        "matches": 800000000,
+        "checked_queries": 414,
+        "strategy": "hybrid"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.37 real         0.36 user         0.00 sys\n            11304960  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 850  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 234  involuntary context switches\n          3020289941  instructions retired\n          1186226143  cycles elapsed\n            10666320  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "strategy": "hash",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 893292,
+        "update_ns": 1135956,
+        "query_ns": 326844917,
+        "total_ns": 328874165,
+        "queries": 40000,
+        "matches": 800000000,
+        "checked_queries": 414,
+        "strategy": "hash"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.42 real         0.41 user         0.00 sys\n            11321344  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 851  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 581  involuntary context switches\n          3023772124  instructions retired\n          1273582793  cycles elapsed\n            10682704  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "strategy": "sorted",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 932459,
+        "update_ns": 1196792,
+        "query_ns": 336543792,
+        "total_ns": 338673043,
+        "queries": 40000,
+        "matches": 800000000,
+        "checked_queries": 414,
+        "strategy": "sorted"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.43 real         0.43 user         0.00 sys\n            11321344  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 851  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 387  involuntary context switches\n          3022246396  instructions retired\n          1302138408  cycles elapsed\n            10682704  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+    "sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+    "strategy": "occupied",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/contained.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 948792,
+        "update_ns": 2396249,
+        "query_ns": 345066165,
+        "total_ns": 348411206,
+        "queries": 40000,
+        "matches": 800000000,
+        "checked_queries": 414,
+        "strategy": "occupied"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.46 real         0.44 user         0.00 sys\n            13123584  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 961  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 588  involuntary context switches\n          3022738206  instructions retired\n          1339773026  cycles elapsed\n            12484944  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "strategy": "hybrid",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 980125,
+        "update_ns": 3220417,
+        "query_ns": 207589791,
+        "total_ns": 211790333,
+        "queries": 40000,
+        "matches": 21790287,
+        "checked_queries": 414,
+        "strategy": "hybrid"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.24 real         0.23 user         0.00 sys\n            13352960  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 975  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 272  involuntary context switches\n          1267241463  instructions retired\n           689822221  cycles elapsed\n            12730728  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "strategy": "hash",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 900458,
+        "update_ns": 4019624,
+        "query_ns": 318199748,
+        "total_ns": 323119830,
+        "queries": 40000,
+        "matches": 21790287,
+        "checked_queries": 414,
+        "strategy": "hash"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.35 real         0.31 user         0.00 sys\n            12091392  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 898  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 430  involuntary context switches\n          1494763818  instructions retired\n           918310229  cycles elapsed\n            11469160  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "strategy": "sorted",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 913625,
+        "update_ns": 3336624,
+        "query_ns": 433645960,
+        "total_ns": 437896209,
+        "queries": 40000,
+        "matches": 21790287,
+        "checked_queries": 414,
+        "strategy": "sorted"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.46 real         0.23 user         0.00 sys\n            11616256  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 869  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 746  involuntary context switches\n          1271768507  instructions retired\n           704086667  cycles elapsed\n            10994024  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+    "sha256": "25d3db68b1a9a5c7f0435607d868f3c93a19f6e7d23531a4a9cdfcf2a8710cb7",
+    "strategy": "occupied",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/crowd.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 953458,
+        "update_ns": 2351707,
+        "query_ns": 269581584,
+        "total_ns": 272886749,
+        "queries": 40000,
+        "matches": 21790287,
+        "checked_queries": 414,
+        "strategy": "occupied"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.30 real         0.26 user         0.00 sys\n            12173312  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 903  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 401  involuntary context switches\n          1564667160  instructions retired\n           764183898  cycles elapsed\n            11534672  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "strategy": "hybrid",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 1097959,
+        "update_ns": 5083292,
+        "query_ns": 194116166,
+        "total_ns": 200297417,
+        "queries": 40000,
+        "matches": 588829,
+        "checked_queries": 414,
+        "strategy": "hybrid"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.24 real         0.13 user         0.00 sys\n            14860288  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1071  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 433  involuntary context switches\n           741290039  instructions retired\n           406457241  cycles elapsed\n            14238056  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "strategy": "hash",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 929084,
+        "update_ns": 6959961,
+        "query_ns": 131626750,
+        "total_ns": 139515795,
+        "queries": 40000,
+        "matches": 588829,
+        "checked_queries": 414,
+        "strategy": "hash"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.16 real         0.14 user         0.00 sys\n            14860288  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1067  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 194  involuntary context switches\n           738481572  instructions retired\n           401785357  cycles elapsed\n            14238056  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "strategy": "sorted",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 953209,
+        "update_ns": 3700543,
+        "query_ns": 94504584,
+        "total_ns": 99158336,
+        "queries": 40000,
+        "matches": 588829,
+        "checked_queries": 414,
+        "strategy": "sorted"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.12 real         0.11 user         0.00 sys\n            16973824  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1196  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  90  involuntary context switches\n           849718128  instructions retired\n           346323244  cycles elapsed\n            16351592  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+    "sha256": "62900cb05bddd593b6ac3513b1a63d51c0d9019896225c7d2e93864ee6d77f48",
+    "strategy": "occupied",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/floors.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 934417,
+        "update_ns": 3547667,
+        "query_ns": 1435111790,
+        "total_ns": 1439593874,
+        "queries": 40000,
+        "matches": 588829,
+        "checked_queries": 414,
+        "strategy": "occupied"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        1.48 real         1.39 user         0.01 sys\n            14270464  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1031  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                1627  involuntary context switches\n         14483290288  instructions retired\n          4104092792  cycles elapsed\n            13631824  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "strategy": "hybrid",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 4698000,
+        "update_ns": 11288792,
+        "query_ns": 51841834,
+        "total_ns": 67828626,
+        "queries": 40000,
+        "matches": 3428653,
+        "checked_queries": 414,
+        "strategy": "hybrid"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=100000, frames=6, output_storage=one_reused_vector\n        0.14 real         0.13 user         0.00 sys\n            33964032  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2233  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  76  involuntary context switches\n          1483966921  instructions retired\n           446349034  cycles elapsed\n            33341800  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "strategy": "hash",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 4906875,
+        "update_ns": 12153293,
+        "query_ns": 71579458,
+        "total_ns": 88639626,
+        "queries": 40000,
+        "matches": 3428653,
+        "checked_queries": 414,
+        "strategy": "hash"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=100000, frames=6, output_storage=one_reused_vector\n        0.16 real         0.15 user         0.00 sys\n            33964032  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2233  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 164  involuntary context switches\n          1579329810  instructions retired\n           510395237  cycles elapsed\n            33341800  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "strategy": "sorted",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 4449458,
+        "update_ns": 11597499,
+        "query_ns": 48676500,
+        "total_ns": 64723457,
+        "queries": 40000,
+        "matches": 3428653,
+        "checked_queries": 414,
+        "strategy": "sorted"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=100000, frames=6, output_storage=one_reused_vector\n        0.13 real         0.12 user         0.00 sys\n            33964032  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2233  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  36  involuntary context switches\n          1475501222  instructions retired\n           429825663  cycles elapsed\n            33341800  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+    "sha256": "a51421c68eb955ac2914735d2dc0f7bb839397c27117f81f105c85e51c7bab2a",
+    "strategy": "occupied",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/many-objects.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 4800459,
+        "update_ns": 11618502,
+        "query_ns": 669484125,
+        "total_ns": 685903086,
+        "queries": 40000,
+        "matches": 3428653,
+        "checked_queries": 414,
+        "strategy": "occupied"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=100000, frames=6, output_storage=one_reused_vector\n        0.76 real         0.75 user         0.00 sys\n            33964032  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                2233  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 259  involuntary context switches\n          9238815223  instructions retired\n          2450285809  cycles elapsed\n            33341800  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "strategy": "hybrid",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 884917,
+        "update_ns": 2606292,
+        "query_ns": 37954791,
+        "total_ns": 41446000,
+        "queries": 40000,
+        "matches": 2785123,
+        "checked_queries": 414,
+        "strategy": "hybrid"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.05 real         0.05 user         0.00 sys\n            11091968  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 837  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 103  involuntary context switches\n           476153124  instructions retired\n           181274807  cycles elapsed\n            10453328  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "strategy": "hash",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 894500,
+        "update_ns": 2596667,
+        "query_ns": 67178667,
+        "total_ns": 70669834,
+        "queries": 40000,
+        "matches": 2785123,
+        "checked_queries": 414,
+        "strategy": "hash"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.08 real         0.08 user         0.00 sys\n            11091968  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 837  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 126  involuntary context switches\n           621963632  instructions retired\n           270004800  cycles elapsed\n            10453328  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "strategy": "sorted",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 941458,
+        "update_ns": 3810666,
+        "query_ns": 41242209,
+        "total_ns": 45994333,
+        "queries": 40000,
+        "matches": 2785123,
+        "checked_queries": 414,
+        "strategy": "sorted"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.06 real         0.06 user         0.00 sys\n            13041664  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                 956  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  68  involuntary context switches\n           479234761  instructions retired\n           201007663  cycles elapsed\n            12419432  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+    "sha256": "7fcae4d9b8f212f8dd4e93ff871526bb68ce4dbb7ce43d920af74ef0737f3884",
+    "strategy": "occupied",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/teleports.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 2117167,
+        "update_ns": 4578793,
+        "query_ns": 446921707,
+        "total_ns": 453617667,
+        "queries": 40000,
+        "matches": 2785123,
+        "checked_queries": 414,
+        "strategy": "occupied"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.47 real         0.24 user         0.00 sys\n            14499840  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1045  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 271  involuntary context switches\n          2333830678  instructions retired\n           718363062  cycles elapsed\n            13877608  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "strategy": "hybrid",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 904875,
+        "update_ns": 6360166,
+        "query_ns": 140609166,
+        "total_ns": 147874207,
+        "queries": 40000,
+        "matches": 303865,
+        "checked_queries": 414,
+        "strategy": "hybrid"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.18 real         0.13 user         0.00 sys\n            15532032  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1108  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                 110  involuntary context switches\n           637017269  instructions retired\n           378272265  cycles elapsed\n            14909800  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "strategy": "hash",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 953625,
+        "update_ns": 3401293,
+        "query_ns": 76647666,
+        "total_ns": 81002584,
+        "queries": 40000,
+        "matches": 303865,
+        "checked_queries": 414,
+        "strategy": "hash"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.10 real         0.09 user         0.00 sys\n            13828096  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1004  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  42  involuntary context switches\n           638362412  instructions retired\n           321413876  cycles elapsed\n            13189456  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "strategy": "sorted",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 929250,
+        "update_ns": 3344956,
+        "query_ns": 54843959,
+        "total_ns": 59118165,
+        "queries": 40000,
+        "matches": 303865,
+        "checked_queries": 414,
+        "strategy": "sorted"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        0.08 real         0.07 user         0.00 sys\n            14368768  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1037  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                  37  involuntary context switches\n           683207769  instructions retired\n           249678315  cycles elapsed\n            13730128  peak memory footprint\n"
+  },
+  {
+    "fixture": "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+    "sha256": "b6ca513655c10fe4e3bc024a34b4046b842a696fbd9651e62dd82a069b852419",
+    "strategy": "occupied",
+    "status": "exploratory_concurrent_not_acceptance",
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/cell-readview/.build/release/examples/stream_probe",
+      "/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/benchmarks/twenty-k/uniform.bin",
+      "1",
+      "97"
+    ],
+    "source_sha256": {
+      "src/lib.rs": "d01602a73e7ef4030c2ce46b02190cde41f68d5fbd68b3be17c4d988a9202977",
+      "Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904"
+    },
+    "binary_sha256": "851d721dc2225ad5bf5eea9e7c73cb653e66a1be56dc852aa13ff9d5eda3c3a9",
+    "results": [
+      {
+        "build_ns": 943125,
+        "update_ns": 4439541,
+        "query_ns": 2341865333,
+        "total_ns": 2347247999,
+        "queries": 40000,
+        "matches": 303865,
+        "checked_queries": 414,
+        "strategy": "occupied"
+      }
+    ],
+    "stderr": "oracle_queries=414, points=20000, frames=6, output_storage=one_reused_vector\n        2.39 real         2.15 user         0.02 sys\n            15532032  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1110  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n                3309  involuntary context switches\n         22332904726  instructions retired\n          6294004739  cycles elapsed\n            14909800  peak memory footprint\n"
+  }
+]

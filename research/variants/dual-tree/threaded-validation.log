@@ -1,0 +1,10 @@
+   Compiling rill-spatial-dual-tree v0.1.0 (/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial/research/variants/dual-tree)
+    Finished `release` profile [optimized] target(s) in 1.57s
+     Running tests/threaded_cohort.rs (research/variants/dual-tree/target/release/deps/threaded_cohort-5934893aedaf2178)
+
+running 2 tests
+test parallel_empty_and_extreme_closed_float_membership ... ok
+test parallel_full_membership_arbitrary_ids_variable_radii_and_mutation ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

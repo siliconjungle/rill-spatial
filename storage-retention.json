@@ -180,6 +180,62 @@
     {
       "path": "research/vendor/cpp-kdtree-plusplus",
       "reason": "Minimal pinned native source inputs for reproduction or ongoing capability evaluation; preserve upstream licenses"
+    },
+    {
+      "path": "research/20k",
+      "reason": "Primary research, ownership, capacity reasoning and source-pinned experiment status; see nested exact retention contract"
+    },
+    {
+      "path": "research/variants/cell-readview",
+      "reason": "Selected independent cell candidate, before/after proofs and reproduction inputs; nested retention declares exact generated retirement"
+    },
+    {
+      "path": "research/variants/dual-tree",
+      "reason": "Selected exact dual-tree, scoped-worker and refit experiment sources/proofs; nested retention declares generated retirement"
+    },
+    {
+      "path": "results/finalists-v3.json",
+      "reason": "Selected repeated2k finalistas with unresolved losses/failures, required negative evidence"
+    },
+    {
+      "path": "results/javascript-repairs-v3.json",
+      "reason": "Selected full-membership validation of repaired upstream adapters"
+    },
+    {
+      "path": "results/twenty-k-screen-v1.json",
+      "reason": "Selected98-job bounded20k screen with complete per-query correctness checks; concurrent exploratory timings"
+    },
+    {
+      "path": "build/frozen/twenty-k-screen-v1/rust",
+      "reason": "Exact measured executable for selected20k screen; core/harness source verified against b7580ed"
+    },
+    {
+      "path": "results/twenty-k-js-proof-v1.json",
+      "reason": "Bounded JS driver full-membership proof on20k traces"
+    },
+    {
+      "path": "results/twenty-k-cpp-proof-v1.json",
+      "reason": "Bounded native driver full-membership proof on20k traces"
+    },
+    {
+      "path": "results/kiddo-wide-proof-v1.json",
+      "reason": "Correctness proof for supported larger-leaf construction fallback"
+    },
+    {
+      "path": "results/validation-batch-simd.log",
+      "reason": "Required publicbatch default-feature correctness proof"
+    },
+    {
+      "path": "results/validation-batch-scalar.log",
+      "reason": "Required publicbatch dependency-free scalar correctness proof"
+    },
+    {
+      "path": "results/validation-batch-release.log",
+      "reason": "Required publicbatch release-mode correctness proof"
+    },
+    {
+      "path": "results/validation-batch-clippy.log",
+      "reason": "Required publiclibrary static check proof"
     }
   ],
   "safe_to_remove": [
@@ -210,6 +266,18 @@
     {
       "path": "build/screen-source-index",
       "reason": "Completed temporary Git index; exact source blobs retained by evidence/screen-v2 commit"
+    },
+    {
+      "path": "results/continuous-smoke-v1.json",
+      "reason": "Completed smoke exposed premature artifact freeze; no performance evidence; corrected protocol validated separately"
+    },
+    {
+      "path": "build/frozen/continuous-smoke-v1",
+      "reason": "Completed stale-artifact smoke, not selected proof"
+    },
+    {
+      "path": "build/continuous-smoke-v1.log",
+      "reason": "Completed duplicate stale-artifact smoke log"
     }
   ]
 }

@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "date": "2026-10-20",
+  "status": "exploratory_concurrent_not_acceptance",
+  "protocol": {
+    "source_sha256": "895d16e7425af0a7ed016a45f343769188d4682055e0385d762d01b0f0f59b90",
+    "oracle_source_sha256": "3cf3df911aaf20d82fe081078b7b1e85696e32d986fc6b9df91778593c01861c",
+    "cli_source_sha256": "d7b3debdf6390222650191cca5b31ab6d6b1b6a2d1008ccde0193df0f853f2d0",
+    "buffers": "Single and raw-batch paths have independent initially empty result vectors, retaining capacity across chunks and frames; visitor owns its bounded vectors per API call",
+    "clearing_and_allocation": "Charged in all materialization methods",
+    "single_raw_batch_order": "Alternating per chunk and repetition",
+    "preparation": "Initial from_points only; prepare after updates only for frames containing queries",
+    "visitor_validation": "Full independent membership validation once per group; oracle allocation, comparison and deallocation excluded; tree building, traversal, ID expansion, vector writes, dispatch and bookkeeping charged",
+    "time_interpretation": "Summed kernel service intervals excluding oracle work, not end-to-end wall latency; output representations are explicitly distinct"
+  },
+  "runs": [
+    {
+      "command": "/usr/bin/time -l research/variants/dual-tree/target/release/examples/batch_probe benchmarks/twenty-k/bounded64.bin 1",
+      "input_sha256": "fd9384b9320527e7439fc461ddd2bf72bbac130e263b08259b3c25359634b49b",
+      "full_membership_passed": ["single", "raw_batch_chunks", "spatial_visitor"],
+      "maximum_resident_set_size_bytes": 11321344,
+      "real_seconds_including_oracle": 1.91,
+      "swaps": 0
+    },
+    {
+      "command": "/usr/bin/time -l research/variants/dual-tree/target/release/examples/batch_probe benchmarks/twenty-k/contained.bin 1",
+      "input_sha256": "fa1bc09fd1632c56f2b8af22d66d6796d39b8f2a44964ef5faa098c03f51064a",
+      "full_membership_passed": ["single", "raw_batch_chunks", "spatial_visitor"],
+      "maximum_resident_set_size_bytes": 37289984,
+      "real_seconds_including_oracle": 7.24,
+      "swaps": 0
+    }
+  ],
+  "interpretation": "Spatial grouping avoids the severe loss from incoherent raw input-order chunks, but these concurrent numbers do not establish a general speedup; contained block discovery excludes consumer expansion and must not substitute for full exact ID reporting"
+}
