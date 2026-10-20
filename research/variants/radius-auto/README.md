@@ -35,9 +35,30 @@ configured maximum rows, plus ordering/scheduler storage. No ID is capped,
 discarded, approximated or deferred to achieve the target.
 
 The hypothesis is that dense all-visible phases can benefit from smaller output
-windows while ordinary scenes retain larger groups. No builds, tests, probes or
-timings have been executed for this candidate, and no performance claim is made.
-Root's independent serial radius comparison was left undisturbed.
+windows while ordinary scenes retain larger groups. Root subsequently validated
+and measured v1. This working version is v2: no builds, tests, probes or timings
+have been executed for v2, and no v2 performance claim is made.
+
+## V2: source-only probe helper isolation
+
+V2 moves exactly the same sampling policy into private
+`#[inline(never)] fn adaptive_group_limit(&self, queries, configured_limit)`.
+`run_batch` still validates every query/configuration, handles the empty batch,
+then calls that helper before partitioning. There is no `cold` attribute. The
+helper is independent of the consumer's callback type and retains the exact same
+four probes, sample-count limit, byte arithmetic, scratch lifetime and soft target.
+No API, geometry, query, result or scheduler algorithm changes accompany it.
+
+Root reported that v1's 56-job comparison passed all exact proofs and improved
+dense primary median service from 48.74 to 28.01 ms, while crowd regressed roughly
+10–25% in primary/cohort runs despite an unchanged effective limit of 64. The
+compiler inlining/layout explanation is a hypothesis; v2 isolates the probe body
+from the callback-specific scheduler to investigate it. V2 requires fresh proof
+and measurement before drawing any conclusion.
+
+V1 remains available at commit `9a2c5821ed91eaa023107d641f3ea8e425eb6c9a`.
+`source-change-v1.patch` and `source-provenance-v1.json` preserve the original
+selected source baseline; current provenance/patch describe v2.
 
 `tests/adaptive.rs` adds independent point-snapshot/full-membership checks without
 a retained result matrix. It rejects duplicate IDs and repeated/missing original
@@ -68,7 +89,7 @@ cargo test --manifest-path research/variants/radius-auto/Cargo.toml --release --
 cargo test --manifest-path research/variants/radius-auto/Cargo.toml --no-default-features --release -- --test-threads=1
 ```
 
-Preflight and all Cargo commands are deliberately deferred. Exact copied/shared
+V2 preflight and all Cargo commands are deliberately deferred. Exact copied/shared
 source hashes, base revision and source-only status are in
 `source-provenance.json`; `source-change.patch` is the reviewable batch delta.
 Recheck shared-source hashes before future measurements. The existing free-disk

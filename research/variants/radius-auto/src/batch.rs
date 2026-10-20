@@ -139,30 +139,11 @@ impl<const D: usize> SpatialIndex<D> {
         self.run_batch(queries, options, visit)
     }
 
-    fn run_batch<F>(
-        &self,
-        queries: &[Query<D>],
-        options: BatchOptions,
-        visit: F,
-    ) -> Result<BatchStats, Error>
-    where
-        F: Fn(&[usize], &[Vec<u64>]) + Sync,
-    {
-        if !(1..=64).contains(&options.workers) || options.queries_per_group == 0 {
-            return Err(Error::BatchConfiguration);
-        }
-        for (centre, radius) in queries {
-            if centre.iter().any(|x| !x.is_finite()) {
-                return Err(Error::Coordinate);
-            }
-            if !radius.is_finite() || *radius < 0.0 {
-                return Err(Error::Radius);
-            }
-        }
-        if queries.is_empty() {
-            return Ok(BatchStats::default());
-        }
-        let mut effective_limit = options.queries_per_group.min(queries.len());
+    // Keep exact density probes out of the callback-specific scheduler code.
+    // This is intentionally not cold: dense query phases use it routinely.
+    #[inline(never)]
+    fn adaptive_group_limit(&self, queries: &[Query<D>], configured_limit: usize) -> usize {
+        let mut effective_limit = configured_limit.min(queries.len());
         let worst_case_bytes = self
             .len()
             .saturating_mul(effective_limit)
@@ -189,6 +170,33 @@ impl<const D: usize> SpatialIndex<D> {
             // worker result allocations. Probe CPU/allocation remains call cost.
             drop(scratch);
         }
+        effective_limit
+    }
+
+    fn run_batch<F>(
+        &self,
+        queries: &[Query<D>],
+        options: BatchOptions,
+        visit: F,
+    ) -> Result<BatchStats, Error>
+    where
+        F: Fn(&[usize], &[Vec<u64>]) + Sync,
+    {
+        if !(1..=64).contains(&options.workers) || options.queries_per_group == 0 {
+            return Err(Error::BatchConfiguration);
+        }
+        for (centre, radius) in queries {
+            if centre.iter().any(|x| !x.is_finite()) {
+                return Err(Error::Coordinate);
+            }
+            if !radius.is_finite() || *radius < 0.0 {
+                return Err(Error::Radius);
+            }
+        }
+        if queries.is_empty() {
+            return Ok(BatchStats::default());
+        }
+        let effective_limit = self.adaptive_group_limit(queries, options.queries_per_group);
         let mut order: Vec<_> = (0..queries.len()).collect();
         let mut groups = Vec::new();
         partition(queries, &mut order, 0, effective_limit, &mut groups);

@@ -127,3 +127,20 @@ proof. An adaptive output-window candidate is the next isolated experiment:
 retain the public geometry, sample output density, and reduce worker-local rows
 only where complete materialized output would otherwise exceed a soft cache
 budget. Sampling overhead must remain charged.
+
+
+## Adaptive output experiment v1
+
+All 56 primary/holdout/cohort jobs passed full membership and query-visit proofs.
+On the paired primary all-visible profile, median service/frame fell from 48.74
+to 28.01 ms. On staggered all-visible cohorts it fell from 23.26 to 9.99 ms,
+with observed worst frames 30.67 versus 11.30 ms and 36/36 versus 0/36 misses.
+No IDs were capped; all 20,000 results per observer were materialized and consumed.
+
+This candidate is **not promoted** on that evidence alone. Primary crowd median
+rose 17.23→18.85 ms and cohort crowd rose 5.73→7.30 ms, even though the sample-based
+window stayed at 64. Holdout crowd was essentially unchanged (17.03→16.94 ms).
+The probe fraction is small; compiler inlining/layout effects and shared-host
+variation remain hypotheses, not established causes. A second source variant
+moves the identical sampling policy into an out-of-line setup helper, preserving
+all validation, output and statistics semantics. It must be remeasured separately.

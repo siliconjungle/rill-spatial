@@ -1,0 +1,70 @@
+--- root/src/batch.rs
++++ radius-auto/src/batch.rs
+@@ -1,4 +1,7 @@
+ //! Bounded exact batches over an immutable index.
++//! Composition experiment: four exact probes may reduce the configured maximum
++//! group size toward a soft 1 MiB output target per worker. Samples can miss dense
++//! queries, so this does not impose a hard byte bound or change any result.
+ use crate::{Error, SpatialIndex};
+ use std::sync::{
+     Mutex,
+@@ -33,6 +36,7 @@
+     pub matches: u128,
+ }
+ type Query<const D: usize> = ([f64; D], f64);
++const SOFT_OUTPUT_TARGET_BYTES: usize = 1024 * 1024;
+ fn partition<const D: usize>(
+     queries: &[Query<D>],
+     order: &mut [usize],
+@@ -158,22 +162,41 @@
+         if queries.is_empty() {
+             return Ok(BatchStats::default());
+         }
++        let mut effective_limit = options.queries_per_group.min(queries.len());
++        let worst_case_bytes = self
++            .len()
++            .saturating_mul(effective_limit)
++            .saturating_mul(std::mem::size_of::<u64>());
++        if queries.len() >= 1024 && worst_case_bytes > SOFT_OUTPUT_TARGET_BYTES {
++            let mut scratch = Vec::new();
++            let mut max_matches = 0usize;
++            for q in [
++                0,
++                queries.len() / 4,
++                queries.len() / 2,
++                3 * queries.len() / 4,
++            ] {
++                self.within_into(queries[q].0, queries[q].1, &mut scratch)
++                    .expect("prevalidated probe query");
++                max_matches = max_matches.max(scratch.len());
++            }
++            if max_matches > 0 {
++                let sampled_row_bytes = max_matches.saturating_mul(std::mem::size_of::<u64>());
++                effective_limit =
++                    effective_limit.min((SOFT_OUTPUT_TARGET_BYTES / sampled_row_bytes).max(1));
++            }
++            // Probe results never reach consumers/stats and do not overlap the
++            // worker result allocations. Probe CPU/allocation remains call cost.
++            drop(scratch);
++        }
+         let mut order: Vec<_> = (0..queries.len()).collect();
+         let mut groups = Vec::new();
+-        partition(
+-            queries,
+-            &mut order,
+-            0,
+-            options.queries_per_group,
+-            &mut groups,
+-        );
++        partition(queries, &mut order, 0, effective_limit, &mut groups);
+         let workers = options.workers.min(groups.len());
+         let next = AtomicUsize::new(0);
+         let work = || {
+             let mut matches = 0u128;
+-            let mut outputs: Vec<Vec<u64>> = (0..options.queries_per_group.min(queries.len()))
+-                .map(|_| Vec::new())
+-                .collect();
++            let mut outputs: Vec<Vec<u64>> = (0..effective_limit).map(|_| Vec::new()).collect();
+             loop {
+                 let at = next.fetch_add(1, Ordering::Relaxed);
+                 let Some(range) = groups.get(at) else {

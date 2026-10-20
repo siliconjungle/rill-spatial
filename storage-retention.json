@@ -432,6 +432,42 @@
     {
       "path": "results/validation-auto-harness.log",
       "reason": "Selected adaptive-output candidate source and required correctness/validation proofs"
+    },
+    {
+      "path": "results/twenty-k-auto-v1.json",
+      "reason": "Selected adaptive-output v1 complete proof/performance baseline; retain regression evidence with improvements"
+    },
+    {
+      "path": "results/twenty-k-auto-v1-summary.json",
+      "reason": "Selected adaptive-output v1 complete proof/performance baseline; retain regression evidence with improvements"
+    },
+    {
+      "path": "build/frozen/twenty-k-auto-v1/rust",
+      "reason": "Selected adaptive-output v1 complete proof/performance baseline; retain regression evidence with improvements"
+    },
+    {
+      "path": "results/twenty-k-auto-holdout-v1.json",
+      "reason": "Selected adaptive-output v1 complete proof/performance baseline; retain regression evidence with improvements"
+    },
+    {
+      "path": "results/twenty-k-auto-holdout-v1-summary.json",
+      "reason": "Selected adaptive-output v1 complete proof/performance baseline; retain regression evidence with improvements"
+    },
+    {
+      "path": "build/frozen/twenty-k-auto-holdout-v1/rust",
+      "reason": "Selected adaptive-output v1 complete proof/performance baseline; retain regression evidence with improvements"
+    },
+    {
+      "path": "results/twenty-k-auto-cohorts-v1.json",
+      "reason": "Selected adaptive-output v1 complete proof/performance baseline; retain regression evidence with improvements"
+    },
+    {
+      "path": "results/twenty-k-auto-cohorts-v1-summary.json",
+      "reason": "Selected adaptive-output v1 complete proof/performance baseline; retain regression evidence with improvements"
+    },
+    {
+      "path": "build/frozen/twenty-k-auto-cohorts-v1/rust",
+      "reason": "Selected adaptive-output v1 complete proof/performance baseline; retain regression evidence with improvements"
     }
   ],
   "safe_to_remove": [

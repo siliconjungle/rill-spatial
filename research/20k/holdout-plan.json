@@ -11,5 +11,6 @@
   ],
   "selection": "Independent seed fixed before buffer-window results; no fixture edits after observing results",
   "purpose": "Validate selected batching resources against unmeasured inputs; exact full membership proof before continuous timings",
-  "status": "registered; not generated or measured yet"
+  "status": "Generated and measured unchanged in v3, radius and adaptive studies; original registration preserved in Git720e953",
+  "status_at_registration": "registered; not generated or measured yet"
 }

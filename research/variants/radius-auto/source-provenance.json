@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "date": "2026-10-20",
-  "status": "source_ready_no_builds_tests_probes_or_timings_run",
+  "status": "source_ready_v2_no_builds_tests_probes_or_timings_run",
   "candidate": "auto-output-only on unchanged root geometry; historical folder radius-auto",
   "base_revision": "720e953078e758ff1a7fe04297b2a4d4bd319deb",
   "copied_source_sha256": {
@@ -19,7 +19,7 @@
     "Cargo.toml": "d5225e0975b5c68eb654d0a93e006de445e1cc944888df16ecded45130c644d9",
     "Cargo.lock": "fd85c9436095e31126e2019f5a7c39e8eb8f47b107c885c8c1aa6cd2a76ded21",
     "src/lib.rs": "577ca92778b928ae2c9ccbea74bd529631c315962c12e616c7ed58ad41968be9",
-    "src/batch.rs": "a074e86b690e09a96c405689b23c5e2e3f9ca0b1b828104f4a78e2ca8771edb5",
+    "src/batch.rs": "46a9a10207ae1732b88e1178fed1fc1691c0d67d0b72255082db56b16a660212",
     "tests/adaptive.rs": "9189f1a35223d0373770ed89be6ccae96a6b5d194c5f57e5e89dc60e1efa6e21"
   },
   "materialization": "Only declared core lib/batch source and minimal wide lock closure copied; hierarchy and test inputs referenced read-only",
@@ -27,11 +27,25 @@
   "batch_change": "Sample four exact queries only after full validation, then soft1MiB-per-worker output-window target; samples are extra compute and do not emit callbacks",
   "hard_bound_claim": false,
   "deferred": [
-    "ink-cache source preflight",
-    "all Cargo builds",
-    "all tests",
-    "all probes",
-    "all timings"
+    "v2 ink-cache source preflight",
+    "all v2 Cargo builds",
+    "all v2 tests",
+    "all v2 probes",
+    "all v2 timings"
   ],
-  "optional_build_policy": "No build requested/admitted; root explicitly required source-only during serial measurements"
+  "optional_build_policy": "No v2 build requested/admitted; explicit source-only follow-up",
+  "revision": 2,
+  "v1_revision": "9a2c5821ed91eaa023107d641f3ea8e425eb6c9a",
+  "v1_batch_sha256": "a074e86b690e09a96c405689b23c5e2e3f9ca0b1b828104f4a78e2ca8771edb5",
+  "v2_change": "Move unchanged exact sampling policy to private inline(never) adaptive_group_limit independent of callback type; run_batch validation remains before helper; no cold attribute or other algorithm/API change",
+  "v2_working_base_revision": "9a2c5821ed91eaa023107d641f3ea8e425eb6c9a",
+  "root_reported_v1_validation": {
+    "jobs": 56,
+    "exact_proofs": "all pass per root report",
+    "dense_primary_median_ms": [
+      48.74,
+      28.01
+    ],
+    "crowd": "roughly10\u201325% primary/cohort regression with unchanged effective64-row limit; compiler-layout cause unconfirmed"
+  }
 }

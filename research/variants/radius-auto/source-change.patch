@@ -1,26 +1,17 @@
 --- root/src/batch.rs
-+++ radius-auto/src/batch.rs
-@@ -1,4 +1,7 @@
- //! Bounded exact batches over an immutable index.
++++ radius-auto-v2/src/batch.rs
+@@ -1,0 +2,3 @@
 +//! Composition experiment: four exact probes may reduce the configured maximum
 +//! group size toward a soft 1 MiB output target per worker. Samples can miss dense
 +//! queries, so this does not impose a hard byte bound or change any result.
- use crate::{Error, SpatialIndex};
- use std::sync::{
-     Mutex,
-@@ -33,6 +36,7 @@
-     pub matches: u128,
- }
- type Query<const D: usize> = ([f64; D], f64);
+@@ -35,0 +39 @@
 +const SOFT_OUTPUT_TARGET_BYTES: usize = 1024 * 1024;
- fn partition<const D: usize>(
-     queries: &[Query<D>],
-     order: &mut [usize],
-@@ -158,22 +162,41 @@
-         if queries.is_empty() {
-             return Ok(BatchStats::default());
-         }
-+        let mut effective_limit = options.queries_per_group.min(queries.len());
+@@ -137,0 +142,34 @@
++    // Keep exact density probes out of the callback-specific scheduler code.
++    // This is intentionally not cold: dense query phases use it routinely.
++    #[inline(never)]
++    fn adaptive_group_limit(&self, queries: &[Query<D>], configured_limit: usize) -> usize {
++        let mut effective_limit = configured_limit.min(queries.len());
 +        let worst_case_bytes = self
 +            .len()
 +            .saturating_mul(effective_limit)
@@ -47,8 +38,12 @@
 +            // worker result allocations. Probe CPU/allocation remains call cost.
 +            drop(scratch);
 +        }
-         let mut order: Vec<_> = (0..queries.len()).collect();
-         let mut groups = Vec::new();
++        effective_limit
++    }
++
+@@ -160,0 +199 @@
++        let effective_limit = self.adaptive_group_limit(queries, options.queries_per_group);
+@@ -163,7 +202 @@
 -        partition(
 -            queries,
 -            &mut order,
@@ -57,14 +52,8 @@
 -            &mut groups,
 -        );
 +        partition(queries, &mut order, 0, effective_limit, &mut groups);
-         let workers = options.workers.min(groups.len());
-         let next = AtomicUsize::new(0);
-         let work = || {
-             let mut matches = 0u128;
+@@ -174,3 +207 @@
 -            let mut outputs: Vec<Vec<u64>> = (0..options.queries_per_group.min(queries.len()))
 -                .map(|_| Vec::new())
 -                .collect();
 +            let mut outputs: Vec<Vec<u64>> = (0..effective_limit).map(|_| Vec::new()).collect();
-             loop {
-                 let at = next.fetch_add(1, Ordering::Relaxed);
-                 let Some(range) = groups.get(at) else {

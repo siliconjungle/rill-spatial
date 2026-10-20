@@ -1,16 +1,51 @@
 {
   "schema": 1,
-  "status": "source_ready_no_builds_tests_or_measurements_run",
+  "status": "source_ready_v2_no_builds_tests_or_measurements_run",
   "keep": [
-    {"path":"Cargo.toml","reason":"Minimal isolated manifest, same wide pin, shared root and thin semantic test references"},
-    {"path":"Cargo.lock","reason":"Minimal required wide dependency closure with candidate package identity; no copied dependency sources"},
-    {"path":"src/lib.rs","reason":"Declared root lib materialization with only read-only hierarchy path adjustment"},
-    {"path":"src/batch.rs","reason":"Declared root batch materialization plus exact sampled soft output-window adaptation"},
-    {"path":"tests/adaptive.rs","reason":"Required candidate full-membership proof inputs for dense, sparse, threshold, uneven-Q, missed-sample and invalid-input cases; validation deferred"},
-    {"path":"README.md","reason":"Actual unchanged-root-geometry base, exact soft-target policy, semantics, limitations and deferred reproduction"},
-    {"path":"source-provenance.json","reason":"Exact base revision and copied/shared source hashes, no measurement claims"},
-    {"path":"source-change.patch","reason":"Reviewable adaptive batch delta without retaining extra full revision copies"},
-    {"path":"storage-retention.json","reason":"Exact source-only retention contract"}
+    {
+      "path": "Cargo.toml",
+      "reason": "Minimal isolated manifest, same wide pin, shared root and thin semantic test references"
+    },
+    {
+      "path": "Cargo.lock",
+      "reason": "Minimal required wide dependency closure with candidate package identity; no copied dependency sources"
+    },
+    {
+      "path": "src/lib.rs",
+      "reason": "Declared root lib materialization with only read-only hierarchy path adjustment"
+    },
+    {
+      "path": "src/batch.rs",
+      "reason": "Declared root batch materialization plus exact sampled soft output-window adaptation"
+    },
+    {
+      "path": "tests/adaptive.rs",
+      "reason": "Required candidate full-membership proof inputs for dense, sparse, threshold, uneven-Q, missed-sample and invalid-input cases; validation deferred"
+    },
+    {
+      "path": "README.md",
+      "reason": "Actual unchanged-root-geometry base, exact soft-target policy, semantics, limitations and deferred reproduction"
+    },
+    {
+      "path": "source-provenance.json",
+      "reason": "Exact base revision and copied/shared source hashes, no measurement claims"
+    },
+    {
+      "path": "source-change.patch",
+      "reason": "Reviewable adaptive batch delta without retaining extra full revision copies"
+    },
+    {
+      "path": "storage-retention.json",
+      "reason": "Exact source-only retention contract"
+    },
+    {
+      "path": "source-change-v1.patch",
+      "reason": "Explicit selected v1 reproduction/review baseline before helper isolation"
+    },
+    {
+      "path": "source-provenance-v1.json",
+      "reason": "Exact selected v1 provenance and source hashes; v1 source also retained in Git9a2c5821ed91eaa023107d641f3ea8e425eb6c9a"
+    }
   ],
   "safe_to_remove": [],
   "read_only_reproduction_inputs": [
@@ -20,5 +55,5 @@
     "../radius-aware/tests/thin.rs",
     "../../../examples/probe.rs"
   ],
-  "storage_status":"Source-only; no targets, dependency sources or data copies; preexisting ~23 GiB free versus requested100GB deficit remains; no worker paused or killed"
+  "storage_status": "Source-only; no targets, dependency sources or data copies; preexisting ~23 GiB free versus requested100GB deficit remains; no worker paused or killed"
 }

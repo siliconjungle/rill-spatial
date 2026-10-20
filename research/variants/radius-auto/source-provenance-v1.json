@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "date": "2026-10-20",
+  "status": "source_ready_no_builds_tests_probes_or_timings_run",
+  "candidate": "auto-output-only on unchanged root geometry; historical folder radius-auto",
+  "base_revision": "720e953078e758ff1a7fe04297b2a4d4bd319deb",
+  "copied_source_sha256": {
+    "src/lib.rs": "39563ffe46134e55a356f16a3e0010b4f62d53045cf2a402ebb3a52ce03cc3fc",
+    "src/batch.rs": "4f98c0902c4bb2bb731f2372a4feda16fa957e93cf9554d1fdd288821c602f8f"
+  },
+  "shared_read_only_sha256": {
+    "src/hierarchy.rs": "299cd36c34e398b51832a44d83d92153b13488ddbe61293b3d8a8b5273d618ca",
+    "tests/correctness.rs": "81bfbe90ad560d7570efdbca9fed39744b11e53e5363350e9186022b34685cb2",
+    "tests/batch.rs": "db2bf1a2dfcbfb30d8a11e469047b1de5a6523fffa4ae09790944071d4abf9e8",
+    "research/variants/radius-aware/tests/thin.rs": "9eb93e43f79282825d4e72644ed45b5d0629b7649181307c658f33f7e8879a30",
+    "examples/probe.rs": "003d633bcdce4a5ea53980db62c3e437d818abf51b4e0d9d53ad17780241c8f6"
+  },
+  "candidate_sha256": {
+    "Cargo.toml": "d5225e0975b5c68eb654d0a93e006de445e1cc944888df16ecded45130c644d9",
+    "Cargo.lock": "fd85c9436095e31126e2019f5a7c39e8eb8f47b107c885c8c1aa6cd2a76ded21",
+    "src/lib.rs": "577ca92778b928ae2c9ccbea74bd529631c315962c12e616c7ed58ad41968be9",
+    "src/batch.rs": "a074e86b690e09a96c405689b23c5e2e3f9ca0b1b828104f4a78e2ca8771edb5",
+    "tests/adaptive.rs": "9189f1a35223d0373770ed89be6ccae96a6b5d194c5f57e5e89dc60e1efa6e21"
+  },
+  "materialization": "Only declared core lib/batch source and minimal wide lock closure copied; hierarchy and test inputs referenced read-only",
+  "lib_change": "Only hierarchy module read-only path adjustment; original root geometry",
+  "batch_change": "Sample four exact queries only after full validation, then soft1MiB-per-worker output-window target; samples are extra compute and do not emit callbacks",
+  "hard_bound_claim": false,
+  "deferred": [
+    "ink-cache source preflight",
+    "all Cargo builds",
+    "all tests",
+    "all probes",
+    "all timings"
+  ],
+  "optional_build_policy": "No build requested/admitted; root explicitly required source-only during serial measurements"
+}
