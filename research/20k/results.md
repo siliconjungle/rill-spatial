@@ -2,7 +2,7 @@
 
 Acceptance remains **OPEN**. No 20,000-connection server has been tested.
 
-The initial bounded screen (`results/twenty-k-screen-v1.json`) completed98 jobs
+The initial bounded screen (`results/twenty-k-screen-v1.json`) completed 98 jobs
 with full query membership/duplicate/omission checks. These were concurrent
 exploratory runs with oracle pauses between bounded output groups. Walking the
 reference point set during those pauses can disturb caches and frequency state;
@@ -15,9 +15,9 @@ faster overall than reconstructing at every query frame. See the source-pinned
 
 Cell read views now store aligned coordinate and ID arrays. Contained-cell
 acceptance bulk-copies contiguous IDs. Four alternating concurrent trials gave
-contained-scene medians369→135ms (single) and364→132ms (cell batch), over two query
-frames. Some other scenes regressed2–6%; this is a useful mechanism result, not
-universal superiority. Both layouts passed11 independent oracle suites and
+contained-scene medians 369→135ms (single) and 364→132ms (cell batch), over two query
+frames. Some other scenes regressed 2–6%; this is a useful mechanism result, not
+universal superiority. Both layouts passed 11 independent oracle suites and
 64,188 full holdout checks. See
 [paired layout evidence](../variants/cell-readview/evidence/layout-summary.json).
 
@@ -39,7 +39,7 @@ it must not be called scheduled-to-ready latency or a server p99.
 
 The strongest selected external indexes also receive the same coherent scoped
 scheduler at one/four workers. This prevents attributing a general multicore
-benefit uniquely to the new index. Output windows1/8/64 and worker counts1/2/4
+benefit uniquely to the new index. Output windows 1/8/64 and worker counts 1/2/4
 are separate experimental dimensions. Results from different output/timing
 contracts are not pooled into the original strict superiority gate.
 

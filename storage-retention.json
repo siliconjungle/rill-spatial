@@ -236,6 +236,14 @@
     {
       "path": "results/validation-batch-clippy.log",
       "reason": "Required publiclibrary static check proof"
+    },
+    {
+      "path": "results/twenty-k-continuous-screen-v1.json",
+      "reason": "Selected full-proof then uninterrupted timing comparison across12 equal-resource studies and7 scenes"
+    },
+    {
+      "path": "build/frozen/twenty-k-continuous-screen-v1/rust",
+      "reason": "Exact measured executable; complete source retained at6f35e2f"
     }
   ],
   "safe_to_remove": [

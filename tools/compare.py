@@ -15,8 +15,9 @@ def identity():
  return {'git_commit':output(['git','rev-parse','HEAD']),'git_status':output(['git','status','--short']),'source_sha256':{f:digest(f)for f in files},'toolchains':{n:output(c)for n,c in {'rust':['rustc','--version'],'node':['node','--version'],'clang':['clang++','--version'],'cpu':['sysctl','-n','machdep.cpu.brand_string']}.items()}}
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--implementations',default=','.join(RUST+JS+CPP));p.add_argument('--scenarios',default='small,uniform,clusters,dense,contained,floors,boundaries,teleports,large');p.add_argument('--samples',type=int,default=5);p.add_argument('--processes',type=int,default=3);p.add_argument('--out',default='results/comparison.json');p.add_argument('--fixtures',default='benchmarks/fixtures');p.add_argument('--seed',type=int,default=17);p.add_argument('--timeout',type=int,default=300);p.add_argument('--window',type=int,default=64);p.add_argument('--continuous',action='store_true');a=p.parse_args()
- names=a.implementations.split(',');scenarios=a.scenarios.split(',')
+ p=argparse.ArgumentParser();p.add_argument('--implementations',default=','.join(RUST+JS+CPP));p.add_argument('--scenarios',default='small,uniform,clusters,dense,contained,floors,boundaries,teleports,large');p.add_argument('--samples',type=int,default=5);p.add_argument('--processes',type=int,default=3);p.add_argument('--out',default='results/comparison.json');p.add_argument('--fixtures',default='benchmarks/fixtures');p.add_argument('--seed',type=int,default=17);p.add_argument('--timeout',type=int,default=300);p.add_argument('--window',type=int,default=64);p.add_argument('--continuous',action='store_true');p.add_argument('--windows',help='comma-separated randomized output-window sweep');a=p.parse_args()
+ names=a.implementations.split(',');scenarios=a.scenarios.split(',');windows=[int(w)for w in a.windows.split(',')]if a.windows else[a.window]
+ assert len(windows)==len(set(windows)) and all(1<=w<=64 for w in windows)
  assert a.samples>0 and a.processes>0 and 1<=a.window<=64
  assert not(set(names)-set(RUST+JS+CPP+VARIANTS)), 'Unknown implementation'
  assert not a.continuous or not(set(names)-set(RUST+VARIANTS)), 'Continuous full-consumption protocol currently Rust only'
@@ -32,9 +33,9 @@ def main():
   path=Path('benchmarks')/('.frozen-'+out.stem+'.mjs');assert not path.exists();shutil.copy2('benchmarks/javascript.mjs',path);artifacts['js']={'path':str(path),'sha256':digest(path)}
  for name in set(names)&set(CPP):
   path=frozen/name;shutil.copy2('build/cpp-'+name,path);artifacts[name]={'path':str(path),'sha256':digest(path)}
- doc={'schema':2,'status':'INCOMPLETE','created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'host':platform.platform(),'machine':platform.machine(),'identity':identity(),'artifacts':artifacts,'implementations':names,'scenarios':scenarios,'notes':['Other user workers left running; shared-machine diagnostics','Process RSS includes reference oracle and retained result vectors; not isolated index bytes'],'output_window_queries':a.window,'continuous_full_consumption':a.continuous,'samples_per_process':a.samples,'requested_processes':a.processes,'rows':[]}
- jobs=[(i,s,n)for i in range(a.processes)for s in scenarios for n in names];random.Random(a.seed).shuffle(jobs)
- for ordinal,(process,scenario,name)in enumerate(jobs):
+ doc={'schema':2,'status':'INCOMPLETE','created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'host':platform.platform(),'machine':platform.machine(),'identity':identity(),'artifacts':artifacts,'implementations':names,'scenarios':scenarios,'notes':['Other user workers left running; shared-machine diagnostics','Process RSS includes reference oracle and retained result vectors; not isolated index bytes'],'output_window_queries':windows[0] if len(windows)==1 else None,'output_windows':windows,'continuous_full_consumption':a.continuous,'samples_per_process':a.samples,'requested_processes':a.processes,'rows':[]}
+ jobs=[(i,s,n,w)for i in range(a.processes)for s in scenarios for n in names for w in windows];random.Random(a.seed).shuffle(jobs)
+ for ordinal,(process,scenario,name,window)in enumerate(jobs):
   fixture=Path(a.fixtures)/(scenario+'.json');input_path=fixture
   bounded=json.loads(fixture.read_text()).get('bounded',False)
   if bounded and name not in RUST+VARIANTS+JS+CPP:raise RuntimeError('Unknown bounded driver')
@@ -44,14 +45,14 @@ def main():
   assert digest(artifact['path'])==artifact['sha256'],'Measured executable changed'
   start=time.monotonic()
   try:
-   r=subprocess.run(['/usr/bin/time','-l']+cmd,text=True,capture_output=True,timeout=a.timeout,env={**os.environ,"RILL_OUTPUT_WINDOW":str(a.window),"RILL_CONTINUOUS":"1" if a.continuous else "0"})
+   r=subprocess.run(['/usr/bin/time','-l']+cmd,text=True,capture_output=True,timeout=a.timeout,env={**os.environ,"RILL_OUTPUT_WINDOW":str(window),"RILL_CONTINUOUS":"1" if a.continuous else "0"})
    if r.returncode:row={'implementation':name,'scenario':scenario,'status':'failed','exit_code':r.returncode,'error':r.stderr if len(r.stderr)<7000 else r.stderr[:3500]+'\n[stderr middle omitted]\n'+r.stderr[-3500:]}
    else:row=json.loads(r.stdout);row['scenario']=scenario;row['status']='measured';row['process_peak_rss_bytes']=int(re.search(r'(\d+)\s+maximum resident set size',r.stderr)[1])
   except Exception as e:row={'implementation':name,'scenario':scenario,'status':'failed','error':str(e)}
-  row.update({'process':process,'command':cmd,'fixture_sha256':digest(fixture),'input_sha256':digest(input_path),'artifact_sha256':artifact['sha256'],'load_average':output(['sysctl','-n','vm.loadavg']),'process_wall_seconds':time.monotonic()-start});doc['rows'].append(row)
+  row.update({'process':process,'output_window_queries':window,'command':cmd,'fixture_sha256':digest(fixture),'input_sha256':digest(input_path),'artifact_sha256':artifact['sha256'],'load_average':output(['sysctl','-n','vm.loadavg']),'process_wall_seconds':time.monotonic()-start});doc['rows'].append(row)
   out.write_text(json.dumps(doc,indent=2)+'\n')
   if row['status']=='measured':
-   values=sorted(x['total_ns']for x in row['samples']);print(f'{ordinal+1}/{len(jobs)} {name} {scenario}: {values[len(values)//2]/1e6:.3f} ms',flush=True)
-  else:print(f'{ordinal+1}/{len(jobs)} {name} {scenario}: FAILED {str(row.get("error",""))[:100]}',flush=True)
+   values=sorted(x['total_ns']for x in row['samples']);print(f'{ordinal+1}/{len(jobs)} {name} {scenario} window={window}: {values[len(values)//2]/1e6:.3f} ms',flush=True)
+  else:print(f'{ordinal+1}/{len(jobs)} {name} {scenario} window={window}: FAILED {str(row.get("error",""))[:100]}',flush=True)
  doc['status']='COMPLETE_WITH_FAILURES'if any(r['status']!='measured'for r in doc['rows'])else'COMPLETE';out.write_text(json.dumps(doc,indent=2)+'\n')
 if __name__=='__main__':main()
