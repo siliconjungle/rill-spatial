@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: packed leaves and median partitions match independent ordered scans
+ok 1 - packed leaves and median partitions match independent ordered scans
+  ---
+  duration_ms: 199.81125
+  type: 'test'
+  ...
+# Subtest: strict spherical edges, inclusive boxes and nearest ties preserve original identity
+ok 2 - strict spherical edges, inclusive boxes and nearest ties preserve original identity
+  ---
+  duration_ms: 1.015
+  type: 'test'
+  ...
+# Subtest: finite extremes and underflow retain JavaScript predicates
+ok 3 - finite extremes and underflow retain JavaScript predicates
+  ---
+  duration_ms: 0.9735
+  type: 'test'
+  ...
+# Subtest: invalid rows, typed coordinates, signed zeros and duplicate filtering are captured once
+ok 4 - invalid rows, typed coordinates, signed zeros and duplicate filtering are captured once
+  ---
+  duration_ms: 0.51525
+  type: 'test'
+  ...
+# Subtest: axis choices and input permutations preserve nearest ties by input order
+ok 5 - axis choices and input permutations preserve nearest ties by input order
+  ---
+  duration_ms: 2.2925
+  type: 'test'
+  ...
+# Subtest: invalid resource options fail explicitly
+ok 6 - invalid resource options fail explicitly
+  ---
+  duration_ms: 0.381417
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 274.074

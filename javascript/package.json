@@ -1,0 +1,10 @@
+{
+  "name": "@siliconjungle/rill-spatial",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": "./index.mjs",
+  "files": ["index.mjs", "README.md", "LICENSE-MIT"],
+  "license": "MIT",
+  "description": "Portable packed immutable position indexes for Node and browsers",
+  "scripts": {"test": "node --test test/*.test.mjs"}
+}

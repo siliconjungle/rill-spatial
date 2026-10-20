@@ -568,6 +568,10 @@
     {
       "path": "results/storage-retirement.json",
       "reason": "Required record of completed generated-output retirement and remaining disk reserve deficit"
+    },
+    {
+      "path": "javascript",
+      "reason": "Portable Rill implementation, independent oracles and required package inputs; performance adoption guarded in Nocturne"
     }
   ],
   "safe_to_remove": [
