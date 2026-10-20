@@ -60,14 +60,22 @@ impl<A: Adapter + Sync, const WORKERS: usize> Adapter for Coherent<A, WORKERS> {
         limit: usize,
         emit: &mut (dyn FnMut(&[usize], &[Vec<u64>]) + Send),
     ) {
+        let consumer = Mutex::new(emit);
+        self.visit_groups_shared(queries, limit, &|ids, rows| {
+            consumer.lock().unwrap()(ids, rows)
+        });
+    }
+    fn visit_groups_shared(
+        &self,
+        queries: &[Query],
+        limit: usize,
+        emit: &(dyn Fn(&[usize], &[Vec<u64>]) + Sync),
+    ) {
         assert!((1..=4).contains(&WORKERS));
         assert!(limit > 0);
         if queries.is_empty() {
             return;
         }
-        // The paused-oracle runner cannot subtract a serial callback's time from
-        // overlapping worker execution. Parallel measurements require a complete
-        // proof pass followed by uninterrupted timing with full consumption.
         if WORKERS > 1 {
             assert_eq!(std::env::var("RILL_CONTINUOUS").as_deref(), Ok("1"));
         }
@@ -75,32 +83,33 @@ impl<A: Adapter + Sync, const WORKERS: usize> Adapter for Coherent<A, WORKERS> {
         let mut groups = Vec::new();
         partition(queries, &mut order, 0, limit, &mut groups);
         let next = AtomicUsize::new(0);
-        let emit = Mutex::new(emit);
-        std::thread::scope(|scope| {
-            for _ in 0..WORKERS {
-                let order = &order;
-                let groups = &groups;
-                let next = &next;
-                let emit = &emit;
-                let index = &self.0;
-                scope.spawn(move || {
-                    let mut outputs: Vec<Vec<u64>> = (0..limit).map(|_| Vec::new()).collect();
-                    let mut local = Vec::with_capacity(limit);
-                    loop {
-                        let g = next.fetch_add(1, Ordering::Relaxed);
-                        let Some(range) = groups.get(g) else {
-                            break;
-                        };
-                        let indices = &order[range.clone()];
-                        local.clear();
-                        local.extend(indices.iter().map(|&i| queries[i]));
-                        index.query_batch(&local, &mut outputs[..indices.len()]);
-                        let mut consumer = emit.lock().unwrap();
-                        consumer(indices, &outputs[..indices.len()]);
-                    }
-                });
+        let work = || {
+            let mut outputs: Vec<Vec<u64>> =
+                (0..limit.min(queries.len())).map(|_| Vec::new()).collect();
+            let mut local = Vec::with_capacity(limit.min(queries.len()));
+            loop {
+                let g = next.fetch_add(1, Ordering::Relaxed);
+                let Some(range) = groups.get(g) else {
+                    break;
+                };
+                let indices = &order[range.clone()];
+                local.clear();
+                local.extend(indices.iter().map(|&i| queries[i]));
+                self.0.query_batch(&local, &mut outputs[..indices.len()]);
+                emit(indices, &outputs[..indices.len()]);
             }
-        });
+        };
+        let workers = WORKERS.min(groups.len());
+        if workers == 1 {
+            work();
+        } else {
+            std::thread::scope(|scope| {
+                for _ in 1..workers {
+                    scope.spawn(work);
+                }
+                work();
+            });
+        }
     }
 }
 #[cfg(test)]

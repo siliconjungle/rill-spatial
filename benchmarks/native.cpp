@@ -63,6 +63,8 @@ class Native{std::vector<Point>points;std::vector<GPoint>gp;std::unique_ptr<kdt:
  public:Native(const std::vector<Point>&p,double):points(p){rebuild();}void update(const std::vector<std::pair<uint32_t,Point>>&u){for(auto&x:u)points[x.first]=x.second;dirty|=!u.empty();}void prepare(){if(dirty){rebuild();dirty=false;}}
  void query(const Point&p,double r,std::vector<uint64_t>&out)const{out.clear();GPoint q;std::copy(p.begin(),p.end(),q.begin());for(auto i:tree->radiusSearch(q,r+1e-9))if(squared(points[i],p)<=r*r)out.push_back(i);}
 };
+#elif IMPLEMENTATION == 7
+#include "../research/variants/kdtree-plusplus/adapter.hpp"
 #else
 #error Set IMPLEMENTATION to a supported adapter
 #endif

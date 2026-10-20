@@ -7,17 +7,26 @@ for the population median ratio, at confidence 1 - 2**(-n), assuming independent
 process pairs. Bonferroni protects the whole family. This deliberately requires
 many fresh process pairs; thousands of in-process iterations do not replace them.
 """
-import argparse,json,math,statistics
+import argparse,json,math,statistics,hashlib
 from pathlib import Path
 from compare import RUST,JS,CPP
 SCENARIOS='small,uniform,clusters,dense,contained,floors,boundaries,teleports,large'.split(',')
 p=argparse.ArgumentParser();p.add_argument('results',nargs='+');p.add_argument('--out',default='results/gate.json');a=p.parse_args()
 rows=[];issues=[];runs=[]
+registered_hashes={name:hashlib.sha256((Path('benchmarks/fixtures')/(name+'.json')).read_bytes()).hexdigest()for name in SCENARIOS}
 for f in a.results:
  d=json.loads(Path(f).read_text());runs.append({'path':f,'schema':d.get('schema'),'status':d['status']})
  if d.get('schema',0)<2:issues.append(f'{f}: missing executable provenance');continue
  if d['status']=='INCOMPLETE':issues.append(f'{f}: unfinished run')
- rows.extend(d['rows'])
+ for row in d['rows']:
+  scenario=row['scenario']
+  if scenario not in registered_hashes or row.get('fixture_sha256')!=registered_hashes[scenario]:
+   issues.append(f"{f}: unregistered fixture {scenario}; cannot substitute a20k/holdout workload")
+   continue
+  if row.get('continuous_full_consumption') or row.get('materialization'):
+   issues.append(f"{f}: changed timing/materialization contract {scenario}; separate study only")
+   continue
+  rows.append(row)
  for row in d['rows']:
   if row['status']!='measured':issues.append(f"{f}: failed mandatory case {row['implementation']}/{row['scenario']}")
 competitors=[x for x in RUST+JS+CPP if x!='rill-spatial'];comparisons=len(competitors)*len(SCENARIOS);required=math.ceil(math.log2(comparisons/.05));checks=[]
@@ -44,6 +53,6 @@ for scenario in SCENARIOS:
   checks.append({'implementation':name,'scenario':scenario,'status':status,'process_pairs':len(pairs),'median_ratio':median,'upper_median_ratio_bound':max(pairs)if pairs else None})
 inventory=json.loads(Path('research/inventory.json').read_text());pending=[s['id']for s in inventory['implementations']if s['status']=='pending']
 if pending:issues.append('Unresolved source projects: '+', '.join(pending))
-report={'status':'PASS'if not issues and all(x['status']=='pass'for x in checks)else'OPEN','scope':'Complete exact-radius dynamic workload runtime; resource/capability superiority and 2,000-connection server capacity are not established','family_confidence':.95,'required_fresh_process_pairs':required,'method':'Distribution-free one-sided median bound, Bonferroni family correction; assumes independent process pairs','runs':runs,'issues':sorted(set(issues)),'counts':{s:sum(c['status']==s for c in checks)for s in ['pass','missing','loss-or-tie','insufficient-processes']},'comparisons':checks}
+report={'status':'PASS'if not issues and all(x['status']=='pass'for x in checks)else'OPEN','scope':'Original nine registered fixtures with full retained output vectors; complete exact-radius dynamic workload runtime; resource/capability superiority and 2,000-connection server capacity are not established','family_confidence':.95,'required_fresh_process_pairs':required,'method':'Distribution-free one-sided median bound, Bonferroni family correction; assumes independent process pairs','runs':runs,'issues':sorted(set(issues)),'counts':{s:sum(c['status']==s for c in checks)for s in ['pass','missing','loss-or-tie','insufficient-processes']},'comparisons':checks}
 Path(a.out).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:report[k]for k in ['status','required_fresh_process_pairs','counts','issues']},indent=2))
 raise SystemExit(0 if report['status']=='PASS'else 1)

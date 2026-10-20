@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "keep": [
+    {
+      "path": "adapter.hpp",
+      "reason": "Original native adapter matching the parent's successful build and nine-fixture normal-domain full-membership proof"
+    },
+    {
+      "path": "README.md",
+      "reason": "Pinned shared reproduction inputs, root evidence links, validated domain, fallback limits and outstanding full-contract checks"
+    },
+    {
+      "path": "storage-retention.json",
+      "reason": "Exact experiment retention declaration"
+    }
+  ],
+  "safe_to_remove": [],
+  "shared_read_only_inputs": [
+    {
+      "path": "../../../results/kdtree-plusplus-proof-v1.json",
+      "reason": "Parent-owned COMPLETE full-membership proof; all nine registered normal-domain fixtures passed"
+    },
+    {
+      "path": "../../../results/cpp-builds.json",
+      "reason": "Parent-owned successful implementation-7 build command and compiler flags"
+    },
+    {
+      "path": "../../../benchmarks/native.cpp",
+      "reason": "Parent-owned host interface, ordered squared predicate and registered fixture oracle"
+    },
+    {
+      "path": "../../vendor/cpp-kdtree-plusplus",
+      "reason": "Shared unchanged upstream headers pinned by repository inventory; never copied into this workspace"
+    }
+  ],
+  "validation": {
+    "status": "registered_normal_domain_9_of_9_passed",
+    "adapter_sha256": "d7f9b12409d3f79891e86e521daee7ef3959c001fc6c6e5b6b43b4c1e999fd9a",
+    "performed_by": "parent integration lane",
+    "limitations": "Full extreme-radius Rust-oracle parity, strict performance acceptance and connected-server capacity remain unproved"
+  }
+}

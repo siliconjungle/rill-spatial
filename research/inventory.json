@@ -176,7 +176,9 @@
         "kiddo-immutable"
       ],
       "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
-      "adapter_notes": {}
+      "adapter_notes": {
+        "kiddo-mutable": "Default32-point leaf strategy, with supported512-point leaf fallback when bulk construction rejects tied splits. Failed mutation removal/split triggers charged reconstruction. One implementation with parameterfallback, not two competitors."
+      }
     },
     {
       "name": "nabo",
@@ -884,13 +886,18 @@
       "repository": "https://github.com/nvmd/libkdtree",
       "commit": "ab5118c86342d6bb195b4187f61f05911ebc0587",
       "license": "NOASSERTION",
-      "status": "pending",
+      "status": "adapter-implemented",
       "description": "libkdtree++ is an STL-like C++ template container implementation of k-dimensional space sorting, using a kd-tree. It sports a theoretically unlimited number of dimensions, and can store any data structure",
       "source_url": "https://api.github.com/repos/nvmd/libkdtree/tarball/ab5118c86342d6bb195b4187f61f05911ebc0587",
       "source_directory": "research/vendor/cpp-kdtree-plusplus",
       "archive_sha256": "825c3a9082a7518e4134e29d7536116202c1e251a452cab71a59d446117a2a80",
-      "adapters": [],
-      "status_reason": "Source discovered and pinned; adapter/capability evaluation remains outstanding."
+      "adapters": [
+        "kdtree-plusplus"
+      ],
+      "status_reason": "Measurement/correctness status is per fixture and build in results; this status does not assert correctness or a performance win.",
+      "adapter_notes": {
+        "kdtree-plusplus": "Native double KD tree with supported lexicographic coordinate/ID accessor/comparator; closed conservative box and exact final filter. Duplicate IDs retained. Static coalesced optimise charged. Nine registered fixtures pass full oracle; wider numerical capability remains separately documented."
+      }
     }
   ]
 }

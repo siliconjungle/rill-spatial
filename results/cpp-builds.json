@@ -104,5 +104,22 @@
     ],
     "status": "built",
     "error": ""
+  },
+  {
+    "implementation": "kdtree-plusplus",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O3",
+      "-ffp-contract=off",
+      "-DNDEBUG",
+      "-DIMPLEMENTATION=7",
+      "-DIMPLEMENTATION_NAME=\"kdtree-plusplus\"",
+      "benchmarks/native.cpp",
+      "-o",
+      "build/cpp-kdtree-plusplus"
+    ],
+    "status": "built",
+    "error": ""
   }
 ]

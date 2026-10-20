@@ -5,7 +5,8 @@ use std::sync::{
     atomic::{AtomicUsize, Ordering},
 };
 
-/// Resource choices for [`SpatialIndex::within_batch`].
+/// Resource choices for [`SpatialIndex::within_batch`] and
+/// [`SpatialIndex::within_batch_parallel`].
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct BatchOptions {
     /// Maximum scoped query workers, from 1 through 64. Default: 1.
@@ -94,6 +95,55 @@ impl<const D: usize> SpatialIndex<D> {
     where
         F: FnMut(&[usize], &[Vec<u64>]) + Send,
     {
+        let consumer = Mutex::new(visit);
+        self.run_batch(queries, options, |indices, rows| {
+            let mut consumer = consumer.lock().expect("batch callback panicked");
+            consumer(indices, rows);
+        })
+    }
+
+    /// Report complete exact query groups to a concurrently invoked callback.
+    ///
+    /// Inputs, original query indices, complete unordered rows and validation
+    /// semantics are the same as [`Self::within_batch`]. Each query is visited
+    /// exactly once, including empty results. Different workers can call `visit`
+    /// simultaneously on disjoint groups, so the callback must synchronize any
+    /// shared mutable state. There is no consumer mutex in this method.
+    /// Borrowed result vectors belong to that worker and are reused only after
+    /// its callback returns; copy only what you retain.
+    ///
+    /// All query/configuration validation completes before any callback. The
+    /// immutable index borrow excludes updates, and dirty/unprepared indexes use
+    /// the same exact fallback as [`Self::within_into`]. One worker participates
+    /// on the caller's thread; at most `workers - 1` scoped threads are created.
+    /// At most `workers * queries_per_group` output vectors are live, plus
+    /// O(query count) ordering/scheduling storage. Each row may contain the
+    /// entire index, and vector capacity may exceed length.
+    ///
+    /// A callback panic propagates after scoped workers join. Other callbacks
+    /// may already be running and can continue before the call unwinds. The
+    /// index remains unchanged and can be queried again after catching a panic.
+    pub fn within_batch_parallel<F>(
+        &self,
+        queries: &[Query<D>],
+        options: BatchOptions,
+        visit: F,
+    ) -> Result<BatchStats, Error>
+    where
+        F: Fn(&[usize], &[Vec<u64>]) + Sync,
+    {
+        self.run_batch(queries, options, visit)
+    }
+
+    fn run_batch<F>(
+        &self,
+        queries: &[Query<D>],
+        options: BatchOptions,
+        visit: F,
+    ) -> Result<BatchStats, Error>
+    where
+        F: Fn(&[usize], &[Vec<u64>]) + Sync,
+    {
         if !(1..=64).contains(&options.workers) || options.queries_per_group == 0 {
             return Err(Error::BatchConfiguration);
         }
@@ -119,8 +169,8 @@ impl<const D: usize> SpatialIndex<D> {
         );
         let workers = options.workers.min(groups.len());
         let next = AtomicUsize::new(0);
-        let consumer = Mutex::new((visit, 0u128));
         let work = || {
+            let mut matches = 0u128;
             let mut outputs: Vec<Vec<u64>> = (0..options.queries_per_group.min(queries.len()))
                 .map(|_| Vec::new())
                 .collect();
@@ -135,22 +185,26 @@ impl<const D: usize> SpatialIndex<D> {
                     self.within_into(queries[q].0, queries[q].1, out)
                         .expect("prevalidated query");
                 }
-                let mut consumer = consumer.lock().expect("batch callback panicked");
-                consumer.1 += rows.iter().map(|r| r.len() as u128).sum::<u128>();
-                (consumer.0)(indices, rows);
+                matches += rows.iter().map(|r| r.len() as u128).sum::<u128>();
+                visit(indices, rows);
             }
+            matches
         };
-        if workers == 1 {
-            work();
+        let matches = if workers == 1 {
+            work()
         } else {
             std::thread::scope(|scope| {
+                let mut handles = Vec::with_capacity(workers - 1);
                 for _ in 1..workers {
-                    scope.spawn(work);
+                    handles.push(scope.spawn(work));
                 }
-                work();
-            });
-        }
-        let matches = consumer.into_inner().expect("batch callback panicked").1;
+                let mut matches = work();
+                for handle in handles {
+                    matches += handle.join().expect("batch worker panicked");
+                }
+                matches
+            })
+        };
         Ok(BatchStats {
             queries: queries.len(),
             groups: groups.len(),

@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "registered_before_window_selection": true,
+  "seed": 97531,
+  "generator": "tools/fixtures-20k.mjs",
+  "profiles": [
+    "uniform",
+    "bounded64",
+    "crowd",
+    "teleports"
+  ],
+  "selection": "Independent seed fixed before buffer-window results; no fixture edits after observing results",
+  "purpose": "Validate selected batching resources against unmeasured inputs; exact full membership proof before continuous timings",
+  "status": "registered; not generated or measured yet"
+}

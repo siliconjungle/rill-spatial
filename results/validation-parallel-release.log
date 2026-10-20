@@ -1,0 +1,41 @@
+   Compiling rill-spatial v0.1.0 (/Users/james/Documents/ChatGPT/3d-modelling/rill-spatial)
+    Finished `release` profile [optimized] target(s) in 6.74s
+     Running unittests src/lib.rs (build/target/release/deps/rill_spatial-e3e3109a24b6abb5)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/batch.rs (build/target/release/deps/batch-0cc2fc88db16e54d)
+
+running 6 tests
+test batch_invalid_input_has_no_callbacks ... ok
+test parallel_callback_requires_sync_without_requiring_send ... ok
+test parallel_callbacks_overlap_and_caller_participates ... ok
+test callback_panic_unwinds_and_index_remains_usable ... ok
+test parallel_callback_panic_unwinds_and_index_remains_usable ... ok
+test batch_full_membership_across_workers_epochs_and_dimensions ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running tests/correctness.rs (build/target/release/deps/correctness-1546d641fa89cf17)
+
+running 9 tests
+test closed_boundary_duplicates_and_clear ... ok
+test bulk_points_replace_duplicate_ids_and_survive_structural_changes ... ok
+test invalid_inputs_are_atomic ... ok
+test exceptional_scales_do_not_overflow_or_lose_points ... ok
+test independent_parallel_reads ... ok
+test prepared_motion_matches_unprepared_with_stable_and_sparse_ids ... ok
+test prepared_queries_match_ordered_f64_at_boundaries_and_scales ... ok
+test random_mutations_2d ... ok
+test random_mutations_3d ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests rill_spatial
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

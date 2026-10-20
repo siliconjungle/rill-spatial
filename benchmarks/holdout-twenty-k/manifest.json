@@ -1,0 +1,42 @@
+{
+  "seed": 97531,
+  "profile": "20k-v1",
+  "fixtures": [
+    {
+      "name": "uniform",
+      "path": "benchmarks/holdout-twenty-k/uniform.json",
+      "sha256": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "bytes": 4615416,
+      "points": 20000,
+      "observers": 20000,
+      "queries": 40000
+    },
+    {
+      "name": "bounded64",
+      "path": "benchmarks/holdout-twenty-k/bounded64.json",
+      "sha256": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "bytes": 4616623,
+      "points": 20000,
+      "observers": 20000,
+      "queries": 40000
+    },
+    {
+      "name": "crowd",
+      "path": "benchmarks/holdout-twenty-k/crowd.json",
+      "sha256": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "bytes": 4369472,
+      "points": 20000,
+      "observers": 20000,
+      "queries": 40000
+    },
+    {
+      "name": "teleports",
+      "path": "benchmarks/holdout-twenty-k/teleports.json",
+      "sha256": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "bytes": 4615341,
+      "points": 20000,
+      "observers": 20000,
+      "queries": 40000
+    }
+  ]
+}

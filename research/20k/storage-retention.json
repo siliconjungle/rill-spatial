@@ -32,6 +32,10 @@
     {
       "path": "pending-adapters.md",
       "reason": "Pinned primary-source capability audit for remaining competitor adapters"
+    },
+    {
+      "path": "holdout-plan.json",
+      "reason": "Preselected independent20k seed/profiles registered before tuning resource combinations"
     }
   ],
   "safe_to_remove": []

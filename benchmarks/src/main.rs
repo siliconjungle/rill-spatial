@@ -1,5 +1,6 @@
 mod bounded;
 mod cohorts;
+mod continuous;
 mod more_adapters;
 mod rust_adapters;
 mod studies;
@@ -36,6 +37,16 @@ pub trait Adapter {
         for (q, out) in queries.iter().zip(outputs) {
             self.query(q.point, q.radius, out);
         }
+    }
+    fn visit_groups_shared(
+        &self,
+        queries: &[Query],
+        max_queries: usize,
+        emit: &(dyn Fn(&[usize], &[Vec<u64>]) + Sync),
+    ) {
+        self.visit_groups(queries, max_queries, &mut |indices, rows| {
+            emit(indices, rows)
+        });
     }
     fn visit_groups(
         &self,
@@ -162,6 +173,9 @@ fn main() {
     use rust_adapters::*;
     match args[1].as_str() {
         "rill-spatial" => run::<Rill>(&args[1], &fixture, samples),
+        "rill-parallel-1" => run::<studies::PublicParallel<1>>(&args[1], &fixture, samples),
+        "rill-parallel-2" => run::<studies::PublicParallel<2>>(&args[1], &fixture, samples),
+        "rill-parallel-4" => run::<studies::PublicParallel<4>>(&args[1], &fixture, samples),
         "study-kiddo-1" => run::<cohorts::Coherent<KiddoImmutable, 1>>(&args[1], &fixture, samples),
         "study-kiddo-4" => run::<cohorts::Coherent<KiddoImmutable, 4>>(&args[1], &fixture, samples),
         "study-static-aabb-1" => {

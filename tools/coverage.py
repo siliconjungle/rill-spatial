@@ -13,6 +13,8 @@ MAP={
  '@flatten-js/core':['flatten-planar'],'mnemonist':['mnemonist-vp','mnemonist-kd'],
  'pico_tree':['pico-tree'],'libkdtree':['libkdtree'],'KDTree':['crvs-kdtree']}
 NOTES={
+ 'kiddo-mutable':'Default32-point leaf strategy, with supported512-point leaf fallback when bulk construction rejects tied splits. Failed mutation removal/split triggers charged reconstruction. One implementation with parameterfallback, not two competitors.',
+ 'kdtree-plusplus':'Native double KD tree with supported lexicographic coordinate/ID accessor/comparator; closed conservative box and exact final filter. Duplicate IDs retained. Static coalesced optimise charged. Nine registered fixtures pass full oracle; wider numerical capability remains separately documented.',
  'quadtree-f64':'f64 feature. Fixed bounding rectangle avoids source contains_rect typo (r.max_x <= self.max_y). Coalesced rebuild avoids duplicate retention/removal failures. Deduplication and exact 3D filtering charged; source remains unmodified.',
  'mnemonist-kd':'Radius via all-N nearest-neighbour reporting; complete, untruncated, includes ranking cost because exposed API requires it.',
  'nabo':'Bounded KNN with k=population, allow-self and unsorted results; no truncation.',

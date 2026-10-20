@@ -1,0 +1,513 @@
+{
+  "schema": 2,
+  "status": "COMPLETE",
+  "created_utc": "2026-10-20T04:45:14.157762+00:00",
+  "host": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "identity": {
+    "git_commit": "38dc8d35e4833ec4def869946ff61888130b9647",
+    "git_status": "M benchmarks/native.cpp\n M benchmarks/src/bounded.rs\n M benchmarks/src/cohorts.rs\n M benchmarks/src/main.rs\n M benchmarks/src/studies.rs\n M research/20k/agent-ownership.json\n M research/20k/storage-retention.json\n M results/cpp-builds.json\n M results/screen-gate.json\n M src/batch.rs\n M tools/build-cpp.py\n M tools/compare.py\n M tools/gate.py\n?? benchmarks/holdout-twenty-k/\n?? benchmarks/src/continuous.rs\n?? research/20k/holdout-plan.json\n?? research/variants/kdtree-plusplus/\n?? results/continuous-smoke-v2.json\n?? results/twenty-k-continuous-screen-v1.json\n?? results/twenty-k-window-sweep-v1.json",
+    "source_sha256": {
+      "benchmarks/holdout-twenty-k/bounded64.json": "b2ef6cf78d2e7379d24c287dec87b1a6fc1603ef2e05c681eae878d20590e359",
+      "benchmarks/holdout-twenty-k/crowd.json": "6df6ea49854723e60a33ae284387f955899fece644f81531bc8b6a385b19b5fa",
+      "benchmarks/holdout-twenty-k/manifest.json": "bef84f32f85d6998688046680a77b63ece9106e425bdec7d474d55b6ed3897e1",
+      "benchmarks/holdout-twenty-k/teleports.json": "c3d31f8a1a74c9a271caed1b8f2d933d77e5791ac74e5f9247522748042dbde5",
+      "benchmarks/holdout-twenty-k/uniform.json": "eb2c48d44bd3a9f148a7f4876d22706827e62c430d7a753cc1901bcedf0b6b68",
+      "benchmarks/src/continuous.rs": "b324723a3f2dd306732a2d5263964be0f23e973e7f761577b35aeb5c8e9360c9",
+      "research/20k/holdout-plan.json": "478e87c77eb4ef2178dcf1e3e93188dae2100d39473afad31443eb9eea63ac87",
+      "research/variants/kdtree-plusplus/README.md": "1f742670f295c35c6f7039cd131bb0e7bfdddbab0d8902781efa237104159a2c",
+      "research/variants/kdtree-plusplus/adapter.hpp": "d7f9b12409d3f79891e86e521daee7ef3959c001fc6c6e5b6b43b4c1e999fd9a",
+      "research/variants/kdtree-plusplus/storage-retention.json": "85ede671ecc1b3478e38c17e47d9db09b9d5d8913f874631076a14caa8a57478",
+      ".github/workflows/ci.yml": "92afeec10af9401560aa805f2c417a78106c400dc27327b9ca1be9081d4034b9",
+      ".gitignore": "cc8bdcd033ed79d3b1439ec7aa4e66b501139213dba6dc1f8b4bcdcb49c4f2aa",
+      "Cargo.lock": "f685d31c3bf80e19cde4867d6830748dbda9d1653ef3ba319fe67a7ed9a2c897",
+      "Cargo.toml": "70067f8559f532a565e86a2fc2d07df18c1f18d61847d30e92c14a292d81be38",
+      "LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "LICENSE-MIT": "079adec67563038bee5dac86b57a3cf1546cffc112f51f85c68b13c3d0369428",
+      "README.md": "297084abd162b19482926bb2a56eff4a981c359d483da5a34eb97623f6a0cff8",
+      "benchmarks/Cargo.toml": "a280ecde6da786a29146ea10a7493aa6b04498750f3dfd152752a4afb9168131",
+      "benchmarks/fixtures/boundaries.json": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "benchmarks/fixtures/clusters.json": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "benchmarks/fixtures/contained.json": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "benchmarks/fixtures/dense.json": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "benchmarks/fixtures/floors.json": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "benchmarks/fixtures/large.json": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "benchmarks/fixtures/manifest.json": "33319e1ff2e497d49b18d70a1607c1c496f299e144428918785467b1c3478086",
+      "benchmarks/fixtures/small.json": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "benchmarks/fixtures/teleports.json": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "benchmarks/fixtures/uniform.json": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "benchmarks/holdout-97123/boundaries.json": "914439d679bc3793b10b45254db0f5fb2994b6cd5b7465dc6b603728ce47ef8a",
+      "benchmarks/holdout-97123/clusters.json": "5bfdad77ded17b68b13cc23a70de687f9438fefe9a7e6563ef6a25803dd63d98",
+      "benchmarks/holdout-97123/contained.json": "cc6b7f8de45ca724df2d93b00b8956a1d1faa508b6b70a1cd420698875eb10a0",
+      "benchmarks/holdout-97123/dense.json": "06b98a8e94294570ac6ecb93a87f3ebc220ee34cf9bb291f7d3b2738ab3a27a1",
+      "benchmarks/holdout-97123/floors.json": "fed8d7cca125bb213d2a71fba55dce280e73a06226eacb6001db10260ed4b70c",
+      "benchmarks/holdout-97123/large.json": "d8b17fd585986e36f4c1f2e350274069c11cb7c4775b5f0b3b8ba1e045fc8cb9",
+      "benchmarks/holdout-97123/manifest.json": "6767c84fba702be8ead8fc8b8bf14f1d97a73f7a29caf045f80a50e4cb88cdba",
+      "benchmarks/holdout-97123/small.json": "24184d41b21cec260cb169e0283485c3182433cdda6b4ff50ca0dfe5667b218e",
+      "benchmarks/holdout-97123/teleports.json": "ac76e6525ea7e25d60befb8097090a1e729938b956f7a8b7c4af1f9bdbf8b21c",
+      "benchmarks/holdout-97123/uniform.json": "623b60122ae133148ca4e36bd2b23836182cb021fe84c103a87a0727c02459f1",
+      "benchmarks/javascript.mjs": "49bd32afcd127ab33feb3a45710ffb916fb5a530093b626db76e2c906fa4c9d1",
+      "benchmarks/native.cpp": "a737d4f697a8f57e2d11aa2ab37aae35a8f1cc04f3d0efcb22e328a0a1a0801a",
+      "benchmarks/src/bounded.rs": "18ea6704f0cf406a9714683fc8205ab94ff2fdebf5b4a6a68d34420c58659dee",
+      "benchmarks/src/cohorts.rs": "beec83fdd792f1fad13df045aec02bec815b77ef6a509ee51c0802ad23a909ea",
+      "benchmarks/src/main.rs": "c5e6245f90d47ea126c9d2eacfc2830c7ad696d319e50c613555f1135a24b167",
+      "benchmarks/src/more_adapters.rs": "222a1a1b8817ab18171256bb10c4c5324d54309ea25f81370c7d9c030e1a7ba2",
+      "benchmarks/src/rust_adapters.rs": "1eb3b7bcb3c860ee0420a5ecf51921f0abc7807018a05a7dfc0014eff9ceb123",
+      "benchmarks/src/studies.rs": "26ca3db2b8145c7cf8cad373b6cb185717bb73e2537ed708f12b07c1336a0124",
+      "benchmarks/twenty-k/bounded64.json": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "benchmarks/twenty-k/contained.json": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "benchmarks/twenty-k/crowd.json": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "benchmarks/twenty-k/floors.json": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "benchmarks/twenty-k/manifest.json": "8b7a73fa67d9d10f03e0ce4336d5c4d6ca0a32554fc3f1915f167acbe6a79788",
+      "benchmarks/twenty-k/many-objects.json": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "benchmarks/twenty-k/teleports.json": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "benchmarks/twenty-k/uniform.json": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "examples/probe.rs": "003d633bcdce4a5ea53980db62c3e437d818abf51b4e0d9d53ad17780241c8f6",
+      "research/20k/agent-ownership.json": "63ef25fe4d2ebeb899a9c0a28273e67f888e9b4e24ff33a725fe7eb3132a35d6",
+      "research/20k/events.jsonl": "6a14d601e87aaff28b29e85942e92f80af81dd0309507a72a91431c863b47f93",
+      "research/20k/pending-adapters.md": "0cd0f03aaa30601c141af601ed766d91823b4b6e6c754fdf4689082d00204c35",
+      "research/20k/research.md": "40210621aba9d9b27755a94b5d64d8f0f9984ffa8ca13bcd0f8da4c749f796cb",
+      "research/20k/results.md": "380163590e3e606e248d6f5fe287061614b9f69d8c462995afbd6195efa9dfd2",
+      "research/20k/sources.json": "4e1e4f3848b8fb90e676ad593dd59cbfa98f246cea500ea77bd7790640715051",
+      "research/20k/status.json": "a36de087be09ea38435dd2d90b1604c1a43fffd97fbd76dc7fd6dd2e460e50fb",
+      "research/20k/storage-retention.json": "3536984176bdbacebf5999b40843536480c1f63bc153faa9947622f98294ff00",
+      "research/20k/work-queue.json": "ccde833fed926915422b3289001c1e5859319c9bccdf7d2ef3b6401399c64ba4",
+      "research/baselines.json": "117b9103f931bb6334c5eb186c29129412d7be2b83ca9f181e56133de150a2d2",
+      "research/discovery.json": "7007a4cfa08ccb2477313d7082d9862f3001e87ca57ee3f82911caaf39222633",
+      "research/inventory.json": "b610b8b2ce410ed01ba3350ac15cd7c3f8d979c9bd2c10395ad23c4a31c7944d",
+      "research/npm/package-lock.json": "cbb268cad3d328a828475020e22a1f4180deff6a83820923157c78ea1e3ecc50",
+      "research/npm/package.json": "f577e233d61564d7685eb4b6c4ad71d16303d3d6988cac88d4e5771b56bca95d",
+      "research/protocol.md": "0b89ac6189c6cfdf5fdcc47970637551f9cdef02fd32a52e039f8a329c87b15e",
+      "research/variants/cell-readview/Cargo.lock": "a2135260c3fffa1b86852e61b41df3883600df0016ca91c1241b073c87a8b5ef",
+      "research/variants/cell-readview/Cargo.toml": "5eb2a1c2ae074e497148a2ce7f3a31f4b08886edc16d97efabb7f03f86fd7117",
+      "research/variants/cell-readview/README.md": "44bf8fa93d06853c84aec8403ab106cd187782a5aa32513f9dc2602fa5556559",
+      "research/variants/cell-readview/evidence/batch-build-release.txt": "64d0cbd4b7e4c6329fde55978dd3d261407b55f34c21add0feebf7e0575ee531",
+      "research/variants/cell-readview/evidence/batch-holdout-exploratory.json": "0021730530275dd63860352a065516f650278e072619a0706e32816d8913860b",
+      "research/variants/cell-readview/evidence/batch-oracle-release.txt": "b6c425e3225e36ab99997c5f29bcbf943b810dca3c90ddcc559327ed980d3f6f",
+      "research/variants/cell-readview/evidence/batch-summary.json": "353ad113aad8ccaef4c43a2eec08548ab985b8adf30f8f40eeddffc983ebdcb0",
+      "research/variants/cell-readview/evidence/batch-twenty-k-exploratory.json": "64c5d755fe33ab48713523f3cb6a565fbe0bdeeb878f49b6e3bfb84f610ae563",
+      "research/variants/cell-readview/evidence/build-release.txt": "64d0cbd4b7e4c6329fde55978dd3d261407b55f34c21add0feebf7e0575ee531",
+      "research/variants/cell-readview/evidence/holdout-exploratory.json": "d72b6c43a6b286b25a96f86f0d1cbdb5557aaf5740b725ff306ce22ff8d88201",
+      "research/variants/cell-readview/evidence/layout-after-build.txt": "7a7bb64a28cdda9b91e6e27f41be455104d929b5d7ad6dd5beca75fc5a47f1f4",
+      "research/variants/cell-readview/evidence/layout-after-manifest.json": "31421a50ceaed86da97ae1f1f9f3361ef64e7d1e102e85430dc55ca77a104c87",
+      "research/variants/cell-readview/evidence/layout-after-oracle.txt": "38afd31d0821ebd001e732d8d74cbda77f35a5005a55959db624aeaa1f97dc37",
+      "research/variants/cell-readview/evidence/layout-before-build.txt": "7a7bb64a28cdda9b91e6e27f41be455104d929b5d7ad6dd5beca75fc5a47f1f4",
+      "research/variants/cell-readview/evidence/layout-before-manifest.json": "f37fc4edf570e6d56e11f8bd70a05ab737dd0cd29d63fb60943fe0e7bba9e364",
+      "research/variants/cell-readview/evidence/layout-before-oracle.txt": "a67a3ac29983acdbaf80965e77daf5b3bb818041a8d328c05c6a03a2af85b259",
+      "research/variants/cell-readview/evidence/layout-change.patch": "e04e158179fdb13fc743a282e697fdbc233cae98e25a491d3085d8aec3f63255",
+      "research/variants/cell-readview/evidence/layout-holdout-proof.json": "b96c858f1e694df69253bbec838b1f90d1c1d369042ea9e47b4f2fee7c0af8a3",
+      "research/variants/cell-readview/evidence/layout-summary.json": "df2e9234293e03ec2c805d810d6c52b8cdda1b88eccdb908e2e2694387214f43",
+      "research/variants/cell-readview/evidence/layout-twenty-k-diagnostic.json": "6fe991d2b97fb00c30173131ca3afd72deb26330a1835d831931dc6eef806489",
+      "research/variants/cell-readview/evidence/oracle-release.txt": "ac1e1ba5811b75bc950c7aff97a7371b1fcb88ef5762ec39ded96ff31cee124d",
+      "research/variants/cell-readview/evidence/summary.json": "6a97f1fb51e51cf619dafbd94b759efc5aa9b9c6cde724de427ceab70a80789a",
+      "research/variants/cell-readview/evidence/twenty-k-exploratory.json": "ce86e745bd670f6a6a56c605b7931a4e415c56ab01d7cf8aad4c15d218b6d252",
+      "research/variants/cell-readview/examples/batch_probe.rs": "6094371c85329bb39b5e869c9c909be15292ccca0b9009215023b2f90cd7df5a",
+      "research/variants/cell-readview/examples/stream_probe.rs": "174e1223bd5f01a22ace4eebf7bdbbf27d7f44ccd20d0d56b3e5309763bb8904",
+      "research/variants/cell-readview/run_batch_diagnostics.py": "dcf938e8e205500211c1deeea648c05709e31cda778bec5f47a4ed46916b5f9f",
+      "research/variants/cell-readview/run_diagnostics.py": "6f35a503c4dc4e111c701faf895ab8f27f110a8217e1e08ad4d14f611f255d39",
+      "research/variants/cell-readview/run_layout_diagnostics.py": "39343b5aaae4e0d728142b454981db678d5968f6179363070dc21b35e381afb6",
+      "research/variants/cell-readview/src/lib.rs": "a3f641131efe227c17e746b2e36fac7a880d141f5bfb47ef66375674c8086266",
+      "research/variants/cell-readview/storage-retention.json": "fa269f9f8db0ac3bf56ea7e60fb9f5866c54b7373468621a8eea3a2c9bc90378",
+      "research/variants/cell-readview/tests/batch_oracle.rs": "83ffc998bb8a10014c8f607e3f0d291929f8b61328b3f1ba4d4e26802fba4d0e",
+      "research/variants/cell-readview/tests/oracle.rs": "f8d69bc9d189f91f081f03484456003244bfbacdd3eac942eee4b57c856def0d",
+      "research/variants/dual-tree/Cargo.lock": "5a372ffb49c96d71dd6723ed5d28fa84016e90765a2ac68ca5ff6885bd318f43",
+      "research/variants/dual-tree/Cargo.toml": "f8601c1434fadb4482a2150250b62733a8886cf58a8789cf81570b4072bed56e",
+      "research/variants/dual-tree/README.md": "a249541639c12e3c194b21c60a439dfae36def62becc1f1bd4a25054daaa0134",
+      "research/variants/dual-tree/REFIT.md": "a5b9fce080f9309526dea231715dd70614477eb71baa14087894a169fb5bdb3f",
+      "research/variants/dual-tree/THREADED.md": "76b087ab12a748b5980b8da59a52d25b44a2c97f636a4a989fe2e51cf17b98a4",
+      "research/variants/dual-tree/diagnostics-resources.json": "e5f3476b26a123da92b7f932ee981e0d7777fd9bcfff19423878cc82c3089dcb",
+      "research/variants/dual-tree/diagnostics.jsonl": "be932a1abe0276ff312b1f70da65054d13c1c95f574f5fda72b138fb74555f7e",
+      "research/variants/dual-tree/examples/batch_probe.rs": "d7b3debdf6390222650191cca5b31ab6d6b1b6a2d1008ccde0193df0f853f2d0",
+      "research/variants/dual-tree/examples/refit_diagnostic.rs": "687bc68da11cc858f27c4795b622f8730e2e1e59789ba6171852f4fae86d6207",
+      "research/variants/dual-tree/examples/support/cohort.rs": "b4d4c576e2e4495046f568d65ca9435bb1a3f20ac8a0e1494f1c6a6102fbd5a1",
+      "research/variants/dual-tree/examples/threaded_cohort.rs": "795edf4e0d411284ad1e800c8e8762a2b9fb8042a19958e37b35ef91b89a540e",
+      "research/variants/dual-tree/refit-bounded64.jsonl": "c79edd78faa8e183fcbab64f076a4f9f3449f18d90616fc6bf1309670293fbae",
+      "research/variants/dual-tree/refit-floors.jsonl": "571cd4f210ec1f35414a9ee424633d5a8a861d7e6b385d01493f92410f952d1d",
+      "research/variants/dual-tree/refit-results.json": "4268efb6fef105408c69aebfd1b961e9d8965f90bbd9e42631d21332526b1a06",
+      "research/variants/dual-tree/refit-teleports.jsonl": "e6090cc34537222531f974c7df9b680d5f1665e0df8d9ec2a98ed45d73e1fdff",
+      "research/variants/dual-tree/refit-uniform.jsonl": "a8d9ffe90b58b3f2b7c10829b310f31188bb3e240dc78cd8393eca94d94038a0",
+      "research/variants/dual-tree/repro/original-Cargo.lock": "c675898835fff55d9e161bce62b20b6dd26ccbcebcaf14e2efba493a525bbcd1",
+      "research/variants/dual-tree/repro/original-Cargo.toml": "e37b6a478474e0374893b4c951bf824e37b65caed49b2944d5843e8b082cc9dc",
+      "research/variants/dual-tree/src/lib.rs": "895d16e7425af0a7ed016a45f343769188d4682055e0385d762d01b0f0f59b90",
+      "research/variants/dual-tree/storage-retention.json": "7204730d85ae1c08b93a217f0ebeba21b3b8c4cd1a4c085de3982f46a51121fa",
+      "research/variants/dual-tree/tests/oracle.rs": "3cf3df911aaf20d82fe081078b7b1e85696e32d986fc6b9df91778593c01861c",
+      "research/variants/dual-tree/tests/threaded_cohort.rs": "6c62df29805d77cb529851c756975ad87c7916d6f02b5e435699a5200d643f0f",
+      "research/variants/dual-tree/threaded-bounded64.jsonl": "5c5cd1be48e94b9787f7ed182be067b03d6e8671209f522e479b5998297cd64b",
+      "research/variants/dual-tree/threaded-contained.jsonl": "ccacde9085d1d0d5b0d3f2b0b6133f9054b89b3ee475d3b06b044a02eb212900",
+      "research/variants/dual-tree/threaded-results.json": "e8af67b7715e6276b65e57fdd9e6ae286edd5a9c7bd5df486c9641385ccac89d",
+      "research/variants/dual-tree/threaded-validation.log": "fb6a966d1d81a5314e8c5814c39c5b6d50aaa026b01fc42e11550db8ee6a97b4",
+      "research/variants/dual-tree/validation.json": "ee567e8604397f79b0d8b629da340ab26ad22c72181b6a6b66d985b53f360476",
+      "research/variants/dual-tree/validation.log": "08c5199b5861dc1f20fdf005068ec25e414f3dc68f10a7bb2663beaec3f2e256",
+      "src/batch.rs": "d4692bea8b5476d02edfb331dc6097976d9cf3d13cb7df5540e3b9c44a16340d",
+      "src/hierarchy.rs": "299cd36c34e398b51832a44d83d92153b13488ddbe61293b3d8a8b5273d618ca",
+      "src/lib.rs": "39563ffe46134e55a356f16a3e0010b4f62d53045cf2a402ebb3a52ce03cc3fc",
+      "storage-retention.json": "5985a3f7a437f79661629c5905bf5f01fb938b96a3bcde544917ef7b0cf88297",
+      "tests/batch.rs": "237ce1a8598ccb2ee077bbe503ba93b541fb1e1267c642468a95dd3fbc927431",
+      "tests/correctness.rs": "81bfbe90ad560d7570efdbca9fed39744b11e53e5363350e9186022b34685cb2",
+      "tools/add-cpp.mjs": "e7dc33bb244f0c2eb831af816e67ac1edd99721a9870f742c8d35a6b17192626",
+      "tools/binary-fixtures.py": "bb6c3e8d517be4831ab19a2cfea8a52bc8131a766a8339249e7108c30417cc1d",
+      "tools/build-cpp.py": "825a9b0e4b96c2762d09d9459327413a778d409d2849df8ce9f503016122ecb1",
+      "tools/compare.py": "67d6fa95a1ba2368114dff96e8b7d52569edb05f21c2d9b878e1dfc113106caf",
+      "tools/coverage.py": "5c1fd94217936b0094361137428da1bca4ed0eb3254732965e02f39db9c0a149",
+      "tools/discover.mjs": "10bc7da9a7fda07cc06f459336d7f00c8710e685b95fda99025279e654df19e4",
+      "tools/fetch-sources.mjs": "47871b9d40a7a7710f75d9db044598876e694027b20dfd31973bc6eb4008193c",
+      "tools/fixtures-20k.mjs": "ef30ecd1dcbe44b01f1fc79dd9e8678f87c6d9ef8e8bf584615b1b4f142d9528",
+      "tools/fixtures.mjs": "cf286c372fbff0d3b93ee00865979438696adfcb62275a0b149274ddb99f4ba1",
+      "tools/gate.py": "a2b6effe9e2deb85dcbb301971ce172b0e2bbdb26d74f01ad5b8fdc7abac9abf"
+    },
+    "toolchains": {
+      "rust": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+      "node": "v26.1.0",
+      "clang": "Apple clang version 14.0.0 (clang-1400.0.29.202)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+      "cpu": "Apple M2"
+    }
+  },
+  "artifacts": {
+    "kdtree-plusplus": {
+      "path": "build/frozen/kdtree-plusplus-proof-v1/kdtree-plusplus",
+      "sha256": "abe0f58f2e5dd8c8765cb67c0fc1921f14d774fe8f9f9a703fcffbd57804d254"
+    }
+  },
+  "implementations": [
+    "kdtree-plusplus"
+  ],
+  "scenarios": [
+    "small",
+    "uniform",
+    "clusters",
+    "dense",
+    "contained",
+    "floors",
+    "boundaries",
+    "teleports",
+    "large"
+  ],
+  "notes": [
+    "Other user workers left running; shared-machine diagnostics",
+    "Process RSS includes reference oracle and retained result vectors; not isolated index bytes"
+  ],
+  "output_window_queries": 64,
+  "output_windows": [
+    64
+  ],
+  "continuous_full_consumption": false,
+  "samples_per_process": 1,
+  "requested_processes": 1,
+  "rows": [
+    {
+      "implementation": "kdtree-plusplus",
+      "scenario": "dense",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 412708,
+          "update_ns": 890165,
+          "query_ns": 247843042,
+          "total_ns": 249145915,
+          "results": 3786052
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 84819968,
+      "whole_process_cpu_seconds": {
+        "user": 0.19,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/kdtree-plusplus-proof-v1/kdtree-plusplus",
+        "benchmarks/fixtures/dense.bin",
+        "1"
+      ],
+      "fixture_sha256": "b29ebb476398feac70912998a0c2506b93f6a87414c9e0de34d54b8db40e34d0",
+      "input_sha256": "623d391af436f2e3b8ad954b873191595b3eeeb571a211ca101297c4585e1286",
+      "artifact_sha256": "abe0f58f2e5dd8c8765cb67c0fc1921f14d774fe8f9f9a703fcffbd57804d254",
+      "load_average": "{ 3.14 3.75 4.51 }",
+      "process_wall_seconds": 0.8169909169664606
+    },
+    {
+      "implementation": "kdtree-plusplus",
+      "scenario": "uniform",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 347541,
+          "update_ns": 722667,
+          "query_ns": 2620333,
+          "total_ns": 3690541,
+          "results": 6672
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 2883584,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/kdtree-plusplus-proof-v1/kdtree-plusplus",
+        "benchmarks/fixtures/uniform.bin",
+        "1"
+      ],
+      "fixture_sha256": "1f0b3869676fcd436cc5cb8ccec0378dad88aa24dde74abf78e02bce53a569cf",
+      "input_sha256": "09d73f8651660d5fb32fbb91e2f4dd29b28bf69aaa636cb80257dc82544966d0",
+      "artifact_sha256": "abe0f58f2e5dd8c8765cb67c0fc1921f14d774fe8f9f9a703fcffbd57804d254",
+      "load_average": "{ 3.14 3.75 4.51 }",
+      "process_wall_seconds": 0.020938499947078526
+    },
+    {
+      "implementation": "kdtree-plusplus",
+      "scenario": "small",
+      "points": 64,
+      "queries": 128,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 10167,
+          "update_ns": 15875,
+          "query_ns": 37500,
+          "total_ns": 63542,
+          "results": 130
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 1474560,
+      "whole_process_cpu_seconds": {
+        "user": 0.0,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/kdtree-plusplus-proof-v1/kdtree-plusplus",
+        "benchmarks/fixtures/small.bin",
+        "1"
+      ],
+      "fixture_sha256": "a0e3d072710d8f11389031ec5dfcb5dbb108267b297ad0f8486605dcfc58248a",
+      "input_sha256": "8ed2da63a586b482bbb31208f9c2e1d8873d4613eeb9c8b1087817d19c2dc19d",
+      "artifact_sha256": "abe0f58f2e5dd8c8765cb67c0fc1921f14d774fe8f9f9a703fcffbd57804d254",
+      "load_average": "{ 3.14 3.75 4.51 }",
+      "process_wall_seconds": 0.008849667035974562
+    },
+    {
+      "implementation": "kdtree-plusplus",
+      "scenario": "contained",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 356250,
+          "update_ns": 742292,
+          "query_ns": 107504207,
+          "total_ns": 108602749,
+          "results": 8000000
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 134463488,
+      "whole_process_cpu_seconds": {
+        "user": 0.19,
+        "system": 0.01,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/kdtree-plusplus-proof-v1/kdtree-plusplus",
+        "benchmarks/fixtures/contained.bin",
+        "1"
+      ],
+      "fixture_sha256": "d22e9202d1ea2d3a04d61abcbb2d535b3e116e824ddeeeeb78263728e076e13c",
+      "input_sha256": "a1cf29e9b12181c7f9dc4c4157a7dfe182f2d7a0717ba9a8736a63d27c8ebc78",
+      "artifact_sha256": "abe0f58f2e5dd8c8765cb67c0fc1921f14d774fe8f9f9a703fcffbd57804d254",
+      "load_average": "{ 3.14 3.75 4.51 }",
+      "process_wall_seconds": 0.22175329108722508
+    },
+    {
+      "implementation": "kdtree-plusplus",
+      "scenario": "floors",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 375375,
+          "update_ns": 855082,
+          "query_ns": 5273000,
+          "total_ns": 6503457,
+          "results": 24856
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 3178496,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/kdtree-plusplus-proof-v1/kdtree-plusplus",
+        "benchmarks/fixtures/floors.bin",
+        "1"
+      ],
+      "fixture_sha256": "d73c5bcf099df01bac038d84567909e6fe0124ea45d027877cfc0f5356e4bc74",
+      "input_sha256": "364af3fc968e26a913836b3c2215ae726d5eedf439ca121846a6d9ad336edda3",
+      "artifact_sha256": "abe0f58f2e5dd8c8765cb67c0fc1921f14d774fe8f9f9a703fcffbd57804d254",
+      "load_average": "{ 3.14 3.75 4.51 }",
+      "process_wall_seconds": 0.024112834013067186
+    },
+    {
+      "implementation": "kdtree-plusplus",
+      "scenario": "clusters",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 341292,
+          "update_ns": 733376,
+          "query_ns": 13372834,
+          "total_ns": 14447502,
+          "results": 306662
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 9732096,
+      "whole_process_cpu_seconds": {
+        "user": 0.03,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/kdtree-plusplus-proof-v1/kdtree-plusplus",
+        "benchmarks/fixtures/clusters.bin",
+        "1"
+      ],
+      "fixture_sha256": "070c1221edb38fb0f68ac4a85393cba22b3c815e1209ee3c2f37283b1a113718",
+      "input_sha256": "a6059b5116227309a102e343bde9f5d813c70ab66f15dd906bd6ee3eb8393e61",
+      "artifact_sha256": "abe0f58f2e5dd8c8765cb67c0fc1921f14d774fe8f9f9a703fcffbd57804d254",
+      "load_average": "{ 3.14 3.75 4.51 }",
+      "process_wall_seconds": 0.04044879204593599
+    },
+    {
+      "implementation": "kdtree-plusplus",
+      "scenario": "teleports",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 342625,
+          "update_ns": 709376,
+          "query_ns": 2711291,
+          "total_ns": 3763292,
+          "results": 6828
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 2867200,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/kdtree-plusplus-proof-v1/kdtree-plusplus",
+        "benchmarks/fixtures/teleports.bin",
+        "1"
+      ],
+      "fixture_sha256": "3c67e9a0ba13a9f4c368373697c75efe3086f2a5c49bb5d4ec24450fe9e2f164",
+      "input_sha256": "d9d6771a8d8d563b29c3ac69105df0095f97a11d47e31f3f90c99eaa6bff4070",
+      "artifact_sha256": "abe0f58f2e5dd8c8765cb67c0fc1921f14d774fe8f9f9a703fcffbd57804d254",
+      "load_average": "{ 3.14 3.75 4.51 }",
+      "process_wall_seconds": 0.020750291063450277
+    },
+    {
+      "implementation": "kdtree-plusplus",
+      "scenario": "boundaries",
+      "points": 2000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 360041,
+          "update_ns": 709707,
+          "query_ns": 4426793,
+          "total_ns": 5496541,
+          "results": 14285
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 2981888,
+      "whole_process_cpu_seconds": {
+        "user": 0.01,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/kdtree-plusplus-proof-v1/kdtree-plusplus",
+        "benchmarks/fixtures/boundaries.bin",
+        "1"
+      ],
+      "fixture_sha256": "149d8022b3979a6b298fef5327809947228b4f0cb383a4c51477c6e8ac55cdb9",
+      "input_sha256": "6734e910cb0c0c4855e0e7df4f2799464dd73f3a0b17110d3bb2ed32bfb38eac",
+      "artifact_sha256": "abe0f58f2e5dd8c8765cb67c0fc1921f14d774fe8f9f9a703fcffbd57804d254",
+      "load_average": "{ 3.14 3.75 4.51 }",
+      "process_wall_seconds": 0.02223549992777407
+    },
+    {
+      "implementation": "kdtree-plusplus",
+      "scenario": "large",
+      "points": 22000,
+      "queries": 4000,
+      "correct": true,
+      "samples": [
+        {
+          "build_ns": 4492750,
+          "update_ns": 9335915,
+          "query_ns": 5775793,
+          "total_ns": 19604458,
+          "results": 11330
+        }
+      ],
+      "status": "measured",
+      "process_peak_rss_bytes": 8847360,
+      "whole_process_cpu_seconds": {
+        "user": 0.08,
+        "system": 0.0,
+        "scope": "entire process including proof, parsing, allocation and timing; not timed kernel CPU alone"
+      },
+      "process": 0,
+      "output_window_queries": 64,
+      "command": [
+        "build/frozen/kdtree-plusplus-proof-v1/kdtree-plusplus",
+        "benchmarks/fixtures/large.bin",
+        "1"
+      ],
+      "fixture_sha256": "05acdd08c93e02a1599a67cb572a469aa2b1b5a31d2dd1e60974694590f953c8",
+      "input_sha256": "ba730c5cd3361f8a3e0bd93333d147ef332058bd4adeab7e5f07f0c4887f6cd0",
+      "artifact_sha256": "abe0f58f2e5dd8c8765cb67c0fc1921f14d774fe8f9f9a703fcffbd57804d254",
+      "load_average": "{ 3.14 3.75 4.51 }",
+      "process_wall_seconds": 0.10306579200550914
+    }
+  ]
+}

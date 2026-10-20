@@ -3,13 +3,13 @@
 use crate::{Adapter, Fixture, Point, Sample, squared};
 use std::{hint::black_box, time::Instant};
 
-enum Expected {
+pub(crate) enum Expected {
     All,
     Sparse(Vec<u32>),
     Dense { bits: Vec<u64>, count: usize },
 }
 impl Expected {
-    fn new(points: &[Point], p: &Point, r: f64, lo: &Point, hi: &Point) -> Self {
+    pub(crate) fn new(points: &[Point], p: &Point, r: f64, lo: &Point, hi: &Point) -> Self {
         let far = std::array::from_fn(|d| (p[d] - lo[d]).abs().max((p[d] - hi[d]).abs()));
         if squared(&far, &[0.0; 3]) <= r * r {
             return Self::All;
@@ -41,7 +41,7 @@ impl Expected {
             Self::Dense { bits, count }
         }
     }
-    fn validate(&self, actual: &[u64], seen: &mut [u64], n: usize) {
+    pub(crate) fn validate(&self, actual: &[u64], seen: &mut [u64], n: usize) {
         seen.fill(0);
         let expected_count = match self {
             Self::All => n,
@@ -101,6 +101,10 @@ pub(crate) fn run<A: Adapter>(name: &str, f: &Fixture, samples: usize) {
         "output window admission: 1..=64"
     );
     let continuous = std::env::var("RILL_CONTINUOUS").as_deref() == Ok("1");
+    if continuous {
+        crate::continuous::run::<A>(name, f, samples, window);
+        return;
+    }
     let mut frame_samples = Vec::new();
     let mut rows = Vec::new();
     let mut peak_capacity = 0;

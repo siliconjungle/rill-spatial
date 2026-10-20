@@ -1,0 +1,2227 @@
+{
+  "scope": "Observed kernel service only; no full server, queue latency or statistical p99 claim",
+  "budget_ms": 16.666666666666668,
+  "inputs": [
+    {
+      "path": "results/twenty-k-continuous-screen-v1.json",
+      "status": "COMPLETE"
+    },
+    {
+      "path": "results/twenty-k-window-sweep-v1.json",
+      "status": "COMPLETE"
+    }
+  ],
+  "failures": [],
+  "rows": [
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-batch-1",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 38.5489385,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 19.0458745,
+      "max_observed_frame_ms": 21.21975,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-batch-1",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 35.4925005,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 17.511042,
+      "max_observed_frame_ms": 19.484042,
+      "observed_deadline_misses": 11
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-batch-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 35.484459,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 18.196875499999997,
+      "max_observed_frame_ms": 20.465083,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-batch-2",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 26.79025,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 13.402646,
+      "max_observed_frame_ms": 14.307375,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-batch-2",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 22.13623,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 10.968646,
+      "max_observed_frame_ms": 12.097166,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-batch-2",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 20.326125,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 10.497020500000001,
+      "max_observed_frame_ms": 13.949958,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-batch-4",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 26.024563,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 12.789479,
+      "max_observed_frame_ms": 16.615083,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-batch-4",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 17.7784365,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 8.873978999999999,
+      "max_observed_frame_ms": 9.594292,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 12.85521,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 6.5373125000000005,
+      "max_observed_frame_ms": 11.27375,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-cell-batch-sorted",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 36.405083,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 17.502313,
+      "max_observed_frame_ms": 18.111333,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-dual",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 57.631959,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 27.551811999999998,
+      "max_observed_frame_ms": 28.26475,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-spatial",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 39.976207,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 19.847896,
+      "max_observed_frame_ms": 21.265042,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-spatial",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 40.1914165,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 19.910062500000002,
+      "max_observed_frame_ms": 21.306584,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "rill-spatial",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 38.4555,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 19.200145499999998,
+      "max_observed_frame_ms": 20.212459,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "study-geo-rtree-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 79.334499,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 39.132729,
+      "max_observed_frame_ms": 39.672625,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 26.317251,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 12.780937999999999,
+      "max_observed_frame_ms": 13.634208,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "study-kiddo-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 76.24675,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 37.644229,
+      "max_observed_frame_ms": 38.505458,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 32.426167,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 15.515687499999999,
+      "max_observed_frame_ms": 16.450167,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "study-static-aabb-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 47.62304,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 23.2323545,
+      "max_observed_frame_ms": 23.377167,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "bounded64",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "15ca4599ef5191efb8cfb9f2da09760d185427d29a423396a289544b0f98a02f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 23.670041,
+      "matches_per_query": {
+        "max": 186,
+        "mean": 69.27755,
+        "p99": 159
+      },
+      "median_frame_ms": 11.165208,
+      "max_observed_frame_ms": 11.249875,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-batch-1",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 389.175689,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 194.8123125,
+      "max_observed_frame_ms": 201.548375,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-batch-1",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 356.785646,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 178.4608125,
+      "max_observed_frame_ms": 180.914125,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-batch-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 361.198206,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 180.0462705,
+      "max_observed_frame_ms": 225.024083,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-batch-2",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 486.520605,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 273.21135400000003,
+      "max_observed_frame_ms": 1042.814833,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-batch-2",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 389.020188,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 195.1906255,
+      "max_observed_frame_ms": 196.724792,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-batch-2",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 291.378295,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 143.923958,
+      "max_observed_frame_ms": 320.350542,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-batch-4",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 513.6366895,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 259.687584,
+      "max_observed_frame_ms": 274.040875,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-batch-4",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 373.286895,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 186.68406249999998,
+      "max_observed_frame_ms": 190.017083,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 291.127249,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 145.00037500000002,
+      "max_observed_frame_ms": 901.354459,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-cell-batch-sorted",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 440.526085,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 218.92362500000002,
+      "max_observed_frame_ms": 221.605583,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-dual",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 364.340458,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 180.751125,
+      "max_observed_frame_ms": 184.012291,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-spatial",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 377.4775205,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 187.77493750000002,
+      "max_observed_frame_ms": 202.337417,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-spatial",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 352.3018345,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 174.97843749999998,
+      "max_observed_frame_ms": 190.044042,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "contained",
+      "implementation": "rill-spatial",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 356.535959,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 176.716771,
+      "max_observed_frame_ms": 187.473042,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "contained",
+      "implementation": "study-geo-rtree-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 4495.548084,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 2223.188521,
+      "max_observed_frame_ms": 2327.2705,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 1182.605376,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 589.3207915,
+      "max_observed_frame_ms": 631.331958,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "study-kiddo-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 2152.970833,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 1078.500667,
+      "max_observed_frame_ms": 1084.416583,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 1049.333168,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 513.301021,
+      "max_observed_frame_ms": 553.109792,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "study-static-aabb-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 2173.865416,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 1087.492729,
+      "max_observed_frame_ms": 1130.939166,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "contained",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "254b754061284b07386899a11a58daf4e7d943419d22ded6e79b4c6ea768a7f0",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 1061.622541,
+      "matches_per_query": {
+        "max": 20000,
+        "mean": 20000.0,
+        "p99": 20000
+      },
+      "median_frame_ms": 524.4821665,
+      "max_observed_frame_ms": 557.149375,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-batch-1",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 122.4946665,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 62.2664795,
+      "max_observed_frame_ms": 66.140917,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-batch-1",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 124.8371875,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 62.180479,
+      "max_observed_frame_ms": 69.065417,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-batch-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 125.517498,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 62.7822915,
+      "max_observed_frame_ms": 71.064625,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-batch-2",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 77.7044165,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 38.7752085,
+      "max_observed_frame_ms": 41.512417,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-batch-2",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 68.7171465,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 34.128625,
+      "max_observed_frame_ms": 35.788666,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-batch-2",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 67.708457,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 34.2393335,
+      "max_observed_frame_ms": 37.865917,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-batch-4",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 66.8813965,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 33.1892705,
+      "max_observed_frame_ms": 34.207916,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-batch-4",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 47.1467505,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 23.111687500000002,
+      "max_observed_frame_ms": 24.599208,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 40.129956,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 19.519541500000003,
+      "max_observed_frame_ms": 21.212625,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-cell-batch-sorted",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 161.032999,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 79.800021,
+      "max_observed_frame_ms": 84.232042,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-dual",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 202.011416,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 98.64225,
+      "max_observed_frame_ms": 102.80375,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-spatial",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 132.9283115,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 66.336646,
+      "max_observed_frame_ms": 68.159375,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-spatial",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 136.593416,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 68.2161245,
+      "max_observed_frame_ms": 125.01875,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "rill-spatial",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 138.324041,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 68.5488545,
+      "max_observed_frame_ms": 73.297334,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "study-geo-rtree-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 282.653917,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 139.81289600000002,
+      "max_observed_frame_ms": 142.785708,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 119.123212,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 57.5864375,
+      "max_observed_frame_ms": 60.98875,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "study-kiddo-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 247.193708,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 122.4488335,
+      "max_observed_frame_ms": 145.606625,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 100.345166,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 49.8549795,
+      "max_observed_frame_ms": 51.533584,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "study-static-aabb-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 249.020417,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 124.00025,
+      "max_observed_frame_ms": 128.842542,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "crowd",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "904f4d6ca7f6293570f9ddbfbf0fe38d9e04d7e80381fc67b83a359ac255aa33",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 63.037959,
+      "matches_per_query": {
+        "max": 1307,
+        "mean": 544.757175,
+        "p99": 1259
+      },
+      "median_frame_ms": 31.059333000000002,
+      "max_observed_frame_ms": 32.023709,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "floors",
+      "implementation": "rill-batch-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 33.978793,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 16.7175835,
+      "max_observed_frame_ms": 18.159208,
+      "observed_deadline_misses": 3
+    },
+    {
+      "scenario": "floors",
+      "implementation": "rill-batch-2",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 16.759044,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 8.2434165,
+      "max_observed_frame_ms": 8.934667,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "floors",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 13.595293,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 6.6145415,
+      "max_observed_frame_ms": 7.497291,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "floors",
+      "implementation": "rill-cell-batch-sorted",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 64.651336,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 31.6423125,
+      "max_observed_frame_ms": 32.916916,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "floors",
+      "implementation": "rill-dual",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 49.609291,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 23.6441455,
+      "max_observed_frame_ms": 23.846833,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "floors",
+      "implementation": "rill-spatial",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 31.515667,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 15.608021,
+      "max_observed_frame_ms": 16.674208,
+      "observed_deadline_misses": 1
+    },
+    {
+      "scenario": "floors",
+      "implementation": "study-geo-rtree-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 63.749667,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 31.8237915,
+      "max_observed_frame_ms": 32.390791,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "floors",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 29.340333,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 14.2202505,
+      "max_observed_frame_ms": 14.810666,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "floors",
+      "implementation": "study-kiddo-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 30.788211,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 14.870146,
+      "max_observed_frame_ms": 15.040334,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "floors",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 16.307418,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 6.888896,
+      "max_observed_frame_ms": 8.503584,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "floors",
+      "implementation": "study-static-aabb-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 57.185459,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 28.017417000000002,
+      "max_observed_frame_ms": 28.33275,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "floors",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "f3ec1d4cf11801db5c81710cc8948e81f89641831bc3a9fdaa84f22d7ff95667",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 18.284833,
+      "matches_per_query": {
+        "max": 55,
+        "mean": 14.720725,
+        "p99": 45
+      },
+      "median_frame_ms": 8.597978999999999,
+      "max_observed_frame_ms": 8.952,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-batch-1",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 54.256167,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 26.8025205,
+      "max_observed_frame_ms": 32.788083,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-batch-1",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 54.778999,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 27.221729,
+      "max_observed_frame_ms": 32.269542,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-batch-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 51.808873,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 25.4527705,
+      "max_observed_frame_ms": 29.890291,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-batch-2",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 37.7065205,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 18.320125,
+      "max_observed_frame_ms": 23.249,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-batch-2",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 34.275063,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 16.824146,
+      "max_observed_frame_ms": 20.69075,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-batch-2",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 30.917498,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 15.411521,
+      "max_observed_frame_ms": 19.666083,
+      "observed_deadline_misses": 9
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-batch-4",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 36.329667,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 17.695229,
+      "max_observed_frame_ms": 25.58,
+      "observed_deadline_misses": 9
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-batch-4",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 27.9193565,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 13.5967085,
+      "max_observed_frame_ms": 19.088917,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 23.289331,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 11.2601875,
+      "max_observed_frame_ms": 16.585458,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-cell-batch-sorted",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 72.549041,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 33.2036455,
+      "max_observed_frame_ms": 33.405583,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-dual",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 81.048959,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 37.598979,
+      "max_observed_frame_ms": 38.947542,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-spatial",
+      "window": 1,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 57.2812305,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 28.3444795,
+      "max_observed_frame_ms": 33.542833,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-spatial",
+      "window": 8,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 2,
+      "observed_query_frames": 12,
+      "median_total_ms": 58.021416,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 28.472792,
+      "max_observed_frame_ms": 34.459708,
+      "observed_deadline_misses": 12
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "rill-spatial",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 3,
+      "observed_query_frames": 18,
+      "median_total_ms": 57.988584,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 28.487875000000003,
+      "max_observed_frame_ms": 33.391334,
+      "observed_deadline_misses": 18
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "study-geo-rtree-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 108.354668,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 51.650999999999996,
+      "max_observed_frame_ms": 52.366708,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 51.218127,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 23.289958,
+      "max_observed_frame_ms": 24.832709,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "study-kiddo-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 121.991457,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 58.757000000000005,
+      "max_observed_frame_ms": 61.244708,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 48.784918,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 22.042896,
+      "max_observed_frame_ms": 22.63625,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "study-static-aabb-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 74.935749,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 34.374729,
+      "max_observed_frame_ms": 34.781083,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "many-objects",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "a35f8a6944b9b66f8d0cf59aa713143b78d3b2649e1e828ef779c2b09c37f183",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 41.659127,
+      "matches_per_query": {
+        "max": 223,
+        "mean": 85.716325,
+        "p99": 195
+      },
+      "median_frame_ms": 17.421937999999997,
+      "max_observed_frame_ms": 18.150542,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "rill-batch-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 37.025125,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 18.377187499999998,
+      "max_observed_frame_ms": 18.670875,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "rill-batch-2",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 21.925083,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 10.854083,
+      "max_observed_frame_ms": 10.932708,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 14.739209,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 7.269083500000001,
+      "max_observed_frame_ms": 7.298291,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "rill-cell-batch-sorted",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 44.760416,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 21.225625,
+      "max_observed_frame_ms": 22.064917,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "rill-dual",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 50.958501,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 24.538875,
+      "max_observed_frame_ms": 24.777125,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "rill-spatial",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 44.612584,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 22.1907915,
+      "max_observed_frame_ms": 22.787,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "study-geo-rtree-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 67.722376,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 33.450542,
+      "max_observed_frame_ms": 35.863584,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 26.392832,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 12.9383335,
+      "max_observed_frame_ms": 13.552625,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "study-kiddo-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 93.659583,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 46.6020415,
+      "max_observed_frame_ms": 49.61125,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 31.613667,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 15.4327085,
+      "max_observed_frame_ms": 16.07775,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "study-static-aabb-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 52.771542,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 25.785021,
+      "max_observed_frame_ms": 26.0385,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "teleports",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "334e3684f652b6f05b7265699f52444efe10ece65433417fa07e7276b7579dd6",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 25.346917,
+      "matches_per_query": {
+        "max": 182,
+        "mean": 69.628075,
+        "p99": 161
+      },
+      "median_frame_ms": 11.8500415,
+      "max_observed_frame_ms": 12.032041,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "rill-batch-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 17.678666,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 8.744583,
+      "max_observed_frame_ms": 9.705666,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "rill-batch-2",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 11.540458,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 5.6192915,
+      "max_observed_frame_ms": 6.297542,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "rill-batch-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 11.756916,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 5.6496665,
+      "max_observed_frame_ms": 6.604375,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "rill-cell-batch-sorted",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 57.618666,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 28.0488955,
+      "max_observed_frame_ms": 28.362208,
+      "observed_deadline_misses": 6
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "rill-dual",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 26.524836,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 12.329875000000001,
+      "max_observed_frame_ms": 12.671708,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "rill-spatial",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 20.691333,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 10.1797705,
+      "max_observed_frame_ms": 10.912042,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "study-geo-rtree-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 33.302,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 16.342750000000002,
+      "max_observed_frame_ms": 17.120291,
+      "observed_deadline_misses": 2
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "study-geo-rtree-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 16.725625,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 7.9528955,
+      "max_observed_frame_ms": 8.141792,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "study-kiddo-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 23.995001,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 11.553,
+      "max_observed_frame_ms": 11.938625,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "study-kiddo-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 13.743208,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 6.184458,
+      "max_observed_frame_ms": 6.371708,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "study-static-aabb-1",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 26.082208,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 12.521042,
+      "max_observed_frame_ms": 12.798625,
+      "observed_deadline_misses": 0
+    },
+    {
+      "scenario": "uniform",
+      "implementation": "study-static-aabb-4",
+      "window": 64,
+      "artifact_sha256": "36ef80b05972df40ef7be13031669e4054211edcfa946ecac20264fdeb176e11",
+      "fixture_sha256": "8005af082da2de4491fc1456677a90dfccdb339390f62fb2c21d1d2fb764990f",
+      "protocol": "v1 serialized consumer",
+      "fresh_processes": 1,
+      "observed_query_frames": 6,
+      "median_total_ms": 14.341626,
+      "matches_per_query": {
+        "max": 32,
+        "mean": 7.596625,
+        "p99": 25
+      },
+      "median_frame_ms": 6.512021,
+      "max_observed_frame_ms": 6.676084,
+      "observed_deadline_misses": 0
+    }
+  ],
+  "notes": [
+    "Different binary hashes, fixture hashes and protocols stay separate",
+    "Reported frame includes updates/preparation and complete output consumption where specified",
+    "Maximum is the worst observed frame, not a guaranteed bound",
+    "Fresh processes and samples are retained; this does not satisfy the original simultaneous superiority gate"
+  ]
+}

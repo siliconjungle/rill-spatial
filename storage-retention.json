@@ -244,6 +244,54 @@
     {
       "path": "build/frozen/twenty-k-continuous-screen-v1/rust",
       "reason": "Exact measured executable; complete source retained at6f35e2f"
+    },
+    {
+      "path": "research/variants/kdtree-plusplus",
+      "reason": "Native adapter source, bounds reasoning and parent proof references; nested retention contract"
+    },
+    {
+      "path": "results/kdtree-plusplus-proof-v1.json",
+      "reason": "Nine-fixture complete-membership proof for additional native source project"
+    },
+    {
+      "path": "build/frozen/kdtree-plusplus-proof-v1/kdtree-plusplus",
+      "reason": "Exact native executable used by retained proof"
+    },
+    {
+      "path": "results/twenty-k-window-sweep-v1.json",
+      "reason": "Selected96-job randomized worker/output-window experiment with full proofs"
+    },
+    {
+      "path": "build/frozen/twenty-k-window-sweep-v1/rust",
+      "reason": "Exact selected v1 output-window sweep executable"
+    },
+    {
+      "path": "results/twenty-k-summary-v1.json",
+      "reason": "Derived dimension-preserving summary of selected v1 raw evidence"
+    },
+    {
+      "path": "results/validation-parallel-simd.log",
+      "reason": "Required default-feature parallel API proof"
+    },
+    {
+      "path": "results/validation-parallel-release.log",
+      "reason": "Required optimized parallel API proof"
+    },
+    {
+      "path": "results/validation-parallel-scalar.log",
+      "reason": "Required scalar parallel API proof"
+    },
+    {
+      "path": "results/validation-parallel-clippy.log",
+      "reason": "Required static validation for new public API"
+    },
+    {
+      "path": "results/validation-parallel-harness.log",
+      "reason": "Shared-consumer harness query identity regression proof"
+    },
+    {
+      "path": "benchmarks/holdout-twenty-k/manifest.json",
+      "reason": "Independent seed97531 fixture hashes; generator and registered plan are exact reproduction inputs"
     }
   ],
   "safe_to_remove": [
@@ -286,6 +334,18 @@
     {
       "path": "build/continuous-smoke-v1.log",
       "reason": "Completed duplicate stale-artifact smoke log"
+    },
+    {
+      "path": "results/continuous-smoke-v2.json",
+      "reason": "Completed insight-only scheduler smoke superseded by selected complete84-job screen and96-job window sweep"
+    },
+    {
+      "path": "build/frozen/continuous-smoke-v2",
+      "reason": "Completed insight-only scheduler smoke superseded by selected complete84-job screen and96-job window sweep"
+    },
+    {
+      "path": "build/continuous-smoke-v2.log",
+      "reason": "Completed insight-only scheduler smoke superseded by selected complete84-job screen and96-job window sweep"
     }
   ]
 }

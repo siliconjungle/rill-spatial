@@ -43,4 +43,16 @@ benefit uniquely to the new index. Output windows 1/8/64 and worker counts 1/2/4
 are separate experimental dimensions. Results from different output/timing
 contracts are not pooled into the original strict superiority gate.
 
-The raw serial screen and window sweep are recorded below after completion.
+The original serial screen completed 84/84 jobs and the randomized output-window
+sweep completed 96/96 jobs, all with full membership proofs. These v1 runs have a
+serialized consumer. Dense results showed that tiny groups can increase overhead;
+there is no universal best output-window choice. The new explicit concurrent
+consumer path is measured separately using protocol v2, with identical synthetic
+per-ID consumption on every implementation. This checksum is a compiler-visible
+consumer, not game serialization or realistic network work.
+
+The v2 proof exercises the same parallel-consumer path as timing. It validates
+all IDs under a proof-only mutex, then recreates the trace for uninterrupted
+concurrent consumption using per-group atomic summaries. Every timed query is
+visited once; count and order-independent checksum agree with the independent
+proof. Callback order never substitutes for original query identity.

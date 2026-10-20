@@ -4,13 +4,80 @@
   "source_revision": "ef1fbbc",
   "workspace_mode": "minimal independent crate roots with read-only shared inputs",
   "workers": [
-    {"task": "capacity_research", "lane": "research", "owns": ["research/20k/research.md", "research/20k/sources.json"], "acceptance": "Primary-source bibliography, quantitative capacity bounds, actionable experiments; distinguish exact semantics from changed replication semantics"},
-    {"task": "cell_readview", "lane": "algorithm", "owns": ["research/variants/cell-readview"], "acceptance": "Exact oracle parity, minimal independent Rust crate, pinned reproduction inputs and diagnostics"},
-    {"task": "dual_tree", "lane": "algorithm", "owns": ["research/variants/dual-tree"], "acceptance": "Exact variable-radius batch reporting including arbitrary centres, oracle parity and bounded output experiment"},
-    {"task": "root", "lane": "integration", "owns": ["src", "benchmarks", "tools", "research/20k/work-queue.json", "research/20k/agent-ownership.json", "research/20k/events.jsonl", "research/20k/status.json", "research/20k/storage-retention.json", "results", "README.md", "storage-retention.json"], "acceptance": "Reproducible 20,000-observer fixtures, comparative correctness/performance evidence, strict gate; final performance measurements serial"}
+    {
+      "task": "capacity_research",
+      "lane": "research",
+      "owns": [
+        "research/20k/research.md",
+        "research/20k/sources.json"
+      ],
+      "acceptance": "Primary-source bibliography, quantitative capacity bounds, actionable experiments; distinguish exact semantics from changed replication semantics"
+    },
+    {
+      "task": "cell_readview",
+      "lane": "algorithm",
+      "owns": [
+        "research/variants/cell-readview"
+      ],
+      "acceptance": "Exact oracle parity, minimal independent Rust crate, pinned reproduction inputs and diagnostics"
+    },
+    {
+      "task": "dual_tree",
+      "lane": "algorithm",
+      "owns": [
+        "research/variants/dual-tree"
+      ],
+      "acceptance": "Exact variable-radius batch reporting including arbitrary centres, oracle parity and bounded output experiment"
+    },
+    {
+      "task": "root",
+      "lane": "integration",
+      "owns": [
+        "src",
+        "benchmarks",
+        "tools",
+        "research/20k/work-queue.json",
+        "research/20k/agent-ownership.json",
+        "research/20k/events.jsonl",
+        "research/20k/status.json",
+        "research/20k/storage-retention.json",
+        "results",
+        "README.md",
+        "storage-retention.json"
+      ],
+      "acceptance": "Reproducible 20,000-observer fixtures, comparative correctness/performance evidence, strict gate; final performance measurements serial"
+    },
+    {
+      "task": "capacity_research",
+      "lane": "adapterfollowup",
+      "owns": [
+        "research/variants/kdtree-plusplus"
+      ],
+      "acceptance": "Pinned closed-box native-f64 adapter source; root integrates and validates after serialtiming"
+    }
   ],
-  "shared_read_only_inputs": ["benchmarks/fixtures", "benchmarks/holdout-97123", "research/inventory.json", "research/vendor", "research/npm/node_modules", "examples/probe.rs"],
-  "excluded_copies": [".git", "build", "target", "node_modules", "knowledge", "reports"],
-  "concurrency": {"development": 4, "acceptance_benchmarks": 1},
-  "notes": ["Parallel development and exploratory runs are authorized; concurrent exploratory timings cannot establish superiority", "Do not suspend or terminate other workers; preserve the 100 GB reserve policy and report the existing deficit"]
+  "shared_read_only_inputs": [
+    "benchmarks/fixtures",
+    "benchmarks/holdout-97123",
+    "research/inventory.json",
+    "research/vendor",
+    "research/npm/node_modules",
+    "examples/probe.rs"
+  ],
+  "excluded_copies": [
+    ".git",
+    "build",
+    "target",
+    "node_modules",
+    "knowledge",
+    "reports"
+  ],
+  "concurrency": {
+    "development": 4,
+    "acceptance_benchmarks": 1
+  },
+  "notes": [
+    "Parallel development and exploratory runs are authorized; concurrent exploratory timings cannot establish superiority",
+    "Do not suspend or terminate other workers; preserve the 100 GB reserve policy and report the existing deficit"
+  ]
 }

@@ -5,8 +5,8 @@ from pathlib import Path
 RUST=['rill-spatial','brute-force','rstar','kdtree','kd-tree','kiddo-mutable','kiddo-immutable','static-aabb2d','geo-index-kd','geo-index-rtree','spart-kd','spart-rtree','spart-rstar','spart-octree','spart-quadtree']
 RUST+=['acap-kd','acap-flat-kd','acap-vp','acap-flat-vp','acap-exhaustive','vpsearch','petal-ball','neighbourhood-owned','neighbourhood-index','quadtree-f64','quadtree-rs','rust-octree','spatial-linear','spatial-quadratic','spatial-rstar','nabo']
 JS=['rbush','rbush-3d','flatbush','kdbush','static-kdtree','d3-quadtree','kd-tree-javascript','js-quadtree','@timohausmann/quadtree-js','quadtree-lib','rtree','mnemonist-vp','spatial-hash','flatten-planar','box-intersect','quadtree2','mnemonist-kd']
-VARIANTS=['study-kiddo-1','study-kiddo-4','study-static-aabb-1','study-static-aabb-4','study-geo-rtree-1','study-geo-rtree-4','rill-batch-1','rill-batch-2','rill-batch-4','rill-coherent-1','rill-coherent-2','rill-coherent-4','rill-cell-sorted','rill-cell-hybrid','rill-cell-hash','rill-cell-occupied','rill-dual','rill-cell-batch-sorted','rill-cell-batch-hybrid','rill-cell-batch-hash','rill-cell-batch-occupied']
-CPP=['nanoflann','pico-tree','libkdtree','kdtree-cpp','crvs-kdtree','gishi-kdtree']
+VARIANTS=['rill-parallel-1','rill-parallel-2','rill-parallel-4','study-kiddo-1','study-kiddo-4','study-static-aabb-1','study-static-aabb-4','study-geo-rtree-1','study-geo-rtree-4','rill-batch-1','rill-batch-2','rill-batch-4','rill-coherent-1','rill-coherent-2','rill-coherent-4','rill-cell-sorted','rill-cell-hybrid','rill-cell-hash','rill-cell-occupied','rill-dual','rill-cell-batch-sorted','rill-cell-batch-hybrid','rill-cell-batch-hash','rill-cell-batch-occupied']
+CPP=['kdtree-plusplus','nanoflann','pico-tree','libkdtree','kdtree-cpp','crvs-kdtree','gishi-kdtree']
 def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def output(cmd):return subprocess.check_output(cmd,text=True).strip()
 def identity():
@@ -48,6 +48,9 @@ def main():
    r=subprocess.run(['/usr/bin/time','-l']+cmd,text=True,capture_output=True,timeout=a.timeout,env={**os.environ,"RILL_OUTPUT_WINDOW":str(window),"RILL_CONTINUOUS":"1" if a.continuous else "0"})
    if r.returncode:row={'implementation':name,'scenario':scenario,'status':'failed','exit_code':r.returncode,'error':r.stderr if len(r.stderr)<7000 else r.stderr[:3500]+'\n[stderr middle omitted]\n'+r.stderr[-3500:]}
    else:row=json.loads(r.stdout);row['scenario']=scenario;row['status']='measured';row['process_peak_rss_bytes']=int(re.search(r'(\d+)\s+maximum resident set size',r.stderr)[1])
+   if r.returncode==0:
+    cpu=re.search(r'([\d.]+)\s+real\s+([\d.]+)\s+user\s+([\d.]+)\s+sys',r.stderr)
+    if cpu:row['whole_process_cpu_seconds']={'user':float(cpu[2]),'system':float(cpu[3]),'scope':'entire process including proof, parsing, allocation and timing; not timed kernel CPU alone'}
   except Exception as e:row={'implementation':name,'scenario':scenario,'status':'failed','error':str(e)}
   row.update({'process':process,'output_window_queries':window,'command':cmd,'fixture_sha256':digest(fixture),'input_sha256':digest(input_path),'artifact_sha256':artifact['sha256'],'load_average':output(['sysctl','-n','vm.loadavg']),'process_wall_seconds':time.monotonic()-start});doc['rows'].append(row)
   out.write_text(json.dumps(doc,indent=2)+'\n')

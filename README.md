@@ -90,9 +90,9 @@ Git commit pins are in the source inventory; benchmark adapters are original cod
 
 ## Comparison status
 
-The harness currently has 52 competitor entries from 38 source projects, plus a
+The harness currently has 53 competitor entries from 39 source projects, plus a
 brute-force control. Several projects expose genuinely different data structures;
-these are separate implementations, not 52 independent algorithms. Additional
+these are separate implementations, not 53 independent algorithms. Additional
 source projects remain pending. The source inventory records adapter limitations.
 A single screening sample checks correctness and finds optimization targets; it
 cannot pass the gate. The evaluator requires at least 14 fresh process pairs per
@@ -132,6 +132,11 @@ let stats = index.within_batch(
 )?;
 assert_eq!(stats.matches, 1);
 ```
+
+`within_batch_parallel` accepts `Fn + Sync` instead, allowing consumers of
+disjoint groups to run concurrently. It shares the same exact validation and
+bounded scheduler. Synchronize shared mutable consumer state explicitly; adding
+one global consumer lock restores the serialized bottleneck.
 
 Choose workers and group size together: each worker owns reusable result vectors,
 and a dense exact row may contain every indexed ID. The method creates threads
