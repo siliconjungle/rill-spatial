@@ -56,3 +56,8 @@ test('invalid resource options fail explicitly',()=>{
   for(const leafSize of[0,1.5,1025,NaN])assert.throws(()=>new PackedPointIndex([],{leafSize}),RangeError);
   for(const splitAxes of[[],[3],[-1],[.5]])assert.throws(()=>new PackedPointIndex([],{splitAxes}),RangeError);
 });
+
+test('height pruning retains coincident heights when the tolerance is below an origin ULP',()=>{
+ const points=Array.from({length:70},(_,i)=>[i,1e16+(i%3)*4,0]);
+ for(const leafSize of[1,16,24])check(points,[[[0,1e16,0],5,.1],[[3,1e16,0],5,.1]],{leafSize});
+});

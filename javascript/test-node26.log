@@ -1,0 +1,15 @@
+✔ packed leaves and median partitions match independent ordered scans (174.054708ms)
+✔ strict spherical edges, inclusive boxes and nearest ties preserve original identity (0.695792ms)
+✔ finite extremes and underflow retain JavaScript predicates (0.728541ms)
+✔ invalid rows, typed coordinates, signed zeros and duplicate filtering are captured once (0.545291ms)
+✔ axis choices and input permutations preserve nearest ties by input order (3.378667ms)
+✔ invalid resource options fail explicitly (0.480542ms)
+✔ height pruning retains coincident heights when the tolerance is below an origin ULP (0.948292ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 263.821708

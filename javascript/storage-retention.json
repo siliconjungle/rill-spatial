@@ -28,6 +28,10 @@
     {
       "path": "test-node22.log",
       "reason": "Required JavaScript package documentation or independent validation proof"
+    },
+    {
+      "path": "test-node26.log",
+      "reason": "Required current-engine standalone oracle proof"
     }
   ],
   "safe_to_remove": []

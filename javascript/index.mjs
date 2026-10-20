@@ -68,7 +68,7 @@ export class PackedPointIndex {
     const x=origin[0],y=origin[1],z=origin[2],stack=[0],bounds=[minXZ(this,0,x,z)];let best=-1,distance=Infinity;
     while(stack.length){
       const n=stack.pop(),bound=bounds.pop();
-      if(y+maxHeight<=this.y0[n]||y-maxHeight>=this.y1[n]||bound>distance||bound===distance&&best>=0&&this.first[n]>=best)continue;
+      if(Math.max(this.y0[n]-y,0,y-this.y1[n])>=maxHeight||bound>distance||bound===distance&&best>=0&&this.first[n]>=best)continue;
       if(this.left[n]<0){
         for(let j=this.begin[n];j<this.end[n];j++)if(Math.abs(this.y[j]-y)<maxHeight){
           const d=Math.hypot(this.x[j]-x,this.z[j]-z),rank=this.order[j];
